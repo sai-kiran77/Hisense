@@ -1,0 +1,86 @@
+.social-media-container {
+    padding: 65px 0 40px 0;
+    margin: 0 11%;
+    border-bottom: 1px solid #d8d8d8;
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-media-container a.logo {
+    display: block;
+    width: 185px;
+    height: 30px;
+    background: url("https://global.hisense.com/.resources/webresources/images/common/logo.svg") no-repeat;
+    background-size: 100% auto;
+    text-indent: -9999px;
+}
+
+.social-media-container .social-media {
+    display: flex;
+}
+
+.social-media-container .social-media a.social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #f3f3f3;
+    margin-right: 12px;
+    text-indent: -9999px;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    background-position: center center;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+.social-media-container .social-media a.social-btn:last-child {
+    margin-right: 0;
+}
+.social-media-container .social-media a.social-btn:hover {
+    background-color: #ddd;
+}
+.social-media-container .social-media a.social-btn.fb {
+    background-image: url("https://global.hisense.com/.resources/webresources/images/common/icon-fb.svg");
+    background-size: auto 50%;
+}
+.social-media-container .social-media a.social-btn.twitter {
+    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-twitter.svg);
+}
+.social-media-container .social-media a.social-btn.ig {
+    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-ig.svg);
+}
+.social-media-container .social-media a.social-btn.youtube {
+    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-youtube.svg);
+}
+.social-media-container .social-media a.social-btn.linkedin {
+    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-youtube.svg);
+}
+
+@media (max-width: 1023px) {
+    .social-media-container {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 30px 15px 30px 15px;
+        flex-direction: column;
+        margin-bottom: 40px;
+    }
+
+    .social-media-container a.logo {
+        margin-bottom: 45px;
+        width: 146px;
+        height: 24px;
+    }
+
+    .social-media-container .social-media a.social-btn {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+@media (max-width: 767px) {
+    .social-media-container .social-media {
+        justify-content: space-between;
+    }
+}

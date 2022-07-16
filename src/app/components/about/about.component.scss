@@ -1,0 +1,17 @@
+.about-container{
+    margin: 8px 0 !important;
+}
+
+.triple-slider{
+    .slick-track{
+        display: flex;
+    }
+}
+@media screen and (max-width: 768px) {
+    .triple-slider{
+        .slick-track{
+            width: max-content;
+            width: 25%;
+        }
+    }
+}

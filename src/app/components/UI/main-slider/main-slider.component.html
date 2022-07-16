@@ -1,0 +1,35 @@
+<div class="main-visual slider slick-initialized slick-slider slick-dotted">
+    <div class="slick-list draggable">
+        <div class="slick-track">
+            <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
+                [navigation]="true" class="mySwiper">
+                <ng-container *ngFor="let slide of slides">
+                    <ng-template swiperSlide>
+                        <!-- slick-active -->
+                        <div class="slick-slide slick-current">
+                            <div>
+                                <div class="slide-item" style="width: 100%; display: inline-block;">
+                                    <div class="content">
+                                        <img *ngIf="slide.imgURL" [src]="slide?.imgURL" alt="Hisense">
+                                        <h2 *ngIf="slide.h2" style="color: #fff">{{slide.h2}}</h2>
+                                        <p *ngIf="slide.p" style="color: #fff">{{slide.p}}</p>
+                                        <h3 style="color: #fff" *ngIf="slide.h3">{{slide.h3}}</h3>
+                                        <h1 style="color: #fff" *ngIf="slide.h1">{{slide.h1}}</h1>
+
+                                        <!-- href="https://global.hisense.com/laser-tv/100l9g-trichroma-laser-tv" -->
+                                        <a class="btn-hisense" target="_blank" rel="" tabindex="0">{{slide.btnText}}</a>
+
+                                    </div>
+                                    <img class="banner desktop-only" [src]="slide.desktopImgURL"
+                                        alt="100L9G TRICHROMA LASER TV">
+                                    <img class="banner mobile-only" [src]="slide.mobileImgURL"
+                                        alt="100L9G TRICHROMA LASER TV">
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </ng-container>
+            </swiper>
+        </div>
+    </div>
+</div>

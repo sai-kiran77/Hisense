@@ -1,0 +1,44 @@
+// .container{
+//     width:100%;
+//     height: 90vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
+footer ::ng-deep a.icon-region,
+.sitemap-container a.icon-region {
+    display: inline-block;
+    font-size: 15px;
+    color: #1d1d1f;
+    background: url(https://global.hisense.com/.resources/webresources/images/common/icon-worldwide-green.svg) no-repeat 0 5px;
+    background-size: 20px auto;
+    padding: 3px 0 0 30px;
+    font-weight: 500;
+}
+
+footer ::ng-deep a.icon-region:hover,
+.sitemap-container a.icon-region:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 1023px) {
+
+    footer ::ng-deep a.icon-region,
+    .sitemap-container a.icon-region {
+        min-height: 33px;
+        font-size: 14px;
+        font-weight: 400;
+        background-position: 0 0;
+        background-size: 33px auto;
+        padding-top: 5px;
+        padding-left: 50px;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    footer {
+        overflow: hidden;
+    }
+}

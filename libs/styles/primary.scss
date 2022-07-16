@@ -1,0 +1,17 @@
+$color-primary: var(--primary); 
+$color-secondary: var(--secondary); 
+$color-neutral-dark: var(--neutral-dark); 
+$color-neutral-medium: var(--neutral-medium); 
+$color-neutral-light: var(--neutral-light); 
+$color-white: var(--white); 
+
+:root{
+    --primary: #00b3ac;
+    --secondary: #09cbc6;
+
+    --neutral-dark: #1d1d1f;
+    --neutral-medium: #4a4a4a;
+    --neutral-light: #e2e2e2;
+
+    --white: #ffffff;
+}

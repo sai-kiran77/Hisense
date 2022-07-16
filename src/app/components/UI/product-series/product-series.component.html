@@ -1,0 +1,143 @@
+<div class="overview-type-listing">
+    <div class="overview-type-wrapper">
+        <h2>{{title}}</h2>
+        <div class="overview-type-container slick-initialized slick-slider">
+            <div class="slick-list draggable">
+                <div class="slick-track">
+                    <!-- <ng-container *ngIf="screenWidth >= 1024"> -->
+                        <div *ngFor="let product of products" class="slick-slide slick-current" data-slick-index="0" aria-hidden="false">
+                            <div>
+                                <div class="overview-type">
+                                    <div class="img">
+                                        <div class="img-container">
+                                            <img class="desktop-only"
+                                                src="https://global.hisense.com/dam/jcr:f991da50-3433-43a8-8de4-760328abae50/hisense-tv-u7.jpg"
+                                                alt="Hisense TV U7G">
+                                            <img class="mobile-only"
+                                                src="https://global.hisense.com/dam/jcr:7db760ab-5967-4c26-85dd-d551b9f6cd2f/hisense-tv-u7-mobile.jpg"
+                                                alt="Hisense TV U7G">
+                                        </div>
+                                    </div>
+                                    <div class="overview-content theme-white">
+                                        <div class="type">ULED TV</div>
+                                        <div class="style">Beauty Beyond the Screen</div>
+                                        <div class="viewmore"><a class="btn-hisense" href="/tv-u7g/" target="_self"
+                                                tabindex="0">View More</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </ng-container> -->
+                </div>
+            </div>
+        </div>
+        <div class="overview-type-listing-dots"></div>
+    </div>
+</div>
+
+
+
+<ng-template>
+    <ng-container *ngIf="screenWidth < 1024">
+        <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
+            [navigation]="true" class="mySwiper">
+            <ng-container *ngFor="let product of products">
+                <ng-template swiperSlide>
+                    <div class="slick-slide slick-current slick-active" data-slick-index="0"
+                        aria-hidden="false">
+                        <div>
+                            <div class="overview-type">
+                                <div class="img">
+                                    <div class="img-container">
+                                        <img class="desktop-only"
+                                            src="https://global.hisense.com/dam/jcr:f991da50-3433-43a8-8de4-760328abae50/hisense-tv-u7.jpg"
+                                            alt="Hisense TV U7G">
+                                        <img class="mobile-only"
+                                            src="https://global.hisense.com/dam/jcr:7db760ab-5967-4c26-85dd-d551b9f6cd2f/hisense-tv-u7-mobile.jpg"
+                                            alt="Hisense TV U7G">
+                                    </div>
+                                </div>
+                                <div class="overview-content theme-white">
+                                    <div class="type">ULED TV</div>
+                                    <div class="style">Beauty Beyond the Screen</div>
+                                    <div class="viewmore"><a class="btn-hisense" href="/tv-u7g/"
+                                            target="_self" tabindex="0">View More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="slick-slide slick-active" data-slick-index="1" aria-hidden="false"
+                        style="width: 270px;">
+                        <div>
+                            <div class="overview-type" style="width: 100%; display: inline-block;">
+                                <div class="img">
+                                    <div class="img-container">
+                                        <img class="desktop-only"
+                                            src="https://global.hisense.com/dam/jcr:66fc181e-8427-4f64-9965-bcf0f2880041/hisense-tv-a9.jpg"
+                                            alt="Hisense TV A9G">
+                                        <img class="mobile-only"
+                                            src="https://global.hisense.com/dam/jcr:7522f056-6775-4d64-b460-832bf126fbc5/hisense-tv-a9-mobile.jpg"
+                                            alt="Hisense TV A9G">
+                                    </div>
+                                </div>
+                                <div class="overview-content theme-white">
+                                    <div class="type">OLED TV</div>
+                                    <div class="style">Deep Blacks</div>
+                                    <div class="viewmore"><a class="btn-hisense" href="/tv/oled-4k-tv-a9g/"
+                                            target="_self" tabindex="0">View More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-slide slick-active" data-slick-index="2" aria-hidden="false"
+                        style="width: 270px;">
+                        <div>
+                            <div class="overview-type" style="width: 100%; display: inline-block;">
+                                <div class="img">
+                                    <div class="img-container">
+                                        <img class="desktop-only"
+                                            src="https://global.hisense.com/dam/jcr:007733e3-688d-4054-a345-a0ee07fbe400/hisense-tv-a6.jpg"
+                                            alt="Hisense TV A6G">
+                                        <img class="mobile-only"
+                                            src="https://global.hisense.com/dam/jcr:40056ff5-8d24-4c02-8b68-7768d9205606/hisense-tv-a6-mobile.jpg"
+                                            alt="Hisense TV A6G">
+                                    </div>
+                                </div>
+                                <div class="overview-content theme-white">
+                                    <div class="type">UHD TV</div>
+                                    <div class="style">Simply Brilliant 4K</div>
+                                    <div class="viewmore"><a class="btn-hisense" href="/tv/uhd-4k-tv-a6g/"
+                                            target="_self" tabindex="0">View More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slick-slide slick-active" data-slick-index="3" aria-hidden="false"
+                        style="width: 270px;">
+                        <div>
+                            <div class="overview-type" style="width: 100%; display: inline-block;">
+                                <div class="img">
+                                    <div class="img-container">
+                                        <img class="desktop-only"
+                                            src="https://global.hisense.com/dam/jcr:33152a5c-6080-4543-82d5-e1c5f2b3a0c2/hisense-tv-a4.jpg"
+                                            alt="Hisense TV A4G">
+                                        <img class="mobile-only"
+                                            src="https://global.hisense.com/dam/jcr:d5b89d7e-14b4-4cd0-878d-2b7f9d2256da/hisense-tv-a4-mobile.jpg"
+                                            alt="Hisense TV A4G">
+                                    </div>
+                                </div>
+                                <div class="overview-content theme-white">
+                                    <div class="type">Smart TV</div>
+                                    <div class="style">Live Streaming , Live Smart</div>
+                                    <div class="viewmore"><a class="btn-hisense"
+                                            href="/tv/fhd-smart-tv-a4g/" target="_self" tabindex="0">View
+                                            More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                </ng-template>
+            </ng-container>
+        </swiper>
+    </ng-container>
+</ng-template>

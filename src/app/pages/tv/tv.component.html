@@ -1,0 +1,736 @@
+<div class="page-wrapper">
+    <div class="main-container">
+        <app-ui-main-slider [slides]="slides" [navigation]="slides.length > 1" [loop]="true" [pagination]="true">
+        </app-ui-main-slider>
+
+        <div class="product-listing js-stickybit-parent">
+            <div class="mobile-product-filter">
+                <div class="product-name">tv</div>
+                <div class="product-filter-button">
+                    <div class="mobile-filter" (click)="toggleFilterInMobile()">Filter</div>
+
+                </div>
+            </div>
+            <div class="product-filter" style="position: sticky; top: 80px;" [ngClass]="{'show__filter__section': showFilterSectionInMobile}">
+                <div class="mobile-filter">Filter by
+                    <div class="close" (click)="toggleFilterInMobile()"></div>
+                </div>
+                <div class="product-filter-container">
+                    <div class="title">Filter by</div>
+                    <div class="filter-clear"> <span>Clear all</span></div>
+                    <div class="product-filter-type" style="max-height: 166px;">
+                        <div class="product-filter-title">Type</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="uled"
+                                            style="width: 67px; height: 28px;"><span>ULED</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="oled"
+                                            style="width: 70px; height: 28px;"><span>OLED</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="uhd-4k"
+                                            style="width: 86px; height: 28px;"><span>UHD
+                                            4K</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="smart"
+                                            style="width: 80px; height: 28px;"><span>SMART</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-filter-type" style="max-height: 142px;">
+                        <div class="product-filter-title">Screen Size</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="40”-or-less"
+                                            style="width: 107px; height: 28px;"><span>40" or less</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="43”-to-65”"
+                                            style="width: 100px; height: 28px;"><span>43" to 65"</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="70”or-above"
+                                            style="width: 126px; height: 28px;"><span>70" or above</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-filter-type" style="max-height: 334px;">
+                        <div class="product-filter-title">Features</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="8k-resolution"
+                                            style="width: 133px; height: 28px;"><span>8K Resolution</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="mini-led-technology"
+                                            style="width: 190px; height: 28px;"><span>Mini-LED Technology</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="quantum-dot-colour"
+                                            style="width: 194px; height: 28px;"><span>Quantum Dot Colour</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="full-array-local-dimming"
+                                            style="width: 221px; height: 28px;"><span>Full Array Local Dimming</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="dolby-vision-hdr"
+                                            style="width: 160px; height: 28px;"><span>Dolby Vision HDR</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="hdr-10+"
+                                            style="width: 91px; height: 28px;"><span>HDR
+                                            10+</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="game-mode-pro"
+                                            style="width: 157px; height: 28px;"><span>Game Mode Pro</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="ultra-motion"
+                                            style="width: 124px; height: 28px;"><span>Ultra Motion</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="front-firing-speakers"
+                                            style="width: 190px; height: 28px;"><span>Front Firing Speakers</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="voice-control"
+                                            style="width: 135px; height: 28px;"><span>Voice Control</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="streaming-apps"
+                                            style="width: 156px; height: 28px;"><span>Streaming apps</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-filter-type" style="max-height: 142px;">
+                        <div class="product-filter-title">Television Resolution</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="8k-(7680×4320)"
+                                            style="width: 143px; height: 28px;"><span>8K (7680x4320)</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="4k-(3840×2160)"
+                                            style="width: 140px; height: 28px;"><span>4K (3840x2160)</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="full-hd-(1920*1080)"
+                                            style="width: 171px; height: 28px;"><span>Full HD (1920x1080)</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-filter-type" style="max-height: 142px;">
+                        <div class="product-filter-title">Peak Brightness</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="600-or-less"
+                                            style="width: 113px; height: 28px;"><span>600 or less</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="700-to-1500"
+                                            style="width: 117px; height: 28px;"><span>700 to 1500</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="2000-or-more"
+                                            style="width: 136px; height: 28px;"><span>2000 or more</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="product-filter-type" style="max-height: 190px;">
+                        <div class="product-filter-title">Best For</div>
+                        <div class="product-filter-detail">
+                            <ul>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="films"
+                                            style="width: 70px; height: 28px;"><span>Films</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="sports"
+                                            style="width: 79px; height: 28px;"><span>Sports</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="games"
+                                            style="width: 87px; height: 28px;"><span>Games</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="apps"
+                                            style="width: 69px; height: 28px;"><span>Apps</span></div>
+                                </li>
+                                <li>
+                                    <div><input type="checkbox" id="" data-filter="tv"
+                                            style="width: 48px; height: 28px;"><span>TV</span></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="btn-container"><a class="btn-clear" href="javascript:void(0)">Clear</a><a
+                            class="btn-apply" href="javascript:void(0)">Apply</a></div>
+                </div>
+            </div>
+            <div class="product-listing-inner">
+                <div class="product-listing-no-result">No Result</div>
+
+
+
+
+                <div class="product-listing-tab"
+                    data-filter="oled 43”-to-65” mini-led-technology game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ 4k-(3840×2160) 700-to-1500 sports games ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/oled-4k-tv-a9h" style="transform: translateY(20px);">
+                        <img src="assets/images/TV_A9H.png" alt="OLED 4K TV A9H">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" class="" style="transform: translateY(30px);">OLED 4K</h4>
+                        <h3 data-track="35" class="" style="transform: translateY(35px);">Hisense OLED 4K TV A9H</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"
+                                style="width: 0px; opacity: 0; transform: translateX(97.4271px);"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_1.png" alt="TV A9H Infinite Blacks">
+                                <div class="product-highlight-text">Infinite Blacks</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_2.png" alt="TV A9H Pixel Dimming">
+                                <div class="product-highlight-text">Pixel Dimming</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_3.png" alt="TV A9H OLED Colour">
+                                <div class="product-highlight-text">OLED Colour</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/oled-4k-tv-a9h">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uhd-4k 70”or-above 43”-to-65” quantum-dot-colour dolby-vision-hdr voice-control streaming-apps hdr-10+ 4k-(3840×2160) 600-or-less tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uhd-4k-tv-a7h" style="transform: translateY(20px);">
+                        <img src="assets/images/TV_A7H.png" alt="Hisense UHD 4K TV A7H  - Listing image">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" class="" style="transform: translateY(30px);">UHD 4K</h4>
+                        <h3 data-track="35" class="" style="transform: translateY(35px);">UHD 4K TV A7H</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature_natural-colour-enhancer.png"
+                                    alt="Hisense UHD 4K TV A7H - Precision Colour">
+                                <div class="product-highlight-text">Precision Colour</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature_Quantum-Dot-Colour2.png"
+                                    alt="Hisense UHD 4K TV A7H - WIDE COLOUR GAMUT">
+                                <div class="product-highlight-text">WIDE COLOUR GAMUT</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature_Dolby-Atmos.png"
+                                    alt="Hisense UHD 4K TV A7H - Dolby Atmos">
+                                <div class="product-highlight-text">Dolby Atmos</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uhd-4k-tv-a7h">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 70”or-above mini-led-technology quantum-dot-colour dolby-vision-hdr game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ ultra-motion front-firing-speakers 8k-(7680×4320) 2000-or-more films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/mini-led-uled-tv-u9g" style="transform: translateY(20px);">
+                        <img src="assets/images/TV_U9G_MINI-LED_ULED_8KTV@2x.png"
+                            alt="Mini-LED ULED 8K TV U9G">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">Mini-LED ULED 8K TV U9G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"
+                                style="transform: translateX(97.4271px); width: 53px; opacity: 1;"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature1.png" alt="Hisense U9G TV ULED icon">
+                                <div class="product-highlight-text">ULED</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature2.svg"
+                                    alt="Hisense U9G TV 8K Resolution icon">
+                                <div class="product-highlight-text">8K Resolution</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Feature3.svg"
+                                    alt="Hisense U9G 8K AI Upscaler icon">
+                                <div class="product-highlight-text">8K AI Upscaler</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/mini-led-uled-tv-u9g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 70”or-above quantum-dot-colour dolby-vision-hdr 8k-resolution game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ ultra-motion front-firing-speakers 4k-(3840×2160) 700-to-1500 films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/dual-cell-uled-4k-tv-u9dg"
+                        style="transform: translateY(20px);">
+                        <img src="assets/images/TV_U9G_DUAL_CELL_ULED_4KTV@2x.png"
+                            alt="Dual-cell ULED 4K TV U9DG Image Front Top">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">Dual-cell ULED 4K TV U9DG</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Landing_feature_1@2x.png"
+                                    alt="Hisense U9DG - Dual Cell ULED Small Icon">
+                                <div class="product-highlight-text">Dual Cell ULED</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x.png"
+                                    alt="Hisense U9DG - Dimming Zones Small Icon">
+                                <div class="product-highlight-text">2,000,000+ Dimming Zones</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x.png"
+                                    alt="Hisense U9DG - Hi-VIEW Engine Small Icon">
+                                <div class="product-highlight-text">HI-VIEW Engine</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail"
+                                href="https://global.hisense.com/tv/dual-cell-uled-4k-tv-u9dg">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense"
+                                href="https://global.hisense.com/tv/dual-cell-uled-4k-tv-u9dg?type=where-to-buy">Where
+                                to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 70”or-above quantum-dot-colour dolby-vision-hdr 8k-resolution game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ ultra-motion 8k-(7680×4320) 700-to-1500 films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uled-8k-tv-u80g" style="transform: translateY(20px);">
+                        <img src="assets/images/TV_U80G_ULED_8K_TV@2x.png" alt="ULED 8K TV U80G">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">ULED 8K TV U80G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor" style="width: 0px; opacity: 0;"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x.png"
+                                    alt="Hisense U80G - Dolby Vision Listing Icon">
+                                <div class="product-highlight-text">Dolby vision</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(1).png"
+                                    alt="Hisense U80G - 8K Resolution Listing Icon">
+                                <div class="product-highlight-text">8K Resolution </div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(1).png"
+                                    alt="Hisense U80G - Full Array Local Dimming ProListing Icon">
+                                <div class="product-highlight-text">Full Array Local Dimming Pro</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uled-8k-tv-u80g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense"
+                                href="https://global.hisense.com/tv/uled-8k-tv-u80g?type=where-to-buy">Where to
+                                buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="oled 70”or-above 43”-to-65” dolby-vision-hdr game-mode-pro voice-control streaming-apps hdr-10+ ultra-motion front-firing-speakers 4k-(3840×2160) films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/oled-4k-tv-a9g" style="transform: translateY(20px);">
+                        <img src="assets/images/A9G@2x.png"
+                            alt="Hisense A9G - Wide Colour Gamut  Small Icon">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">OLED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">OLED 4K TV A9G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(1).png"
+                                    alt="Hisense A9G - Wide Colour Gamut  Small Icon">
+                                <div class="product-highlight-text">Wide Colour Gamut</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(2).png"
+                                    alt="Hisense A9G - Pixel Dimming Small Icon">
+                                <div class="product-highlight-text">Pixel Dimming</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(2).png"
+                                    alt="Hisense A9G - Ultimate Contrast Small Icon">
+                                <div class="product-highlight-text">Ultimate Contrast</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/oled-4k-tv-a9g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 43”-to-65” quantum-dot-colour dolby-vision-hdr game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ ultra-motion front-firing-speakers 700-to-1500 films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uled-4k-tv-u8g" style="transform: translateY(20px);">
+                        <img src="assets/images/U8G@2x.png" alt="Hisense ULED 4K TV U8G icon">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">ULED 4K TV U8G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor" style="width: 0px; opacity: 0;"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(3).png"
+                                    alt="Hisense U8G - HDR10 Small Icon">
+                                <div class="product-highlight-text">HDR10+</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(4).png"
+                                    alt="Hisense U8G - Dolby Vision Atmos Small Icon">
+                                <div class="product-highlight-text">Dolby Vision Atmos</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(3).png"
+                                    alt="Hisense U8G - Full Array Local Dimming Pro Small Icon">
+                                <div class="product-highlight-text">Full Array Local Dimming Pro</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uled-4k-tv-u8g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 70”or-above 43”-to-65” quantum-dot-colour dolby-vision-hdr game-mode-pro voice-control full-array-local-dimming streaming-apps hdr-10+ ultra-motion 4k-(3840×2160) 700-to-1500 films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product="/tv-u7g"
+                        href="https://global.hisense.com/tv-u7g" style="transform: translateY(20px);">
+                        <img src="assets/images/U7G@2x.png" alt="ULED 4K TV U7G product image ">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">ULED 4K TV U7G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(2).png"
+                                    alt="Hisense U7G - Quantum Dot Colour Small Icon">
+                                <div class="product-highlight-text">Quantum Dot Colour</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(4).png"
+                                    alt="Hisense U6G - Full Array Local Dimming Small Icon">
+                                <div class="product-highlight-text">Full Array Local Dimming</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(5).png"
+                                    alt="Hisense U6G - HDR10+ Small Icon">
+                                <div class="product-highlight-text">HDR10+</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv-u7g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 43”-to-65” quantum-dot-colour dolby-vision-hdr voice-control full-array-local-dimming streaming-apps hdr-10+ 4k-(3840×2160) 700-to-1500 films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uled-4k-tv-u7qf" style="transform: translateY(20px);">
+                        <img src="assets/images/U7QF@2x.png" alt="ULED 4K TV U7QF">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">ULED 4K TV U7QF</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor" style="width: 0px; opacity: 0;"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(3).png"
+                                    alt="Hisense U7QF - ULED Listing Icon">
+                                <div class="product-highlight-text">ULED</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(5).png"
+                                    alt="Hisense U7QF - Hi-View Engine Listing Icon">
+                                <div class="product-highlight-text">HI-VIEW Engine</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(6).png"
+                                    alt="Hisense U7QF - 4K Resolution Listing Icon">
+                                <div class="product-highlight-text">4K Resolution</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uled-4k-tv-u7qf">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uled 43”-to-65” full-array-local-dimming hdr-10+ 4k-(3840×2160) films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uled-4k-tv-u6g" style="transform: translateY(20px);">
+                        <img src="assets/images/U6G@2x.png" alt="ULED 4K TV U6G">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">ULED</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">ULED 4K TV U6G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(4).png"
+                                    alt="Hisense U6G - Wide Colour Gamut Small Icon">
+                                <div class="product-highlight-text">Wide Colour Gamut</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(6).png"
+                                    alt="Hisense U6G - Full Array Local Dimming Small Icon">
+                                <div class="product-highlight-text">Full Array Local Dimming</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(7).png"
+                                    alt="Hisense U6G - HDR10+ Small Icon">
+                                <div class="product-highlight-text">HDR10+</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uled-4k-tv-u6g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uhd-4k 70”or-above 43”-to-65” quantum-dot-colour dolby-vision-hdr voice-control streaming-apps hdr-10+ 4k-(3840×2160) films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uhd-4k-tv-a7g" style="transform: translateY(20px);">
+                        <img src="assets/images/A7G@2x.png" alt="UHD 4K TV A7G">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">UHD</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">UHD 4K TV A7G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(5).png"
+                                    alt="Hisense A7G - UHD AI Upscaler listing icon">
+                                <div class="product-highlight-text">UHD AI Upscaler</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(4).png"
+                                    alt="Hisense A7G - Dolby Vision Atmos listing icon">
+                                <div class="product-highlight-text">Dolby Vision Atmos</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(7).png"
+                                    alt="Hisense A7G - Ai Picture Optimization listing icon">
+                                <div class="product-highlight-text">AI Picture Optimization</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uhd-4k-tv-a7g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="uhd-4k 70”or-above 43”-to-65” dolby-vision-hdr voice-control streaming-apps 4k-(3840×2160) films tv sports games apps ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/uhd-4k-tv-a6g" style="transform: translateY(20px);">
+                        <img src="assets/images/A6G@2x.png" alt="Hisense A6G Listing image">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">UHD </h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">UHD 4K TV A6G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon1@2x(6).png"
+                                    alt="Hisense A6G 4K Resolution listing icon">
+                                <div class="product-highlight-text">4K Resolution</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon2@2x(8).png"
+                                    alt="Hisense A6G UHD AI Upscaler listing icon">
+                                <div class="product-highlight-text">UHD AI Upscaler</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/Icon3@2x(8).png"
+                                    alt="Hisense A6G Alexa Built-In listing icon">
+                                <div class="product-highlight-text">Alexa Built-in</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/uhd-4k-tv-a6g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-listing-tab"
+                    data-filter="smart 40”-or-less voice-control streaming-apps full-hd-(1920*1080) ">
+                    <a class="product-listing-img" data-track="20" data-hero-product=""
+                        href="https://global.hisense.com/tv/fhd-smart-tv-a4g" style="transform: translateY(20px);">
+                        <img src="assets/images/A4G@2x.png" alt="Hisense A4G Listing Image">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4 data-track="30" style="transform: translateY(30px);" class="">FHD</h4>
+                        <h3 data-track="35" style="transform: translateY(35px);" class="">FHD SMART TV A4G</h3>
+                        <div class="product-highlights" data-track="50" style="transform: translateY(50px);">
+                            <div class="product-highlights-cursor"></div>
+
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_1@2x.png"
+                                    alt="Hisense A4G VIDAA Smart OS listing icon">
+                                <div class="product-highlight-text">VIDAA Smart OS</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_2@2x.png"
+                                    alt="Hisense A4G DTS Virtual:X listing icon">
+                                <div class="product-highlight-text">Hisense A4G VIDAA Smart OS listing icon</div>
+                            </a>
+                            <a class="product-highlight" href="https://global.hisense.com/tv#">
+                                <img src="assets/images/listing_icon_3@2x.png"
+                                    alt="Hisense A4G Noise Reduction listing icon">
+                                <div class="product-highlight-text">Noise Reduction</div>
+                            </a>
+
+                        </div>
+                        <div class="product-highlights-description"></div>
+                    </div>
+                    <div class="product-listing-tab-buttons" data-track="35" style="transform: translateY(35px);">
+                        <div>
+                            <a class="btn-detail" href="https://global.hisense.com/tv/fhd-smart-tv-a4g">Detail</a>
+                        </div>
+                        <div>
+                            <a class="btn-hisense" href="https://global.hisense.com/regional">Where to buy</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
