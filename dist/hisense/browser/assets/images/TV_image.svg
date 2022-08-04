@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00aaa6"/>
+      <stop offset="0.877" stop-color="#39d5ce"/>
+      <stop offset="1" stop-color="#6debe6"/>
+    </linearGradient>
+    <clipPath id="clip-Soundbar_icon_movie_7">
+      <rect width="60" height="60"/>
+    </clipPath>
+  </defs>
+  <g id="Soundbar_icon_movie_7" data-name="Soundbar_icon_movie – 7" clip-path="url(#clip-Soundbar_icon_movie_7)">
+    <path id="Path_11196" data-name="Path 11196" d="M260.84-582.545l.1-29.76-26.359-14.943L208.43-612.41v30.146l-.231.4h.776l25.408,14.619,25.851-14.9.793-.075Zm-2.414-29.279-11.036,6.233-10.9-18.667Zm-25.582-12.527-10.9,18.8-11.011-6.362ZM210.09-610.483l11.018,6.365L210.09-585.123Zm23.468,40.842-21.223-12.241L233.6-582Zm.049-14.021-22.518.128,11.459-19.758,11.105,6.42ZM223.38-604.724l11.259-19.409,11.3,19.359-11.454,6.467Zm11.839,35.077.042-12.361,21.618-.123Zm.048-14.025.048-13.193,11.467-6.475,11.405,19.54Zm23.92-1.706-10.963-18.779,11.051-6.244Z" transform="translate(-204.199 627.248)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

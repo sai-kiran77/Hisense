@@ -7,6 +7,7 @@ import { HomeModule } from './pages/home/home.module';
 import { SwiperModule } from 'swiper/angular';
 import { ShellComponent } from './components/shell/shell.component';
 import { ComponentsModule } from './components/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ComponentsModule } from './components/components.module';
     AppRoutingModule,
     HomeModule,
     SwiperModule,
-    ComponentsModule
+    ComponentsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
