@@ -5,8 +5,8 @@
         <div class="navbar" id="navbar">
             <div class="navigations">
                 <ul class="left">
-                    <li class="">
-                        <a>TV &amp; Audio</a>
+                    <!-- <li class="">
+                        <a>Television</a>
                         <a (click)="subDropdownToggle = true" class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-tv-and-audio"
                             aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
                         <div [ngClass]="{'menu-in': subDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
@@ -33,209 +33,46 @@
                                 </a>
                             </div>
                         </div>
-                    </li>
-                    <li class="">
-                        <a>Laser TV </a>
-                        <a class="toggle-dropdown"
-                            id="toggle-dropdown-laser-tv" aria-haspopup="true" aria-expanded="false"
-                            aria-label="Toggle dropdown"> </a>
-                        <div class="dropdown-menu" aria-labelledby="toggle-dropdown-laser-tv">
-                            <button class="mobile-back" type="button" aria-label="Toggle sub navigation"><span
-                                    class="navbar-back-icon"></span></button>
-                            <div class="section-title">Laser TV </div>
+                    </li> -->
+                    <li class="" *ngFor="let obj of navLinks">
+                        <a [routerLink]="obj.url">{{obj.text}}</a>
+                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-tv-and-audio"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
+                        <div [ngClass]="{'menu-in': obj.subDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="obj.subDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
+                                <span class="navbar-back-icon"></span>
+                            </button>
+                            <div class="section-title">{{obj.text}}</div>
                             <div class="sub-menu">
-                                <a class="" routerLink="/laser-tv-series">
+                                <a class="" [routerLink]="subLink?.url" [fragment]="subLink?.fragment" *ngFor="let subLink of obj['sub-menu']">
                                     <span class="thumbnail">
                                         <div class="img">
-                                            <img src="assets/images/laser-tv.png"
-                                                alt="Laser TV">
+                                            <img [src]="subLink.image" [alt]="subLink.text">
                                         </div>
                                     </span>
-                                    <span class="title">Laser TV</span>
+                                    <span class="title">{{subLink.text}}</span>
                                 </a>
-                                <a class="" routerLink="/laser-cinema">
+                                <!-- <a class="" routerLink="/soundbar-series">
                                     <span class="thumbnail">
                                         <div class="img">
-                                            <img src="assets/images/laser-cinema.png"
-                                                alt="Laser Cinema">
+                                            <img src="assets/images/soundbar.png"
+                                                alt="Soundbar">
                                         </div>
                                     </span>
-                                    <span class="title">Laser Cinema</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);">Home Appliances</a>
-                        <a class="toggle-dropdown"
-                            href="javascript:;" id="toggle-dropdown-home-appliances" aria-haspopup="true"
-                            aria-expanded="false" aria-label="Toggle dropdown"> </a>
-                        <div class="dropdown-menu" aria-labelledby="toggle-dropdown-home-appliances">
-                            <button class="mobile-back" type="button" aria-label="Toggle sub navigation"><span
-                                    class="navbar-back-icon"></span></button>
-                            <div class="section-title">Home Appliances</div>
-                            <div class="sub-menu with-subsection">
-                                <a class="" href="https://global.hisense.com/refrigerator-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/refrigerator.png"
-                                                alt="Refrigerator">
-                                        </div>
-                                    </span>
-                                    <span class="title">Refrigerator</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/laundry-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/laundry.png"
-                                                alt="Laundry ">
-                                        </div>
-                                    </span>
-                                    <span class="title">Laundry </span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/dishwasher-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/dishwasher.png"
-                                                alt="Dishwasher">
-                                        </div>
-                                    </span>
-                                    <span class="title">Dishwasher</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/oven-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/oven.png"
-                                                alt="Oven">
-                                        </div>
-                                    </span>
-                                    <span class="title">Oven</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/hob-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/hob.png"
-                                                alt="Hob">
-                                        </div>
-                                    </span>
-                                    <span class="title">Hob</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/microwave-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/microwave.png"
-                                                alt="Microwave">
-                                        </div>
-                                    </span>
-                                    <span class="title">Microwave</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/wine-cabinet-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/wine-cabinet.png"
-                                                alt="Wine Cabinet">
-                                        </div>
-                                    </span>
-                                    <span class="title">Wine Cabinet</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/chest-freezer-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/chest-freezer.png"
-                                                alt="Chest Freezer">
-                                        </div>
-                                    </span>
-                                    <span class="title">Chest Freezer</span>
-                                </a>
-                                <a class="" href="https://global.hisense.com/air-conditioner-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/air-conditioner.png"
-                                                alt="Air Conditioner">
-                                        </div>
-                                    </span>
-                                    <span class="title">Air Conditioner</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);">Mobile</a>
-                        <a class="toggle-dropdown" href="javascript:;"
-                            id="toggle-dropdown-mobile" aria-haspopup="true" aria-expanded="false"
-                            aria-label="Toggle dropdown"> </a>
-                        <div class="dropdown-menu" aria-labelledby="toggle-dropdown-mobile">
-                            <button class="mobile-back" type="button" aria-label="Toggle sub navigation"><span
-                                    class="navbar-back-icon"></span></button>
-                            <div class="section-title">Mobile</div>
-                            <div class="sub-menu">
-                                <a class="" href="https://global.hisense.com/smartphone-series/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/smartphone.png"
-                                                alt="Smartphone">
-                                        </div>
-                                    </span>
-                                    <span class="title">Smartphone</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="">
-                        <a href="javascript:void(0);">B2B</a>
-                        <a class="toggle-dropdown" href="javascript:;"
-                            id="toggle-dropdown-commercial-display" aria-expanded="false" aria-label="Toggle dropdown">
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="toggle-dropdown-commercial-display">
-                            <button class="mobile-back" type="button" aria-label="Toggle sub navigation"><span
-                                    class="navbar-back-icon"></span></button>
-                            <div class="section-title">B2B</div>
-                            <div class="sub-menu">
-                                <a href="https://commercial-display.hisense.com/" target="_blank" rel="noopener">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/hisense-commercial-display.png"
-                                                alt="Commercial Display">
-                                        </div>
-                                    </span>
-                                    <span class="title">Commercial Display</span>
-                                </a>
-                                <a href="http://medical.hisense.com/" target="_blank" rel="noopener">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/hisense-medical.png"
-                                                alt="Medical">
-                                        </div>
-                                    </span>
-                                    <span class="title">Medical</span>
-                                </a>
-                                <a href="http://www.hisense-transtech.com/" target="_blank" rel="noopener">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/hisense-transtech.png"
-                                                alt="Transtech">
-                                        </div>
-                                    </span>
-                                    <span class="title">Transtech</span>
-                                </a>
-                                <a href="http://www.hisensehvac.com/" target="_blank" rel="noopener">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/hisense-HVAC.png"
-                                                alt="HVAC">
-                                        </div>
-                                    </span>
-                                    <span class="title">HVAC</span>
-                                </a>
+                                    <span class="title">Soundbar</span>
+                                </a> -->
                             </div>
                         </div>
                     </li>
                 </ul>
                 <ul class="right">
                     <li class="">
-                        <a href="https://global.hisense.com/about-hisense/overview/">About Hisense</a>
+                        <a routerLink="/about-us">About Us</a>
                     </li>
                     <li class="">
+                        <a routerLink="/contact-us">Contact Us</a>
+                    </li>
+                    <!-- <li class="">
                         <a href="javascript:void(0);">Support</a>
                         <a class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-support}"
                             aria-expanded="false" aria-label="Toggle dropdown"> </a>
@@ -274,12 +111,12 @@
                                 </a>
                             </div>
                         </div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>
-        <a class="icon-region" href="https://global.hisense.com/regional">International</a>
-        <a class="icon-search" id="btnSearch"></a>
+        <!-- <a class="icon-region" href="https://global.hisense.com/regional">International</a> -->
+        <!-- <a class="icon-search" id="btnSearch"></a> -->
         <button [ngClass]="{'active':mobileNavToggle}" class="mobile-nav-toggle" type="button" aria-controls="navbar" aria-expanded="false"
             aria-label="Toggle navigation" (click)="mobileNavToggle = !mobileNavToggle">
             <span class="navbar-toggler-icon"></span>
@@ -287,4 +124,4 @@
     </nav>
 </header>
 
-<a class="btn-backtotop" [ngClass]="{'scroll-up': headerHidden}" (click)="scrollTop()">BACK TO TOP</a>
+<!-- <a class="btn-backtotop" [ngClass]="{'scroll-up': headerHidden}" (click)="scrollTop()">BACK TO TOP</a> -->

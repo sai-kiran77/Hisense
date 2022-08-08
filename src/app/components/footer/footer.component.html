@@ -1,6 +1,45 @@
 <div class="footer-links-container">
   <div class="footer-links">
+    
+    <ul class="col" *ngFor="let menu of navLinks">
+      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+        <dl>
+          <dt><a [routerLink]="menu.url">{{menu.text}}</a></dt>
+          <dd *ngFor="let subMenu of menu['sub-menu']"><a [routerLink]="subMenu.url" [fragment]="subMenu.fragment">{{subMenu.text}}</a></dd>
+        </dl>
+      </li>
+    </ul>
+    
     <ul class="col">
+      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+        <dl>
+          <dt><a routerLink="/about-us" target="" rel="">About Hisense </a></dt>
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/overview" target="" rel="">Overview</a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/history" target="" rel="">History </a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/industrial-group/" target="" rel="">Industrial Groups
+            </a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/values" target="" rel="">Values</a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/csr" target="" rel="">CSR</a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/technology" target="" rel="">Technology </a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/newsroom/" target="" rel="">Newsroom</a></dd> -->
+          <!-- <dd><a href="https://global.hisense.com/about-hisense/partnership/" target="" rel="">Partnership</a></dd> -->
+          <dd><a routerLink="/about-us" target="" rel="">About US</a></dd>
+        </dl>
+      </li>
+      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+        <dl>
+          <dt><a routerLink="/contact-us" target="" rel="">Support</a></dt>
+          <!-- <dd><a href="https://global.hisense.com/support/certificate-download" target="" rel="">Certificate
+              Download</a></dd> -->
+          <dd><a routerLink="/contact-us" target="" rel="">Contact Us </a></dd>
+          <!-- <dd><a href="https://global.hisense.com/support/customer-center/" target="" rel="">Customer Center</a></dd> -->
+        </dl>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- <ul class="col">
       <li class="row" [ngClass]="{'show':row1}" style="max-height: 58px;">
         <a (click)="row1 = !row1" class="accordion-toggle" href="javascript:;"></a>
         <dl>
@@ -16,64 +55,23 @@
           <dd><a href="https://global.hisense.com/laser-cinema" target="" rel="">Laser Cinema</a></dd>
         </dl>
       </li>
-    </ul>
-    <ul class="col">
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
-        <dl>
-          <dt><a href="https://global.hisense.com/refrigerator-series" target="" rel="">Home Appliances</a></dt>
-          <dd><a href="https://global.hisense.com/refrigerator-series" target="" rel="">Refrigerator</a></dd>
-          <dd><a href="https://global.hisense.com/laundry-series" target="" rel="">Laundry</a></dd>
-          <dd><a href="https://global.hisense.com/dishwasher-series" target="" rel="">Dishwasher</a></dd>
-          <dd><a href="https://global.hisense.com/oven-series" target="" rel="">Oven</a></dd>
-          <dd><a href="https://global.hisense.com/hob-series" target="" rel="">Hob</a></dd>
-          <dd><a href="https://global.hisense.com/microwave-series" target="" rel="">Microwave</a></dd>
-          <dd><a href="https://global.hisense.com/wine-cabinet-series" target="" rel="">Wine Cabinet</a></dd>
-          <dd><a href="https://global.hisense.com/chest-freezer-series" target="" rel="">Chest Freezer</a></dd>
-          <dd><a href="https://global.hisense.com/air-conditioner-series" target="" rel="">Air Conditioner</a></dd>
-        </dl>
-      </li>
-    </ul>
-    <ul class="col">
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
-        <dl>
-          <dt><a href="https://global.hisense.com/smartphone-series" target="" rel="">Mobile</a></dt>
-          <dd><a href="https://global.hisense.com/smartphone-series" target="" rel="">Smartphone</a></dd>
-        </dl>
-      </li>
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
-        <dl>
-          <dt><a href="https://commercial-display.hisense.com/" target="_blank" rel="">B2B</a></dt>
-          <dd><a href="https://commercial-display.hisense.com/" target="_blank" rel="">Commercial Display</a></dd>
-          <dd><a href="http://medical.hisense.com/" target="_blank" rel="">Medical</a></dd>
-          <dd><a href="http://www.hisense-transtech.com/" target="_blank" rel="">Transtech</a></dd>
-          <dd><a href="http://www.hisensehvac.com/" target="_blank" rel="">HVAC</a></dd>
-        </dl>
-      </li>
-    </ul>
-    <ul class="col">
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
-        <dl>
-          <dt><a href="https://global.hisense.com/about-hisense/overview" target="" rel="">About Hisense </a></dt>
-          <dd><a href="https://global.hisense.com/about-hisense/overview" target="" rel="">Overview</a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/history" target="" rel="">History </a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/industrial-group/" target="" rel="">Industrial Groups
-            </a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/values" target="" rel="">Values</a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/csr" target="" rel="">CSR</a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/technology" target="" rel="">Technology </a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/newsroom/" target="" rel="">Newsroom</a></dd>
-          <dd><a href="https://global.hisense.com/about-hisense/partnership/" target="" rel="">Partnership</a></dd>
-        </dl>
-      </li>
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
-        <dl>
-          <dt><a href="https://global.hisense.com/support/certificate-download" target="" rel="">Support</a></dt>
-          <dd><a href="https://global.hisense.com/support/certificate-download" target="" rel="">Certificate
-              Download</a></dd>
-          <dd><a href="https://global.hisense.com/support/contact-us/" target="" rel="">Contact Us </a></dd>
-          <dd><a href="https://global.hisense.com/support/customer-center/" target="" rel="">Customer Center</a></dd>
-        </dl>
-      </li>
-    </ul>
-  </div>
-</div>
+    </ul> -->
+
+
+<!-- <ul class="col">
+  <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+    <dl>
+      <dt><a href="https://global.hisense.com/smartphone-series" target="" rel="">Mobile</a></dt>
+      <dd><a href="https://global.hisense.com/smartphone-series" target="" rel="">Smartphone</a></dd>
+    </dl>
+  </li>
+  <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+    <dl>
+      <dt><a href="https://commercial-display.hisense.com/" target="_blank" rel="">B2B</a></dt>
+      <dd><a href="https://commercial-display.hisense.com/" target="_blank" rel="">Commercial Display</a></dd>
+      <dd><a href="http://medical.hisense.com/" target="_blank" rel="">Medical</a></dd>
+      <dd><a href="http://www.hisense-transtech.com/" target="_blank" rel="">Transtech</a></dd>
+      <dd><a href="http://www.hisensehvac.com/" target="_blank" rel="">HVAC</a></dd>
+    </dl>
+  </li>
+</ul> -->

@@ -18,6 +18,34 @@ const routes: Routes = [
         loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
       },
       {
+        path: 'about-us',
+        loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+      },
+      {
+        path: 'contact-us',
+        loadChildren: () => import('./pages/contact-us/contact-us.module').then(m => m.ContactUsModule)
+      },
+      {
+        path: 'privacy-policy',
+        loadChildren: () => import('./pages/privacy-policy/privacy-policy.module').then(m => m.PrivacyPolicyModule)
+      },
+      {
+        path: 'legal-disclaimer',
+        loadChildren: () => import('./pages/legal-disclaimer/legal-disclaimer.module').then(m => m.LegalDisclaimerModule)
+      },
+      // {
+      //   path: 'c/tv',
+      //   loadChildren: () => import('./pages/categories/tv/tv.module').then(m => m.TvModule)
+      // },
+      {
+        path: 'c/:category',
+        loadChildren: () => import('./pages/category/category.module').then(m => m.CategoryModule)
+      },
+      {
+        path: 'v/:varient',
+        loadChildren: () => import('./pages/varient/varient.module').then(m => m.VarientModule)
+      },
+      {
         path: '',
         component: HomeComponent
       }
@@ -31,7 +59,8 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     initialNavigation: 'enabledBlocking',
-    scrollPositionRestoration: 'enabled'
+    scrollPositionRestoration: 'enabled',
+    anchorScrolling: "enabled"
   })],
   exports: [RouterModule]
 })

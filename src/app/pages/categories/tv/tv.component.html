@@ -1,0 +1,46 @@
+<div class="product-listing" style="margin-top: 80px;padding: 1rem;">
+    <div [id]="subCat.code" *ngFor="let subCat of tvMetaData?.subcategories">
+        <div *ngFor="let prodCat of subCat.category_products">
+            <div class="product__category__title">{{prodCat.product.name}}</div>
+            
+            <div class="product-listing-inner">
+                <div class="product-listing-tab" *ngFor="let prod of prodCat.product.product_variants">
+                    <a class="product-listing-img trackin">
+                        <img *ngIf="prod.thumb_image" [src]="prod.thumb_image">
+                        <img *ngIf="!prod.thumb_image" src="assets/images/prod__placeholder.png">
+                    </a>
+                    <div class="product-listing-tab-content">
+                        <h4>{{prod.name}}</h4>
+                        <!-- <h3>ULED 4K TV U8G</h3> -->
+                        <div class="product-listing-description"></div>
+                        <!-- <div class="product-highlights trackin">
+                            <div class="product-highlights-cursor"></div>
+                            <a class="product-highlight" href="#">
+                                <img src="https://global.hisense.com/dam/jcr:53d78b6a-4957-4718-b900-e44483535222/Icon3@2x.png"
+                                    alt="Hisense U8G - HDR10 Small Icon">
+                                <div class="product-highlight-text">HDR10+</div>
+                            </a>
+                            <a class="product-highlight" href="#">
+                                <img src="https://global.hisense.com/dam/jcr:4b2e0a9a-d838-42ba-964a-448070271306/Icon3@2x.png"
+                                    alt="Hisense U8G - Dolby Vision Atmos Small Icon">
+                                <div class="product-highlight-text">Dolby Vision Atmos</div>
+                            </a>
+                            <a class="product-highlight" href="#">
+                                <img src="https://global.hisense.com/dam/jcr:8403045c-c629-4070-80d4-e65f55c29de1/Icon2@2x.png"
+                                    alt="Hisense U8G - Full Array Local Dimming Pro Small Icon">
+                                <div class="product-highlight-text">Full Array Local Dimming Pro</div>
+                            </a>
+                        </div> -->
+                        <!-- <div class="product-highlights-description"></div> -->
+                    </div>
+                    <div class="product-listing-tab-buttons trackin" data-track="35" style="transform: translateY(35px);">
+                        <div><a class="btn-hisense" [routerLink]="prod.relative_url">More Detail</a></div>
+                        <!-- <div>
+                            <a class="btn-detail" href="/regional?type=where-to-buy">Where to buy</a>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

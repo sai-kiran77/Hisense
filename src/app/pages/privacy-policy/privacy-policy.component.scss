@@ -1,0 +1,208 @@
+.page {
+    position: relative;
+    min-height: 100vh;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page {
+        min-height: auto;
+    }
+}
+
+.page__section {
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 50vh;
+    padding-top: 100px;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+@media only screen and (max-width: 80em) {
+    .page__section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__section {
+        padding-top: 60px;
+        padding-bottom: 40px;
+        min-height: auto;
+    }
+}
+
+.page__section_size_full {
+    min-height: 100vh;
+}
+
+.page__section_centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 80px;
+}
+
+.page__cover {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #202020;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.page__cover-inner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page__container {
+    width: 100%;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.page__title {
+    font-family: 'Avalon', Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    padding-top: 80px;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__title {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__title {
+        padding-top: 40px;
+    }
+}
+
+.page__title:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.page__title_centered {
+    text-align: center;
+}
+
+.page__title_bigger {
+    font-family: 'Avalon', Helvetica, sans-serif;
+    font-weight: 600;
+    font-size: 80px;
+    line-height: 1.125;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 80em) {
+    .page__title_bigger {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__title_bigger {
+        font-size: 50px;
+    }
+}
+
+.page__title-description {
+    font-size: 20px;
+    line-height: 1.666666666666667;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__title-description {
+        font-size: 16px;
+    }
+}
+
+.page__subtitle {
+    font-size: 26px;
+    line-height: 1.666666666666667;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__subtitle {
+        font-size: 20px;
+    }
+}
+
+.page__text {
+    font-size: 15px;
+    line-height: 1.615384615384615;
+    margin-bottom: 48px;
+    max-width: 610px;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__text {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__text:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.page__text p {
+    margin-bottom: 25px;
+}
+
+.page__text h2 {
+    font-size: 26px;
+    line-height: 1.666666666666667;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+@media only screen and (max-width: 46.9em) {
+    .page__text h2 {
+        font-size: 20px;
+    }
+}
+
+.page__text img {
+    margin-bottom: 2px;
+    max-width: 100%;
+}
+
+.page__image {
+    margin: 0 0 25px;
+}
+
+.page__image-item {
+    margin-bottom: 2px;
+    max-width: 100%;
+}
+
+.page__image-description {
+    opacity: 0.4;
+}

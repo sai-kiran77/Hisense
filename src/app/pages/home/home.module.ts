@@ -8,6 +8,7 @@ import { MainSliderComponent } from 'src/app/components/main-slider/main-slider.
 import { AboutComponent } from 'src/app/components/about/about.component';
 import { SeriesComponent } from 'src/app/components/series/series.component';
 import { ComponentsModule } from 'src/app/components/components.module';
+import { HomeProductsComponent } from './home-products/home-products.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ComponentsModule } from 'src/app/components/components.module';
     MarketingVideoComponent,
     MainSliderComponent,
     AboutComponent,
-    SeriesComponent
+    SeriesComponent,
+    HomeProductsComponent
   ],
   imports: [
     CommonModule,

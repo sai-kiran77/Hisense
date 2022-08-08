@@ -1,0 +1,14 @@
+@import "libs/styles/tv-series.scss";
+
+.product-listing-tab-buttons{
+    div{
+        width: 100% !important;
+        max-width: none !important;
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
+.product-listing-inner{
+    flex-wrap: nowrap !important;
+}
