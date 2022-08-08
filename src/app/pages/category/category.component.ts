@@ -59,7 +59,7 @@ export class CategoryComponent implements OnInit,OnDestroy {
   }
 
   ngOnDestroy(){
-
+    this.alive = false;
   }
 
 }

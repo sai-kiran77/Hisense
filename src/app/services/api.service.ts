@@ -13,4 +13,8 @@ export class ApiService {
   getSlugData(slugCategory: string, slugURL = '/categories/load-by-slug/'){
     return this.http.get(this.baseURL + slugURL + slugCategory);
   }
+
+  getVarientData(varient: string, varientURL = '/product-variants/load-by-slug/'){
+    return this.http.get(this.baseURL + varientURL + varient);
+  }
 }

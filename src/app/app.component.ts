@@ -11,13 +11,13 @@ export class AppComponent {
   
 
   constructor(private http: HttpClient) {
-    this.http.get('https://hisense-apis.bloginguru.com/v1/pages/metadata?pageName=home').subscribe({
-      next: (res) => {
-        console.log(res);
-      },
-      error: (err) => {
-        console.log(err);
-      }
-    })
+    // this.http.get('https://hisense-apis.bloginguru.com/v1/pages/metadata?pageName=home').subscribe({
+    //   next: (res) => {
+    //     console.log(res);
+    //   },
+    //   error: (err) => {
+    //     console.log(err);
+    //   }
+    // })
   }
 }

@@ -68,8 +68,8 @@
             <div class="product-listing-inner">
                 <div class="product-listing-tab" *ngFor="let prod of prodCat.product.product_variants">
                     <a class="product-listing-img trackin">
-                        <img *ngIf="prod.thumb_image" [src]="prod.thumb_image">
-                        <img *ngIf="!prod.thumb_image" src="assets/images/prod__placeholder.png">
+                        <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
+                        <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
                     </a>
                     <div class="product-listing-tab-content">
                         <h4>{{prod.name}}</h4>
