@@ -5,8 +5,11 @@
                 <div class="owl-wrapper-outer">
                     <div class="owl-wrapper" style="width: 8890px; left: 0px; display: block;">
                         <div class="owl-item" style="min-width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-Main-1.webp">
+                            <div class="item">
+                                <!-- <img alt="" class="product__head-image"
+                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-Main-1.webp"> -->
+                                <img alt="" class="product__head-image"
+                                    [src]="metaData?.thumb_image.full_url">
                             </div>
                         </div>
                         <!-- <div class="owl-item" style="min-width: 635px;">
@@ -59,14 +62,10 @@
                 <div class="product-card__description-left" style="font-size:20px;"></div>
             </div>
 
+            <div class="product__head-description">{{metaData?.name}}</div>
+            <div class="product__head-title" style="margin-bottom:0px!important;">{{metaData?.code}}</div>
 
-
-            <div class="product__head-description">New Arrival</div>
-            <div class="product__head-description">Hisense UHD Google TV</div>
-            <div class="product__head-title" style="margin-bottom:0px!important;">75A6H</div>
-
-            <div class="product__head-description">Hisense 4K Google Smart TV with Far field Voice Control &amp; Dolby
-                Vision.ATMOS</div>
+            <div class="product__head-description">{{metaData?.short_description}}</div>
             <div class="product__head-features">
                 <a href="#review" class="review-number" style="text-decoration:none;">
                     <span class="fa fa-star checked"></span>
@@ -81,115 +80,16 @@
         </div>
     </div>
     <div class="product__body">
-        <!-- <div class="stick-bar product__stick-bar is-affixed" style="min-height: 60px; position: relative;">
-            <div class="inner-wrapper-sticky"
-                style="position: fixed; transform: translate3d(0px, 0px, 0px); top: 0px; left: 0px; width: 1350px;">
-                <div class="stick-bar__inner" data-ui-white="">
-                    <div class="stick-bar__text desktop-banner">Hisense UHD Google TV</div>
-                    <div class="stick-bar__list">
-                        <a class="stick-bar__link desktop-banner" data-offset-selector=".stick-bar" href="#">
-                            <div class="stick-bar__link-inner">Overview</div>
-                        </a>
-                        <a class="stick-bar__link" data-offset-selector=".stick-bar" href="#specifications">
-                            <div class="stick-bar__link-inner">Specification</div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!--                        <a class="stick-bar__link stick-bar__link_primary" href="../where-to-buy.html">WHERE TO BUY</a>-->
         <section class=" desktop-banner" style="">
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Google-TV-3.webp"> -->
+            <div class="row" *ngFor="let obj of metaData?.product?.description_images">
                 <div class="product__block">
                     <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Google-TV-3.webp" alt=""
+                        [src]="obj.full_url" alt=""
                         description="">
                 </div>
             </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Hands-Free-voice-Control-2.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Hands-Free-voice-Control-2.webp"
-                        alt="" description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Remote-Finder-2.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Remote-Finder-2.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Game-Mode-PLUS-2.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Game-Mode-PLUS-2.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Vision-1.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Vision-1.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Atmos-1.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Atmos-1.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/4K-Resolution.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/4K-Resolution.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/HDR-10.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/HDR-10.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Pixel-Tuning.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Pixel-Tuning.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Sports-Mode.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Sports-Mode.webp" alt=""
-                        description="">
-                </div>
-            </div>
-            <div class="row">
-                <!--                        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/Connectivity.webp"> -->
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Connectivity.webp" alt=""
-                        description="">
-                </div>
-            </div>
-
         </section>
-        <section class="mobile-banner" style="">
+        <!-- <section class="mobile-banner" style="">
             <div class="row">
                 <div class="product__block">
                     <img class="product__full-image"
@@ -268,11 +168,11 @@
                 </div>
             </div>
 
-        </section>
+        </section> -->
     </div>
 </div>
 
-<div class="product__block" style=" background-image: url('');">
+<!-- <div class="product__block" style=" background-image: url('');">
     <div class="specs-block" id="specifications">
         <div class="specs-block__title">Now, here’s the <strong>technical bit...</strong></div>
         <div class="specs-block__text">Below, you’ll find all the technical details, such as dimension etc</div>
@@ -311,4 +211,4 @@
 
         </div>
     </div>
-</div>
+</div> -->
