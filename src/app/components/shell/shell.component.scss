@@ -42,3 +42,29 @@ footer ::ng-deep a.icon-region:hover,
         overflow: hidden;
     }
 }
+
+marquee {
+    background-color: #d1b83a;
+    text-transform: uppercase;
+    color: #FFF;
+    font-size: 16px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+
+    a{
+        color: #fff !important;
+    }
+
+    img {
+        max-height: 25px;
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+        border-radius: 1px;
+    }
+}
+
+.m-top-45 {
+    margin-top: 45px;
+}

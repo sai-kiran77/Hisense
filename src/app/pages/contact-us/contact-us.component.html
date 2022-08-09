@@ -4,19 +4,20 @@
         <div class="page__cover-inner desktop-banner"
             style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
         </div>
-        <div class="page__cover-inner mobile-banner" style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
+        <div class="page__cover-inner mobile-banner"
+            style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
         </div>
         <div class="page__container">
             <h1 class="page__title">Contact Us</h1>
         </div>
     </div>
-    
+
     <div class="container" style="margin-top:60px; margin-bottom:60px;">
-        <div class="row" style="">
+        <div class="row">
             <div class="col-sm-6 col-md-6 co-lg-6" style="padding:30px;">
                 <h4>For Customer</h4>
                 <div class="row" style="margin-top:20px;">
-    
+
                     <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                         <b>Email :</b>
                     </div>
@@ -25,7 +26,7 @@
                     </div>
                 </div>
                 <div class="row" style="margin-top:20px;">
-    
+
                     <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                         <b>Phone:</b>
                     </div>
@@ -35,7 +36,7 @@
                 </div>
                 <h4 style="margin-top:40px;">For Business</h4>
                 <div class="row" style="margin-top:20px;">
-    
+
                     <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                         <b>Email :</b>
                     </div>
@@ -43,19 +44,6 @@
                         <a href="mailto:india@hisense.com" style="color:#000;">india@hisense.com</a>
                     </div>
                 </div>
-                <!-- 
-    <div class="row" style='margin-top:20px;'>
-                    
-                    <!~~ 
-    <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
-                        <b>Phone:</b>
-                    </div>
-     ~~>
-                    <div class="colsm-6 col-md-6 co-lg-6">
-                         <p><a href="tel:18002661969" style="color:#000;">1800 266 1969</a></p>
-                    </div>
-                </div>
-     -->
                 <h4 style="margin-top:40px;">Corporate Office</h4>
                 <div class="row" style="margin-top:20px;">
                     <div class="col-sm-12 col-md-12 co-lg-12" style="padding-left:0;">
@@ -71,89 +59,85 @@
                         <p role="status" aria-live="polite" aria-atomic="true"></p>
                         <ul></ul>
                     </div>
-                    <form action="/contact-us/#wpcf7-f2330-o1" method="post" class="wpcf7-form init" novalidate="novalidate"
-                        data-status="init">
-                        <div style="display: none;">
-                            <input type="hidden" name="_wpcf7" value="2330">
-                            <input type="hidden" name="_wpcf7_version" value="5.5.6">
-                            <input type="hidden" name="_wpcf7_locale" value="en_US">
-                            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f2330-o1">
-                            <input type="hidden" name="_wpcf7_container_post" value="0">
-                            <input type="hidden" name="_wpcf7_posted_data_hash" value="">
-                        </div>
+                    <form class="wpcf7-form init" data-status="init" [formGroup]="form">
                         <div class="row">
                             <div class="col-md-12 p-0">
                                 <div class="form-group">
                                     <label> Name<br>
-                                        <span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name"
-                                                value="" size="40"
+                                        <span class="wpcf7-form-control-wrap your-name">
+                                            <input type="text" name="your-name" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                aria-required="true" aria-invalid="false" placeholder="Enter Name*"></span>
+                                                aria-required="true" aria-invalid="false" placeholder="Enter Name*"
+                                                formControlName="name">
+                                        </span>
                                     </label>
+                                    <div class="text-danger" *ngIf="isFormSubmitted && form.controls['name'].errors">
+                                        <span *ngIf="form.controls['name'].errors['required']">Name is required!</span>
+                                        <span *ngIf="form.controls['name'].errors['pattern']">Name can only contain alphabets!</span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label> Phone<br>
                                         <span class="wpcf7-form-control-wrap your-phone"><input type="text"
                                                 name="your-phone" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required form-control"
-                                                aria-required="true" aria-invalid="false" placeholder="Enter phone*"></span>
+                                                aria-required="true" aria-invalid="false" placeholder="Enter phone*"
+                                                formControlName="phone">
+                                        </span>
                                     </label>
+                                    <div class="text-danger" *ngIf="isFormSubmitted && form.controls['phone'].errors">
+                                        <span *ngIf="form.controls['phone'].errors['required']">Phone Number is required!</span>
+                                        <span *ngIf="form.controls['phone'].errors['minlength']">Phone Number can only contain 10 digits!</span>
+                                        <span *ngIf="form.controls['phone'].errors['maxlength']">Phone Number can only contain 10 digits!</span>
+                                        <span *ngIf="form.controls['phone'].errors['pattern']">Phone Number can only contain digits!</span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label> Your email<br>
                                         <span class="wpcf7-form-control-wrap your-email"><input type="email"
                                                 name="your-email" value="" size="40"
                                                 class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email form-control"
-                                                aria-required="true" aria-invalid="false" placeholder="Enter email*"></span>
+                                                aria-required="true" aria-invalid="false" placeholder="Enter email*"
+                                                formControlName="email">
+                                        </span>
                                     </label>
+                                    <div class="text-danger" *ngIf="isFormSubmitted && form.controls['email'].errors">
+                                        <span *ngIf="form.controls['email'].errors['required']">Email is required!</span>
+                                        <span *ngIf="form.controls['email'].errors['email']">Enter a valid email!</span>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label>Message<br>
                                         <span class="wpcf7-form-control-wrap your-message">
-                                            <!-- <grammarly-extension data-grammarly-shadow-root="true"
-                                                style="position: absolute; top: 0px; left: 0px; pointer-events: none;"
-                                                class="cGcvT"></grammarly-extension> -->
-                                            <!-- <grammarly-extension data-grammarly-shadow-root="true"
-                                                style="mix-blend-mode: darken; position: absolute; top: 0px; left: 0px; pointer-events: none;"
-                                                class="cGcvT"></grammarly-extension> -->
-                                                <textarea name="your-message" cols="40"
-                                                rows="10"
+                                            <textarea name="your-message" cols="40" rows="10"
                                                 class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required form-control h-50px"
                                                 aria-required="true" aria-invalid="false" placeholder="Enter message*"
-                                                spellcheck="false"></textarea>
-                                        </span> </label>
+                                                spellcheck="false" formControlName="body"></textarea>
+                                        </span>
+                                    </label>
+                                    <div class="text-danger" *ngIf="isFormSubmitted && form.controls['body'].errors">
+                                        <span *ngIf="form.controls['body'].errors['required']">Message is required!</span>
+                                    </div>
                                 </div>
-                                <p><input type="submit" value="Submit"
-                                        class="wpcf7-form-control has-spinner wpcf7-submit"><span
-                                        class="wpcf7-spinner"></span>
+                                <p>
+                                    <input type="submit" value="Submit" (click)="onSubmit()"
+                                        class="wpcf7-form-control has-spinner wpcf7-submit">
+                                    <span class="wpcf7-spinner"></span>
                                 </p>
                             </div>
                         </div>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                     </form>
                 </div>
-                <!--form action="">
-                    <div class="form-group">
-          <label for="email">Name:</label>
-          <input type="text" class="form-control" id="name" placeholder="Enter name" name="name">
-        </div>
-                    <div class="form-group">
-          <label for="email">Phone:</label>
-          <input type="text" class="form-control" id="phone" placeholder="Enter phone" name="phone">
-        </div>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Message:</label>
-          <textarea  class="form-control" id="msg" placeholder="Enter your Query" name="msg"></textarea>
-        </div>
-                    <div class="center" Style="text-align: center;">
-        <button type="submit" class="btn btn-default" style="background-color:#00cccc!important; color:#fff!important;">Submit</button>
-                    </div>
-      </form-->
             </div>
         </div>
     </div>
 </section>
+
+
+<div class="modal" (click)="modalMessage = ''" [ngClass]="{'show-modal': modalMessage}">
+    <div class="modal-content">
+        <span (click)="modalMessage = ''" class="close-button">&times;</span>
+        <h3>{{modalMessage}}</h3>
+    </div>
+</div>

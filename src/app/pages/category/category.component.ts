@@ -14,6 +14,7 @@ export class CategoryComponent implements OnInit,OnDestroy {
   metaData: any;
   alive = true;
   fragment: any = '';
+  fallbackImg = 'https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp'
 
   constructor(private route:ActivatedRoute,
     private api: ApiService,

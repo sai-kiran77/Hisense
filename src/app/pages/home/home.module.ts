@@ -9,6 +9,7 @@ import { AboutComponent } from 'src/app/components/about/about.component';
 import { SeriesComponent } from 'src/app/components/series/series.component';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { HomeProductsComponent } from './home-products/home-products.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { HomeProductsComponent } from './home-products/home-products.component';
   imports: [
     CommonModule,
     SwiperModule,
-    ComponentsModule
+    ComponentsModule,
+    RouterModule
   ]
 })
 export class HomeModule { }

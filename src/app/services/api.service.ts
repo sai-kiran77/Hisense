@@ -10,11 +10,15 @@ export class ApiService {
 
   constructor(private http: HttpClient) { }
 
-  getSlugData(slugCategory: string, slugURL = '/categories/load-by-slug/'){
+  getSlugData(slugCategory: string, slugURL = '/categories/load-by-slug/') {
     return this.http.get(this.baseURL + slugURL + slugCategory);
   }
 
-  getVarientData(varient: string, varientURL = '/product-variants/load-by-slug/'){
+  getVarientData(varient: string, varientURL = '/product-variants/load-by-slug/') {
     return this.http.get(this.baseURL + varientURL + varient);
+  }
+
+  postContactUsForm(body: any, endpoint: string = '/contact-requests') {
+    return this.http.post(this.baseURL + endpoint, body);
   }
 }

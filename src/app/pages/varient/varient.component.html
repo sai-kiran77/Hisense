@@ -1,174 +1,40 @@
 <div class="product">
     <div class="product__head product__head_ui_black " id="overview">
-        <div class="product__head-image-column">
-            <div class="owl-carousel owl-theme" style="opacity: 1; display: block;">
-                <div class="owl-wrapper-outer">
-                    <div class="owl-wrapper" style="width: 8890px; left: 0px; display: block;">
-                        <div class="owl-item" style="min-width: 635px;">
-                            <div class="item">
-                                <!-- <img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-Main-1.webp"> -->
-                                <img alt="" class="product__head-image"
-                                    [src]="metaData?.thumb_image.full_url">
-                            </div>
-                        </div>
-                        <!-- <div class="owl-item" style="min-width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-1-1.webp"></div>
-                        </div> -->
-                        <!-- <div class="owl-item" style="width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-2-1.webp"></div>
-                        </div>
-                        <div class="owl-item" style="width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-4-2.webp"></div>
-                        </div>
-                        <div class="owl-item" style="width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-3-1.webp"></div>
-                        </div>
-                        <div class="owl-item" style="width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-5-1.webp"></div>
-                        </div>
-                        <div class="owl-item" style="width: 635px;">
-                            <div class="item"><img alt="" class="product__head-image"
-                                    src="https://www.hisense-india.com/wp-content/uploads/2022/07/A6H-6-2.webp"></div>
-                        </div> -->
+        <div class="product__heade__image" style="position: relative;">
+            <div class="carousel">
+                <div class="carousel-container">
+                    <div class="carousel-images" [ngStyle]="{'transform':position}">
+                        <img class="carousel-image current-image" *ngFor="let slide of metaData?.slider_images"
+                            [src]="slide?.full_url" alt="image">
                     </div>
-                </div>
-
-
-
-
-
-
-                <div class="owl-controls clickable">
-                    <div class="owl-pagination" style="display: flex;justify-content: center">
-                        <div class="owl-page active"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
-                        <div class="owl-page"><span class=""></span></div>
+                    <div class="carousel-nav">
+                        <button class="carousel-nav--btn" *ngFor="let slide of metaData?.slider_images;let i = index"
+                            [ngClass]="{'current-btn': i == currentIndex}" (click)="updateCarousel(i)"></button>
                     </div>
                 </div>
             </div>
+
         </div>
         <div class="product__head-text-column">
-            <div class="product-card__head" style="z-index:1;">
-                <div class="product-card__description-left" style="font-size:20px;"></div>
-            </div>
-
             <div class="product__head-description">{{metaData?.name}}</div>
             <div class="product__head-title" style="margin-bottom:0px!important;">{{metaData?.code}}</div>
-
             <div class="product__head-description">{{metaData?.short_description}}</div>
-            <div class="product__head-features">
-                <a href="#review" class="review-number" style="text-decoration:none;">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
+            <div class="product__head-buttons" style="display: flex;flex-wrap: wrap;gap: 6px;">
+                <a [href]="link?.purchase_link" target="_blank"
+                    *ngFor="let link of metaData?.product_variant_purchase_links">
+                    <img class="purchase__link__image" [src]="getVendorImage(link.vendor)" [ngClass]="[link.vendor]">
                 </a>
-            </div>
-            <div class="product__head-buttons">
             </div>
         </div>
     </div>
     <div class="product__body">
-        <section class=" desktop-banner" style="">
+        <section>
             <div class="row" *ngFor="let obj of metaData?.product?.description_images">
                 <div class="product__block">
-                    <img class="product__full-image"
-                        [src]="obj.full_url" alt=""
-                        description="">
+                    <img class="product__full-image" [src]="obj.full_url">
                 </div>
             </div>
         </section>
-        <!-- <section class="mobile-banner" style="">
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Google-TV-2.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Hands-Free-voice-Control-3.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Remote-Finder-3.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Game-Mode-PLUS-3.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Vision-2.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Dolby-Atmos-2.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/4K-Resolution-1.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/HDR-10-1.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Pixel-Tuning-1.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Sports-Mode-1.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-            <div class="row">
-                <div class="product__block">
-                    <img class="product__full-image"
-                        src="https://www.hisense-india.com/wp-content/uploads/2022/07/Connectivity-1.webp"
-                        alt="01 %e5%bd%a2%e8%b1%a1%e9%a1%b5">
-                </div>
-            </div>
-
-        </section> -->
     </div>
 </div>
 

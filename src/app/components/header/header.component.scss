@@ -38,7 +38,7 @@
 
 header {
   width: 100%;
-  position: fixed;
+  // position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
@@ -49,6 +49,7 @@ header {
   -o-transition: all 0.5s ease-out;
   -ms-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
 
   nav {
@@ -745,4 +746,12 @@ header {
 
 li{
   white-space: nowrap;
+}
+
+.top-45{
+  top: 45px;
+}
+
+.top45{
+  top: calc(-100% - 45px);
 }

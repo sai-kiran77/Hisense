@@ -1,25 +1,25 @@
-<!-- <section class="catalog" id="catalog-page">
+<section class="catalog" id="catalog-page">
     <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
         <div class="catalog-banner__content">
             <div class="catalog-banner__content-inner">
-                <h1 class="catalog-banner__title">Television</h1>
-                <div class="catalog-banner__description">
+                <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
+                <!-- <div class="catalog-banner__description">
                     <p>
                         Plenty of choice <br>
                         to find the best fit for your home
                     </p>
-                </div>
+                </div> -->
             </div>
         </div>
         <div class="catalog-banner__image-wrapper">
-        <img alt="Television" class="catalog-banner__image desktop-banner" src="https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp">
-        <a href="https://www.hisense-india.com/qled/">
-        <img alt="Television" class="catalog-banner__image mobile-banner" src="https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp">
-        </a>
-            <img src="">
+            <img alt="Television" class="catalog-banner__image" [src]="metaData?.thumb_image.full_url">
+            <!-- <a href="https://www.hisense-india.com/qled/">
+                <img alt="Television" class="catalog-banner__image mobile-banner"
+                    src="https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp">
+            </a> -->
         </div>
     </div>
-</section> -->
+</section>
 <!-- <div class="catalog__body catalog__body_ui_white">
     <form id="sidebar_products_search" action="" accept-charset="UTF-8" method="get">
         <input name="utf8" type="hidden" value="✓"><input type="hidden" name="per_page" id="per_page">
@@ -60,13 +60,14 @@
         </div></div>
     </form>
 </div> -->
-<div class="product-listing" style="margin-top: 80px;padding: 1rem;">
+<!-- style="margin-top: 80px;padding: 1rem;" -->
+<div class="product-listing">
     <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
         <div *ngFor="let prodCat of subCat.category_products">
             <div class="product__category__title">{{prodCat.product.name}}</div>
-            
+
             <div class="product-listing-inner">
-                <div class="product-listing-tab" *ngFor="let prod of prodCat.product.product_variants">
+                <div class="product-listing-tab" [routerLink]="prod.relative_url" *ngFor="let prod of prodCat.product.product_variants">
                     <a class="product-listing-img trackin">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
                         <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
@@ -95,8 +96,9 @@
                         </div> -->
                         <!-- <div class="product-highlights-description"></div> -->
                     </div>
-                    <div class="product-listing-tab-buttons trackin" data-track="35" style="transform: translateY(35px);">
-                        <div><a class="btn-hisense" [routerLink]="prod.relative_url">More Detail</a></div>
+                    <div class="product-listing-tab-buttons trackin" data-track="35"
+                        style="transform: translateY(35px);">
+                        <div><a class="btn-hisense">More Detail</a></div>
                         <!-- <div>
                             <a class="btn-detail" href="/regional?type=where-to-buy">Where to buy</a>
                         </div> -->

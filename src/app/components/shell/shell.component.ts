@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-shell',
@@ -7,9 +8,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShellComponent implements OnInit {
 
-  constructor() { }
+  currentRoute: any;
+
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
+    this.currentRoute = this.router.url;
+
+    this.router.events.subscribe((event) => {
+      // if (event instanceof NavigationStart) {
+      //     // Show loading indicator
+      // }
+
+      if (event instanceof NavigationEnd) {
+          this.currentRoute = event.url;
+      }
+
+      // if (event instanceof NavigationError) {
+      //     // Hide loading indicator
+
+      //     // Present error to user
+      //     console.log(event.error);
+      // }
+  });
   }
 
 }

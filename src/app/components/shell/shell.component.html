@@ -1,7 +1,13 @@
-<!-- <div class="container">
-    <h2>Work In Progress!</h2>
-</div> -->
-<app-header></app-header>
+<marquee *ngIf="currentRoute == '/'" class="dummy" onmouseover="this.stop();" onmouseout="this.start();">
+    <a routerLink="/c/tv/">New Launch - Delight 4k Series A6H is here.</a>
+    &nbsp;&nbsp;&nbsp;
+    <a routerLink="/c/tv" fragment="laser-tv">NOW AVAILABLE THE 120 INCH HISENSE
+        <img src="https://www.hisense-india.com/wp-content/uploads/2022/07/laser-tv-logo-2.png" alt="Laser TV Logo"> IN
+        INDIA.
+    </a>
+</marquee>
+
+<app-header [ngClass]="{'m-top-45':currentRoute == '/'}" [top]="currentRoute == '/'"></app-header>
 <router-outlet></router-outlet>
 <footer>
     <app-social-links-footer></app-social-links-footer>

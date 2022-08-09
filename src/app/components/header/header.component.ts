@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, HostListener, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { Component, HostListener, Inject, Input, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
+
+  @Input() top = false;
 
   // navLinks = {
   //   LeftNavLinks: [
@@ -264,36 +266,43 @@ export class HeaderComponent implements OnInit {
 
   headerHidden = false;
 
-  @HostListener('window:scroll', ['$event'])
-  onscroll(e: any) {
-    // your code here
-    // console.log(e.target.documentElement.scrollTop);
-    // if(e.target.documentElement.scrollTop > 200 && !this.header.nativeElement.classList.contains('hide__header')){
-    //   this.hideHeader();
-    // }else{
-    //   this.header.nativeElement.classList.remove('hide__header');
-    // }
+  // @HostListener('window:scroll', ['$event'])
+  // onscroll(e: any) {
+  //   // your code here
+  //   // console.log(e.target.documentElement.scrollTop);
+  //   // if(e.target.documentElement.scrollTop > 200 && !this.header.nativeElement.classList.contains('hide__header')){
+  //   //   this.hideHeader();
+  //   // }else{
+  //   //   this.header.nativeElement.classList.remove('hide__header');
+  //   // }
 
-    if (e.target.documentElement.scrollTop > 200) {
-      if (!this.header.nativeElement.classList.contains('hide__header')) {
-        this.hideHeader();
-        this.headerHidden = true;
-      }
-    } else {
-      this.headerHidden = false;
-      this.header.nativeElement.classList.remove('hide__header');
-    }
-  }
+  //   if (e.target.documentElement.scrollTop > 200) {
+  //     if (!this.header.nativeElement.classList.contains('hide__header')) {
+  //       this.hideHeader();
+  //       this.headerHidden = true;
+  //     }
+  //   } else {
+  //     this.headerHidden = false;
+  //     if(this.top){
+  //       this.header.nativeElement.classList.remove('hide__header","top45');
+  //     }
+  //   }
+  // }
 
-  hideHeader() {
-    console.log(this.header)
-    this.header.nativeElement.classList.add('hide__header');
-  }
+  // hideHeader() {
+  //   console.log(this.header)
+  //   if(this.top){
+  //     this.header.nativeElement.classList.add('hide__header top45');
+  //   }else{
+  //     this.header.nativeElement.classList.add('hide__header');
 
-  scrollTop(){
-    if (isPlatformBrowser(this.platformId)) {
-        window.scrollTo({top: 0, behavior: 'smooth'});
-    }
-  }
+  //   }
+  // }
+
+  // scrollTop(){
+  //   if (isPlatformBrowser(this.platformId)) {
+  //       window.scrollTo({top: 0, behavior: 'smooth'});
+  //   }
+  // }
 
 }
