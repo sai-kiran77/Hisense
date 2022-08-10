@@ -13,14 +13,14 @@ const routes: Routes = [
     path: '',
     component: ShellComponent,
     children: [
-      {
-        path: 'tv-series',
-        loadChildren: () => import('./pages/tv-series/tv-series/tv-series.module').then(m => m.TvSeriesModule)
-      },
-      {
-        path: 'tv',
-        loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
-      },
+      // {
+      //   path: 'tv-series',
+      //   loadChildren: () => import('./pages/tv-series/tv-series/tv-series.module').then(m => m.TvSeriesModule)
+      // },
+      // {
+      //   path: 'tv',
+      //   loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
+      // },
       {
         path: 'about-us',
         loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
@@ -57,10 +57,10 @@ const routes: Routes = [
         path: 'contest-terms-and-conditions',
         loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
       },
-      {
-        path: 'treasure-hunt',
-        loadChildren: () => import('./pages/treasure-hunt/treasure-hunt.module').then(m => m.TreasureHuntModule)
-      },
+      // {
+      //   path: 'treasure-hunt',
+      //   loadChildren: () => import('./pages/treasure-hunt/treasure-hunt.module').then(m => m.TreasureHuntModule)
+      // },
       // {
       //   path: 'c/tv',
       //   loadChildren: () => import('./pages/categories/tv/tv.module').then(m => m.TvModule)

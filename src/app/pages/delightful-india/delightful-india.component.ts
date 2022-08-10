@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 
@@ -8,11 +9,11 @@ import { ApiService } from 'src/app/services/api.service';
   styleUrls: ['./delightful-india.component.scss']
 })
 export class DelightfulIndiaComponent implements OnInit {
-  
+
   signupForm: FormGroup;
   isSignupFormSubmitted = false;
   signupLoading = false;
-  
+
   LoginForm: FormGroup;
   isLoginFormSubmitted = false;
   loginLoading = false;
@@ -21,25 +22,30 @@ export class DelightfulIndiaComponent implements OnInit {
 
   showSignupForm = true;
   showLoginForm = false;
-  
+
   constructor(private api: ApiService,
-    private fb: FormBuilder) {
+    private fb: FormBuilder,
+    @Inject(PLATFORM_ID) private platformId: Object) {
     this.signupForm = this.fb.group({
-      name: ['',[Validators.required,Validators.pattern(/^[A-Za-z ]+$/)]],
-      email: ['',[Validators.required,Validators.email]],
-      phone: ['',[Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^[0-9]*$/)]],
-      zipcode: ['',[Validators.required]],
-      terms: ['',[Validators.required]]
+      name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
+      email: ['', [Validators.required, Validators.email]],
+      phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+      zipcode: ['', [Validators.required]],
+      terms: ['', [Validators.required]]
     });
 
     this.LoginForm = this.fb.group({
-      username: ['',[Validators.required]],
-      password: ['',[Validators.required]]
+      username: ['', [Validators.required]],
+      password: ['', [Validators.required]]
     })
 
-    const userName = localStorage.getItem('username');
+    let userName;
 
-    if(userName){
+    if (isPlatformBrowser(this.platformId)) {
+      userName = localStorage.getItem('username');
+    }
+
+    if (userName) {
       this.showSignupForm = false;
       this.showLoginForm = false;
       this.getHints(userName);
@@ -50,7 +56,7 @@ export class DelightfulIndiaComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onRegister(){
+  onRegister() {
     this.isSignupFormSubmitted = true;
     this.signupLoading = true;
     console.log(this.signupForm)
@@ -59,7 +65,9 @@ export class DelightfulIndiaComponent implements OnInit {
         console.log(res);
         this.signupLoading = false;
         // this.modalMessage = res.message;
-        localStorage.setItem('username',res.data.username);
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.setItem('username', res.data.username);
+        }
         this.LoginForm.setValue({
           username: res.data.username,
           password: res.data.password,
@@ -71,13 +79,13 @@ export class DelightfulIndiaComponent implements OnInit {
         this.signupLoading = false;
         // this.modalMessage = err.message;
       })
-    }else{
+    } else {
       this.signupLoading = false;
 
     }
   }
 
-  onLogin(){
+  onLogin() {
     this.isLoginFormSubmitted = true;
     this.loginLoading = true;
     console.log(this.LoginForm)
@@ -91,21 +99,21 @@ export class DelightfulIndiaComponent implements OnInit {
         console.log(err);
         this.loginLoading = false;
       })
-    }else{
+    } else {
       this.loginLoading = false;
 
     }
   }
 
-  getHints(userName: any){
+  getHints(userName: any) {
     this.api.getHints({
       username: userName
     }).subscribe({
-      next: (res: any)=>{
+      next: (res: any) => {
         console.log(res.data);
         this.hints = res.data
       },
-      error: (err)=>{
+      error: (err) => {
         console.log(err);
         this.showLoginForm = true;
       }

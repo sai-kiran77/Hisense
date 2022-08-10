@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContestTermsAndConditionsComponent implements OnInit {
 
+  currentTab = 'TH'
+
   constructor() { }
 
   ngOnInit(): void {
