@@ -16,17 +16,17 @@ export class HomeProductsComponent implements OnInit {
     {
       "text": "Refrigerator",
       "url": "/c/refrigerator/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/refrigerator-thumb.jpg"
+      "image": "https://hisense-apis.bloginguru.com/media/categories/refrigerator-thumb.png"
     },
     {
       "text": "Air Conditioner",
       "url": "/c/air-conditioner/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/air-conditioner-thumb.jpg"
+      "image": "https://hisense-apis.bloginguru.com/media/categories/air-conditioner-thumb.png"
     },
     {
       "text": "Washing Machine",
       "url": "/c/washing-machine/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/washing-machine-thumb.jpg"
+      "image": "https://hisense-apis.bloginguru.com/media/categories/washing-machine-thumb.png"
     }
   ]
 
