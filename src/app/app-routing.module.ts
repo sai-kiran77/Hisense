@@ -6,6 +6,10 @@ import { HomeComponent } from './pages/home/home.component';
 
 const routes: Routes = [
   {
+    path: 'delightful-india',
+    loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
+  },
+  {
     path: '',
     component: ShellComponent,
     children: [
@@ -52,6 +56,10 @@ const routes: Routes = [
       {
         path: 'contest-terms-and-conditions',
         loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
+      },
+      {
+        path: 'treasure-hunt',
+        loadChildren: () => import('./pages/treasure-hunt/treasure-hunt.module').then(m => m.TreasureHuntModule)
       },
       // {
       //   path: 'c/tv',

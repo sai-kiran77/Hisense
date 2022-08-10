@@ -18,7 +18,7 @@
 .product__head{
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    height: 500px;
+    min-height: 600px;
 }
 
 .carousel{
@@ -84,7 +84,7 @@
 .carousel-nav{
     width: 100%;
     position: absolute;
-    bottom: 0;
+    bottom: -25px;
     display: flex;
     justify-content: center;
 }

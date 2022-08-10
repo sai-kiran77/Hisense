@@ -29,10 +29,10 @@
 .bottom-links-container ul.bottom-links li a:hover {
     text-decoration: underline;
 }
-.bottom-links-container ul.bottom-links li.copyright {
-    color: #b4b4b4;
-    white-space: nowrap;
-}
+// .bottom-links-container ul.bottom-links li.copyright {
+//     color: #b4b4b4;
+//     white-space: nowrap;
+// }
 
 @media (max-width: 1023px) {
     .bottom-links-container {
@@ -62,4 +62,10 @@
         display: block;
         width: auto;
     }
+}
+
+.copyright{
+    display: inline-block;
+    font-size: 15px;
+    color: #888889;
 }

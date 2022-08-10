@@ -1,0 +1,109 @@
+<form style="border:1px solid #ccc" [formGroup]="signupForm" *ngIf="showSignupForm">
+    <div class="container">
+        <h1>Sign Up</h1>
+        <p>Please fill the form to create an account.</p>
+        <hr>
+
+        <div>
+            <label for="name"><b>Name</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['name'].errors">
+                <span *ngIf="signupForm.controls['name'].errors['required']">Name is required!</span>
+                <span *ngIf="signupForm.controls['name'].errors['pattern']">Name can only contain alphabets!</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="email"><b>Email</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
+            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['email'].errors">
+                <span *ngIf="signupForm.controls['email'].errors['required']">Email is required!</span>
+                <span *ngIf="signupForm.controls['email'].errors['email']">Enter a valid email!</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="phone"><b>Phone</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone">
+            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['phone'].errors">
+                <span *ngIf="signupForm.controls['phone'].errors['required']">Phone Number is required!</span>
+                <span *ngIf="signupForm.controls['phone'].errors['minlength']">Phone Number can only contain 10
+                    digits!</span>
+                <span *ngIf="signupForm.controls['phone'].errors['maxlength']">Phone Number can only contain 10
+                    digits!</span>
+                <span *ngIf="signupForm.controls['phone'].errors['pattern']">Phone Number can only contain
+                    digits!</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="pincode"><b>Pincode</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode" formControlName="zipcode">
+            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['zipcode'].errors">
+                <span *ngIf="signupForm.controls['zipcode'].errors['required']">Pincode is required!</span>
+            </div>
+        </div>
+
+        <div style="margin-bottom:15px">
+            <label>
+                <!-- checked="checked" -->
+                <input type="checkbox" name="terms" formControlName="terms">
+                <span class="ml-4 f-14">Yes, I would like to receive important updates and notifications on
+                    WhatsApp</span>
+            </label>
+            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['terms'].errors">
+                <span *ngIf="signupForm.controls['terms'].errors['required']">Please accept to proceed further!</span>
+            </div>
+        </div>
+
+        <div>
+            <p class="f-14">By proceeding, you are authorizing Hisense and its empaneled controctors to get in touch
+                with you through calls, SMS or e-mail</p>
+        </div>
+
+        <div class="clearfix">
+            <button type="button" class="signupbtn" (click)="onRegister()">
+                <span>Register Now</span>
+                <span *ngIf="signupLoading" class="loader"></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+
+<form style="border:1px solid #ccc" [formGroup]="LoginForm" *ngIf="showLoginForm">
+    <div class="container">
+        <h1>Login</h1>
+        <!-- <p>Please fill the form to create an account.</p> -->
+        <hr>
+
+        <div>
+            <label for="email"><b>Username</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" formControlName="username">
+            <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['username'].errors">
+                <span *ngIf="LoginForm.controls['username'].errors['required']">Username is required!</span>
+            </div>
+        </div>
+
+        <div>
+            <label for="password"><b>Password</b><span class="text-danger">*</span></label>
+            <input type="text" placeholder="Enter Password" name="password" formControlName="password">
+            <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['password'].errors">
+                <span *ngIf="LoginForm.controls['password'].errors['required']">Password is required!</span>
+            </div>
+        </div>
+
+        <div class="clearfix">
+            <button type="button" class="signupbtn" (click)="onLogin()">
+                <span>Login</span>
+                <span *ngIf="signupLoading" class="loader"></span>
+            </button>
+        </div>
+    </div>
+</form>
+
+<div class="hints">
+    <div class="card" *ngFor="let hint of hints">
+        {{hint.hint}}
+    </div>
+</div>
