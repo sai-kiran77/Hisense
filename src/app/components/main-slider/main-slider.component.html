@@ -7,17 +7,17 @@
                 <ng-container *ngFor="let slide of slides;let i = index">
                     <ng-template swiperSlide>
                         <div class="slick-slide slick-current" data-slick-index="i" aria-hidden="false" role="tabpanel"
-                            aria-describedby="slick-slide-control00">
+                            aria-describedby="slick-slide-control00" style="width: 100%;">
                             <div>
                                 <div class="slide-item" style="width: 100%; display: inline-block;">
-                                    <img class="banner" [src]="slide.image" class="ls-bg"
-                                    loading="lazy" [routerLink]="slide.url">
+                                    <img class="banner" [src]="slide.image" class="ls-bg" loading="lazy"
+                                        [routerLink]="slide.url" style="width: 100%;">
                                 </div>
                             </div>
                         </div>
                     </ng-template>
                 </ng-container>
-                
+
             </swiper>
         </div>
     </div>

@@ -76,12 +76,12 @@
                             </button>
                             <div class="section-title">In The News</div>
                             <div class="sub-menu">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks">
-                                    <span class="thumbnail">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks" style="justify-content: center;">
+                                    <!-- <span class="thumbnail">
                                         <div class="img">
                                             <img [src]="subLink.image" [alt]="subLink.text">
                                         </div>
-                                    </span>
+                                    </span> -->
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
