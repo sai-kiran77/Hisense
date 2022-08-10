@@ -2,35 +2,31 @@
   <div class="footer-links">
     
     <ul class="col" *ngFor="let menu of navLinks">
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+      <li class="row" [ngClass]="{'show':menu.row}" style="max-height: 58px;">
+        <a (click)="menu.row = menu.row ? false : true" class="accordion-toggle"></a>
         <dl>
           <dt><a [routerLink]="menu.url">{{menu.text}}</a></dt>
-          <dd *ngFor="let subMenu of menu['sub-menu']"><a [routerLink]="subMenu.url" [fragment]="subMenu.fragment">{{subMenu.text}}</a></dd>
+          <dd *ngFor="let subMenu of menu['sub-menu']"><a [routerLink]="subMenu.url">{{subMenu.text}}</a></dd>
         </dl>
       </li>
     </ul>
     
     <ul class="col">
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+      <li class="row" style="max-height: 58px;" [ngClass]="{'show':row1}">
+        <a class="accordion-toggle" (click)="row1 = !row1"></a>
         <dl>
           <dt><a routerLink="/about-us" target="" rel="">About Hisense </a></dt>
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/overview" target="" rel="">Overview</a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/history" target="" rel="">History </a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/industrial-group/" target="" rel="">Industrial Groups
-            </a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/values" target="" rel="">Values</a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/csr" target="" rel="">CSR</a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/technology" target="" rel="">Technology </a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/newsroom/" target="" rel="">Newsroom</a></dd> -->
-          <!-- <dd><a href="https://global.hisense.com/about-hisense/partnership/" target="" rel="">Partnership</a></dd> -->
           <dd><a routerLink="/about-us" target="" rel="">About US</a></dd>
+          <dd><a routerLink="/press-coverages" target="" rel="">Press Coverages</a></dd>
+          <dd><a routerLink="/tech-testimonials" target="" rel="">Tech Testimonials</a></dd>
+          <dd><a routerLink="/offers-promotions" target="" rel="">Offers/Promotions</a></dd>
+          <dd><a routerLink="/contest-terms-and-conditions/" target="" rel="">Contest Terms And COnditions</a></dd>
         </dl>
       </li>
-      <li class="row" style="max-height: 58px;"><a class="accordion-toggle" href="javascript:;"></a>
+      <li class="row" style="max-height: 58px;" [ngClass]="{'show':row2}">
+        <a class="accordion-toggle" (click)="row2 = !row2"></a>
         <dl>
           <dt><a routerLink="/contact-us" target="" rel="">Support</a></dt>
-          <!-- <dd><a href="https://global.hisense.com/support/certificate-download" target="" rel="">Certificate
-              Download</a></dd> -->
           <dd><a routerLink="/contact-us" target="" rel="">Contact Us </a></dd>
           <!-- <dd><a href="https://global.hisense.com/support/customer-center/" target="" rel="">Customer Center</a></dd> -->
         </dl>

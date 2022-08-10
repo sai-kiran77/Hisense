@@ -33,6 +33,26 @@ const routes: Routes = [
         path: 'legal-disclaimer',
         loadChildren: () => import('./pages/legal-disclaimer/legal-disclaimer.module').then(m => m.LegalDisclaimerModule)
       },
+      {
+        path: 'press-coverages',
+        loadChildren: () => import('./pages/press-coverages/press-coverages.module').then(m => m.PressCoveragesModule)
+      },
+      {
+        path: 'tech-testimonials',
+        loadChildren: () => import('./pages/tech-testimonials/tech-testimonials.module').then(m => m.TechTestimonialsModule)
+      },
+      {
+        path: 'contest-terms-and-conditions',
+        loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
+      },
+      {
+        path: 'offers-promotions',
+        loadChildren: () => import('./pages/offers-promotions/offers-promotions.module').then(m => m.OffersPromotionsModule)
+      },
+      {
+        path: 'contest-terms-and-conditions',
+        loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
+      },
       // {
       //   path: 'c/tv',
       //   loadChildren: () => import('./pages/categories/tv/tv.module').then(m => m.TvModule)

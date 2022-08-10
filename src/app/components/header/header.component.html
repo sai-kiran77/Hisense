@@ -34,9 +34,9 @@
                             </div>
                         </div>
                     </li> -->
-                    <li class="" *ngFor="let obj of navLinks">
+                    <li *ngFor="let obj of navLinks">
                         <a [routerLink]="obj.url">{{obj.text}}</a>
-                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-tv-and-audio"
+                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown" id="toggle-dropdown-tv-and-audio"
                             aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
                         <div [ngClass]="{'menu-in': obj.subDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
                             <button (click)="obj.subDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
@@ -44,10 +44,10 @@
                             </button>
                             <div class="section-title">{{obj.text}}</div>
                             <div class="sub-menu">
-                                <a class="" [routerLink]="subLink?.url" [fragment]="subLink?.fragment" *ngFor="let subLink of obj['sub-menu']">
-                                    <span class="thumbnail">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']">
+                                    <span class="thumbnail" style="overflow: hidden;">
                                         <div class="img">
-                                            <img [src]="subLink.image" [alt]="subLink.text">
+                                            <img [src]="subLink.image" [alt]="subLink.text" style="object-fit: contain;max-height: 125px;">
                                         </div>
                                     </span>
                                     <span class="title">{{subLink.text}}</span>
@@ -66,6 +66,27 @@
                     </li>
                 </ul>
                 <ul class="right">
+                    <li>
+                        <a>In The News</a>
+                        <a (click)="newsSubDropdownToggle = true" class="toggle-dropdown" id="toggle-dropdown-tv-and-audio"
+                            aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
+                        <div [ngClass]="{'menu-in': newsSubDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="newsSubDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
+                                <span class="navbar-back-icon"></span>
+                            </button>
+                            <div class="section-title">In The News</div>
+                            <div class="sub-menu">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks">
+                                    <span class="thumbnail">
+                                        <div class="img">
+                                            <img [src]="subLink.image" [alt]="subLink.text">
+                                        </div>
+                                    </span>
+                                    <span class="title">{{subLink.text}}</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
                     <li class="">
                         <a routerLink="/about-us">About Us</a>
                     </li>

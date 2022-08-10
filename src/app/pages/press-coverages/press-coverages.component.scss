@@ -1,0 +1,96 @@
+.page__section {
+    min-height: 50vh;
+}
+
+.page__cover {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #202020;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.page__section_centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.page__container {
+    width: 100%;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.page__title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+
+.container {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    margin-top: 1.5rem;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.read-more-btn {
+    margin: 20px 0;
+    background-color: rgb(0, 204, 204) !important;
+    color: rgb(255, 255, 255) !important;
+    padding: 0.71rem;
+    display: block;
+    width: fit-content;
+}
+
+.row {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.f-24 {
+    font-size: 24px !important;
+    font-weight: bold;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    font-size: 22px;
+}
+
+.pagination a.active {
+    background-color: rgb(0, 204, 204);
+    color: white;
+    border: 1px solid rgb(0, 204, 204);
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}

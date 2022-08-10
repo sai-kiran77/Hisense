@@ -13,96 +13,51 @@
         </div>
         <div class="catalog-banner__image-wrapper">
             <img alt="Television" class="catalog-banner__image" [src]="metaData?.thumb_image.full_url">
-            <!-- <a href="https://www.hisense-india.com/qled/">
-                <img alt="Television" class="catalog-banner__image mobile-banner"
-                    src="https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp">
-            </a> -->
         </div>
     </div>
 </section>
-<!-- <div class="catalog__body catalog__body_ui_white">
-    <form id="sidebar_products_search" action="" accept-charset="UTF-8" method="get">
-        <input name="utf8" type="hidden" value="✓"><input type="hidden" name="per_page" id="per_page">
-        <div class="stick-bar catalog__filter stick-bar_ui_white" style="min-height: 64px;"><div class="inner-wrapper-sticky" style="position: relative; transform: translate3d(0px, 0px, 0px);">
-            <div class="stick-bar__inner" data-ui-white="">
-                <div class="select__overlay"></div>
-                <div class="stick-bar__column">
-                    <div class="select">
-                        <div class="form-group">
-                            <select class="form-control" id="tv-filter-1">
-                            <option value="all">Screen Size • All</option>
-                            <option value="30-39">Screen Size • 30-39</option>
-                            <option value="40-49">Screen Size • 40-49</option>
-                            <option value="50-59">Screen Size • 50-59</option>
-                            <option value="60-69">Screen Size • 60-69</option>
-                            <option value="70">Screen Size • 70 Above</option>
-                            </select>
-                        </div>   
-                    </div>
-                </div>
-                <div class="stick-bar__column">
-                    <div class="select">
-                        <div class="form-group">
-                            <select class="form-control" id="tv-filter-2">
-                            <option value="all">Product Type • All</option>
-                            <option value="smart">Product Type • SMART</option>
-                            <option value="uhd">Product Type • UHD</option>
-                            <option value="qled">Product Type • QLED</option>
-                            </select>
-                        </div>   
-                    </div>
-                </div>
-                <div class="stick-bar__column w-100">
-                    <a href="javascript:void(0)" id="tv-filter-btn" class="btn-filter">Filter</a>
-                    <a class="stick-bar__link" href="" onclick="window.location.reload();"><div class="stick-bar__link-inner">Reset</div></a>
-                </div>
-            </div>
-        </div></div>
-    </form>
-</div> -->
-<!-- style="margin-top: 80px;padding: 1rem;" -->
-<div class="product-listing">
+<div class="product-listing" style="padding: 1rem;">
     <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
+        <a class="sub__cat__link" [routerLink]="subCat.relative_url">{{subCat.name}}</a>
         <div *ngFor="let prodCat of subCat.category_products">
             <div class="product__category__title">{{prodCat.product.name}}</div>
 
             <div class="product-listing-inner">
-                <div class="product-listing-tab" [routerLink]="prod.relative_url" *ngFor="let prod of prodCat.product.product_variants">
+                <div class="product-listing-tab" [routerLink]="prod.relative_url"
+                    *ngFor="let prod of prodCat.product.product_variants">
                     <a class="product-listing-img trackin">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
                         <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
                     </a>
                     <div class="product-listing-tab-content">
                         <h4>{{prod.name}}</h4>
-                        <!-- <h3>ULED 4K TV U8G</h3> -->
+                        <h3>{{prod.variant_size}}</h3>
                         <div class="product-listing-description"></div>
-                        <!-- <div class="product-highlights trackin">
-                            <div class="product-highlights-cursor"></div>
-                            <a class="product-highlight" href="#">
-                                <img src="https://global.hisense.com/dam/jcr:53d78b6a-4957-4718-b900-e44483535222/Icon3@2x.png"
-                                    alt="Hisense U8G - HDR10 Small Icon">
-                                <div class="product-highlight-text">HDR10+</div>
-                            </a>
-                            <a class="product-highlight" href="#">
-                                <img src="https://global.hisense.com/dam/jcr:4b2e0a9a-d838-42ba-964a-448070271306/Icon3@2x.png"
-                                    alt="Hisense U8G - Dolby Vision Atmos Small Icon">
-                                <div class="product-highlight-text">Dolby Vision Atmos</div>
-                            </a>
-                            <a class="product-highlight" href="#">
-                                <img src="https://global.hisense.com/dam/jcr:8403045c-c629-4070-80d4-e65f55c29de1/Icon2@2x.png"
-                                    alt="Hisense U8G - Full Array Local Dimming Pro Small Icon">
-                                <div class="product-highlight-text">Full Array Local Dimming Pro</div>
-                            </a>
-                        </div> -->
-                        <!-- <div class="product-highlights-description"></div> -->
                     </div>
-                    <div class="product-listing-tab-buttons trackin" data-track="35"
-                        style="transform: translateY(35px);">
+                    <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
                         <div><a class="btn-hisense">More Detail</a></div>
-                        <!-- <div>
-                            <a class="btn-detail" href="/regional?type=where-to-buy">Where to buy</a>
-                        </div> -->
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="padding: 1rem;" *ngFor="let prodCat of metaData?.category_products">
+        <div class="product__category__title">{{prodCat.product.name}}</div>
+
+        <div class="product-listing-inner">
+            <div class="product-listing-tab" [routerLink]="prod.relative_url"
+                *ngFor="let prod of prodCat.product.product_variants">
+                <a class="product-listing-img trackin">
+                    <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
+                    <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
+                </a>
+                <div class="product-listing-tab-content">
+                    <h4>{{prod.name}}</h4>
+                    <h3>{{prod.variant_size}}</h3>
+                    <div class="product-listing-description"></div>
+                </div>
+                <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
+                    <div><a class="btn-hisense">More Detail</a></div>
                 </div>
             </div>
         </div>

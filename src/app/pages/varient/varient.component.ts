@@ -25,7 +25,6 @@ export class VarientComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.params.pipe(takeWhile(_=>this.alive)).subscribe(routeParams => {
-      console.log(routeParams);
       this.state.mobileNavToggle.next(false);
       this.loadMetaData(routeParams['varient']);
     });
@@ -49,7 +48,6 @@ export class VarientComponent implements OnInit {
   }
 
   getVendorImage(vendor: string){
-    console.log(vendor)
     switch(vendor){
       case "amazon":
       return 'assets/amazon.png';

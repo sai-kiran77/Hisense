@@ -18,6 +18,12 @@ export class ApiService {
     return this.http.get(this.baseURL + varientURL + varient);
   }
 
+  getPressCoverages(params: any, varientURL = '/press-coverages') {
+    return this.http.get(this.baseURL + varientURL, {
+      params
+    });
+  }
+
   postContactUsForm(body: any, endpoint: string = '/contact-requests') {
     return this.http.post(this.baseURL + endpoint, body);
   }

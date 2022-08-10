@@ -10,8 +10,9 @@
 }
 
 .product__category__title {
-    margin: 20px;
+    padding: 16px;
     font-size: 2em;
+    font-weight: bold;
 }
 
 .product-listing-inner {
@@ -319,4 +320,16 @@
     .mobile-banner {
         display: block !important;
     }
+}
+
+.sub__cat__link{
+    text-decoration: underline;
+    color: #007aff !important;
+    font-size: 22px;
+}
+
+.product__category__title {
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
 }
