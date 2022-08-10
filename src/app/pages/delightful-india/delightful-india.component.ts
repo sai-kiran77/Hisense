@@ -20,8 +20,12 @@ export class DelightfulIndiaComponent implements OnInit {
 
   hints: any = [];
 
+  modalMessage = '';
+
   showSignupForm = true;
   showLoginForm = false;
+
+  loginData: any;
 
   constructor(private api: ApiService,
     private fb: FormBuilder,
@@ -63,11 +67,12 @@ export class DelightfulIndiaComponent implements OnInit {
     if (this.signupForm && this.signupForm.valid) {
       this.api.signup(this.signupForm.value).subscribe((res: any) => {
         console.log(res);
+        this.loginData = res.data;
         this.signupLoading = false;
         // this.modalMessage = res.message;
-        if (isPlatformBrowser(this.platformId)) {
-          localStorage.setItem('username', res.data.username);
-        }
+        // if (isPlatformBrowser(this.platformId)) {
+        //   localStorage.setItem('username', res.data.username);
+        // }
         this.LoginForm.setValue({
           username: res.data.username,
           password: res.data.password,
@@ -77,6 +82,7 @@ export class DelightfulIndiaComponent implements OnInit {
       }, (err: any) => {
         console.log(err);
         this.signupLoading = false;
+        this.modalMessage = err.error.message;
         // this.modalMessage = err.message;
       })
     } else {
@@ -95,9 +101,14 @@ export class DelightfulIndiaComponent implements OnInit {
         this.loginLoading = false;
         this.showSignupForm = false;
         this.showLoginForm = false;
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.setItem('username', res.data.username);
+        }
+        this.hints = res.data.hints;
       }, (err: any) => {
         console.log(err);
         this.loginLoading = false;
+        this.modalMessage = err.error.message;
       })
     } else {
       this.loginLoading = false;
@@ -115,7 +126,11 @@ export class DelightfulIndiaComponent implements OnInit {
       },
       error: (err) => {
         console.log(err);
+        this.modalMessage = err.error.message;
         this.showLoginForm = true;
+        if (isPlatformBrowser(this.platformId)) {
+          localStorage.removeItem('username');
+        }
       }
     })
   }

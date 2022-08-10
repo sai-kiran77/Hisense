@@ -276,12 +276,12 @@ export class HeaderComponent implements OnInit {
                 {
                     "text": "Single door Refrigerators",
                     "url": "/c/single-door-refrigerators/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/single-door-refrigerators-thumb.jpg"
+                    "image": "https://hisense-apis.bloginguru.com/media/categories/single-door-refrigerators-thumb.png"
                 },
                 {
                     "text": "Top Freezer Refrigerators",
                     "url": "/c/top-freezer-refrigerators/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/top-freezer-refrigerators-thumb.jpg"
+                    "image": "https://hisense-apis.bloginguru.com/media/categories/top-freezer-refrigerators-thumb.png"
                 }
             ]
         },
@@ -292,7 +292,7 @@ export class HeaderComponent implements OnInit {
                 {
                     "text": "Convertible Health Series",
                     "url": "/c/convertible-health-series/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/convertible-health-series-thumb.jpg"
+                    "image": "https://hisense-apis.bloginguru.com/media/categories/convertible-health-series-thumb.png"
                 }
             ]
         },
@@ -303,7 +303,7 @@ export class HeaderComponent implements OnInit {
                 {
                     "text": "Simple Life Series",
                     "url": "/c/simple-life-series/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/simple-life-series-thumb.jpg"
+                    "image": "https://hisense-apis.bloginguru.com/media/categories/simple-life-series-thumb.png"
                 }
             ]
         },

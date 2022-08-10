@@ -67,6 +67,7 @@
                 <span *ngIf="signupLoading" class="loader"></span>
             </button>
         </div>
+        <div class="form__redirect">Already have an account? <a (click)="showSignupForm = false;showLoginForm = true;">Login</a></div>
     </div>
 </form>
 
@@ -76,6 +77,26 @@
         <h1>Login</h1>
         <!-- <p>Please fill the form to create an account.</p> -->
         <hr>
+
+        <div class="login__user__details" *ngIf="loginData">
+            <p>Thanks for signing up. Welcome to our community. We are happy to have you on board.</p>
+            <p>Please note below details to stay in touch!</p>
+    
+            <div class="grid" style="grid-template-columns: 1fr 1fr 1fr;gap: 1rem; margin-top: 1rem;">
+                <div>
+                    <div class="key">Username</div>
+                    <div class="value">{{loginData.username}}</div>
+                </div>
+                <div>
+                    <div class="key">Password</div>
+                    <div class="value">{{loginData.password}}</div>
+                </div>
+                <div>
+                    <div class="key">Delightful India Code</div>
+                    <div class="value">{{loginData.delightful_india_code}}</div>
+                </div>
+            </div>
+        </div>
 
         <div>
             <label for="email"><b>Username</b><span class="text-danger">*</span></label>
@@ -87,7 +108,7 @@
 
         <div>
             <label for="password"><b>Password</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Password" name="password" formControlName="password">
+            <input type="password" placeholder="Enter Password" name="password" formControlName="password">
             <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['password'].errors">
                 <span *ngIf="LoginForm.controls['password'].errors['required']">Password is required!</span>
             </div>
@@ -99,11 +120,18 @@
                 <span *ngIf="signupLoading" class="loader"></span>
             </button>
         </div>
+        <div class="form__redirect">Don't have an account? <a (click)="showSignupForm = true;showLoginForm = false;">Signup</a></div>
     </div>
 </form>
 
-<div class="hints">
-    <div class="card" *ngFor="let hint of hints">
-        {{hint.hint}}
+<div class="hints" *ngIf="hints.length">
+    <div class="card" *ngFor="let hint of hints" [innerHtml]="hint.hint">
+    </div>
+</div>
+
+<div class="modal" (click)="modalMessage = ''" [ngClass]="{'show-modal': modalMessage}">
+    <div class="modal-content">
+        <span (click)="modalMessage = ''" class="close-button">&times;</span>
+        <h3 style="line-height: 1.5;">{{modalMessage}}</h3>
     </div>
 </div>
