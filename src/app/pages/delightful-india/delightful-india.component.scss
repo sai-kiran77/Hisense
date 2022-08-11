@@ -1,22 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@600;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&display=swap');
+
+*{
+    font-family: 'DynaPuff', cursive !important;
+    font-weight: 400 !important;
+}
 
 .page__container {
     position: relative;
+    padding: 80px 0 40px 0;
+    background-image: url(https://hisense-apis.bloginguru.com/media/pages/campaigns/delightful-india/background.png);
 
     .content__container {
-        position: absolute;
-        top: 150px;
-        left: 50%;
-        height: 100%;
-        transform: translateX(-50%);
+        // position: absolute;
+        // top: 150px;
+        // left: 50%;
+        // height: 100%;
+        // transform: translateX(-50%);
 
         .container {
             // transform: translate(-50%, -50%);
             // max-height: calc(100% - 10px);
-            max-height: 450px;
+            // max-height: 450px;
             padding: 16px;
-            overflow-y: auto;
-            background: rgba(0, 0, 0, 0.4);
+            // overflow-y: auto;
+            background: rgba(0, 0, 0, 0.65);
             border-radius: 12px;
             // .backdrop {
             //     // filter: blur(2px);
@@ -34,8 +41,8 @@
     }
 
     .delighful__india__banner {
-        height: calc(100vh - 80px);
-        width: 100vw;
+        // height: calc(100vh - 80px);
+        // width: 100vw;
     }
 }
 
@@ -55,8 +62,8 @@ input {
 }
 
 input:focus {
-    // outline: 3px solid #00B3ac;
-    outline: 3px solid #C16E25;
+    outline: 3px solid #00B3ac;
+    // outline: 3px solid #C16E25;
 }
 
 hr {
@@ -98,14 +105,9 @@ button:hover {
 }
 
 form {
-    width: 450px;
+    width: 40%;
+    margin: auto;
     // margin: 3rem auto;
-}
-
-@media screen and (max-width: 576px) {
-    form {
-        width: 95%;
-    }
 }
 
 
@@ -176,7 +178,7 @@ h1 {
     font-size: 12px;
 
     a {
-        color: -webkit-link;
+    //     color: -webkit-link;
         cursor: pointer;
         text-decoration: underline;
     }
@@ -245,6 +247,7 @@ h1 {
 
     .value {
         font-size: 12px;
+        font-weight: bold !important;
     }
 }
 
@@ -307,15 +310,34 @@ div {
 }
 
 .page__heading {
-    margin: 40px 0;
-    position: absolute;
+    padding: 40px 0;
+    // position: absolute;
     width: 100%;
-    top: 40px;
+    // top: 40px;
     font-size: 3em;
-    left: 50%;
-    transform: translateX(-50%);
+    // left: 50%;
+    // transform: translateX(-50%);
 
     span {
         font-family: 'DynaPuff', cursive;
+        font-weight: 600 !important;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    form{
+        width: 50% !important;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    form{
+        width: 60% !important;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    form {
+        width: 95% !important;
     }
 }

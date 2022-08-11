@@ -4,9 +4,9 @@
         <span style="color: #3d4b93;">Treasure </span>
         <span style="color: #4fcc87;">Hunt </span>
     </h1>
-    <img class="delighful__india__banner"
+    <!-- <img class="delighful__india__banner"
         src="https://hisense-apis.bloginguru.com/media/pages/campaigns/delightful-india/background.png"
-        alt="delightful india banner">
+        alt="delightful india banner"> -->
     <div class="content__container">
         <form [formGroup]="signupForm" *ngIf="showSignupForm">
             <div class="container">
@@ -109,16 +109,16 @@
 
                         <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
                             <div class="d-flex">
-                                <div class="key">Username: </div>
-                                <div class="value"> {{loginData.username}}</div>
+                                <div class="key">Username&nbsp;:</div>
+                                <div class="value">&nbsp;{{loginData.username}}</div>
                             </div>
                             <div class="d-flex">
-                                <div class="key">Password: </div>
-                                <div class="value"> {{loginData.password}}</div>
+                                <div class="key">Password&nbsp;:</div>
+                                <div class="value">&nbsp;{{loginData.password}}</div>
                             </div>
                             <div class="d-flex">
-                                <div class="key">Hisense unique code: </div>
-                                <div class="value"> {{loginData.delightful_india_code}}</div>
+                                <div class="key">Hisense unique code&nbsp;:</div>
+                                <div class="value">&nbsp;{{loginData.delightful_india_code}}</div>
                             </div>
                         </div>
                     </div>
@@ -147,49 +147,55 @@
                         </button>
                     </div>
                     <div class="form__redirect">Not registered yet? &nbsp;<a
-                            (click)="showSignupForm = true;showLoginForm = false;">Click here</a> to register now</div>
+                            (click)="showSignupForm = true;showLoginForm = false;"s>Click here</a> to register now</div>
                 </div>
             </div>
         </form>
 
-        <div class="container" *ngIf="hints.length">
-            <div class="backdrop"></div>
-            <div class="inside__container">
-                <div class="hints">
-                    <!-- <h1>
-                        <span style="color: #FFA501;">Tricolor </span>
-                        <span style="color: #3d4b93;">Treasure </span>
-                        <span style="color: #4fcc87;">Hunt </span>
-                    </h1> -->
-                    <h3>Follow the clues & spot the Delightful India flags</h3>
-                    <hr>
-                    <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
-                        <div class="d-flex">
-                            <div class="key">Username: </div>
-                            <div class="value"> {{userName}}</div>
-                        </div>
-                        <div class="d-flex">
-                            <div class="key">Hisense unique code: </div>
-                            <div class="value"> {{delightFulCode}}</div>
-                        </div>
-                    </div>
-                    <div>
-                        <label><b>Clues:</b></label>
-                        <div style="padding: 1rem;">
-                            <ng-container *ngFor="let hint of hints">
-                                <label *ngIf="hint.section"><b>Category: </b>{{hint.section}}</label>
-                                <div style="padding: 1rem;">
-                                    <label *ngIf="hint.sub_section"><b>Sub Category: </b>{{hint.sub_section}}</label>
-                                    <div class="card" [innerHtml]="hint.hint">
+        <form *ngIf="showHints">
+            <div class="container">
+                <div class="backdrop"></div>
+                <div class="inside__container">
+                    <div class="hints">
+                        <!-- <h1>
+                            <span style="color: #FFA501;">Tricolor </span>
+                            <span style="color: #3d4b93;">Treasure </span>
+                            <span style="color: #4fcc87;">Hunt </span>
+                        </h1> -->
+                        <h3>Follow the clues & spot the Delightful India flags</h3>
+                        <hr>
+                        <!-- <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
+                            <div class="d-flex">
+                                <div class="key">Username: </div>
+                                <div class="value"> {{userName}}</div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="key">Hisense unique code: </div>
+                                <div class="value"> {{delightFulCode}}</div>
+                            </div>
+                        </div> -->
+                        <div>
+                            <label><b>Clues:</b></label>
+                            <div style="padding: 1rem;">
+                                <ng-container *ngFor="let hint of hints | keyvalue">
+                                    <label style="margin: 1rem 0 !important;display: block;" *ngIf="hint.key"><b>Category&nbsp;: </b>&nbsp;{{hint.key}}</label>
+                                    <div style="padding: 1rem;" *ngFor="let obj of hint.value">
+                                        <label *ngIf="obj['sub_section']"><b>Product&nbsp;: </b>&nbsp;{{obj['sub_section']}}</label>
+                                        <div class="card" [innerHtml]="obj['hint']">
+                                        </div>
                                     </div>
-                                </div>
-                            </ng-container>
+                                </ng-container>
+                            </div>
                         </div>
-
+                        <div class="clearfix">
+                            <button type="button" class="signupbtn" routerLink="/">
+                                <span>Start Finding The Flags</span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </form>
     </div>
 </div>
 

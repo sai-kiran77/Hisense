@@ -3,6 +3,10 @@ import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
 
+interface stringObj {
+  [key: string]: string
+}
+
 @Component({
   selector: 'app-delightful-india',
   templateUrl: './delightful-india.component.html',
@@ -16,12 +20,16 @@ export class DelightfulIndiaComponent implements OnInit {
   signupForm: FormGroup;
   isSignupFormSubmitted = false;
   signupLoading = false;
+  showHints = false;
+
 
   LoginForm: FormGroup;
   isLoginFormSubmitted = false;
   loginLoading = false;
 
-  hints: any = [];
+  hints: {
+    [key: string]: stringObj[]
+  } = {};
 
   modalMessage = '';
 
@@ -110,7 +118,22 @@ export class DelightfulIndiaComponent implements OnInit {
         }
         this.userName = res.data.username;
         this.delightFulCode = res.data.delightful_india_code;
-        this.hints = res.data.hints;
+        this.hints = {};
+        this.showHints = true;
+        res.data.hints.forEach((obj: any) => {
+          if (this.hints[obj.section]) {
+            this.hints[obj.section].push({
+              sub_section: obj.sub_section,
+              hint: obj.hint
+            });
+          } else {
+            this.hints[obj.section] = [];
+            this.hints[obj.section].push({
+              sub_section: obj.sub_section,
+              hint: obj.hint
+            });
+          }
+        });;
       }, (err: any) => {
         console.log(err);
         this.loginLoading = false;
@@ -128,64 +151,22 @@ export class DelightfulIndiaComponent implements OnInit {
     }).subscribe({
       next: (res: any) => {
         console.log(res.data);
-        this.hints = res.data
-        this.hints = [
-          {
-            "hint": "The Remote Finder of A6H Google TV</b> will help you find a flag too",
-            "section": "Television",
-            "sub_section": "UHD TV"
-          },
-          {
-            "hint": "Triple Color Laser Light of Laser TV</b> has a tricolour Flag for you (Obviously!)",
-            "section": "Television",
-            "sub_section": "Laser TV"
-          },
-          {
-            "hint": "Flag is waiting With Quantum dot colour U6G TV</b>",
-            "section": "Television",
-            "sub_section": "QLED TV"
-          },
-          {
-            "hint": "The Remote Finder of A6H Google TV</b> will help you find a flag too",
-            "section": "Television",
-            "sub_section": "UHD TV"
-          },
-          {
-            "hint": "The 670L RQ670N4SBU</b> Refrigerator has a “Big Capacity” lets find our Flag",
-            "section": "Refrigerator",
-            "sub_section": "Pure Flat Refrigerators"
-          },
-          {
-            "hint": "The 94L Mini Ref RR94D4SSN</b> feels like Fresh food, chill Mood lets find our hidden flag",
-            "section": "Refrigerator",
-            "sub_section": "Single Door Refrigerators"
-          },
-          {
-            "hint": "Quickly chill and find a flag in Hisense Intelligent AC 1 TR 5 Star",
-            "section": "Air Conditioner",
-            "sub_section": null
-          },
-          {
-            "hint": "Visit Family Mode of Hisense Intelligent AC 1 TR 4 Star",
-            "section": "Air Conditioner",
-            "sub_section": null
-          },
-          {
-            "hint": "The Washing Machine Simple Life Series 7 Kg has 15 Washing Programs and 1 Flag",
-            "section": "Washing Machine",
-            "sub_section": null
-          },
-          {
-            "hint": "Visit the Snowflake Drum of Washing Machine Simple Life Series 7 Kg... Did you find our Flag???",
-            "section": "Washing Machine",
-            "sub_section": null
-          },
-          {
-            "hint": "Save 30% energy with Half Load & find 100% out Delightful India flag",
-            "section": "Dish Washer",
-            "sub_section": null
+        this.hints = {};
+        this.showHints = true;
+        res.data.forEach((obj: any) => {
+          if (this.hints[obj.section]) {
+            this.hints[obj.section].push({
+              sub_section: obj.sub_section,
+              hint: obj.hint
+            });
+          } else {
+            this.hints[obj.section] = [];
+            this.hints[obj.section].push({
+              sub_section: obj.sub_section,
+              hint: obj.hint
+            });
           }
-        ]
+        });
       },
       error: (err) => {
         console.log(err);
