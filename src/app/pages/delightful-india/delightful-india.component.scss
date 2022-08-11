@@ -1,17 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@600;400&display=swap');
+
+.page__container {
+    position: relative;
+
+    .content__container {
+        position: absolute;
+        top: 150px;
+        left: 50%;
+        height: 100%;
+        transform: translateX(-50%);
+
+        .container {
+            // transform: translate(-50%, -50%);
+            // max-height: calc(100% - 10px);
+            max-height: 450px;
+            padding: 16px;
+            overflow-y: auto;
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 12px;
+            // .backdrop {
+            //     // filter: blur(2px);
+            //     width: 100%;
+            //     height: 100%;
+            //     position: absolute;
+            //     z-index: 10;
+            // }
+
+            // .inside__container {
+            //     position: absolute;
+            //     z-index: 100;
+            // }
+        }
+    }
+
+    .delighful__india__banner {
+        height: calc(100vh - 80px);
+        width: 100vw;
+    }
+}
+
 input {
     width: 100%;
-    padding: 15px;
+    padding: 10px;
     margin: 10px 0 !important;
     display: inline-block;
     border: none;
     display: block;
-    background: #e7eae7;
+    background: white;
     border-radius: 6px;
+
+    &::placeholder {
+        color: black;
+    }
 }
 
 input:focus {
-    background-color: rgb(230, 227, 227);
-    outline: none;
+    // outline: 3px solid #00B3ac;
+    outline: 3px solid #C16E25;
 }
 
 hr {
@@ -42,9 +87,9 @@ button:hover {
 }
 
 /* Add padding to container elements */
-.container {
-    padding: 16px;
-}
+// .container {
+//     padding: 16px;
+// }
 
 /* Clear floats */
 .clearfix {
@@ -52,16 +97,17 @@ button:hover {
     justify-content: center;
 }
 
+form {
+    width: 450px;
+    // margin: 3rem auto;
+}
+
 @media screen and (max-width: 576px) {
     form {
-        width: 80%;
+        width: 95%;
     }
 }
 
-form {
-    width: 60%;
-    margin: 3rem auto;
-}
 
 h1 {
     font-size: 2em;
@@ -70,7 +116,7 @@ h1 {
 }
 
 .text-danger {
-    color: #DC3545;
+    color: red;
     margin-left: 4px;
     font-size: 14px;
 
@@ -114,7 +160,6 @@ h1 {
     gap: 1rem;
     max-width: 500px;
     justify-content: center;
-    align-items: center;
     min-height: 500px;
     margin: auto;
 
@@ -186,18 +231,91 @@ h1 {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 
-.login__user__details{
+.login__user__details {
     margin-bottom: 3rem;
-    p{
+
+    p {
         font-size: 12px;
     }
 
-    .key{
+    .key {
         font-size: 14px;
         font-weight: bold;
     }
 
-    .value{
+    .value {
         font-size: 12px;
+    }
+}
+
+h1,
+h2 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+
+
+h2+p {
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+
+label {
+    color: white;
+}
+
+.d-flex {
+    display: flex;
+    align-items: center;
+}
+
+p,
+div {
+    color: white;
+}
+
+.modal div {
+    color: black;
+}
+
+
+.signupbtn {
+    padding: 1rem 2rem;
+    background: #FF9E06;
+    background: linear-gradient(to bottom right, #FF9E06, #50C138);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        /* Created with https://www.css-gradient.com */
+        background: #FF9C01;
+        background: -webkit-linear-gradient(top left, #FF9C01, #FFA501);
+        background: -moz-linear-gradient(top left, #FF9C01, #FFA501);
+        background: linear-gradient(to bottom right, #FF9C01, #FFA501);
+    }
+}
+
+.page__heading {
+    margin: 40px 0;
+    position: absolute;
+    width: 100%;
+    top: 40px;
+    font-size: 3em;
+    left: 50%;
+    transform: translateX(-50%);
+
+    span {
+        font-family: 'DynaPuff', cursive;
     }
 }

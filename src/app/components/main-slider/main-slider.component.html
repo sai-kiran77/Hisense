@@ -3,7 +3,7 @@
         <div class="slick-track">
             <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
                 [navigation]="true" [speed]="1000" class="mySwiper"
-                [autoplay]="{ delay: 3000, disableOnInteraction: false }">
+                [autoplay]="{ delay: 6000, disableOnInteraction: false }">
                 <ng-container *ngFor="let slide of slides;let i = index">
                     <ng-template swiperSlide>
                         <div class="slick-slide slick-current" data-slick-index="i" aria-hidden="false" role="tabpanel"
@@ -12,6 +12,7 @@
                                 <div class="slide-item" style="width: 100%; display: inline-block;">
                                     <img class="banner" [src]="slide.image" class="ls-bg" loading="lazy"
                                         [routerLink]="slide.url" style="width: 100%;">
+                                    <button class="get__started__btn" [routerLink]="slide.url" *ngIf="slide.url == '/delightful-india'">Get Started</button>
                                 </div>
                             </div>
                         </div>

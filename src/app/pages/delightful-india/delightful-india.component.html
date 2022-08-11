@@ -1,133 +1,198 @@
-<form style="border:1px solid #ccc" [formGroup]="signupForm" *ngIf="showSignupForm">
-    <div class="container">
-        <h1>Sign Up</h1>
-        <p>Please fill the form to create an account.</p>
-        <hr>
+<div class="page__container">
+    <h1 class="page__heading">
+        <span style="color: #FFA501;">Tricolor </span>
+        <span style="color: #3d4b93;">Treasure </span>
+        <span style="color: #4fcc87;">Hunt </span>
+    </h1>
+    <img class="delighful__india__banner"
+        src="https://hisense-apis.bloginguru.com/media/pages/campaigns/delightful-india/background.png"
+        alt="delightful india banner">
+    <div class="content__container">
+        <form [formGroup]="signupForm" *ngIf="showSignupForm">
+            <div class="container">
+                <div class="backdrop"></div>
+                <div class="inside__container">
+                    <h2>Register Now</h2>
+                    <p>Please fill the form to create an account.</p>
+                    <hr>
 
-        <div>
-            <label for="name"><b>Name</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
-            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['name'].errors">
-                <span *ngIf="signupForm.controls['name'].errors['required']">Name is required!</span>
-                <span *ngIf="signupForm.controls['name'].errors['pattern']">Name can only contain alphabets!</span>
-            </div>
-        </div>
+                    <div>
+                        <label for="name"><b>Name</b><span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+                        <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['name'].errors">
+                            <span *ngIf="signupForm.controls['name'].errors['required']">Name is required!</span>
+                            <span *ngIf="signupForm.controls['name'].errors['pattern']">Name can only contain
+                                alphabets!</span>
+                        </div>
+                    </div>
 
-        <div>
-            <label for="email"><b>Email</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
-            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['email'].errors">
-                <span *ngIf="signupForm.controls['email'].errors['required']">Email is required!</span>
-                <span *ngIf="signupForm.controls['email'].errors['email']">Enter a valid email!</span>
-            </div>
-        </div>
+                    <div>
+                        <label for="email"><b>Email</b><span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
+                        <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['email'].errors">
+                            <span *ngIf="signupForm.controls['email'].errors['required']">Email is required!</span>
+                            <span *ngIf="signupForm.controls['email'].errors['email']">Enter a valid email!</span>
+                        </div>
+                    </div>
 
-        <div>
-            <label for="phone"><b>Phone</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone">
-            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['phone'].errors">
-                <span *ngIf="signupForm.controls['phone'].errors['required']">Phone Number is required!</span>
-                <span *ngIf="signupForm.controls['phone'].errors['minlength']">Phone Number can only contain 10
-                    digits!</span>
-                <span *ngIf="signupForm.controls['phone'].errors['maxlength']">Phone Number can only contain 10
-                    digits!</span>
-                <span *ngIf="signupForm.controls['phone'].errors['pattern']">Phone Number can only contain
-                    digits!</span>
-            </div>
-        </div>
+                    <div>
+                        <label for="phone"><b>Phone</b><span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone">
+                        <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['phone'].errors">
+                            <span *ngIf="signupForm.controls['phone'].errors['required']">Phone Number is
+                                required!</span>
+                            <span *ngIf="signupForm.controls['phone'].errors['minlength']">Phone Number can only contain
+                                10
+                                digits!</span>
+                            <span *ngIf="signupForm.controls['phone'].errors['maxlength']">Phone Number can only contain
+                                10
+                                digits!</span>
+                            <span *ngIf="signupForm.controls['phone'].errors['pattern']">Phone Number can only contain
+                                digits!</span>
+                        </div>
+                    </div>
 
-        <div>
-            <label for="pincode"><b>Pincode</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode" formControlName="zipcode">
-            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['zipcode'].errors">
-                <span *ngIf="signupForm.controls['zipcode'].errors['required']">Pincode is required!</span>
-            </div>
-        </div>
+                    <div>
+                        <label for="pincode"><b>Pincode</b><span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode"
+                            formControlName="zipcode">
+                        <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['zipcode'].errors">
+                            <span *ngIf="signupForm.controls['zipcode'].errors['required']">Pincode is required!</span>
+                        </div>
+                    </div>
 
-        <div style="margin-bottom:15px">
-            <label>
-                <!-- checked="checked" -->
-                <input type="checkbox" name="terms" formControlName="terms">
-                <span class="ml-4 f-14">Yes, I would like to receive important updates and notifications on
-                    WhatsApp</span>
-            </label>
-            <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['terms'].errors">
-                <span *ngIf="signupForm.controls['terms'].errors['required']">Please accept to proceed further!</span>
-            </div>
-        </div>
+                    <div style="margin-bottom:15px">
+                        <label class="d-flex">
+                            <!-- checked="checked" -->
+                            <input style="margin: 0 !important;flex: 1;" type="checkbox" name="terms"
+                                formControlName="terms">
+                            <span class="ml-4 f-14">Yes, I would like to receive important updates
+                                and notifications on WhatsApp</span>
+                        </label>
+                        <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['terms'].errors">
+                            <span *ngIf="signupForm.controls['terms'].errors['required']">Please accept to proceed
+                                further!</span>
+                        </div>
+                    </div>
 
-        <div>
-            <p class="f-14">By proceeding, you are authorizing Hisense and its empaneled controctors to get in touch
-                with you through calls, SMS or e-mail</p>
-        </div>
+                    <div>
+                        <p class="f-14">By proceeding, you are authorizing Hisense and its empaneled controctors to get
+                            in
+                            touch
+                            with you through calls, SMS or e-mail</p>
+                    </div>
 
-        <div class="clearfix">
-            <button type="button" class="signupbtn" (click)="onRegister()">
-                <span>Register Now</span>
-                <span *ngIf="signupLoading" class="loader"></span>
-            </button>
-        </div>
-        <div class="form__redirect">Already have an account? <a (click)="showSignupForm = false;showLoginForm = true;">Login</a></div>
-    </div>
-</form>
-
-
-<form style="border:1px solid #ccc" [formGroup]="LoginForm" *ngIf="showLoginForm">
-    <div class="container">
-        <h1>Login</h1>
-        <!-- <p>Please fill the form to create an account.</p> -->
-        <hr>
-
-        <div class="login__user__details" *ngIf="loginData">
-            <p>Thanks for signing up. Welcome to our community. We are happy to have you on board.</p>
-            <p>Please note below details to stay in touch!</p>
-    
-            <div class="grid" style="grid-template-columns: 1fr 1fr 1fr;gap: 1rem; margin-top: 1rem;">
-                <div>
-                    <div class="key">Username</div>
-                    <div class="value">{{loginData.username}}</div>
-                </div>
-                <div>
-                    <div class="key">Password</div>
-                    <div class="value">{{loginData.password}}</div>
-                </div>
-                <div>
-                    <div class="key">Delightful India Code</div>
-                    <div class="value">{{loginData.delightful_india_code}}</div>
+                    <div class="clearfix">
+                        <button type="button" class="signupbtn" (click)="onRegister()">
+                            <span>Register Now</span>
+                            <span *ngIf="signupLoading" class="loader"></span>
+                        </button>
+                    </div>
+                    <div class="form__redirect">Already registered? &nbsp;<a
+                            (click)="showSignupForm = false;showLoginForm = true;">Click here</a> to login</div>
                 </div>
             </div>
-        </div>
+        </form>
 
-        <div>
-            <label for="email"><b>Username</b><span class="text-danger">*</span></label>
-            <input type="text" placeholder="Enter Username" name="username" id="username" formControlName="username">
-            <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['username'].errors">
-                <span *ngIf="LoginForm.controls['username'].errors['required']">Username is required!</span>
+        <form [formGroup]="LoginForm" *ngIf="showLoginForm">
+            <div class="container">
+                <div class="backdrop"></div>
+                <div class="inside__container">
+                    <h2>Proceed to login</h2>
+                    <!-- <p>Please fill the form to create an account.</p> -->
+                    <hr>
+
+                    <div class="login__user__details" *ngIf="loginData">
+                        <p>Thanks for registering for Tricolor Treasure Hunt. Proceed to login below to continue
+                            further.</p>
+                        <p>Please note down your login details and your Hisense unique code</p>
+
+                        <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
+                            <div class="d-flex">
+                                <div class="key">Username: </div>
+                                <div class="value"> {{loginData.username}}</div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="key">Password: </div>
+                                <div class="value"> {{loginData.password}}</div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="key">Hisense unique code: </div>
+                                <div class="value"> {{loginData.delightful_india_code}}</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="email"><b>Username</b><span class="text-danger">*</span></label>
+                        <input type="text" placeholder="Enter Username" name="username" id="username"
+                            formControlName="username">
+                        <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['username'].errors">
+                            <span *ngIf="LoginForm.controls['username'].errors['required']">Username is required!</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password"><b>Password</b><span class="text-danger">*</span></label>
+                        <input type="password" placeholder="Enter Password" name="password" formControlName="password">
+                        <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['password'].errors">
+                            <span *ngIf="LoginForm.controls['password'].errors['required']">Password is required!</span>
+                        </div>
+                    </div>
+
+                    <div class="clearfix">
+                        <button type="button" class="signupbtn" (click)="onLogin()">
+                            <span>Login</span>
+                            <span *ngIf="signupLoading" class="loader"></span>
+                        </button>
+                    </div>
+                    <div class="form__redirect">Not registered yet? &nbsp;<a
+                            (click)="showSignupForm = true;showLoginForm = false;">Click here</a> to register now</div>
+                </div>
+            </div>
+        </form>
+
+        <div class="container" *ngIf="hints.length">
+            <div class="backdrop"></div>
+            <div class="inside__container">
+                <div class="hints">
+                    <!-- <h1>
+                        <span style="color: #FFA501;">Tricolor </span>
+                        <span style="color: #3d4b93;">Treasure </span>
+                        <span style="color: #4fcc87;">Hunt </span>
+                    </h1> -->
+                    <h3>Follow the clues & spot the Delightful India flags</h3>
+                    <hr>
+                    <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
+                        <div class="d-flex">
+                            <div class="key">Username: </div>
+                            <div class="value"> {{userName}}</div>
+                        </div>
+                        <div class="d-flex">
+                            <div class="key">Hisense unique code: </div>
+                            <div class="value"> {{delightFulCode}}</div>
+                        </div>
+                    </div>
+                    <div>
+                        <label><b>Clues:</b></label>
+                        <div style="padding: 1rem;">
+                            <ng-container *ngFor="let hint of hints">
+                                <label *ngIf="hint.section"><b>Category: </b>{{hint.section}}</label>
+                                <div style="padding: 1rem;">
+                                    <label *ngIf="hint.sub_section"><b>Sub Category: </b>{{hint.sub_section}}</label>
+                                    <div class="card" [innerHtml]="hint.hint">
+                                    </div>
+                                </div>
+                            </ng-container>
+                        </div>
+
+                    </div>
+                </div>
             </div>
         </div>
-
-        <div>
-            <label for="password"><b>Password</b><span class="text-danger">*</span></label>
-            <input type="password" placeholder="Enter Password" name="password" formControlName="password">
-            <div class="text-danger" *ngIf="isLoginFormSubmitted && LoginForm.controls['password'].errors">
-                <span *ngIf="LoginForm.controls['password'].errors['required']">Password is required!</span>
-            </div>
-        </div>
-
-        <div class="clearfix">
-            <button type="button" class="signupbtn" (click)="onLogin()">
-                <span>Login</span>
-                <span *ngIf="signupLoading" class="loader"></span>
-            </button>
-        </div>
-        <div class="form__redirect">Don't have an account? <a (click)="showSignupForm = true;showLoginForm = false;">Signup</a></div>
-    </div>
-</form>
-
-<div class="hints" *ngIf="hints.length">
-    <div class="card" *ngFor="let hint of hints" [innerHtml]="hint.hint">
     </div>
 </div>
+
 
 <div class="modal" (click)="modalMessage = ''" [ngClass]="{'show-modal': modalMessage}">
     <div class="modal-content">

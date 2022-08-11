@@ -1,3 +1,27 @@
-.ls-bg{
+.ls-bg {
     cursor: pointer;
+}
+
+.get__started__btn {
+    position: absolute;
+    bottom: 15px;
+    padding: 1rem 2rem;
+    right: 175px;
+    background: #FF9E06;
+    background: linear-gradient(to bottom right, #FF9E06, #50C138);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        /* Created with https://www.css-gradient.com */
+        background: #FF9C01;
+        background: -webkit-linear-gradient(top left, #FF9C01, #FFA501);
+        background: -moz-linear-gradient(top left, #FF9C01, #FFA501);
+        background: linear-gradient(to bottom right, #FF9C01, #FFA501);
+    }
 }

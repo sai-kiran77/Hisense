@@ -17,8 +17,8 @@ export class MainSliderComponent implements OnInit {
 
   slides = [
     {
-      url:'/c/laser-tv',
-      image:'https://hisense-apis.bloginguru.com/media/pages/home/laser-tv-slide.png'
+      url:'/delightful-india',
+      image:'https://hisense-apis.bloginguru.com/media/pages/home/Delightful-India-slide.jpg'
     },
     {
       url:'/c/air-conditioner',
@@ -33,16 +33,16 @@ export class MainSliderComponent implements OnInit {
       image:'https://hisense-apis.bloginguru.com/media/pages/home/tv-70A71F-slide.png'
     },
     {
-      url:'/c/qled-tv',
-      image:'https://hisense-apis.bloginguru.com/media/pages/home/qled-tv-slide.png'
+      url:'/c/refrigerator',
+      image:'https://hisense-apis.bloginguru.com/media/pages/home/refrigerator-slide.webp'
     },
     {
-      url:'/v/65A73F',
-      image:'https://hisense-apis.bloginguru.com/media/pages/home/tv-A73F-slide.jpg'
+      url:'/c/washing-machine',
+      image:'https://hisense-apis.bloginguru.com/media/pages/home/washing-machine-slide.webp'
     },
     {
-      url:'/v/50A6GE',
-      image:'https://hisense-apis.bloginguru.com/media/pages/home/tv-50A6GE-slide.png'
+      url:'/c/dish-washer',
+      image:'https://hisense-apis.bloginguru.com/media/pages/home/dishwasher-slide.webp'
     },
   ]
 
