@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -14,7 +15,7 @@ export class OffersPromotionsComponent implements OnInit {
     //   tab: '5th August 2022'
     // },
     {
-      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2021.jpg`,
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.png`,
       tab: '23rd July 2022'
     },
     {
@@ -26,7 +27,7 @@ export class OffersPromotionsComponent implements OnInit {
       tab: '18th Nov 2021'
     },
     {
-      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.jpg`,
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2021.jpg`,
       tab: '23rd July 2021'
     },
     {
@@ -59,7 +60,10 @@ export class OffersPromotionsComponent implements OnInit {
     this.currentTab = obj.tab;
   }
 
-  constructor() { }
+  constructor(private state: GlobalStateService) {
+    this.state.mobileNavToggle.next(false);
+
+   }
 
   ngOnInit(): void {
   }

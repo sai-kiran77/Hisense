@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
   selector: 'app-contact-us',
@@ -14,11 +15,15 @@ export class ContactUsComponent implements OnInit {
   modalMessage = '';
 
   constructor(private fb: FormBuilder,
-    private api: ApiService) {
+    private api: ApiService,
+    private state: GlobalStateService
+  ) {
+    this.state.mobileNavToggle.next(false);
+
     this.form = this.fb.group({
-      name: ['', [Validators.required,Validators.pattern(/^[A-Za-z ]+$/)]],
-      phone: ['', [Validators.required,Validators.minLength(10),Validators.maxLength(10),Validators.pattern(/^[0-9]*$/)]],
-      email: ['', [Validators.required,Validators.email]],
+      name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
+      phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+      email: ['', [Validators.required, Validators.email]],
       body: ['', [Validators.required]]
     })
     console.log(this.form)

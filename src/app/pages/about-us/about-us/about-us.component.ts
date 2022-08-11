@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
   selector: 'app-about-us',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private state: GlobalStateService) {
+    this.state.mobileNavToggle.next(false);
+   }
 
   ngOnInit(): void {
   }

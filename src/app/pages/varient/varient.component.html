@@ -17,7 +17,7 @@
             </div>
 
         </div>
-        <div class="product__head-text-column">
+        <div class="product__head-text-column" [ngClass]="{'mt-200': showFlag }">
             <div class="product__head-description">{{metaData?.name}}</div>
             <div class="product__head-title" style="margin-bottom:0px!important;">{{metaData?.code}}</div>
             <div class="product__head-description">{{metaData?.short_description}}</div>
@@ -41,10 +41,7 @@
 </div>
 
 <div class="embed__flag" *ngIf="showFlag">
-    <img [src]="flagImage" alt="flag" style="    width: 150px;
-    position: relative;
-    bottom: 55px;
-    left: 60%;">
+    <img [src]="flagImage" alt="flag">
 </div>
 
 <!-- <div class="product__block" style=" background-image: url('');">

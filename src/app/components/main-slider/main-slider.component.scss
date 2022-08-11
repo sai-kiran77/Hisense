@@ -6,13 +6,13 @@
     position: absolute;
     bottom: 15px;
     padding: 1rem 2rem;
-    right: 175px;
+    right: 20%;
     background: #FF9E06;
     background: linear-gradient(to bottom right, #FF9E06, #50C138);
     border: none;
     outline: none;
     border-radius: 8px;
-    font-size: 2rem;
+    font-size: 3rem;
     cursor: pointer;
     color: white;
     transition: background 300ms ease-in-out;
@@ -23,5 +23,11 @@
         background: -webkit-linear-gradient(top left, #FF9C01, #FFA501);
         background: -moz-linear-gradient(top left, #FF9C01, #FFA501);
         background: linear-gradient(to bottom right, #FF9C01, #FFA501);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .get__started__btn{
+        display: none;
     }
 }

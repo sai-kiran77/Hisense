@@ -42,8 +42,13 @@ export class VarientComponent implements OnInit {
         if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
         res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
         || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
-        res.data.code == 'AS-22TC3RAM0'){
-          console.log('came herwe')
+        res.data.code == 'AS-22TC3RAM0' ||
+        res.data.code == '75A6H' ||
+        res.data.code == '55A6H' ||
+        res.data.code == '50A6H' ||
+        res.data.code == '43A6H' ||
+        res.data.code == '65U6G' ||
+        res.data.code == '55U6G'){
           this.showFlag = true;
         }
       },

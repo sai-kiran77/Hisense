@@ -2,6 +2,7 @@ import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 interface stringObj {
   [key: string]: string
@@ -40,7 +41,10 @@ export class DelightfulIndiaComponent implements OnInit {
 
   constructor(private api: ApiService,
     private fb: FormBuilder,
-    @Inject(PLATFORM_ID) private platformId: Object) {
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private state: GlobalStateService) {
+    this.state.mobileNavToggle.next(false);
+
     this.signupForm = this.fb.group({
       name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
       email: ['', [Validators.required, Validators.email]],

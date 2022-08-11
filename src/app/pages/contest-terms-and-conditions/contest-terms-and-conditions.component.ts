@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
   selector: 'app-contest-terms-and-conditions',
@@ -9,7 +10,10 @@ export class ContestTermsAndConditionsComponent implements OnInit {
 
   currentTab = 'TH'
 
-  constructor() { }
+  constructor(private state: GlobalStateService) {
+    this.state.mobileNavToggle.next(false);
+
+   }
 
   ngOnInit(): void {
   }

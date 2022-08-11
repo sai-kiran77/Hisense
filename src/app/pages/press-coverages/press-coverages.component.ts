@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
   selector: 'app-press-coverages',
@@ -18,7 +19,10 @@ export class PressCoveragesComponent implements OnInit {
   }
   metaData: any;
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService,
+    private state: GlobalStateService) { 
+    this.state.mobileNavToggle.next(false);
+  }
 
   ngOnInit(): void {
     this.getMetaData();
