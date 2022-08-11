@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-footer',
@@ -18,22 +19,22 @@ export class FooterComponent implements OnInit {
                 {
                     "text": "Laser TV",
                     "url": "/c/laser-tv/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/laser-tv-thumb.jpg"
+                    "image": environment.baseApiUrl + "/media/categories/laser-tv-thumb.jpg"
                 },
                 {
                     "text": "Smart TV",
                     "url": "/c/smart-tv/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/smart-tv-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/smart-tv-thumb.png"
                 },
                 {
                     "text": "UHD TV",
                     "url": "/c/uhd-tv/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/uhd-tv-thumb.webp"
+                    "image": environment.baseApiUrl + "/media/categories/uhd-tv-thumb.webp"
                 },
                 {
                     "text": "QLED TV",
                     "url": "/c/qled-tv/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/qled-tv-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/qled-tv-thumb.png"
                 }
             ]
         },
@@ -44,17 +45,17 @@ export class FooterComponent implements OnInit {
                 {
                     "text": "Pure Flat Refrigerators",
                     "url": "/c/pure-flat-refrigerators/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/pure-flat-refrigerators-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/pure-flat-refrigerators-thumb.png"
                 },
                 {
                     "text": "Single door Refrigerators",
                     "url": "/c/single-door-refrigerators/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/single-door-refrigerators-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/single-door-refrigerators-thumb.png"
                 },
                 {
                     "text": "Top Freezer Refrigerators",
                     "url": "/c/top-freezer-refrigerators/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/top-freezer-refrigerators-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/top-freezer-refrigerators-thumb.png"
                 }
             ]
         },
@@ -65,7 +66,7 @@ export class FooterComponent implements OnInit {
                 {
                     "text": "Convertible Health Series",
                     "url": "/c/convertible-health-series/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/convertible-health-series-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/convertible-health-series-thumb.png"
                 }
             ]
         },
@@ -76,7 +77,7 @@ export class FooterComponent implements OnInit {
                 {
                     "text": "Simple Life Series",
                     "url": "/c/simple-life-series/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/simple-life-series-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/simple-life-series-thumb.png"
                 }
             ]
         },
@@ -87,7 +88,7 @@ export class FooterComponent implements OnInit {
                 {
                     "text": "Freestanding Dishwasher",
                     "url": "/c/freestanding-dishwasher/",
-                    "image": "https://hisense-apis.bloginguru.com/media/categories/freestanding-dishwasher-thumb.png"
+                    "image": environment.baseApiUrl + "/media/categories/freestanding-dishwasher-thumb.png"
                 }
             ]
         }

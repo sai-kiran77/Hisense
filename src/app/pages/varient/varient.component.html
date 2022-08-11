@@ -5,8 +5,8 @@
                 <div class="carousel-container">
                     <div class="carousel-images" [ngStyle]="{'transform':position}">
                         <!-- <div > -->
-                            <img class="carousel-image current-image" *ngFor="let slide of metaData?.slider_images"
-                                [src]="slide?.full_url" alt="image">
+                        <img class="carousel-image current-image" *ngFor="let slide of metaData?.slider_images"
+                            [src]="slide?.full_url" alt="image">
                         <!-- </div> -->
                     </div>
                 </div>
@@ -38,6 +38,13 @@
             </div>
         </section>
     </div>
+</div>
+
+<div class="embed__flag" *ngIf="showFlag">
+    <img [src]="flagImage" alt="flag" style="    width: 150px;
+    position: relative;
+    bottom: 55px;
+    left: 60%;">
 </div>
 
 <!-- <div class="product__block" style=" background-image: url('');">

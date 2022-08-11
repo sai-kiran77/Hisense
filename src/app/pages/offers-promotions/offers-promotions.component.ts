@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-offers-promotions',
@@ -8,44 +9,44 @@ import { Component, OnInit } from '@angular/core';
 export class OffersPromotionsComponent implements OnInit {
 
   metaData = [
+    // {
+    //   image: `${environment.baseApiUrl}/wp-content/uploads/2022/08/Warranty-Announcement-Hisense.webp',
+    //   tab: '5th August 2022'
+    // },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2022/08/Warranty-Announcement-Hisense.webp',
-      tab: '5th August 2022'
-    },
-    {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2022/07/Open-Letter-Hisense-July-23-2022.webp',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2021.jpg`,
       tab: '23rd July 2022'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/12/Open-Letter-Hisense-December-1.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/1-Dec-2021.jpg`,
       tab: '1st Dec 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/12/Open-Letter-Hisense-December.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/18-Nov-2021.jpg`,
       tab: '18th Nov 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/09/Open-Letter-Hisense-23-july.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.jpg`,
       tab: '23rd July 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/09/Open-Letter-Hisense-10-july.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/10-July-2021.jpg`,
       tab: '10th July 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/06/Open-Letter-Hisense.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/12-June-2021.jpg`,
       tab: '12th June 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/05/Open-Letter-Hisense.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/1-May-2021.jpg`,
       tab: '1st May 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2021/07/Open-Letter-Hisense.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/1-Jan-2021.jpg`,
       tab: '1st January 2021'
     },
     {
-      image: 'https://www.hisense-india.com/wp-content/uploads/2020/09/Hisense-Open-Letter-v4-1.jpg',
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/10-September-2021.jpg`,
       tab: '10th September 2020'
     },
   ]

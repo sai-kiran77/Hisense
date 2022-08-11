@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-home-products',
@@ -11,22 +12,22 @@ export class HomeProductsComponent implements OnInit {
     {
       "text": "TV",
       "url": "/c/tv/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/tv-thumb.jpg"
+      "image": environment + "/media/categories/tv-thumb.jpg"
     },
     {
       "text": "Refrigerator",
       "url": "/c/refrigerator/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/refrigerator-thumb.png"
+      "image": environment + "/media/categories/refrigerator-thumb.png"
     },
     {
       "text": "Air Conditioner",
       "url": "/c/air-conditioner/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/air-conditioner-thumb.png"
+      "image": environment + "/media/categories/air-conditioner-thumb.png"
     },
     {
       "text": "Washing Machine",
       "url": "/c/washing-machine/",
-      "image": "https://hisense-apis.bloginguru.com/media/categories/washing-machine-thumb.png"
+      "image": environment + "/media/categories/washing-machine-thumb.png"
     }
   ]
 

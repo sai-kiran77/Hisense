@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { takeWhile } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-varient',
@@ -16,6 +17,9 @@ export class VarientComponent implements OnInit {
   alive = true;
   currentIndex = 0;
   position  = 'translateX(0)';
+
+  showFlag = false;
+  flagImage = environment.baseApiUrl + '/media/pages/campaigns/delightful-india/flag.png'
 
   constructor(private route:ActivatedRoute,
     private api: ApiService,
@@ -35,6 +39,13 @@ export class VarientComponent implements OnInit {
       next: (res: any) => {
         console.log(res.data);
         this.metaData = res.data;
+        if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
+        res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
+        || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
+        res.data.code == 'AS-22TC3RAM0'){
+          console.log('came herwe')
+          this.showFlag = true;
+        }
       },
       error: (e) => {
         console.log(e);
