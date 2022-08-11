@@ -19,7 +19,7 @@ export class VarientComponent implements OnInit {
   position  = 'translateX(0)';
 
   showFlag = false;
-  flagImage = environment.baseApiUrl + '/media/pages/campaigns/delightful-india/flag.png'
+  flagImage = 'https://hisense-apis.bloginguru.com/media/pages/campaigns/delightful-india/flag.png'
 
   constructor(private route:ActivatedRoute,
     private api: ApiService,
