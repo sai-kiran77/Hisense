@@ -11492,3 +11492,12 @@ body {
     border-radius: 20px;
     background: #869791;
 }
+
+@media screen and (max-width: 500px) {
+    .product__head{
+        grid-template-columns: 1fr;
+        .product__head-text-column{
+            text-align: center !important;
+        }
+    }
+}
