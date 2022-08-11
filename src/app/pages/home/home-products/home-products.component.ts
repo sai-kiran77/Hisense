@@ -12,22 +12,22 @@ export class HomeProductsComponent implements OnInit {
     {
       "text": "TV",
       "url": "/c/tv/",
-      "image": environment + "/media/categories/tv-thumb.jpg"
+      "image": environment.baseApiUrl + "/media/categories/tv-thumb.jpg"
     },
     {
       "text": "Refrigerator",
       "url": "/c/refrigerator/",
-      "image": environment + "/media/categories/refrigerator-thumb.png"
+      "image": environment.baseApiUrl + "/media/categories/refrigerator-thumb.png"
     },
     {
       "text": "Air Conditioner",
       "url": "/c/air-conditioner/",
-      "image": environment + "/media/categories/air-conditioner-thumb.png"
+      "image": environment.baseApiUrl + "/media/categories/air-conditioner-thumb.png"
     },
     {
       "text": "Washing Machine",
       "url": "/c/washing-machine/",
-      "image": environment + "/media/categories/washing-machine-thumb.png"
+      "image": environment.baseApiUrl + "/media/categories/washing-machine-thumb.png"
     }
   ]
 
