@@ -6,6 +6,7 @@
     position: absolute;
     bottom: 15px;
     padding: 1rem 2rem;
+    z-index: 100;
     right: 20%;
     background: #FF9E06;
     background: linear-gradient(to bottom right, #FF9E06, #50C138);
@@ -27,7 +28,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .get__started__btn{
+    .get__started__btn {
         display: none;
     }
 }

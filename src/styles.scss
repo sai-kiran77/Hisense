@@ -4044,6 +4044,12 @@ ul li {
     }
 }
 
+.mySwiper .swiper-pagination {
+    width: auto !important;
+    left: 50% !important;
+    transform: translate(-50%) !important;
+}
+
 .mySwiper .swiper-pagination-bullet {
     position: relative;
     width: 30px;
@@ -4057,6 +4063,11 @@ ul li {
     border-radius: 50%;
     border: none;
     opacity: 1;
+
+    &.swiper-pagination {
+        display: flex !important;
+        justify-content: center !important;
+    }
 
     &.swiper-pagination-bullet-active {
         border: solid 3px #E6E6E6;
