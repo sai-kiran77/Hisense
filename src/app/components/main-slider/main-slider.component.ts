@@ -19,7 +19,7 @@ export class MainSliderComponent implements OnInit {
   slides = [
     {
       url:'/delightful-india',
-      image:`${environment.baseApiUrl}${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`
+      image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`
     },
     {
       url:'/c/air-conditioner',
