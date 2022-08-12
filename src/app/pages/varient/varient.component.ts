@@ -48,7 +48,9 @@ export class VarientComponent implements OnInit {
         res.data.code == '50A6H' ||
         res.data.code == '43A6H' ||
         res.data.code == '65U6G' ||
-        res.data.code == '55U6G'){
+        res.data.code == 'AS-12TC4RAM0' ||
+        res.data.code == 'AS-12TC5RAM0' ||
+        res.data.code == '55U6G' || res.data.code == 'WFVB7012MS' ){
           this.showFlag = true;
         }
       },
