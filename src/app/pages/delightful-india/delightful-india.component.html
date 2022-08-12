@@ -59,9 +59,9 @@
                     </div>
 
                     <div style="margin-bottom:15px">
-                        <label class="d-flex">
+                        <label>
                             <!-- checked="checked" -->
-                            <input style="margin: 0 !important;flex: 1;" type="checkbox" name="terms"
+                            <input style="display: inline !important;width: auto;" type="checkbox" name="terms"
                                 formControlName="terms">
                             <span class="ml-4 f-14">Yes, I would like to receive important updates
                                 and notifications on WhatsApp</span>
@@ -158,12 +158,12 @@
                         <hr>
                         <div class="grid" style="gap: 0.5rem; margin-top: 1rem;">
                             <div class="d-flex">
-                                <div class="key">Username: </div>
-                                <div class="value"> {{userName}}</div>
+                                <div class="key">Username &nbsp;:</div>&nbsp;
+                                <div class="value">{{userName}}</div>
                             </div>
                             <div class="d-flex">
-                                <div class="key">Hisense unique code: </div>
-                                <div class="value"> {{delightFulCode}}</div>
+                                <div class="key">Hisense unique code &nbsp;:</div>&nbsp;
+                                <div class="value">{{delightFulCode}}</div>
                             </div>
                         </div>
                         <div>
@@ -184,6 +184,8 @@
                                 <span>Start Finding The Flags</span>
                             </button>
                         </div>
+                        <div class="form__redirect"><a
+                            (click)="logout()">logout</a></div>
                     </div>
                 </div>
             </div>

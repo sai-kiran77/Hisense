@@ -183,4 +183,14 @@ export class DelightfulIndiaComponent implements OnInit {
     })
   }
 
+  logout(){
+
+    this.showSignupForm = false;
+    this.showLoginForm = true;
+    this.showHints = false;
+
+    localStorage.removeItem('username');
+    localStorage.removeItem('delightful_india_code');
+  }
+
 }

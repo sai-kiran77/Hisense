@@ -4044,11 +4044,11 @@ ul li {
     }
 }
 
-.mySwiper .swiper-pagination {
-    width: auto !important;
-    left: 50% !important;
-    transform: translate(-50%) !important;
-}
+// .mySwiper .swiper-pagination {
+//     width: auto !important;
+//     left: 50% !important;
+//     transform: translate(-50%) !important;
+// }
 
 .mySwiper .swiper-pagination-bullet {
     position: relative;
@@ -4064,10 +4064,10 @@ ul li {
     border: none;
     opacity: 1;
 
-    &.swiper-pagination {
-        display: flex !important;
-        justify-content: center !important;
-    }
+    // &.swiper-pagination {
+    //     display: flex !important;
+    //     justify-content: center !important;
+    // }
 
     &.swiper-pagination-bullet-active {
         border: solid 3px #E6E6E6;
