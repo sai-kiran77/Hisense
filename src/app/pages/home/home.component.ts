@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     private title: Title,
     private meta: Meta) {
     this.state.mobileNavToggle.next(false);
-    this.title.setTitle('Hisense Global Website - Hisense Global');
+    this.title.setTitle('Hisense India');
     this.meta.updateTag({
       name: 'description',
       content: "Discover Hisense's latest smart TV & entertainment system, appliances and smartphones designed for your pleasure and convenience."

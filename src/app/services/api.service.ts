@@ -1,12 +1,13 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiService {
 
-  baseURL = 'https://hisense-apis.bloginguru.com/v1';
+  baseURL = `${environment.baseApiUrl}/v1`;
 
   constructor(private http: HttpClient) { }
 

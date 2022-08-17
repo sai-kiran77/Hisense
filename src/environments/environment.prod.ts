@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseApiUrl:'https://hisense-apis.bloginguru.com'
+  baseApiUrl:'https://api.hisense-india.com'
 };

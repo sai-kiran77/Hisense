@@ -69,7 +69,7 @@
 .catalog-banner__content-inner {
     display: inline-block;
     vertical-align: top;
-    text-align: left;
+    text-align: center;
 }
 
 .catalog-banner__image-wrapper {
@@ -340,5 +340,11 @@
 .product__category__title {
     padding: 8px;
     font-size: 18px;
+    font-weight: bold;
+}
+
+.catalog-banner__sub__title {
+    padding: 8px;
+    font-size: 20px;
     font-weight: bold;
 }

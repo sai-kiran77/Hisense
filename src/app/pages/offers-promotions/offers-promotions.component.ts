@@ -10,10 +10,10 @@ import { environment } from 'src/environments/environment';
 export class OffersPromotionsComponent implements OnInit {
 
   metaData = [
-    // {
-    //   image: `${environment.baseApiUrl}/wp-content/uploads/2022/08/Warranty-Announcement-Hisense.webp',
-    //   tab: '5th August 2022'
-    // },
+    {
+      image: `${environment.baseApiUrl}/media/offers-and-promotions/5-August-2022.webp`,
+      tab: '5th August 2022'
+    },
     {
       image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.png`,
       tab: '23rd July 2022'

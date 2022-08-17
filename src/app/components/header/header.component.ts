@@ -31,6 +31,8 @@ export class HeaderComponent implements OnInit {
         },
     ]
 
+    delightFulFlagPath = `${environment.baseApiUrl}/media/pages/campaigns/delightful-india/flag-logo.png`
+
     // navLinks = {
     //   LeftNavLinks: [
     //     {

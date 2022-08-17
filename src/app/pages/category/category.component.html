@@ -3,6 +3,8 @@
         <div class="catalog-banner__content">
             <div class="catalog-banner__content-inner">
                 <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
+                <h3 class="catalog-banner__sub__title" *ngIf="metaData?.subcategories.length == 1">{{metaData?.subcategories[0].name}}</h3>
+
                 <!-- <div class="catalog-banner__description">
                     <p>
                         Plenty of choice <br>
@@ -18,7 +20,7 @@
 </section>
 <div class="product-listing" style="padding: 1rem;">
     <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
-        <a class="sub__cat__link" [routerLink]="subCat.relative_url">{{subCat.name}}</a>
+        <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a>
         <div *ngFor="let prodCat of subCat.category_products">
             <div class="product__category__title">{{prodCat.product.name}}</div>
 
