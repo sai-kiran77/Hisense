@@ -761,3 +761,13 @@ li {
   white-space: break-spaces;
   word-break: break-word;
 }
+
+@media screen and (max-width: 768px) {
+  nav{
+    &.main-nav{
+      .mobile-nav-toggle.active.home-page{
+        top: -15px !important;
+      } 
+    }
+  }
+}

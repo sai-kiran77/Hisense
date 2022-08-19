@@ -143,7 +143,7 @@
         </div>
         <!-- <a class="icon-region" href="https://global.hisense.com/regional">International</a> -->
         <!-- <a class="icon-search" id="btnSearch"></a> -->
-        <button [ngClass]="{'active':mobileNavToggle}" class="mobile-nav-toggle" type="button" aria-controls="navbar" aria-expanded="false"
+        <button [ngClass]="{'active':mobileNavToggle,'home-page': isHomePage === '/'}" class="mobile-nav-toggle" type="button" aria-controls="navbar" aria-expanded="false"
             aria-label="Toggle navigation" (click)="mobileNavToggle = !mobileNavToggle">
             <span class="navbar-toggler-icon"></span>
         </button>

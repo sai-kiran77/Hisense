@@ -43,4 +43,8 @@ export class ApiService {
       params
     });
   }
+
+  getTechTestimonials(endpoint: string = '/tech-testimonials'){
+    return this.http.get(this.baseURL + endpoint);
+  }
 }

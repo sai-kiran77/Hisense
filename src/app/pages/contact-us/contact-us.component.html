@@ -73,7 +73,8 @@
                                     </label>
                                     <div class="text-danger" *ngIf="isFormSubmitted && form.controls['name'].errors">
                                         <span *ngIf="form.controls['name'].errors['required']">Name is required!</span>
-                                        <span *ngIf="form.controls['name'].errors['pattern']">Name can only contain alphabets!</span>
+                                        <span *ngIf="form.controls['name'].errors['pattern']">Name can only contain
+                                            alphabets!</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -86,10 +87,14 @@
                                         </span>
                                     </label>
                                     <div class="text-danger" *ngIf="isFormSubmitted && form.controls['phone'].errors">
-                                        <span *ngIf="form.controls['phone'].errors['required']">Phone Number is required!</span>
-                                        <span *ngIf="form.controls['phone'].errors['minlength']">Phone Number can only contain 10 digits!</span>
-                                        <span *ngIf="form.controls['phone'].errors['maxlength']">Phone Number can only contain 10 digits!</span>
-                                        <span *ngIf="form.controls['phone'].errors['pattern']">Phone Number can only contain digits!</span>
+                                        <span *ngIf="form.controls['phone'].errors['required']">Phone Number is
+                                            required!</span>
+                                        <span *ngIf="form.controls['phone'].errors['minlength']">Phone Number can only
+                                            contain 10 digits!</span>
+                                        <span *ngIf="form.controls['phone'].errors['maxlength']">Phone Number can only
+                                            contain 10 digits!</span>
+                                        <span *ngIf="form.controls['phone'].errors['pattern']">Phone Number can only
+                                            contain digits!</span>
                                     </div>
                                 </div>
                                 <div class="form-group">
@@ -102,7 +107,8 @@
                                         </span>
                                     </label>
                                     <div class="text-danger" *ngIf="isFormSubmitted && form.controls['email'].errors">
-                                        <span *ngIf="form.controls['email'].errors['required']">Email is required!</span>
+                                        <span *ngIf="form.controls['email'].errors['required']">Email is
+                                            required!</span>
                                         <span *ngIf="form.controls['email'].errors['email']">Enter a valid email!</span>
                                     </div>
                                 </div>
@@ -116,7 +122,8 @@
                                         </span>
                                     </label>
                                     <div class="text-danger" *ngIf="isFormSubmitted && form.controls['body'].errors">
-                                        <span *ngIf="form.controls['body'].errors['required']">Message is required!</span>
+                                        <span *ngIf="form.controls['body'].errors['required']">Message is
+                                            required!</span>
                                     </div>
                                 </div>
                                 <p>

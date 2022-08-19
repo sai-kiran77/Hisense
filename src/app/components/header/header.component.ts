@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, HostListener, Inject, Input, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
@@ -323,14 +324,25 @@ export class HeaderComponent implements OnInit {
                 }
             ]
         }
-    ]
+    ];
+    isHomePage: any;
 
     constructor(private state: GlobalStateService,
-        @Inject(PLATFORM_ID) private platformId: Object) {
+        @Inject(PLATFORM_ID) private platformId: Object,
+        private router: Router) {
         this.subscribeToSidebarNavigation();
     }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.isHomePage = this.router.url;
+        console.log(this.router.url);
+        this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                this.isHomePage = event.url;
+                console.log(this.isHomePage);
+            }
+        });
+    }
 
     // toggleNavItemsDisplay(){
     //   if(!this.isNavItemsToggleDisabled){
