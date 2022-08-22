@@ -17,10 +17,10 @@ const routes: Routes = [
       //   path: 'tv',
       //   loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
       // },
-      {
-        path: 'delightful-india',
-        loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
-      },
+      // {
+      //   path: 'delightful-india',
+      //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
+      // },
       {
         path: 'about-us',
         loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
@@ -80,7 +80,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: '*', component: NotFoundComponent
+    path: '**', component: NotFoundComponent
   }
 ];
 

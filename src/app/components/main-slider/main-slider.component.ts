@@ -17,11 +17,11 @@ import { environment } from 'src/environments/environment';
 export class MainSliderComponent implements OnInit {
 
   slides = [
-    {
-      url:'/delightful-india',
-      image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`,
-      mobile: `${environment.baseApiUrl}/media/pages/home/slider/Delightful india_1x1.jpg`
-    },
+    // {
+    //   url:'/delightful-india',
+    //   image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`,
+    //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/Delightful india_1x1.jpg`
+    // },
     {
       url:'/c/air-conditioner',
       image:`${environment.baseApiUrl}/media/pages/home/slider/TVC-Master-banner-Revised.webp`,

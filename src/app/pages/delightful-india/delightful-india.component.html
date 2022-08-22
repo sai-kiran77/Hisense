@@ -144,7 +144,8 @@
                         </button>
                     </div>
                     <div class="form__redirect">Not registered yet? &nbsp;<a
-                            (click)="showSignupForm = true;showLoginForm = false;"s>Click here</a> to register now</div>
+                            (click)="showSignupForm = true;showLoginForm = false;">Click here</a> to register now
+                    </div>
                 </div>
             </div>
         </form>
@@ -170,9 +171,11 @@
                             <label><b>Clues:</b></label>
                             <div style="padding: 1rem;">
                                 <ng-container *ngFor="let hint of hints | keyvalue">
-                                    <label style="margin: 1rem 0 !important;display: block;" *ngIf="hint.key"><b>Category&nbsp;: </b>&nbsp;{{hint.key}}</label>
+                                    <label style="margin: 1rem 0 !important;display: block;"
+                                        *ngIf="hint.key"><b>Category&nbsp;: </b>&nbsp;{{hint.key}}</label>
                                     <div style="padding: 1rem;" *ngFor="let obj of hint.value">
-                                        <label *ngIf="obj['sub_section']"><b>Product&nbsp;: </b>&nbsp;{{obj['sub_section']}}</label>
+                                        <label *ngIf="obj['sub_section']"><b>Product&nbsp;:
+                                            </b>&nbsp;{{obj['sub_section']}}</label>
                                         <div class="card" [innerHtml]="obj['hint']">
                                         </div>
                                     </div>
@@ -180,12 +183,13 @@
                             </div>
                         </div>
                         <div class="clearfix">
-                            <button type="button" class="signupbtn" routerLink="/">
-                                <span>Start Finding The Flags</span>
-                            </button>
+                            <a routerLink="/">
+                                <button type="button" class="signupbtn">
+                                    <span>Start Finding The Flags</span>
+                                </button>
+                            </a>
                         </div>
-                        <div class="form__redirect"><a
-                            (click)="logout()">logout</a></div>
+                        <div class="form__redirect"><a (click)="logout()">logout</a></div>
                     </div>
                 </div>
             </div>
@@ -195,8 +199,13 @@
 
 
 <div class="modal" (click)="modalMessage = ''" [ngClass]="{'show-modal': modalMessage}">
-    <div class="modal-content">
-        <span (click)="modalMessage = ''" class="close-button">&times;</span>
-        <h3 style="line-height: 1.5;">{{modalMessage}}</h3>
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-image">
+            <img src="assets/images/warning.png" alt="warning">
+        </div>
+        <h1>Error!</h1>
+        <!-- <span (click)="modalMessage = ''" class="close-button">&times;</span> -->
+        <h3 style="line-height: 1.5;margin-bottom: 2em;color: #666;">{{modalMessage}}</h3>
+        <button (click)="modalMessage = ''" class="js-close">Dismiss</button>
     </div>
 </div>

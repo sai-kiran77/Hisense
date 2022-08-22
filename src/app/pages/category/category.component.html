@@ -25,7 +25,7 @@
             <div class="product__category__title">{{prodCat.product.name}}</div>
 
             <div class="product-listing-inner">
-                <div class="product-listing-tab" [routerLink]="prod.relative_url"
+                <a class="product-listing-tab" [routerLink]="prod.relative_url"
                     *ngFor="let prod of prodCat.product.product_variants">
                     <a class="product-listing-img trackin">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
@@ -39,7 +39,7 @@
                     <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
                         <div><a class="btn-hisense">More Detail</a></div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </div>
@@ -47,7 +47,7 @@
         <div class="product__category__title">{{prodCat.product.name}}</div>
 
         <div class="product-listing-inner">
-            <div class="product-listing-tab" [routerLink]="prod.relative_url"
+            <a class="product-listing-tab" [routerLink]="prod.relative_url"
                 *ngFor="let prod of prodCat.product.product_variants">
                 <a class="product-listing-img trackin">
                     <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
@@ -61,7 +61,7 @@
                 <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
                     <div><a class="btn-hisense">More Detail</a></div>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>

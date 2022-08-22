@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&display=swap');
 
-*{
+* {
     font-family: 'DynaPuff', cursive !important;
     font-weight: 400 !important;
 }
@@ -178,7 +178,7 @@ h1 {
     font-size: 12px;
 
     a {
-    //     color: -webkit-link;
+        //     color: -webkit-link;
         cursor: pointer;
         text-decoration: underline;
     }
@@ -196,6 +196,42 @@ h1 {
     visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+
+    h1 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 0.5em;
+        color: #000 !important;
+    }
+}
+
+.js-close {
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #000;
+    border: none;
+    padding: 0.5em 1em;
+    color: #fff;
+    box-shadow: 0 0 0 2px #000 inset;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin: auto;
+    transition: background 0.4s ease, color 0.4s ease;
+
+    &:hover {
+        box-shadow: 0 0 0 2px #000 inset;
+        color: #000;
+        background-color: transparent;
+    }
+}
+
+.modal-image {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto;
+    border-radius: 50%;
+    padding: 11px 10px 2px;
+    margin-bottom: 2em;
 }
 
 .modal-content {
@@ -207,6 +243,9 @@ h1 {
     padding: 2rem;
     width: 60%;
     border-radius: 0.5rem;
+    padding: 2em 3em;
+    text-align: center;
+    border-radius: 0.5em;
 }
 
 .close-button {
@@ -325,13 +364,13 @@ div {
 }
 
 @media screen and (max-width: 850px) {
-    form{
+    form {
         width: 50% !important;
     }
 }
 
 @media screen and (max-width: 750px) {
-    form{
+    form {
         width: 60% !important;
     }
 }

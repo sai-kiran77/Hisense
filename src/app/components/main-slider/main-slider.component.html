@@ -6,21 +6,18 @@
                 [autoplay]="{ delay: 6000, disableOnInteraction: false }">
                 <ng-container *ngFor="let slide of slides;let i = index">
                     <ng-template swiperSlide>
-                        <div style="background-color: rgb(229, 226, 226);" class="slick-slide slick-current" data-slick-index="i" aria-hidden="false" role="tabpanel"
+                        <div style="background-color: rgb(229, 226, 226);" class="slick-slide slick-current"
+                            data-slick-index="i" aria-hidden="false" role="tabpanel"
                             aria-describedby="slick-slide-control00" style="width: 100%;">
                             <div>
                                 <div class="slide-item" style="width: 100%; display: inline-block;">
-                                    <!-- <img class="banner" [src]="slide.image" class="ls-bg" loading="lazy"
-                                        [routerLink]="slide.url" style="width: 100%;"> -->
-                                    <!-- <img [src]="slide.image" [srcset]="slide.srcset" [routerLink]="slide.url"
-                                        style="width: 100%;" class="banner" class="ls-bg" loading="lazy" /> -->
-                                    <!-- <button class="get__started__btn" [routerLink]="slide.url"
-                                        *ngIf="slide.url == '/delightful-india'">Get Started</button> -->
-                                    <picture >
-                                        <source media="(min-width:768px)" [srcset]="slide.image">
-                                        <img [src]="slide.mobile" [routerLink]="slide.url"
-                                        style="width: 100%;" class="banner" class="ls-bg" loading="lazy">
-                                    </picture>
+                                    <a [routerLink]="slide.url">
+                                        <picture>
+                                            <source media="(min-width:768px)" [srcset]="slide.image">
+                                            <img [src]="slide.mobile" style="width: 100%;" class="banner" class="ls-bg"
+                                                loading="lazy">
+                                        </picture>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -31,104 +28,3 @@
         </div>
     </div>
 </div>
-
-<!-- 
-    <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website.jpg"
-                                class="ls-bg" alt="" loading="lazy" [routerLink]="'/c/air-conditioner/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/TVC-Master-banner-website-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado.jpg"
-                                class="ls-bg" alt="" loading="lazy" [routerLink]="'/c/tv/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-tornado-1280x600.jpg 1280w">
-
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid.jpg" class="ls-bg"
-                                alt="" loading="lazy" [routerLink]="'/c/tv/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-vivid-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega.jpg" class="ls-bg"
-                                alt="" loading="lazy" [routerLink]="'/c/tv/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/Website-Banner-TV-Mega-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new.jpg"
-                                class="ls-bg" alt="" loading="lazy" [routerLink]="'/c/refrigerator/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/Refrigerator-desktop-banner-new-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2.jpg"
-                                class="ls-bg" alt="" loading="lazy" [routerLink]="'/c/washing-machine/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/01/HI-WB-01-04-1920X900-min-2-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new.jpg"
-                                class="ls-bg" alt="" loading="lazy" [routerLink]="'/c/dish-washer/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/Dishwasher-desktop-banner-new-1280x600.jpg 1280w">
-                                
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
-                <ng-template swiperSlide>
-                    <div class="slick-slide slick-current" data-slick-index="0" aria-hidden="false" role="tabpanel"
-                        id="slick-slide00" aria-describedby="slick-slide-control00">
-                        <div>
-                            <div class="slide-item" style="width: 100%; display: inline-block;">
-                                <img class="banner" src="https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new.jpg" class="ls-bg"
-                                alt="" loading="lazy" [routerLink]="'/c/tv/'"
-                                srcset="https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new.jpg 1920w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-300x141.jpg 300w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-1024x480.jpg 1024w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-768x360.jpg 768w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-1536x720.jpg 1536w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-500x234.jpg 500w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-800x375.jpg 800w, https://www.hisense-india.com/wp-content/uploads/2022/05/QLED-banner-desktop-new-1280x600.jpg 1280w">
-                            </div>
-                        </div>
-                    </div>
-                </ng-template>
- -->
