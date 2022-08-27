@@ -39,12 +39,14 @@ export class HomeProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getHeaderItems().subscribe((res: any) => {
+      console.log(res);
       this.products = res.data.map((obj: any)=>{
         return {
           ...obj,
-          "image": obj.thumb_image_medium
+          "image": obj.thumb_image_small
         }
       })
+
   }, (err) => {
       console.log(err);
   })

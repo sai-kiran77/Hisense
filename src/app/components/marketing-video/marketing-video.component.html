@@ -52,14 +52,32 @@
         </div>
     </div>
 </div>
+<div class="video-container">
+    <div>
+        <div class="content">
+            <h3>
+                <!-- <p><strong>Hisense</strong> OFFICIAL SPONSOR of</p> -->
+                <!-- <p>Intelligent Inverter</p> -->
+            </h3>
+            <!-- href="https://global.hisense.com/dam/jcr:a542d1bc-72dc-4744-b96c-9e1b18925f62/FIFA-Partnership-Annoucement-Video.mp4">See -->
+            <a class="btn-video" (click)="playVideo1 = true">
+                Play Video</a>
+        </div>
+        <div class="banner">
+            <img class="lazy"
+                alt="Hisense AC"
+                [src]="image3">
+        </div>
+    </div>
+</div>
 
-<div>
+<!-- <div>
     <div class="video">
         <video controls class="video__element" playsinline="">
             <source src="assets/home_page/hisense-opt-14.mp4" type="video/mp4">
        </video>
     </div>
-</div>
+</div> -->
 
 
 
@@ -77,6 +95,29 @@
                     </video>
                 </div>
                 <button type="button" class="close" (click)="playVideo = false">Close</button>
+            </div>
+            <div class="mfp-preloader">Loading...</div>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="playVideo1">
+    <div class="mfp-bg video-lightbox mfp-ready"></div>
+    <div class="mfp-wrap mfp-auto-cursor video-lightbox mfp-ready" tabindex="-1" style="overflow: hidden auto;">
+        <div class="mfp-container mfp-s-ready mfp-inline-holder">
+            <div class="mfp-content">
+                <div class="video-wrap">
+                    <!-- <video controls class="video__element" playsinline="">
+                    </video> -->
+                    <video autoplay controls>
+                        <!-- <source src="assets/home_page/hisense-opt-14.mp4" type="video/mp4"> -->
+                        <source
+                            src="assets/home_page/hisense-opt-14.mp4"
+                            type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <button type="button" class="close" (click)="playVideo1 = false">Close</button>
             </div>
             <div class="mfp-preloader">Loading...</div>
         </div>

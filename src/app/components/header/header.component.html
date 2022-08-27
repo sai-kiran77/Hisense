@@ -17,12 +17,12 @@
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">{{obj.text}}</div>
-                            <div class="sub-menu">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']">
+                            <div class="sub-menu" style="height: 200px !important;background-color: white;">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']" style="width: 200px !important;">
                                     <span class="thumbnail" style="overflow: hidden;">
                                         <div class="img">
                                             <img [src]="subLink.image" [alt]="subLink.text"
-                                                style="object-fit: contain;max-height: 125px;">
+                                                style="object-fit: contain;max-height: 180px;min-width: 170px;">
                                         </div>
                                     </span>
                                     <span class="title">{{subLink.text}}</span>
