@@ -14,7 +14,7 @@
             </div>
         </div>
         <div class="catalog-banner__image-wrapper">
-            <img alt="Television" class="catalog-banner__image" [src]="metaData?.thumb_image.full_url">
+            <img [alt]="metaData?.name" class="catalog-banner__image" [src]="metaData?.thumb_image_medium.full_url">
         </div>
     </div>
 </section>
@@ -28,8 +28,8 @@
                 <a class="product-listing-tab" [routerLink]="prod.relative_url"
                     *ngFor="let prod of prodCat.product.product_variants">
                     <a class="product-listing-img trackin">
-                        <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
-                        <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
+                        <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
+                        <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
                     </a>
                     <div class="product-listing-tab-content">
                         <h4>{{prod.name}}</h4>
@@ -50,8 +50,8 @@
             <a class="product-listing-tab" [routerLink]="prod.relative_url"
                 *ngFor="let prod of prodCat.product.product_variants">
                 <a class="product-listing-img trackin">
-                    <img *ngIf="prod?.thumb_image?.full_url" [src]="prod?.thumb_image?.full_url">
-                    <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
+                    <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
+                    <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
                 </a>
                 <div class="product-listing-tab-content">
                     <h4>{{prod.name}}</h4>

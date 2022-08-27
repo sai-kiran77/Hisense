@@ -5,88 +5,48 @@
         <div class="navbar" id="navbar">
             <div class="navigations">
                 <ul class="left">
-                    <!-- <li class="">
-                        <a>Television</a>
-                        <a (click)="subDropdownToggle = true" class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-tv-and-audio"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
-                        <div [ngClass]="{'menu-in': subDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
-                            <button (click)="subDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
-                                <span class="navbar-back-icon"></span>
-                            </button>
-                            <div class="section-title">TV &amp; Audio</div>
-                            <div class="sub-menu">
-                                <a class="" routerLink="/tv-series">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/tv.png" alt="TV">
-                                        </div>
-                                    </span>
-                                    <span class="title">TV</span>
-                                </a>
-                                <a class="" routerLink="/soundbar-series"><span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/soundbar.png"
-                                                alt="Soundbar">
-                                        </div>
-                                    </span>
-                                    <span class="title">Soundbar</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li> -->
                     <li *ngFor="let obj of navLinks">
                         <a [routerLink]="obj.url">{{obj.text}}</a>
-                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown" id="toggle-dropdown-tv-and-audio"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
-                        <div [ngClass]="{'menu-in': obj.subDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
-                            <button (click)="obj.subDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
+                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown"
+                            id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
+                            aria-label="Toggle dropdown"></a>
+                        <div [ngClass]="{'menu-in': obj.subDropdownToggle}" class="dropdown-menu"
+                            aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="obj.subDropdownToggle = false" class="mobile-back" type="button"
+                                aria-label="Toggle sub navigation">
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">{{obj.text}}</div>
-                            <div class="sub-menu">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']">
+                            <div class="sub-menu" style="height: 200px !important;background-color: white;">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']" style="width: 200px !important;">
                                     <span class="thumbnail" style="overflow: hidden;">
                                         <div class="img">
-                                            <img [src]="subLink.image" [alt]="subLink.text" style="object-fit: contain;max-height: 125px;">
+                                            <img [src]="subLink.image" [alt]="subLink.text"
+                                                style="object-fit: contain;max-height: 180px;min-width: 170px;">
                                         </div>
                                     </span>
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
-                                <!-- <a class="" routerLink="/soundbar-series">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/soundbar.png"
-                                                alt="Soundbar">
-                                        </div>
-                                    </span>
-                                    <span class="title">Soundbar</span>
-                                </a> -->
                             </div>
                         </div>
                     </li>
                 </ul>
                 <ul class="right">
-                    <!-- <li class="">
-                        <a routerLink="delightful-india">
-                            <img [src]="delightFulFlagPath" alt="flag" width="65">
-                        </a>
-                    </li> -->
                     <li>
                         <a>In The News</a>
-                        <a (click)="newsSubDropdownToggle = true" class="toggle-dropdown" id="toggle-dropdown-tv-and-audio"
-                            aria-haspopup="true" aria-expanded="false" aria-label="Toggle dropdown"></a>
-                        <div [ngClass]="{'menu-in': newsSubDropdownToggle}" class="dropdown-menu" aria-labelledby="toggle-dropdown-tv-and-audio">
-                            <button (click)="newsSubDropdownToggle = false" class="mobile-back" type="button" aria-label="Toggle sub navigation">
+                        <a (click)="newsSubDropdownToggle = true" class="toggle-dropdown"
+                            id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
+                            aria-label="Toggle dropdown"></a>
+                        <div [ngClass]="{'menu-in': newsSubDropdownToggle}" class="dropdown-menu"
+                            aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="newsSubDropdownToggle = false" class="mobile-back" type="button"
+                                aria-label="Toggle sub navigation">
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">In The News</div>
                             <div class="sub-menu">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks" style="justify-content: center;">
-                                    <!-- <span class="thumbnail">
-                                        <div class="img">
-                                            <img [src]="subLink.image" [alt]="subLink.text">
-                                        </div>
-                                    </span> -->
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
+                                    style="justify-content: center;">
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
@@ -98,56 +58,13 @@
                     <li class="">
                         <a routerLink="/contact-us">Contact Us</a>
                     </li>
-                    <!-- <li class="">
-                        <a href="javascript:void(0);">Support</a>
-                        <a class="toggle-dropdown" href="javascript:;" id="toggle-dropdown-support}"
-                            aria-expanded="false" aria-label="Toggle dropdown"> </a>
-                        <div class="dropdown-menu" aria-labelledby="toggle-dropdown-support">
-                            <button class="mobile-back" type="button" aria-label="Toggle sub navigation">
-                                <span class="navbar-back-icon"></span>
-                            </button>
-                            <div class="section-title">Support</div>
-                            <div class="sub-menu">
-                                <a href="https://global.hisense.com/support/certificate-download/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/icon-certificate-download.svg"
-                                                alt="Certificate Download">
-                                        </div>
-                                    </span>
-                                    <span class="title">Certificate Download</span>
-                                </a>
-                                <a href="https://global.hisense.com/support/contact-us/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/icon-contact-us.svg"
-                                                alt="Contact Us">
-                                        </div>
-                                    </span>
-                                    <span class="title">Contact Us</span>
-                                </a>
-                                <a href="https://global.hisense.com/support/customer-center/">
-                                    <span class="thumbnail">
-                                        <div class="img">
-                                            <img src="assets/images/icon-customer-center.svg"
-                                                alt="Customer Center">
-                                        </div>
-                                    </span>
-                                    <span class="title">Customer Center</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li> -->
                 </ul>
             </div>
         </div>
-        <!-- <a class="icon-region" href="https://global.hisense.com/regional">International</a> -->
-        <!-- <a class="icon-search" id="btnSearch"></a> -->
-        <button [ngClass]="{'active':mobileNavToggle,'home-page': isHomePage === '/'}" class="mobile-nav-toggle" type="button" aria-controls="navbar" aria-expanded="false"
-            aria-label="Toggle navigation" (click)="mobileNavToggle = !mobileNavToggle">
+        <button [ngClass]="{'active':mobileNavToggle,'home-page': isHomePage === '/'}" class="mobile-nav-toggle"
+            type="button" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation"
+            (click)="mobileNavToggle = !mobileNavToggle">
             <span class="navbar-toggler-icon"></span>
         </button>
     </nav>
 </header>
-
-<!-- <a class="btn-backtotop" [ngClass]="{'scroll-up': headerHidden}" (click)="scrollTop()">BACK TO TOP</a> -->

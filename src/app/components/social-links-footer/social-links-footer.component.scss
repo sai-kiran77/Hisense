@@ -10,7 +10,7 @@
     display: block;
     width: 185px;
     height: 30px;
-    background: url("https://global.hisense.com/.resources/webresources/images/common/logo.svg") no-repeat;
+    background: url("https://hisense-apis.bloginguru.com/media/common/images/hisense-logo.svg") no-repeat;
     background-size: 100% auto;
     text-indent: -9999px;
 }
@@ -42,21 +42,21 @@
     background-color: #ddd;
 }
 .social-media-container .social-media a.social-btn.fb {
-    background-image: url("https://global.hisense.com/.resources/webresources/images/common/icon-fb.svg");
+    background-image: url("../../../assets/icon-fb.svg");
     background-size: auto 50%;
 }
 .social-media-container .social-media a.social-btn.twitter {
-    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-twitter.svg);
+    background-image: url("../../../assets/icon-twitter.svg");
 }
 .social-media-container .social-media a.social-btn.ig {
-    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-ig.svg);
+    background-image: url("../../../assets/icon-ig.svg");
 }
 .social-media-container .social-media a.social-btn.youtube {
-    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-youtube.svg);
+    background-image: url("../../../assets/icon-youtube.svg");
 }
-.social-media-container .social-media a.social-btn.linkedin {
-    background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-youtube.svg);
-}
+// .social-media-container .social-media a.social-btn.linkedin {
+//     background-image: url(https://global.hisense.com/.resources/webresources/images/common/icon-youtube.svg);
+// }
 
 @media (max-width: 1023px) {
     .social-media-container {

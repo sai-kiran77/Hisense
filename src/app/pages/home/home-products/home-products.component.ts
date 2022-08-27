@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -8,32 +9,47 @@ import { environment } from 'src/environments/environment';
 })
 export class HomeProductsComponent implements OnInit {
 
-  products = [
-    {
-      "text": "TV",
-      "url": "/c/tv/",
-      "image": environment.baseApiUrl + "/media/categories/tv-thumb.jpg"
-    },
-    {
-      "text": "Refrigerator",
-      "url": "/c/refrigerator/",
-      "image": environment.baseApiUrl + "/media/categories/refrigerator-thumb.png"
-    },
-    {
-      "text": "Air Conditioner",
-      "url": "/c/air-conditioner/",
-      "image": environment.baseApiUrl + "/media/categories/air-conditioner-thumb.png"
-    },
-    {
-      "text": "Washing Machine",
-      "url": "/c/washing-machine/",
-      "image": environment.baseApiUrl + "/media/categories/washing-machine-thumb.png"
-    }
-  ]
+  products: any = [];
+  // products = [
+  //   {
+  //     "text": "TV",
+  //     "url": "/c/tv/",
+  //     "image": environment.baseApiUrl + "/media/categories/tv-thumb.jpg"
+  //   },
+  //   {
+  //     "text": "Refrigerator",
+  //     "url": "/c/refrigerator/",
+  //     "image": environment.baseApiUrl + "/media/categories/refrigerator-thumb.png"
+  //   },
+  //   {
+  //     "text": "Air Conditioner",
+  //     "url": "/c/air-conditioner/",
+  //     "image": environment.baseApiUrl + "/media/categories/air-conditioner-thumb.png"
+  //   },
+  //   {
+  //     "text": "Washing Machine",
+  //     "url": "/c/washing-machine/",
+  //     "image": environment.baseApiUrl + "/media/categories/washing-machine-thumb.png"
+  //   }
+  // ]
 
-  constructor() { }
+
+
+  constructor(private api: ApiService) { }
 
   ngOnInit(): void {
+    this.api.getHeaderItems().subscribe((res: any) => {
+      console.log(res);
+      this.products = res.data.map((obj: any)=>{
+        return {
+          ...obj,
+          "image": obj.thumb_image_small
+        }
+      })
+
+  }, (err) => {
+      console.log(err);
+  })
   }
 
 }

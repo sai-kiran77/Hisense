@@ -1,5 +1,5 @@
 <div class="product-listing">
-    <div class="product-listing-inner">
+    <div class="product-listing-inner" style="flex-wrap: wrap !important;">
         <a class="product-listing-tab" *ngFor="let prod of products" [routerLink]="prod.url">
             <a class="product-listing-img trackin">
                 <img [src]="prod.image" style="max-height: 150px;">
