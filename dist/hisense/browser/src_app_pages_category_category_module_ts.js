@@ -48,7 +48,7 @@ function CategoryComponent_div_10_div_2_a_4_img_2_Template(rf, ctx) { if (rf & 1
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 27);
 } if (rf & 2) {
     const prod_r9 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", prod_r9 == null ? null : prod_r9.thumb_image == null ? null : prod_r9.thumb_image.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", prod_r9 == null ? null : prod_r9.thumb_image_medium == null ? null : prod_r9.thumb_image_medium.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
 } }
 function CategoryComponent_div_10_div_2_a_4_img_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 28);
@@ -73,9 +73,9 @@ function CategoryComponent_div_10_div_2_a_4_Template(rf, ctx) { if (rf & 1) {
     const prod_r9 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("routerLink", prod_r9.relative_url);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", prod_r9 == null ? null : prod_r9.thumb_image == null ? null : prod_r9.thumb_image.full_url);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", prod_r9 == null ? null : prod_r9.thumb_image_medium == null ? null : prod_r9.thumb_image_medium.full_url);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !(prod_r9 == null ? null : prod_r9.thumb_image == null ? null : prod_r9.thumb_image.full_url));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !(prod_r9 == null ? null : prod_r9.thumb_image_medium == null ? null : prod_r9.thumb_image_medium.full_url));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](prod_r9.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
@@ -113,7 +113,7 @@ function CategoryComponent_div_11_a_4_img_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 27);
 } if (rf & 2) {
     const prod_r15 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", prod_r15 == null ? null : prod_r15.thumb_image == null ? null : prod_r15.thumb_image.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", prod_r15 == null ? null : prod_r15.thumb_image_medium == null ? null : prod_r15.thumb_image_medium.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
 } }
 function CategoryComponent_div_11_a_4_img_3_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 28);
@@ -138,9 +138,9 @@ function CategoryComponent_div_11_a_4_Template(rf, ctx) { if (rf & 1) {
     const prod_r15 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("routerLink", prod_r15.relative_url);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", prod_r15 == null ? null : prod_r15.thumb_image == null ? null : prod_r15.thumb_image.full_url);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", prod_r15 == null ? null : prod_r15.thumb_image_medium == null ? null : prod_r15.thumb_image_medium.full_url);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !(prod_r15 == null ? null : prod_r15.thumb_image == null ? null : prod_r15.thumb_image.full_url));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", !(prod_r15 == null ? null : prod_r15.thumb_image_medium == null ? null : prod_r15.thumb_image_medium.full_url));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](prod_r15.name);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
@@ -226,7 +226,7 @@ class CategoryComponent {
     }
 }
 CategoryComponent.ɵfac = function CategoryComponent_Factory(t) { return new (t || CategoryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_0__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Meta)); };
-CategoryComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: CategoryComponent, selectors: [["app-category"]], decls: 12, vars: 5, consts: [["id", "catalog-page", 1, "catalog"], ["data-ui-white", "", 1, "catalog-banner", "catalog-banner_ui_white", 2, "background-color", "#000"], [1, "catalog-banner__content"], [1, "catalog-banner__content-inner"], [1, "catalog-banner__title"], ["class", "catalog-banner__sub__title", 4, "ngIf"], [1, "catalog-banner__image-wrapper"], ["alt", "Television", 1, "catalog-banner__image", 3, "src"], [1, "product-listing", 2, "padding", "1rem"], [3, "id", 4, "ngFor", "ngForOf"], ["style", "padding: 1rem;", 4, "ngFor", "ngForOf"], [1, "catalog-banner__sub__title"], [3, "id"], ["class", "sub__cat__link", 3, "routerLink", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "sub__cat__link", 3, "routerLink"], [1, "product__category__title"], [1, "product-listing-inner"], ["class", "product-listing-tab", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "product-listing-tab", 3, "routerLink"], [1, "product-listing-img", "trackin"], [3, "src", 4, "ngIf"], ["src", "assets/images/prod__placeholder.png", 4, "ngIf"], [1, "product-listing-tab-content"], [1, "product-listing-description"], [1, "product-listing-tab-buttons", "trackin", 2, "transform", "translateY(35px)"], [1, "btn-hisense"], [3, "src"], ["src", "assets/images/prod__placeholder.png"], [2, "padding", "1rem"]], template: function CategoryComponent_Template(rf, ctx) { if (rf & 1) {
+CategoryComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: CategoryComponent, selectors: [["app-category"]], decls: 12, vars: 6, consts: [["id", "catalog-page", 1, "catalog"], ["data-ui-white", "", 1, "catalog-banner", "catalog-banner_ui_white", 2, "background-color", "#000"], [1, "catalog-banner__content"], [1, "catalog-banner__content-inner"], [1, "catalog-banner__title"], ["class", "catalog-banner__sub__title", 4, "ngIf"], [1, "catalog-banner__image-wrapper"], [1, "catalog-banner__image", 3, "alt", "src"], [1, "product-listing", 2, "padding", "1rem"], [3, "id", 4, "ngFor", "ngForOf"], ["style", "padding: 1rem;", 4, "ngFor", "ngForOf"], [1, "catalog-banner__sub__title"], [3, "id"], ["class", "sub__cat__link", 3, "routerLink", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "sub__cat__link", 3, "routerLink"], [1, "product__category__title"], [1, "product-listing-inner"], ["class", "product-listing-tab", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "product-listing-tab", 3, "routerLink"], [1, "product-listing-img", "trackin"], [3, "src", 4, "ngIf"], ["src", "assets/images/prod__placeholder.png", 4, "ngIf"], [1, "product-listing-tab-content"], [1, "product-listing-description"], [1, "product-listing-tab-buttons", "trackin", 2, "transform", "translateY(35px)"], [1, "btn-hisense"], [3, "src"], ["src", "assets/images/prod__placeholder.png"], [2, "padding", "1rem"]], template: function CategoryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "h1", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -245,7 +245,7 @@ CategoryComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngIf", (ctx.metaData == null ? null : ctx.metaData.subcategories.length) == 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", ctx.metaData == null ? null : ctx.metaData.thumb_image.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("alt", ctx.metaData == null ? null : ctx.metaData.name)("src", ctx.metaData == null ? null : ctx.metaData.thumb_image_medium.full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", ctx.metaData == null ? null : ctx.metaData.subcategories);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
