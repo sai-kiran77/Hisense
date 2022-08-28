@@ -78,10 +78,8 @@ export class DelightfulIndiaComponent implements OnInit {
   onRegister() {
     this.isSignupFormSubmitted = true;
     this.signupLoading = true;
-    console.log(this.signupForm)
     if (this.signupForm && this.signupForm.valid) {
       this.api.signup(this.signupForm.value).subscribe((res: any) => {
-        console.log(res);
         this.loginData = res.data;
         this.signupLoading = false;
         // this.modalMessage = res.message;
@@ -109,10 +107,8 @@ export class DelightfulIndiaComponent implements OnInit {
   onLogin() {
     this.isLoginFormSubmitted = true;
     this.loginLoading = true;
-    console.log(this.LoginForm)
     if (this.LoginForm && this.LoginForm.valid) {
       this.api.login(this.LoginForm.value).subscribe((res: any) => {
-        console.log(res);
         this.loginLoading = false;
         this.showSignupForm = false;
         this.showLoginForm = false;
@@ -154,7 +150,6 @@ export class DelightfulIndiaComponent implements OnInit {
       username: userName
     }).subscribe({
       next: (res: any) => {
-        console.log(res.data);
         this.hints = {};
         this.showHints = true;
         res.data.forEach((obj: any) => {

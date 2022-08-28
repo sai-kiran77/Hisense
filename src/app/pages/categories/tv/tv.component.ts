@@ -16,7 +16,6 @@ export class TvComponent implements OnInit {
   ngOnInit(): void {
     this.api.getSlugData('tv').subscribe({
       next: (res: any) => {
-        console.log(res.data);
         this.tvMetaData = res.data;
       },
       error: (e) => {

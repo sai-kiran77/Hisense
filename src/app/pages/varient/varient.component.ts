@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { takeWhile } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
@@ -23,7 +24,9 @@ export class VarientComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,
     private api: ApiService,
-    private state: GlobalStateService) {
+    private state: GlobalStateService,
+    private title: Title,
+    private meta: Meta) {
     this.state.mobileNavToggle.next(false);
   }
 
@@ -33,12 +36,30 @@ export class VarientComponent implements OnInit {
       this.loadMetaData(routeParams['varient']);
     });
   }
+
+  seoTags(data: any){
+    this.title.setTitle(data.title);
+    this.meta.updateTag({
+      name: 'description',
+      content: data.description
+    })
+    data.meta.forEach((obj: any)=>{
+      if(obj.attributes){
+        for(let key in obj.attributes){
+          this.meta.updateTag({
+            property: key,
+            content: obj.attributes[key]
+          })
+        }
+      }
+    })
+  }
   
   loadMetaData(category: string){
     this.api.getVarientData(category).pipe(takeWhile(_=>this.alive)).subscribe({
       next: (res: any) => {
-        console.log(res.data);
         this.metaData = res.data;
+        this.seoTags(res.data.seo_info);
         // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
         // res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
         // || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 

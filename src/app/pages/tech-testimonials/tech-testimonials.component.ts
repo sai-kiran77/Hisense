@@ -21,7 +21,6 @@ export class TechTestimonialsComponent implements OnInit {
   ngOnInit(): void {
     this.api.getTechTestimonials().subscribe({
       next: (res: any) => {
-        console.log(res);
         this.testimonials = res.data;
       },
       error: (err) => {

@@ -39,7 +39,6 @@ export class HomeProductsComponent implements OnInit {
 
   ngOnInit(): void {
     this.api.getHeaderItems().subscribe((res: any) => {
-      console.log(res);
       this.products = res.data.map((obj: any)=>{
         return {
           ...obj,

@@ -26,17 +26,14 @@ export class ContactUsComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       body: ['', [Validators.required]]
     })
-    console.log(this.form)
   }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
-    console.log(this.form)
     if (this.form && this.form.valid) {
       this.api.postContactUsForm(this.form.value).subscribe((res: any) => {
-        console.log(res);
         this.modalMessage = res.message;
       }, (err: any) => {
         console.log(err);
