@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild, ViewChildren, ViewEncapsulation } from '@angular/core';
+import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { takeWhile } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
@@ -23,7 +24,9 @@ export class VarientComponent implements OnInit {
 
   constructor(private route:ActivatedRoute,
     private api: ApiService,
-    private state: GlobalStateService) {
+    private state: GlobalStateService,
+    private title: Title,
+    private meta: Meta) {
     this.state.mobileNavToggle.next(false);
   }
 
@@ -32,6 +35,24 @@ export class VarientComponent implements OnInit {
       this.state.mobileNavToggle.next(false);
       this.loadMetaData(routeParams['varient']);
     });
+  }
+
+  seoTags(data: any){
+    this.title.setTitle(data.title);
+    this.meta.updateTag({
+      name: 'description',
+      content: data.description
+    })
+    data.meta.forEach((obj: any)=>{
+      if(obj.attributes){
+        for(let key in obj.attributes){
+          this.meta.updateTag({
+            property: key,
+            content: obj.attributes[key]
+          })
+        }
+      }
+    })
   }
   
   loadMetaData(category: string){
