@@ -29,15 +29,4 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
-
-  // onSlideChange(){
-  //   console.log('slide changed')
-  //   this.onFirstSlide = !this.onFirstSlide;
-  //   console.log(this.onFirstSlide);
-  // }
-
-  // onSwiper(event:any){
-  //   console.log(event);
-  // }
 }

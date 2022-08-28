@@ -49,7 +49,6 @@ export class CategoryComponent implements OnInit,OnDestroy {
   loadMetaData(category: string){
     this.api.getSlugData(category).pipe(takeWhile(_=>this.alive)).subscribe({
       next: (res: any) => {
-        console.log(res.data);
         this.metaData = res.data;
         this.seoTags(res.data.seo_info);
         // if(this.fragment){

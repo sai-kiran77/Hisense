@@ -354,11 +354,9 @@ export class HeaderComponent implements OnInit {
 
     ngOnInit(): void {
         this.isHomePage = this.router.url;
-        console.log(this.router.url);
         this.router.events.subscribe((event) => {
             if (event instanceof NavigationEnd) {
                 this.isHomePage = event.url;
-                console.log(this.isHomePage);
             }
         });
     }
@@ -393,7 +391,6 @@ export class HeaderComponent implements OnInit {
     subscribeToSidebarNavigation() {
         this.state.mobileNavToggle.subscribe(val => {
             this.mobileNavToggle = val;
-            // console.log(val);
             for (let obj of this.navLinks) {
                 obj.subDropdownToggle = false;
             }

@@ -58,7 +58,6 @@ export class VarientComponent implements OnInit {
   loadMetaData(category: string){
     this.api.getVarientData(category).pipe(takeWhile(_=>this.alive)).subscribe({
       next: (res: any) => {
-        console.log(res.data);
         this.metaData = res.data;
         this.seoTags(res.data.seo_info);
         // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
