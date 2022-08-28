@@ -60,6 +60,7 @@ export class VarientComponent implements OnInit {
       next: (res: any) => {
         console.log(res.data);
         this.metaData = res.data;
+        this.seoTags(res.data.seo_info);
         // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
         // res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
         // || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
