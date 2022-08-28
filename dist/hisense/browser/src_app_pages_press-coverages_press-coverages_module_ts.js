@@ -94,7 +94,6 @@ class PressCoveragesComponent {
             this.metaData = res.data;
             this.totalPagesinTen = new Array(res.data.last_page);
             if (this.container) {
-                console.log(this.container);
                 this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
             }
         }, (err) => {

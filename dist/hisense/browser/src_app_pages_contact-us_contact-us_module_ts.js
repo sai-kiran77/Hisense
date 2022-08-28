@@ -133,15 +133,12 @@ class ContactUsComponent {
             email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_3__.Validators.email]],
             body: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_3__.Validators.required]]
         });
-        console.log(this.form);
     }
     ngOnInit() {
     }
     onSubmit() {
-        console.log(this.form);
         if (this.form && this.form.valid) {
             this.api.postContactUsForm(this.form.value).subscribe((res) => {
-                console.log(res);
                 this.modalMessage = res.message;
             }, (err) => {
                 console.log(err);

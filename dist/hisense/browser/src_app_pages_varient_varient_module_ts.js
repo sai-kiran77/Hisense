@@ -105,7 +105,6 @@ class VarientComponent {
     loadMetaData(category) {
         this.api.getVarientData(category).pipe((0,rxjs__WEBPACK_IMPORTED_MODULE_3__.takeWhile)(_ => this.alive)).subscribe({
             next: (res) => {
-                console.log(res.data);
                 this.metaData = res.data;
                 this.seoTags(res.data.seo_info);
                 // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 

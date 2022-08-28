@@ -1079,11 +1079,9 @@ class HeaderComponent {
     }
     ngOnInit() {
         this.isHomePage = this.router.url;
-        console.log(this.router.url);
         this.router.events.subscribe((event) => {
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__.NavigationEnd) {
                 this.isHomePage = event.url;
-                console.log(this.isHomePage);
             }
         });
     }
@@ -1091,7 +1089,6 @@ class HeaderComponent {
     subscribeToSidebarNavigation() {
         this.state.mobileNavToggle.subscribe(val => {
             this.mobileNavToggle = val;
-            // console.log(val);
             for (let obj of this.navLinks) {
                 obj.subDropdownToggle = false;
             }
@@ -1999,7 +1996,6 @@ class HomeProductsComponent {
     }
     ngOnInit() {
         this.api.getHeaderItems().subscribe((res) => {
-            console.log(res);
             this.products = res.data.map((obj) => {
                 return Object.assign(Object.assign({}, obj), { "image": obj.thumb_image_small });
             });

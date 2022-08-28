@@ -191,7 +191,6 @@ class CategoryComponent {
     loadMetaData(category) {
         this.api.getSlugData(category).pipe((0,rxjs__WEBPACK_IMPORTED_MODULE_3__.takeWhile)(_ => this.alive)).subscribe({
             next: (res) => {
-                console.log(res.data);
                 this.metaData = res.data;
                 this.seoTags(res.data.seo_info);
                 // if(this.fragment){

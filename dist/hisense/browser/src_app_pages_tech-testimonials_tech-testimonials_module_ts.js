@@ -53,7 +53,6 @@ class TechTestimonialsComponent {
     ngOnInit() {
         this.api.getTechTestimonials().subscribe({
             next: (res) => {
-                console.log(res);
                 this.testimonials = res.data;
             },
             error: (err) => {
