@@ -1243,7 +1243,7 @@ class MainSliderComponent {
                 mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/TVC-Master-banner-Revised-Mobile.webp`
             },
             {
-                url: ' /c/uhd-tv',
+                url: '/c/uhd-tv',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-2-300822.webp`,
                 mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-TV-A6H-New-Mobile.webp`
             },
