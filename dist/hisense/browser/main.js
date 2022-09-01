@@ -1240,42 +1240,42 @@ class MainSliderComponent {
             {
                 url: '/c/air-conditioner',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-1-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/TVC-Master-banner-Revised-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-1-300822-mobile.webp`
             },
             {
-                url: '/c/uhd-tv',
+                url: ' /c/uhd-tv',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-2-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-TV-A6H-New-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-2-300822-mobile.webp`
             },
             {
                 url: '/v/70A71F',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-3-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-TV-Mega-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-3-300822-mobile.webp`
             },
             {
                 url: '/v/65U6G',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-4-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-TV-Qled-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-4-300822-mobile.webp`
             },
             {
                 url: '/v/50A6GE',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-5-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-TV-vivid-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-5-300822-mobile.webp`
             },
             {
                 url: '/c/refrigerator',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-6-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-Fridge-Mobile-15th-Aug.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-6-300822-mobile.webp`
             },
             {
                 url: '/c/washing-machine',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-7-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/HI-WB-01-04-1920X900-min-2-Mobile.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-7-300822-mobile.webp`
             },
             {
                 url: '/v/H15DSS',
                 image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-8-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/Website-Banner-Dishwasher-Mobile-15th-Aug.webp`
+                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-8-300822-mobile.webp`
             }
         ];
     }
