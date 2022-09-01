@@ -28,7 +28,7 @@ export class MainSliderComponent implements OnInit {
       mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-1-300822-mobile.webp`
     },
     {
-      url: ' /c/uhd-tv',
+      url: '/c/uhd-tv',
       image: `${environment.baseApiUrl}/media/pages/home/slider/slide-2-300822.webp`,
       mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-2-300822-mobile.webp`
     },
