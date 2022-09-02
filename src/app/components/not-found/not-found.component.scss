@@ -1,3 +1,16 @@
-h1{
-    font-size: 60px;
+h1 {
+    font-size: 100px;
+    color: rgb(0, 179, 172);
+}
+
+
+
+button {
+    background: transparent;
+    outline: none;
+    color: rgb(0, 179, 172);
+    font-size: 16px;
+    border: 2px solid rgb(0, 179, 172);
+    padding: 1rem;
+    border-radius: 20px;
 }
