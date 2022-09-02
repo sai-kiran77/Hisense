@@ -161,12 +161,13 @@ function CategoryComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngForOf", prodCat_r13.product.product_variants);
 } }
 class CategoryComponent {
-    constructor(route, api, state, title, meta) {
+    constructor(route, api, state, title, meta, router) {
         this.route = route;
         this.api = api;
         this.state = state;
         this.title = title;
         this.meta = meta;
+        this.router = router;
         this.alive = true;
         // fragment: any = '';
         this.fallbackImg = 'https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp';
@@ -200,6 +201,7 @@ class CategoryComponent {
             },
             error: (e) => {
                 console.log(e);
+                this.router.navigate(['404']);
             }
         });
     }
@@ -224,7 +226,7 @@ class CategoryComponent {
         this.alive = false;
     }
 }
-CategoryComponent.ɵfac = function CategoryComponent_Factory(t) { return new (t || CategoryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_0__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Meta)); };
+CategoryComponent.ɵfac = function CategoryComponent_Factory(t) { return new (t || CategoryComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_0__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Meta), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.Router)); };
 CategoryComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: CategoryComponent, selectors: [["app-category"]], decls: 12, vars: 6, consts: [["id", "catalog-page", 1, "catalog"], ["data-ui-white", "", 1, "catalog-banner", "catalog-banner_ui_white", 2, "background-color", "#000"], [1, "catalog-banner__content"], [1, "catalog-banner__content-inner"], [1, "catalog-banner__title"], ["class", "catalog-banner__sub__title", 4, "ngIf"], [1, "catalog-banner__image-wrapper"], [1, "catalog-banner__image", 3, "alt", "src"], [1, "product-listing", 2, "padding", "1rem"], [3, "id", 4, "ngFor", "ngForOf"], ["style", "padding: 1rem;", 4, "ngFor", "ngForOf"], [1, "catalog-banner__sub__title"], [3, "id"], ["class", "sub__cat__link", 3, "routerLink", 4, "ngIf"], [4, "ngFor", "ngForOf"], [1, "sub__cat__link", 3, "routerLink"], [1, "product__category__title"], [1, "product-listing-inner"], ["class", "product-listing-tab", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "product-listing-tab", 3, "routerLink"], [1, "product-listing-img", "trackin"], [3, "src", 4, "ngIf"], ["src", "assets/images/prod__placeholder.png", 4, "ngIf"], [1, "product-listing-tab-content"], [1, "product-listing-description"], [1, "product-listing-tab-buttons", "trackin", 2, "transform", "translateY(35px)"], [1, "btn-hisense"], [3, "src"], ["src", "assets/images/prod__placeholder.png"], [2, "padding", "1rem"]], template: function CategoryComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "section", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "h1", 4);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5);

@@ -67,12 +67,13 @@ const _c2 = function (a0) { return { "transform": a0 }; };
 const _c3 = function (a0) { return { "mt-200": a0 }; };
 class VarientComponent {
     // flagImage = `${environment.baseApiUrl}/media/pages/campaigns/delightful-india/flag.png`
-    constructor(route, api, state, title, meta) {
+    constructor(route, api, state, title, meta, router) {
         this.route = route;
         this.api = api;
         this.state = state;
         this.title = title;
         this.meta = meta;
+        this.router = router;
         this.alive = true;
         this.currentIndex = 0;
         this.position = 'translateX(0)';
@@ -124,6 +125,7 @@ class VarientComponent {
             },
             error: (e) => {
                 console.log(e);
+                this.router.navigate(['404']);
             }
         });
     }
@@ -153,7 +155,7 @@ class VarientComponent {
         this.alive = false;
     }
 }
-VarientComponent.ɵfac = function VarientComponent_Factory(t) { return new (t || VarientComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_0__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Meta)); };
+VarientComponent.ɵfac = function VarientComponent_Factory(t) { return new (t || VarientComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_0__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__.Meta), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_4__.Router)); };
 VarientComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: VarientComponent, selectors: [["app-varient"]], decls: 21, vars: 13, consts: [[1, "product"], ["id", "overview", 1, "product__head", "product__head_ui_black"], [1, "product__heade__image", 2, "position", "relative"], [1, "carousel"], [1, "carousel-container"], [1, "carousel-images", 3, "ngStyle"], ["class", "carousel-image current-image", "alt", "image", 3, "src", 4, "ngFor", "ngForOf"], [1, "carousel-nav"], ["class", "carousel-nav--btn", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "product__head-text-column", 3, "ngClass"], [1, "product__head-description"], [1, "product__head-title", 2, "margin-bottom", "0px!important"], [1, "product__head-buttons", 2, "display", "flex", "flex-wrap", "wrap", "gap", "6px"], ["target", "_blank", 3, "href", 4, "ngFor", "ngForOf"], [1, "product__body"], ["class", "row", 4, "ngFor", "ngForOf"], ["alt", "image", 1, "carousel-image", "current-image", 3, "src"], [1, "carousel-nav--btn", 3, "ngClass", "click"], ["target", "_blank", 3, "href"], [1, "purchase__link__image", 3, "src", "ngClass"], [1, "row"], [1, "product__block"], [1, "product__full-image", 3, "src"]], template: function VarientComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](6, VarientComponent_img_6_Template, 1, 1, "img", 6);
