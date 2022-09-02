@@ -21,7 +21,8 @@ export class CategoryComponent implements OnInit,OnDestroy {
     private api: ApiService,
     private state: GlobalStateService,
     private title: Title,
-    private meta: Meta) {
+    private meta: Meta,
+    private router: Router) {
     this.state.mobileNavToggle.next(false);
 
   }
@@ -58,6 +59,7 @@ export class CategoryComponent implements OnInit,OnDestroy {
       },
       error: (e) => {
         console.log(e);
+        this.router.navigate(['404']);
       }
     })
   }
