@@ -1,7 +1,7 @@
 <div class="main-visual slider slick-initialized slick-slider slick-dotted">
     <div class="slick-list draggable">
         <div class="slick-track">
-            <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
+            <!-- <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
                 [navigation]="true" [speed]="1000" class="mySwiper"
                 [autoplay]="{ delay: 6000, disableOnInteraction: false }">
                 <ng-container *ngFor="let slide of slides;let i = index">
@@ -14,7 +14,8 @@
                                     <a [routerLink]="slide.click_link">
                                         <picture>
                                             <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
-                                            <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner" class="ls-bg">
+                                            <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
+                                                class="ls-bg">
                                         </picture>
                                     </a>
                                 </div>
@@ -22,8 +23,24 @@
                         </div>
                     </ng-template>
                 </ng-container>
-
-            </swiper>
+            </swiper> -->
+            <!-- Swiper -->
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
+                        <a [routerLink]="slide.click_link">
+                            <picture>
+                                <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
+                                <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
+                                    class="ls-bg">
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 </div>

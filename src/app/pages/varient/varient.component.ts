@@ -6,6 +6,8 @@ import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
+declare var Swiper: any;
+
 @Component({
   selector: 'app-varient',
   templateUrl: './varient.component.html',
@@ -75,6 +77,24 @@ export class VarientComponent implements OnInit {
         // res.data.code == '55U6G' || res.data.code == 'WFVB7012MS' ){
         //   this.showFlag = true;
         // }
+        setTimeout(()=>{
+          let swiper = new Swiper(".mySwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            autoplay: {
+              delay: 5000,
+            },
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+          });
+        })
       },
       error: (e) => {
         console.log(e);
