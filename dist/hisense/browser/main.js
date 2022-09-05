@@ -1195,8 +1195,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "MainSliderComponent": () => (/* binding */ MainSliderComponent)
 /* harmony export */ });
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ 3587);
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/environments/environment */ 2340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/api.service */ 5830);
 /* harmony import */ var swiper_angular__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! swiper/angular */ 9737);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 6362);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 2816);
@@ -1214,11 +1214,11 @@ function MainSliderComponent_ng_container_4_ng_template_1_Template(rf, ctx) { if
 } if (rf & 2) {
     const slide_r1 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]().$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("routerLink", slide_r1.url);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("routerLink", slide_r1.click_link);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("srcset", slide_r1.image, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("srcset", slide_r1.desktop_image_full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", slide_r1.mobile, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", slide_r1.mobile_image_full_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
 } }
 function MainSliderComponent_ng_container_4_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
@@ -1230,59 +1230,71 @@ const _c1 = function () { return { delay: 6000, disableOnInteraction: false }; }
 // install Swiper modules
 swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MODULE_0__.Pagination, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation, swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay]);
 class MainSliderComponent {
-    constructor() {
-        // {
-        //   url:'/delightful-india',
-        //   image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`,
-        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/Delightful india_1x1.jpg`
-        // },
+    // {
+    //   url:'/delightful-india',
+    //   image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`,
+    //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/Delightful india_1x1.jpg`
+    // },
+    constructor(api) {
+        this.api = api;
         this.slides = [
-            {
-                url: '/c/air-conditioner',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-1-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-1-300822-mobile.webp`
-            },
-            {
-                url: '/c/uhd-tv',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-2-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-2-300822-mobile.webp`
-            },
-            {
-                url: '/v/70A71F',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-3-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-3-300822-mobile.webp`
-            },
-            {
-                url: '/v/65U6G',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-4-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-4-300822-mobile.webp`
-            },
-            {
-                url: '/v/50A6GE',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-5-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-5-300822-mobile.webp`
-            },
-            {
-                url: '/c/refrigerator',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-6-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-6-300822-mobile.webp`
-            },
-            {
-                url: '/c/washing-machine',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-7-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-7-300822-mobile.webp`
-            },
-            {
-                url: '/v/H15DSS',
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-8-300822.webp`,
-                mobile: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_1__.environment.baseApiUrl}/media/pages/home/slider/slide-8-300822-mobile.webp`
-            }
+        // {
+        //   url: '/c/air-conditioner',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-1-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-1-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/c/uhd-tv',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-2-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-2-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/v/70A71F',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-3-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-3-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/v/65U6G',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-4-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-4-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/v/50A6GE',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-5-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-5-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/c/refrigerator',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-6-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-6-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/c/washing-machine',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-7-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-7-300822-mobile.webp`
+        // },
+        // {
+        //   url: '/v/H15DSS',
+        //   image: `${environment.baseApiUrl}/media/pages/home/slider/slide-8-300822.webp`,
+        //   mobile: `${environment.baseApiUrl}/media/pages/home/slider/slide-8-300822-mobile.webp`
+        // }
         ];
     }
     ngOnInit() {
+        this.getSlides();
+    }
+    getSlides() {
+        this.api.getPageSlides({ pageUrl: '/' }).subscribe({
+            next: (res) => {
+                console.log(res);
+                this.slides = res.data.home_page_slides;
+            },
+            error: (err) => {
+            }
+        });
     }
 }
-MainSliderComponent.ɵfac = function MainSliderComponent_Factory(t) { return new (t || MainSliderComponent)(); };
+MainSliderComponent.ɵfac = function MainSliderComponent_Factory(t) { return new (t || MainSliderComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService)); };
 MainSliderComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: MainSliderComponent, selectors: [["app-main-slider"]], decls: 5, vars: 10, consts: [[1, "main-visual", "slider", "slick-initialized", "slick-slider", "slick-dotted"], [1, "slick-list", "draggable"], [1, "slick-track"], [1, "mySwiper", 3, "slidesPerView", "spaceBetween", "loop", "pagination", "navigation", "speed", "autoplay"], [4, "ngFor", "ngForOf"], ["swiperSlide", ""], ["data-slick-index", "i", "aria-hidden", "false", "role", "tabpanel", "aria-describedby", "slick-slide-control00", 1, "slick-slide", "slick-current", 2, "width", "100%"], [1, "slide-item", 2, "width", "100%", "display", "inline-block"], [3, "routerLink"], ["media", "(min-width:768px)", 3, "srcset"], [1, "ls-bg", 2, "width", "100%", 3, "src"]], template: function MainSliderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "swiper", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](4, MainSliderComponent_ng_container_4_Template, 2, 0, "ng-container", 4);
@@ -2329,6 +2341,11 @@ class ApiService {
     }
     getHeaderItems(endpoint = '/pages/website-header') {
         return this.http.get(this.baseURL + endpoint);
+    }
+    getPageSlides(params, endpoint = '/pages/metadata') {
+        return this.http.get(this.baseURL + endpoint, {
+            params
+        });
     }
 }
 ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__.HttpClient)); };

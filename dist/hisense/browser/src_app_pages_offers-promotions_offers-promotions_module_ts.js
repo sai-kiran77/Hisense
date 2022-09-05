@@ -11,9 +11,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "OffersPromotionsComponent": () => (/* binding */ OffersPromotionsComponent)
 /* harmony export */ });
-/* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/environments/environment */ 2340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ 3184);
-/* harmony import */ var src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/global-state.service */ 6007);
+/* harmony import */ var src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/app/services/global-state.service */ 6007);
+/* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/api.service */ 5830);
 /* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 6362);
 
 
@@ -29,9 +29,9 @@ function OffersPromotionsComponent_a_3_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const obj_r2 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, obj_r2.tab == ctx_r0.currentTab));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, obj_r2.start_date == ctx_r0.currentTab));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](obj_r2.tab);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](obj_r2.start_date);
 } }
 function OffersPromotionsComponent_img_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 7);
@@ -40,62 +40,74 @@ function OffersPromotionsComponent_img_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("src", ctx_r1.currentImg, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
 } }
 class OffersPromotionsComponent {
-    constructor(state) {
+    constructor(state, api) {
         this.state = state;
+        this.api = api;
         this.metaData = [
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/5-August-2022.webp`,
-                tab: '5th August 2022'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.png`,
-                tab: '23rd July 2022'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/1-Dec-2021.jpg`,
-                tab: '1st Dec 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/18-Nov-2021.jpg`,
-                tab: '18th Nov 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/23-July-2021.jpg`,
-                tab: '23rd July 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/10-July-2021.jpg`,
-                tab: '10th July 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/12-June-2021.jpg`,
-                tab: '12th June 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/1-May-2021.jpg`,
-                tab: '1st May 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/1-Jan-2021.jpg`,
-                tab: '1st January 2021'
-            },
-            {
-                image: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/offers-and-promotions/10-September-2021.jpg`,
-                tab: '10th September 2020'
-            },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/5-August-2022.webp`,
+        //   tab: '5th August 2022'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2022.png`,
+        //   tab: '23rd July 2022'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/1-Dec-2021.jpg`,
+        //   tab: '1st Dec 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/18-Nov-2021.jpg`,
+        //   tab: '18th Nov 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/23-July-2021.jpg`,
+        //   tab: '23rd July 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/10-July-2021.jpg`,
+        //   tab: '10th July 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/12-June-2021.jpg`,
+        //   tab: '12th June 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/1-May-2021.jpg`,
+        //   tab: '1st May 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/1-Jan-2021.jpg`,
+        //   tab: '1st January 2021'
+        // },
+        // {
+        //   image: `${environment.baseApiUrl}/media/offers-and-promotions/10-September-2021.jpg`,
+        //   tab: '10th September 2020'
+        // },
         ];
-        this.currentImg = this.metaData[0].image;
-        this.currentTab = this.metaData[0].tab;
         this.state.mobileNavToggle.next(false);
     }
     changeTab(obj) {
-        this.currentImg = obj.image;
-        this.currentTab = obj.tab;
+        this.currentImg = obj.image_full_url;
+        this.currentTab = obj.start_date;
     }
     ngOnInit() {
+        this.getSlides();
+    }
+    getSlides() {
+        this.api.getPageSlides({ pageUrl: '/offers-promotions' }).subscribe({
+            next: (res) => {
+                console.log(res);
+                this.metaData = res.data.offers_promotions;
+                this.currentImg = this.metaData[0].image_full_url;
+                this.currentTab = this.metaData[0].start_date;
+            },
+            error: (err) => {
+            }
+        });
     }
 }
-OffersPromotionsComponent.ɵfac = function OffersPromotionsComponent_Factory(t) { return new (t || OffersPromotionsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_1__.GlobalStateService)); };
+OffersPromotionsComponent.ɵfac = function OffersPromotionsComponent_Factory(t) { return new (t || OffersPromotionsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_0__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService)); };
 OffersPromotionsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: OffersPromotionsComponent, selectors: [["app-offers-promotions"]], decls: 6, vars: 2, consts: [[1, "container"], [1, "col1"], ["id", "themeslist", 1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "col2"], [3, "src", 4, "ngIf"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [3, "src"]], template: function OffersPromotionsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](3, OffersPromotionsComponent_a_3_Template, 2, 4, "a", 3);
