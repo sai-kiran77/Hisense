@@ -342,7 +342,43 @@ header {
   }
 }
 
+@media screen and (min-width: 1023px) {
+  header {
+    nav {
+      &.main-nav {
+        ul {
+          li {
+            .dropdown-menu {
+              .sub-menu {
+                height: 200px !important;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+}
+
 @media (max-width: 1023px) {
+
+  // header {
+  //   nav {
+  //     &.main-nav {
+  //       ul {
+  //         li {
+  //           .dropdown-menu {
+  //             .sub-menu {
+  //               height:  !important;
+  //             }
+  //           }
+  //         }
+  //       }
+  //     }
+
+  //   }
+  // }
 
   header {
     :after {
@@ -763,11 +799,11 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-  nav{
-    &.main-nav{
-      .mobile-nav-toggle.active.home-page{
+  nav {
+    &.main-nav {
+      .mobile-nav-toggle.active.home-page {
         top: -15px !important;
-      } 
+      }
     }
   }
 }

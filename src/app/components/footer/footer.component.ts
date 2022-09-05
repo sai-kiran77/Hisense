@@ -48,8 +48,8 @@ export class FooterComponent implements OnInit {
                     "image": environment.baseApiUrl + "/media/categories/pure-flat-refrigerators-thumb.png"
                 },
                 {
-                    "text": "Single door Refrigerators",
-                    "url": "/c/single-door-refrigerators/",
+                    "text": "Mini Refrigerators",
+                    "url": "/c/mini-refrigerators",
                     "image": environment.baseApiUrl + "/media/categories/single-door-refrigerators-thumb.png"
                 },
                 {

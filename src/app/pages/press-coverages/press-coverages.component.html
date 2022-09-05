@@ -13,6 +13,7 @@
         <div>
             <!-- <h3 class="title italics">{{data.title}}</h3> -->
             <p class="f-24"> {{data.title}} </p>
+            <p *ngIf="data?.vendor">({{data?.vendor}})</p>
             <p>{{data?.description}}</p>
             <a [href]="data?.external_url" class=" btn btn-default read-more-btn" target="_blank">Read More</a>
         </div>
