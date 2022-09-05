@@ -7,9 +7,11 @@
                 <ul class="left">
                     <li *ngFor="let obj of navLinks">
                         <a [routerLink]="obj.url">{{obj.text}}</a>
-                        <a (click)="obj.subDropdownToggle = true" class="toggle-dropdown"
-                            id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
-                            aria-label="Toggle dropdown"></a>
+                        <div style="width: 25%;" (click)="obj.subDropdownToggle = true">
+                            <a style="margin-left: auto !important;" class="toggle-dropdown"
+                                id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Toggle dropdown"></a>
+                        </div>
                         <div [ngClass]="{'menu-in': obj.subDropdownToggle}" class="dropdown-menu"
                             aria-labelledby="toggle-dropdown-tv-and-audio">
                             <button (click)="obj.subDropdownToggle = false" class="mobile-back" type="button"
@@ -17,7 +19,7 @@
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">{{obj.text}}</div>
-                            <div class="sub-menu" style="height: 200px !important;background-color: white;">
+                            <div class="sub-menu" style="background-color: white;">
                                 <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']" style="width: 200px !important;">
                                     <span class="thumbnail" style="overflow: hidden;">
                                         <div class="img">
