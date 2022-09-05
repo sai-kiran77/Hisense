@@ -11,10 +11,10 @@
                             aria-describedby="slick-slide-control00" style="width: 100%;">
                             <div>
                                 <div class="slide-item" style="width: 100%; display: inline-block;">
-                                    <a [routerLink]="slide.url">
+                                    <a [routerLink]="slide.click_link">
                                         <picture>
-                                            <source media="(min-width:768px)" [srcset]="slide.image">
-                                            <img [src]="slide.mobile" style="width: 100%;" class="banner" class="ls-bg">
+                                            <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
+                                            <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner" class="ls-bg">
                                         </picture>
                                     </a>
                                 </div>

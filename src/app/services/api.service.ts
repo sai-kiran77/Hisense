@@ -51,4 +51,10 @@ export class ApiService {
   getHeaderItems(endpoint: string = '/pages/website-header'){
     return this.http.get(this.baseURL + endpoint);
   }
+  
+  getPageSlides(params: any,endpoint: string = '/pages/metadata'){
+    return this.http.get(this.baseURL + endpoint,{
+      params
+    });
+  }
 }

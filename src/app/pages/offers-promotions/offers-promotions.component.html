@@ -2,7 +2,7 @@
     <div class="col1">
         <div class="list-group" id="themeslist">
             <a class="list-group-item list-group-item-action" *ngFor="let obj of metaData"
-            [ngClass]="{'active': obj.tab == currentTab}" (click)="changeTab(obj)">{{obj.tab}}</a>
+            [ngClass]="{'active': obj.start_date == currentTab}" (click)="changeTab(obj)">{{obj.start_date}}</a>
         </div>
     </div>
     <div class="col2">
