@@ -17,12 +17,12 @@ export class VarientComponent implements OnInit {
   metaData: any;
   alive = true;
   currentIndex = 0;
-  position  = 'translateX(0)';
+  position = 'translateX(0)';
 
   showFlag = false;
   // flagImage = `${environment.baseApiUrl}/media/pages/campaigns/delightful-india/flag.png`
 
-  constructor(private route:ActivatedRoute,
+  constructor(private route: ActivatedRoute,
     private api: ApiService,
     private state: GlobalStateService,
     private title: Title,
@@ -32,21 +32,21 @@ export class VarientComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.route.params.pipe(takeWhile(_=>this.alive)).subscribe(routeParams => {
+    this.route.params.pipe(takeWhile(_ => this.alive)).subscribe(routeParams => {
       this.state.mobileNavToggle.next(false);
       this.loadMetaData(routeParams['varient']);
     });
   }
 
-  seoTags(data: any){
+  seoTags(data: any) {
     this.title.setTitle(data.title);
     this.meta.updateTag({
       name: 'description',
       content: data.description
     })
-    data.meta.forEach((obj: any)=>{
-      if(obj.attributes){
-        for(let key in obj.attributes){
+    data.meta.forEach((obj: any) => {
+      if (obj.attributes) {
+        for (let key in obj.attributes) {
           this.meta.updateTag({
             property: key,
             content: obj.attributes[key]
@@ -55,9 +55,9 @@ export class VarientComponent implements OnInit {
       }
     })
   }
-  
-  loadMetaData(category: string){
-    this.api.getVarientData(category).pipe(takeWhile(_=>this.alive)).subscribe({
+
+  loadMetaData(category: string) {
+    this.api.getVarientData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
         this.metaData = res.data;
         this.seoTags(res.data.seo_info);
@@ -83,31 +83,31 @@ export class VarientComponent implements OnInit {
     })
   }
 
-  updateCarousel(index: number){
-    this.position =  `translateX(${index * -100 }%)`
+  updateCarousel(index: number) {
+    this.position = `translateX(${index * -100}%)`
     this.currentIndex = index;
   }
 
-  getVendorImage(vendor: string){
-    switch(vendor){
+  getVendorImage(vendor: string) {
+    switch (vendor) {
       case "amazon":
-      return 'assets/amazon.png';
+        return 'assets/amazon.png';
       case "flipkart":
-      return 'assets/flipkart.png';
+        return 'assets/flipkart.png';
       case "tata_cliq":
-      return 'assets/tata-cliq.jpg';
+        return 'assets/tata-cliq.jpg';
       case "jio_mart":
-      return 'assets/jiomart.png';
+        return 'assets/jiomart.png';
       case "reliance_digital":
-      return 'assets/reliance-digital.png';
+        return 'assets/reliance-digital.png';
       case "croma":
-      return 'assets/croma.jpg';
+        return 'assets/croma.jpg';
       default:
         return '';
     }
   }
 
-  ngOnDestroy(){
+  ngOnDestroy() {
     this.alive = false;
   }
 
