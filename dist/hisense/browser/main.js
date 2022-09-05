@@ -801,8 +801,8 @@ class FooterComponent {
                         "image": src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl + "/media/categories/pure-flat-refrigerators-thumb.png"
                     },
                     {
-                        "text": "Single door Refrigerators",
-                        "url": "/c/single-door-refrigerators/",
+                        "text": "Mini Refrigerators",
+                        "url": "/c/mini-refrigerators",
                         "image": src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl + "/media/categories/single-door-refrigerators-thumb.png"
                     },
                     {
