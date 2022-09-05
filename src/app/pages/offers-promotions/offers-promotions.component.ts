@@ -55,7 +55,7 @@ export class OffersPromotionsComponent implements OnInit {
 
   changeTab(obj: any){
     this.currentImg = obj.image_full_url;
-    this.currentTab = obj.start_date;
+    this.currentTab = obj.start_date_formatted ;
   }
 
   constructor(private state: GlobalStateService,
@@ -77,7 +77,7 @@ export class OffersPromotionsComponent implements OnInit {
         console.log(res);
         this.metaData = res.data.offers_promotions;
         this.currentImg = this.metaData[0].image_full_url;
-        this.currentTab = this.metaData[0].start_date;
+        this.currentTab = this.metaData[0].start_date_formatted ;
       },
       error: (err) => {
       }
