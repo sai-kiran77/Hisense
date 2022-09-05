@@ -29,9 +29,9 @@ function OffersPromotionsComponent_a_3_Template(rf, ctx) { if (rf & 1) {
 } if (rf & 2) {
     const obj_r2 = ctx.$implicit;
     const ctx_r0 = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, obj_r2.start_date == ctx_r0.currentTab));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpureFunction1"](2, _c0, obj_r2.start_date_formatted == ctx_r0.currentTab));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](obj_r2.start_date);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](obj_r2.start_date_formatted);
 } }
 function OffersPromotionsComponent_img_5_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](0, "img", 7);
@@ -89,7 +89,7 @@ class OffersPromotionsComponent {
     }
     changeTab(obj) {
         this.currentImg = obj.image_full_url;
-        this.currentTab = obj.start_date;
+        this.currentTab = obj.start_date_formatted;
     }
     ngOnInit() {
         this.getSlides();
@@ -100,7 +100,7 @@ class OffersPromotionsComponent {
                 console.log(res);
                 this.metaData = res.data.offers_promotions;
                 this.currentImg = this.metaData[0].image_full_url;
-                this.currentTab = this.metaData[0].start_date;
+                this.currentTab = this.metaData[0].start_date_formatted;
             },
             error: (err) => {
             }
