@@ -3679,5 +3679,14 @@ button.swiper-pagination-bullet {
   opacity: 0.5;
   transform: scale(1);
 }
+.terms__and__conditions__context__text p {
+  margin-bottom: 16px !important;
+}
+.terms__and__conditions__context__text ul, .terms__and__conditions__context__text li {
+  list-style: disc !important;
+}
+.terms__and__conditions__context__text ul {
+  padding-left: 16px !important;
+}
 
 /*# sourceMappingURL=styles.css.map*/

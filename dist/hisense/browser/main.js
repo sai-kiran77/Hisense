@@ -62,8 +62,13 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_tech-testimonials_tech-testimonials_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/tech-testimonials/tech-testimonials.module */ 3358)).then(m => m.TechTestimonialsModule)
             },
             {
-                path: 'contest-terms-and-conditions',
+                path: 'terms-and-conditions',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_contest-terms-and-conditions_contest-terms-and-conditions_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/contest-terms-and-conditions/contest-terms-and-conditions.module */ 8070)).then(m => m.ContestTermsAndConditionsModule)
+            },
+            {
+                path: 'contest-terms-and-conditions',
+                redirectTo: '/terms-and-conditions',
+                pathMatch: 'full'
             },
             {
                 path: 'offers-promotions',
@@ -93,9 +98,9 @@ const routes = [
                 path: '',
                 component: _pages_home_home_component__WEBPACK_IMPORTED_MODULE_1__.HomeComponent
             },
-            // {
-            //   path: '**', component: NotFoundComponent
-            // }
+            {
+                path: '**', redirectTo: '/'
+            }
         ]
     },
 ];
@@ -849,7 +854,7 @@ class FooterComponent {
     }
 }
 FooterComponent.ɵfac = function FooterComponent_Factory(t) { return new (t || FooterComponent)(); };
-FooterComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 34, vars: 7, consts: [[1, "footer-links-container"], [1, "footer-links"], ["class", "col", 4, "ngFor", "ngForOf"], [1, "col"], [1, "row", 2, "max-height", "58px", 3, "ngClass"], [1, "accordion-toggle", 3, "click"], ["routerLink", "/about-us", "target", "", "rel", ""], ["routerLink", "/press-coverages", "target", "", "rel", ""], ["routerLink", "/tech-testimonials", "target", "", "rel", ""], ["routerLink", "/offers-promotions", "target", "", "rel", ""], ["routerLink", "/contest-terms-and-conditions/", "target", "", "rel", ""], ["routerLink", "/contact-us", "target", "", "rel", ""], [3, "routerLink"], [4, "ngFor", "ngForOf"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
+FooterComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: FooterComponent, selectors: [["app-footer"]], decls: 34, vars: 7, consts: [[1, "footer-links-container"], [1, "footer-links"], ["class", "col", 4, "ngFor", "ngForOf"], [1, "col"], [1, "row", 2, "max-height", "58px", 3, "ngClass"], [1, "accordion-toggle", 3, "click"], ["routerLink", "/about-us", "target", "", "rel", ""], ["routerLink", "/press-coverages", "target", "", "rel", ""], ["routerLink", "/tech-testimonials", "target", "", "rel", ""], ["routerLink", "/offers-promotions", "target", "", "rel", ""], ["routerLink", "/terms-and-conditions/", "target", "", "rel", ""], ["routerLink", "/contact-us", "target", "", "rel", ""], [3, "routerLink"], [4, "ngFor", "ngForOf"]], template: function FooterComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "div", 0)(1, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtemplate"](2, FooterComponent_ul_2_Template, 8, 6, "ul", 2);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](3, "ul", 3)(4, "li", 4)(5, "a", 5);
@@ -871,7 +876,7 @@ FooterComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](21, "Offers/Promotions");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](22, "dd")(23, "a", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24, "Contest Terms And Conditions");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](24, "Terms And Conditions");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](25, "li", 4)(26, "a", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵlistener"]("click", function FooterComponent_Template_a_click_26_listener() { return ctx.row2 = !ctx.row2; });
