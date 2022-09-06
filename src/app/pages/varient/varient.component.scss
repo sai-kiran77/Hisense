@@ -2,6 +2,10 @@
     border-radius: 10px;
 }
 
+.swiper-slide img{
+    object-fit: contain;
+}
+
 .amazon {
     border: 2px solid #F39731;
 }
@@ -21,7 +25,7 @@
 .product__head {
     display: grid !important;
     grid-template-columns: 1fr 1fr;
-    min-height: 600px;
+    min-height: 60vh;
 }
 
 .carousel {
@@ -11500,7 +11504,7 @@ html {
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
     .product__head-text-column.mt-200 {
         margin-top: 200px !important;
     }

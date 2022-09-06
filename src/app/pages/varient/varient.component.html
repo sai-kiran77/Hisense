@@ -8,7 +8,7 @@
                         <div style="padding-bottom: 50px;" class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images">
-                                    <img class="carousel-image current-image" [src]="slide?.full_url" alt="image">
+                                    <img style="max-height: 30vh;" class="carousel-image current-image" [src]="slide?.full_url" alt="image">
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>

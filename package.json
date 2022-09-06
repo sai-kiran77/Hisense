@@ -10,6 +10,7 @@
     "dev:ssr": "ng run hisense:serve-ssr",
     "serve:ssr": "node dist/hisense/server/main.js",
     "build:ssr": "ng build && ng run hisense:server",
+    "build:ssr:dev": "ng build --configuration development && ng run hisense:server",
     "prerender": "ng run hisense:prerender"
   },
   "private": true,
