@@ -46,8 +46,13 @@ const routes: Routes = [
         loadChildren: () => import('./pages/tech-testimonials/tech-testimonials.module').then(m => m.TechTestimonialsModule)
       },
       {
-        path: 'contest-terms-and-conditions',
+        path: 'terms-and-conditions',
         loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
+      },
+      {
+        path: 'contest-terms-and-conditions',
+        redirectTo: '/terms-and-conditions',
+        pathMatch: 'full'
       },
       {
         path: 'offers-promotions',
@@ -77,9 +82,9 @@ const routes: Routes = [
         path: '',
         component: HomeComponent
       },
-      // {
-      //   path: '**', component: NotFoundComponent
-      // }
+      {
+        path: '**', redirectTo: '/'
+      }
     ]
   },
 ];

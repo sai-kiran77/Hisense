@@ -4423,3 +4423,17 @@ ul li {
     -ms-transform: scale(1);
     transform: scale(1);
 }
+
+.terms__and__conditions__context__text{
+    p{
+        margin-bottom: 16px !important;
+    }
+
+    ul,li{
+        list-style: disc !important;
+    }
+
+    ul{
+        padding-left: 16px !important;
+    }
+}
