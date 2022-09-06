@@ -146,7 +146,7 @@ class ContactUsComponent {
         if (this.form && this.form.valid) {
             this.api.postContactUsForm(this.form.value).subscribe((res) => {
                 this.modalMessage = res.message;
-                this.modalImageName = 'assets/images/success.png';
+                this.modalImageName = 'assets/images/success.webp';
             }, (err) => {
                 console.log(err);
                 this.modalImageName = 'assets/images/warning.png';
