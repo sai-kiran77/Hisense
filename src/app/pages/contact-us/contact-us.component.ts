@@ -36,7 +36,7 @@ export class ContactUsComponent implements OnInit {
     if (this.form && this.form.valid) {
       this.api.postContactUsForm(this.form.value).subscribe((res: any) => {
         this.modalMessage = res.message;
-        this.modalImageName = 'assets/images/success.png';
+        this.modalImageName = 'assets/images/success.webp';
       }, (err: any) => {
         console.log(err);
         this.modalImageName = 'assets/images/warning.png'

@@ -1,16 +1,14 @@
+<ng-container *ngIf="!show404">
 <div class="product">
     <div class="product__head product__head_ui_black " id="overview">
         <div class="product__heade__image" style="position: relative;">
             <div class="carousel">
                 <div class="carousel-container">
                     <div class="carousel-images" [ngStyle]="{'transform':position}">
-                        <!-- <img class="carousel-image current-image" *ngFor="let slide of metaData?.slider_images"
-                            [src]="slide?.full_url" alt="image"> -->
-                        <div class="swiper mySwiper">
+                        <div style="padding-bottom: 50px;" class="swiper mySwiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images">
-                                    <img class="carousel-image current-image" [src]="slide?.full_url"
-                                        alt="image">
+                                    <img class="carousel-image current-image" [src]="slide?.full_url" alt="image">
                                 </div>
                             </div>
                             <div class="swiper-button-next"></div>
@@ -19,12 +17,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="carousel-nav">
-                    <button class="carousel-nav--btn" *ngFor="let slide of metaData?.slider_images;let i = index"
-                        [ngClass]="{'current-btn': i == currentIndex}" (click)="updateCarousel(i)"></button>
-                </div> -->
             </div>
-
         </div>
         <div class="product__head-text-column" [ngClass]="{'mt-200': showFlag }">
             <div class="product__head-description">{{metaData?.name}}</div>
@@ -48,48 +41,8 @@
         </section>
     </div>
 </div>
+</ng-container>
 
-<!-- <div class="embed__flag" *ngIf="showFlag">
-    <img [src]="flagImage" alt="flag">
-</div> -->
-
-<!-- <div class="product__block" style=" background-image: url('');">
-    <div class="specs-block" id="specifications">
-        <div class="specs-block__title">Now, here’s the <strong>technical bit...</strong></div>
-        <div class="specs-block__text">Below, you’ll find all the technical details, such as dimension etc</div>
-        <div class="specs-block__list">
-            <div class="specs-block__line">
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title">189 cm(75)<sup></sup></div>
-                    <div class="specs-block__item-text">Size</div>
-                </div>
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title">3840*2160</div>
-                    <div class="specs-block__item-text">Resolution</div>
-                </div>
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title">Ultra Vivid High Contrast Panel</div>
-                    <div class="specs-block__item-text">Picture</div>
-                </div>
-            </div>
-
-        </div>
-         <div class="specs-block__list">
-            <div class="specs-block__line">
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title">Dolby Atmos® and Dolby Digital Audio<sup></sup></div>
-                    <div class="specs-block__item-text">Sound</div>
-                </div>
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title">Google TV</div>
-                    <div class="specs-block__item-text">Operating system</div>
-                </div>
-                <div class="specs-block__item">
-                    <div class="specs-block__item-title"></div>
-                    <div class="specs-block__item-text"></div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div> -->
+<ng-container *ngIf="show404">
+    <app-not-found></app-not-found>
+</ng-container>

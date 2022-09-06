@@ -19,6 +19,7 @@ export class VarientComponent implements OnInit {
   metaData: any;
   alive = true;
   currentIndex = 0;
+  show404 = false;
   position = 'translateX(0)';
 
   showFlag = false;
@@ -59,6 +60,7 @@ export class VarientComponent implements OnInit {
   }
 
   loadMetaData(category: string) {
+    this.show404 = false;
     this.api.getVarientData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
         this.metaData = res.data;
@@ -77,7 +79,7 @@ export class VarientComponent implements OnInit {
         // res.data.code == '55U6G' || res.data.code == 'WFVB7012MS' ){
         //   this.showFlag = true;
         // }
-        setTimeout(()=>{
+        setTimeout(() => {
           let swiper = new Swiper(".mySwiper", {
             slidesPerView: 1,
             spaceBetween: 30,
@@ -98,7 +100,8 @@ export class VarientComponent implements OnInit {
       },
       error: (e) => {
         console.log(e);
-        this.router.navigate(['404']);
+        // this.router.navigate(['404']);
+        this.show404 = true;
       }
     })
   }

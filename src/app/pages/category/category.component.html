@@ -1,29 +1,52 @@
-<section class="catalog" id="catalog-page">
-    <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
-        <div class="catalog-banner__content">
-            <div class="catalog-banner__content-inner">
-                <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
-                <h3 class="catalog-banner__sub__title" *ngIf="metaData?.subcategories.length == 1">{{metaData?.subcategories[0].name}}</h3>
-
-                <!-- <div class="catalog-banner__description">
-                    <p>
-                        Plenty of choice <br>
-                        to find the best fit for your home
-                    </p>
-                </div> -->
+<ng-container *ngIf="!show404">
+    <section class="catalog" id="catalog-page">
+        <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
+            <div class="catalog-banner__content">
+                <div class="catalog-banner__content-inner">
+                    <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
+                    <h3 class="catalog-banner__sub__title" *ngIf="metaData?.subcategories.length == 1">{{metaData?.subcategories[0].name}}</h3>
+    
+                    <!-- <div class="catalog-banner__description">
+                        <p>
+                            Plenty of choice <br>
+                            to find the best fit for your home
+                        </p>
+                    </div> -->
+                </div>
+            </div>
+            <div class="catalog-banner__image-wrapper">
+                <img [alt]="metaData?.name" class="catalog-banner__image" [src]="metaData?.thumb_image_medium.full_url">
             </div>
         </div>
-        <div class="catalog-banner__image-wrapper">
-            <img [alt]="metaData?.name" class="catalog-banner__image" [src]="metaData?.thumb_image_medium.full_url">
+    </section>
+    <div class="product-listing" style="padding: 1rem;">
+        <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
+            <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a>
+            <div *ngFor="let prodCat of subCat.category_products">
+                <div class="product__category__title">{{prodCat.product.name}}</div>
+    
+                <div class="product-listing-inner">
+                    <a class="product-listing-tab" [routerLink]="prod.relative_url"
+                        *ngFor="let prod of prodCat.product.product_variants">
+                        <a class="product-listing-img trackin">
+                            <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
+                            <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
+                        </a>
+                        <div class="product-listing-tab-content">
+                            <h4>{{prod.name}}</h4>
+                            <h3>{{prod.variant_size}}</h3>
+                            <div class="product-listing-description"></div>
+                        </div>
+                        <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
+                            <div><a class="btn-hisense">More Detail</a></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
-<div class="product-listing" style="padding: 1rem;">
-    <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
-        <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a>
-        <div *ngFor="let prodCat of subCat.category_products">
+        <div style="padding: 1rem;" *ngFor="let prodCat of metaData?.category_products">
             <div class="product__category__title">{{prodCat.product.name}}</div>
-
+    
             <div class="product-listing-inner">
                 <a class="product-listing-tab" [routerLink]="prod.relative_url"
                     *ngFor="let prod of prodCat.product.product_variants">
@@ -43,25 +66,8 @@
             </div>
         </div>
     </div>
-    <div style="padding: 1rem;" *ngFor="let prodCat of metaData?.category_products">
-        <div class="product__category__title">{{prodCat.product.name}}</div>
+</ng-container>
 
-        <div class="product-listing-inner">
-            <a class="product-listing-tab" [routerLink]="prod.relative_url"
-                *ngFor="let prod of prodCat.product.product_variants">
-                <a class="product-listing-img trackin">
-                    <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
-                    <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
-                </a>
-                <div class="product-listing-tab-content">
-                    <h4>{{prod.name}}</h4>
-                    <h3>{{prod.variant_size}}</h3>
-                    <div class="product-listing-description"></div>
-                </div>
-                <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
-                    <div><a class="btn-hisense">More Detail</a></div>
-                </div>
-            </a>
-        </div>
-    </div>
-</div>
+<ng-container *ngIf="show404">
+    <app-not-found></app-not-found>
+</ng-container>
