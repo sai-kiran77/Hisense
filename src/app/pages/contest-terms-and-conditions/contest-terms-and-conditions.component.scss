@@ -54,8 +54,10 @@ p {
     font-weight: 400;
 }
 
+
+ul,
 li {
-    list-style: initial;
+    list-style: disc !important;
 }
 
 
@@ -114,7 +116,8 @@ li {
 // }
 
 h1,
-h2 {
+h2,
+h3 {
     text-align: center;
     font-weight: bold;
     margin-bottom: 16px;
@@ -170,4 +173,85 @@ p {
     font-size: 60px;
     line-height: 1.2;
     text-transform: uppercase;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+    padding-top: 100px;
+    padding-bottom: 80px;
+}
+
+.list-group {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+
+.col1 a {
+    padding: 0.75rem 1.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    white-space: nowrap;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.col2 {
+    padding: 1.25rem;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+.active {
+    color: #fff;
+    // background-color: #2FA4E7 !important;
+    background-color: #00B3ac !important;
+    border-color: #00B3ac !important;
+}
+
+
+@media screen and (max-width:768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .col1 {
+        max-width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+
+        /* width */
+        &::-webkit-scrollbar {
+            height: 10px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    }
+
+    .list-group {
+        flex-direction: row;
+    }
+}
+
+p {
+    margin: 100px !important;
 }
