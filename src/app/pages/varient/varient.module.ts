@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { VarientComponent } from './varient.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SwiperModule } from 'swiper/angular';
+import { ComponentsModule } from 'src/app/components/components.module';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
   imports: [
     SwiperModule,
     CommonModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ]
 })

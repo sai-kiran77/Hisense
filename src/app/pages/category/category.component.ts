@@ -14,6 +14,7 @@ export class CategoryComponent implements OnInit,OnDestroy {
 
   metaData: any;
   alive = true;
+  show404 = false;
   // fragment: any = '';
   fallbackImg = 'https://www.hisense-india.com/wp-content/themes/hisense/images/tv/A6H.webp'
 
@@ -34,8 +35,8 @@ export class CategoryComponent implements OnInit,OnDestroy {
 
     //renders when there is a update in params
     this.route.params.pipe(takeWhile(_=>this.alive)).subscribe(routeParams => {
-      // console.log(routeParams);
       this.state.mobileNavToggle.next(false);
+      this.show404 = false;
       this.loadMetaData(routeParams['category']);
     });
 
@@ -59,7 +60,8 @@ export class CategoryComponent implements OnInit,OnDestroy {
       },
       error: (e) => {
         console.log(e);
-        this.router.navigate(['404']);
+        // this.router.navigate(['404']);
+        this.show404 = true;
       }
     })
   }
