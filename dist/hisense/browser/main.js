@@ -38,6 +38,10 @@ const routes = [
             //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
             // },
             {
+                path: 'FIFA-2022',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_fifa-event_fifa-event_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/fifa-event/fifa-event.module */ 9476)).then(m => m.FifaEventModule)
+            },
+            {
                 path: 'about-us',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_about-us_about-us_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/about-us/about-us.module */ 9902)).then(m => m.AboutUsModule)
             },
@@ -73,10 +77,6 @@ const routes = [
             {
                 path: 'offers-promotions',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_offers-promotions_offers-promotions_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/offers-promotions/offers-promotions.module */ 9419)).then(m => m.OffersPromotionsModule)
-            },
-            {
-                path: 'contest-terms-and-conditions',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_contest-terms-and-conditions_contest-terms-and-conditions_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/contest-terms-and-conditions/contest-terms-and-conditions.module */ 8070)).then(m => m.ContestTermsAndConditionsModule)
             },
             // {
             //   path: 'treasure-hunt',
