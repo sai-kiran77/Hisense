@@ -21,10 +21,10 @@ const routes: Routes = [
       //   path: 'delightful-india',
       //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
       // },
-      {
-        path: 'FIFA-2022',
-        loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
-      },
+      // {
+      //   path: 'FIFA-2022',
+      //   loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
+      // },
       {
         path: 'about-us',
         loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
