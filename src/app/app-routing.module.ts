@@ -22,7 +22,7 @@ const routes: Routes = [
       //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
       // },
       {
-        path: 'FIFA-2022',
+        path: 'fifa-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
       },
       {
