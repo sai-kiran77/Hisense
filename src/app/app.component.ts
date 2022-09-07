@@ -17,7 +17,7 @@ export class AppComponent {
   ngOnInit() {
     // console.log(this.router.url);
     if (isPlatformBrowser(this.platformId)) {
-      console.log(window.location.pathname)
+      // console.log(window.location.pathname)
       switch (window.location.pathname) {
         case '/30-39':
           this.router.navigate(['/c/laser-tv']);

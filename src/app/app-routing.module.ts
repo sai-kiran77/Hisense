@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FifaTestComponent } from './components/fifa-test/fifa-test.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
-import { PageTestComponent } from './components/page-test/page-test.component';
 import { ShellComponent } from './components/shell/shell.component';
 import { HomeComponent } from './pages/home/home.component';
 
@@ -26,14 +24,6 @@ const routes: Routes = [
       {
         path: 'FIFA-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
-      },
-      {
-        path: 'page-test',
-        component: PageTestComponent
-      },
-      {
-        path: 'fifa-test',
-        component: FifaTestComponent
       },
       {
         path: 'about-us',

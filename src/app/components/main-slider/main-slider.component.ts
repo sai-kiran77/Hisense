@@ -38,7 +38,7 @@ export class MainSliderComponent implements OnInit {
   getSlides() {
     this.api.getPageSlides({ pageUrl: '/' }).subscribe({
       next: (res: any) => {
-        console.log(res);
+        // console.log(res);
         this.slides = res.data.home_page_slides;
 
         setTimeout(()=>{
