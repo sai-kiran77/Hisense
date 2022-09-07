@@ -27,6 +27,7 @@ class FifaEventComponent {
             "desktop_image_full_url": `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`,
             "mobile_image_full_url": `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`
         };
+        console.log('from fifa');
     }
     ngOnInit() {
         // Set the date we're counting down to

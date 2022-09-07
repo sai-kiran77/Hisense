@@ -22,7 +22,9 @@ export class FifaEventComponent implements OnInit {
     "mobile_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`
   }
 
-  constructor() { }
+  constructor() {
+    console.log('from fifa');
+  }
 
   ngOnInit(): void {
     // Set the date we're counting down to
@@ -38,9 +40,9 @@ export class FifaEventComponent implements OnInit {
       let distance = countDownDate - now;
 
       // Time calculations for days, hours, minutes and seconds
-      this.days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2,'0');
-      this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2,'0');
-      this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2,'0');
+      this.days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+      this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+      this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
       let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
       // Output the result in an element with id="demo"
