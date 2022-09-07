@@ -235,7 +235,7 @@ class FifaEventComponent {
     ngAfterViewInit() {
         if ((0,_angular_common__WEBPACK_IMPORTED_MODULE_2__.isPlatformBrowser)(this.platformId)) {
             // Set the date we're counting down to
-            let countDownDate = new Date("Sep 15, 2022 00:00:00").getTime();
+            let countDownDate = new Date("Nov 20, 2022 16:00:00").getTime();
             // Update the count down every 1 second
             this.x = setInterval(() => {
                 // Get today's date and time
