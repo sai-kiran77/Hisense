@@ -22,6 +22,10 @@ const routes: Routes = [
       //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
       // },
       {
+        path: 'FIFA-2022',
+        loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
+      },
+      {
         path: 'about-us',
         loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
       },
@@ -57,10 +61,6 @@ const routes: Routes = [
       {
         path: 'offers-promotions',
         loadChildren: () => import('./pages/offers-promotions/offers-promotions.module').then(m => m.OffersPromotionsModule)
-      },
-      {
-        path: 'contest-terms-and-conditions',
-        loadChildren: () => import('./pages/contest-terms-and-conditions/contest-terms-and-conditions.module').then(m => m.ContestTermsAndConditionsModule)
       },
       // {
       //   path: 'treasure-hunt',
