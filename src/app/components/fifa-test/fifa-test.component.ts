@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
-  selector: 'app-fifa-event',
-  templateUrl: './fifa-event.component.html',
-  styleUrls: ['./fifa-event.component.scss']
+  selector: 'app-fifa-test',
+  templateUrl: './fifa-test.component.html',
+  styleUrls: ['./fifa-test.component.scss']
 })
-export class FifaEventComponent implements OnInit {
+export class FifaTestComponent implements OnInit {
 
   days: any = '00';
   hours: any = '00';

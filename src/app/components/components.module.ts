@@ -10,6 +10,8 @@ import { RouterModule } from '@angular/router';
 import { MainSliderUIComponent } from './UI/main-slider/main-slider.component';
 import { SwiperModule } from 'swiper/angular';
 import { ProductSeriesComponent } from './UI/product-series/product-series.component';
+import { PageTestComponent } from './page-test/page-test.component';
+import { FifaTestComponent } from './fifa-test/fifa-test.component';
 
 const components = [
   HeaderComponent,
@@ -24,6 +26,8 @@ const components = [
 @NgModule({
   declarations: [
     ...components,
+    PageTestComponent,
+    FifaTestComponent,
   ],
   imports: [
     CommonModule,
