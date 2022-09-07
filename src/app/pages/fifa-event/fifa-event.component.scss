@@ -54,3 +54,67 @@ svg {
         display: none;
     }
 }
+
+.groups{
+    background-color: #09cbc6;
+    padding: 72px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+
+.card{
+    background-color: #00b3ac;
+    color: white;
+    border-radius: 12px;
+    padding-top: 16px;
+    text-align: center;
+    .card__heading{
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 6px;
+    }
+    .card__body{
+        background-color: white;
+        color: black;
+        border-radius: 12px;
+        display: flex;
+        gap: 2rem;
+        flex-direction: column;
+        padding: 16px;
+        div{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 1rem;
+            white-space: nowrap;
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .groups{
+        img{
+            width: 36px;
+            height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .groups{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .groups{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .groups{
+        grid-template-columns: 1fr;
+    }
+}

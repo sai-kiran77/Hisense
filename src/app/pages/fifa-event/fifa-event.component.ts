@@ -15,6 +15,177 @@ export class FifaEventComponent implements OnInit {
   seconds: any;
   x: any;
 
+  groups = [
+    {
+      heading: 'Group A',
+      data: [
+        {
+          name: 'Qatar',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/QAT?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Ecuador',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/ECU?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Senegal',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/SEN?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Netherlands',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/NED?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group B',
+      data: [
+        {
+          name: 'England',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/ENG?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'IR Iran',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/IRN?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'USA',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/USA?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Wales',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/WAL?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group C',
+      data: [
+        {
+          name: 'Argentina',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/ARG?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Saudi Arabia',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/KSA?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Mexico',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/MEX?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Poland',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/POL?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group D',
+      data: [
+        {
+          name: 'France',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/FRA?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Denmark',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/DEN?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Tunisia',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/TUN?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Australia',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/AUS?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group E',
+      data: [
+        {
+          name: 'Spain',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/ESP?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Germany',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/GER?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Japan',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/JPN?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Costa Rica',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/CRC?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group F',
+      data: [
+        {
+          name: 'Belgium',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/BEL?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Canada',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/CAN?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Morocco',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/MAR?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Croatia',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/CRO?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group G',
+      data: [
+        {
+          name: 'Brazil',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/BRA?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Serbia',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/SRB?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Switzerland',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/SUI?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Cameroon',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/CMR?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+    {
+      heading: 'Group H',
+      data: [
+        {
+          name: 'Portugal',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/POR?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Ghana',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/GHA?tx=c_fill,g_auto,q_auto',
+        },
+        {
+          name: 'Uruguay',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/URU?tx=c_fill,g_auto,q_auto'
+        },
+        {
+          name: 'Korea Republic',
+          flag: 'https://cloudinary.fifa.com/api/v3/picture/flags-sq-2/KOR?tx=c_fill,g_auto,q_auto'
+        }
+      ]
+    },
+  ]
+
   environment = environment
 
   fifaDetails = {

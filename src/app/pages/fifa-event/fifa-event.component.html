@@ -50,4 +50,16 @@
             </div>
         </div>
     </section>
+    <section class="groups">
+        <div class="card" *ngFor="let group of groups">
+            <div class="card__heading">{{group.heading}}</div>
+            <div class="card__body">
+                <div *ngFor="let country of group.data">
+                    <img width="58" height="36" [src]="country.flag" [alt]="country.name">
+                    <span>{{country.name}}</span>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
+
