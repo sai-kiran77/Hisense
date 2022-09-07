@@ -1,0 +1,56 @@
+.f-24 {
+    font-size: 36px;
+}
+
+.countdown__wrapper {
+    margin-top: -10px;
+    padding: 48px;
+    background-color: #00b3ac;
+    color: white;
+}
+
+.countdown__container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.count__container {
+    display: flex;
+    gap: 5rem;
+    text-align: center;
+    margin-top: 36px;
+    align-items: center;
+}
+
+svg {
+    fill: #17d9d3 !important;
+}
+
+.count {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+    .count__container {
+        gap: 1rem;
+    }
+
+    .count {
+        font-size: 16px;
+    }
+
+    .f-24 {
+        font-size: 24px;
+    }
+
+    .category{
+        font-size: 12px;
+    }
+
+    .d-sm-none{
+        display: none;
+    }
+}
