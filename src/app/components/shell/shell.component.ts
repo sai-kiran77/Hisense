@@ -13,8 +13,8 @@ export class ShellComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.currentRoute = this.router.url;
-    // console.log(this.currentRoute);
+    this.currentRoute = this.router.url.split('?')[0];
+    console.log(this.currentRoute);
 
     this.router.events.subscribe((event) => {
       // if (event instanceof NavigationStart) {
