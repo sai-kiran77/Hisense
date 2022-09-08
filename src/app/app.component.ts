@@ -18,7 +18,11 @@ export class AppComponent {
     // console.log(this.router.url);
     if (isPlatformBrowser(this.platformId)) {
       // console.log(window.location.pathname)
-      switch (window.location.pathname) {
+      let path = window.location.pathname;
+      if(path.slice(-1) == '/'){
+        path = path.slice(0,-1);
+      }
+      switch (path) {
         case '/30-39':
           this.router.navigate(['/c/laser-tv']);
           break;
@@ -27,7 +31,8 @@ export class AppComponent {
         case '/60-69':
         case '/70-above':
         case '/televisions':
-          this.router.navigate(['/c/tv']);
+        case '/televisions':
+          this.router.navigate(['/range']);
           break;
         case '/ac/model-no-as-12tw4rmrka00':
         case '/ac/model-no-as-12tw4ryrka01b':
@@ -44,6 +49,13 @@ export class AppComponent {
           this.router.navigate(['/c/dish-washer']);
           break;
         case '/festive':
+        case '/service-centres':
+        case '/am-ppc':
+        case '/click':
+        case '/e-catalogue':
+        case '/head-marketing':
+        case '/smartphone-series':
+        case '/spare-parts-manager':
           this.router.navigate(['/']);
           break;
         case '/free-standing-dish-washer':
@@ -61,6 +73,7 @@ export class AppComponent {
           this.router.navigate(['/c/refrigerator'])
           break;
         case '/laser-tv':
+        case '/television/100-hisense-laser-tv':
           this.router.navigate(['/c/laser-tv'])
           break;
         case '/pure-flat':
@@ -151,6 +164,8 @@ export class AppComponent {
           this.router.navigate(['/v/58A71F'])
           break;
         case '/television/65a73f':
+        case '/too-big-to-miss':
+        case '/a73-too-big-too-miss':
           this.router.navigate(['/v/65A73F'])
           break;
         case '/television/65u6g':
@@ -170,6 +185,9 @@ export class AppComponent {
           break;
         case '/washing-machine':
           this.router.navigate(['/c/washing-machine'])
+          break;
+        case '/call-center-manager':
+          this.router.navigate(['/contact-us'])
           break;
       }
     }
