@@ -19,6 +19,7 @@ export class AppComponent {
     if (isPlatformBrowser(this.platformId)) {
       // console.log(window.location.pathname)
       let path = window.location.pathname;
+      console.log(path);
       if(path.slice(-1) == '/'){
         path = path.slice(0,-1);
       }
@@ -149,9 +150,6 @@ export class AppComponent {
           this.router.navigate(['/v/50A73F'])
           break;
         case '/television/55a71f':
-          this.router.navigate([''])
-          break;
-        case '':
           this.router.navigate(['/v/55A71F'])
           break;
         case '/television/55a73f':
