@@ -14,7 +14,7 @@ export class ShellComponent implements OnInit {
 
   ngOnInit(): void {
     this.currentRoute = this.router.url;
-    console.log(this.currentRoute);
+    // console.log(this.currentRoute);
 
     this.router.events.subscribe((event) => {
       // if (event instanceof NavigationStart) {
