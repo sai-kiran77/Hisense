@@ -1967,8 +1967,8 @@ class ShellComponent {
         this.router = router;
     }
     ngOnInit() {
-        this.currentRoute = this.router.url;
-        // console.log(this.currentRoute);
+        this.currentRoute = this.router.url.split('?')[0];
+        console.log(this.currentRoute);
         this.router.events.subscribe((event) => {
             // if (event instanceof NavigationStart) {
             //     // Show loading indicator
