@@ -12,7 +12,7 @@ export class FifaEventComponent implements OnInit {
   days: any = '00';
   hours: any = '00';
   minutes: any = '00';
-  seconds: any;
+  seconds: any = '00';
   x: any;
 
   groups = [
@@ -221,16 +221,16 @@ export class FifaEventComponent implements OnInit {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
         let seconds = Math.floor((distance % (1000 * 60)) / 1000);
         if (this.days !== days) {
-          console.log('days');
           this.days = days;
         }
         if (this.hours !== hours) {
-          console.log('hours');
           this.hours = hours;
         }
         if (this.minutes !== minutes) {
-          console.log('minutes');
           this.minutes = minutes;
+        }
+        if (this.seconds !== seconds) {
+          this.seconds = seconds;
         }
 
         // Output the result in an element with id="demo"
