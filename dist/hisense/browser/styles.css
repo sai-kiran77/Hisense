@@ -3450,7 +3450,6 @@ button.swiper-pagination-bullet {
   transform: translate(-50%, -50%);
   width: 6px;
   height: 6px;
-  background-color: #FFF;
   border: 1px solid #DDD;
   border-radius: 50%;
   transition: all 0.3s ease-out;
