@@ -33,10 +33,10 @@ const routes = [
             //   path: 'tv',
             //   loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
             // },
-            // {
-            //   path: 'delightful-india',
-            //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
-            // },
+            {
+                path: 'delightful-india',
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("src_app_pages_delightful-india_delightful-india_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/delightful-india/delightful-india.module */ 6598)).then(m => m.DelightfulIndiaModule)
+            },
             {
                 path: 'FIFA-2022',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_fifa-event_fifa-event_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/fifa-event/fifa-event.module */ 9476)).then(m => m.FifaEventModule)
@@ -47,7 +47,7 @@ const routes = [
             },
             {
                 path: 'contact-us',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_contact-us_contact-us_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/contact-us/contact-us.module */ 4754)).then(m => m.ContactUsModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("src_app_pages_contact-us_contact-us_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/contact-us/contact-us.module */ 4754)).then(m => m.ContactUsModule)
             },
             {
                 path: 'privacy-policy',
