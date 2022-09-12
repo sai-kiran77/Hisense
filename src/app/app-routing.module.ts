@@ -17,10 +17,10 @@ const routes: Routes = [
       //   path: 'tv',
       //   loadChildren: () => import('./pages/tv/tv.module').then(m => m.TvModule)
       // },
-      // {
-      //   path: 'delightful-india',
-      //   loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
-      // },
+      {
+        path: 'delightful-india',
+        loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
+      },
       // {
       //   path: 'FIFA-2022',
       //   loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
