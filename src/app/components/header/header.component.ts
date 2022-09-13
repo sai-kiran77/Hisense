@@ -336,6 +336,7 @@ export class HeaderComponent implements OnInit {
         private api: ApiService) {
         this.subscribeToSidebarNavigation();
         this.api.getHeaderItems().subscribe((res: any) => {
+            this.api.headerItems.next(res.data);
             this.navLinks = res.data.map((obj: any) => {
                 return {
                     ...obj,

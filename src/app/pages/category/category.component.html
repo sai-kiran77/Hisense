@@ -21,7 +21,7 @@
     </section>
     <div class="product-listing" style="padding: 1rem;">
         <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
-            <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a>
+            <!-- <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a> -->
             <div *ngFor="let prodCat of subCat.category_products">
                 <div class="product__category__title">{{prodCat.product.name}}</div>
     

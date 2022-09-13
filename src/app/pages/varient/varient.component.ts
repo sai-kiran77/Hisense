@@ -100,8 +100,9 @@ export class VarientComponent implements OnInit {
       },
       error: (e) => {
         console.log(e);
+        this.router.navigate(['']);
         // this.router.navigate(['404']);
-        this.show404 = true;
+        // this.show404 = true;
       }
     })
   }
@@ -117,10 +118,10 @@ export class VarientComponent implements OnInit {
         return 'assets/amazon.png';
       case "flipkart":
         return 'assets/flipkart.png';
-      case "tata_cliq":
-        return 'assets/tata-cliq.jpg';
-      case "jio_mart":
-        return 'assets/jiomart.png';
+      // case "tata_cliq":
+      //   return 'assets/tata-cliq.jpg';
+      // case "jio_mart":
+      //   return 'assets/jiomart.png';
       case "reliance_digital":
         return 'assets/reliance-digital.png';
       case "croma":

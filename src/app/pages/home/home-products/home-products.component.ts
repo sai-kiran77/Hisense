@@ -38,17 +38,19 @@ export class HomeProductsComponent implements OnInit {
   constructor(private api: ApiService) { }
 
   ngOnInit(): void {
-    this.api.getHeaderItems().subscribe((res: any) => {
-      this.products = res.data.map((obj: any)=>{
-        return {
-          ...obj,
-          "image": obj.thumb_image_small
-        }
-      })
+    this.api.headerItems.subscribe((data: any) => {
+      if(data){
+        this.products = data.map((obj: any) => {
+          return {
+            ...obj,
+            "image": obj.thumb_image_small
+          }
+        })
+      }
 
-  }, (err) => {
+    }, (err) => {
       console.log(err);
-  })
+    })
   }
 
 }

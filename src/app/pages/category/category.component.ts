@@ -61,7 +61,8 @@ export class CategoryComponent implements OnInit,OnDestroy {
       error: (e) => {
         console.log(e);
         // this.router.navigate(['404']);
-        this.show404 = true;
+        this.router.navigate(['']);
+        // this.show404 = true;
       }
     })
   }

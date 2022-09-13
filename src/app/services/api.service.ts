@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
 
 @Injectable({
@@ -8,6 +9,8 @@ import { environment } from 'src/environments/environment';
 export class ApiService {
 
   baseURL = `${environment.baseApiUrl}/v1`;
+
+  headerItems = new BehaviorSubject(null);
 
   constructor(private http: HttpClient) { }
 

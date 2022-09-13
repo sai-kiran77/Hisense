@@ -1,11 +1,11 @@
 @import "libs/styles/tv-series.scss";
 
-.product-listing-tab{
+.product-listing-tab {
     cursor: pointer;
 }
 
-.product-listing-tab-buttons{
-    div{
+.product-listing-tab-buttons {
+    div {
         width: 100% !important;
         max-width: none !important;
         display: flex !important;
@@ -13,6 +13,18 @@
     }
 }
 
-.product-listing-inner{
+.product-listing-inner {
     flex-wrap: nowrap !important;
+}
+
+.product-listing-img {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible !important;
+}
+
+.product-listing-tab{
+    gap: 60px;
 }
