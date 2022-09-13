@@ -4437,3 +4437,9 @@ ul li {
         padding-left: 16px !important;
     }
 }
+
+@media screen and (max-width:768px) {
+    .page__title {
+        font-size: 40px !important;
+    }
+}

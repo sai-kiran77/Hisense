@@ -58,14 +58,12 @@ p {
     font-size: 60px;
     line-height: 1.2;
     text-transform: uppercase;
+    margin-bottom: 16px;
 }
 
 @media screen and (max-width: 768px) {
     .container{
         grid-template-columns: 1fr;
-    }
-    .page__title{
-        font-size: 45px;
     }
     iframe{
         width: 100% !important;
