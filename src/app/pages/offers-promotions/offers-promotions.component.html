@@ -18,6 +18,6 @@
         </div>
     </div>
     <div class="col2 image" style="max-width: 800px">
-        <img width="800" height="800" (load)="imageLoaded()" *ngIf="currentImg" [src]="currentImg" />
+        <img (load)="imageLoaded()" *ngIf="currentImg" [src]="currentImg" />
     </div>
 </div>

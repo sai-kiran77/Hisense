@@ -12,11 +12,13 @@ export class OffersPromotionsComponent implements OnInit {
 
   metaData: any = [];
   isImageLoading = true;
-  
-  changeTab(obj: any){
-    this.isImageLoading = true;
-    this.currentImg = obj.image_full_url;
-    this.currentTab = obj.start_date_formatted ;
+
+  changeTab(obj: any) {
+    if (this.currentImg != obj.image_full_url) {
+      this.isImageLoading = true;
+      this.currentImg = obj.image_full_url;
+      this.currentTab = obj.start_date_formatted;
+    }
   }
 
   constructor(private state: GlobalStateService,
@@ -29,24 +31,24 @@ export class OffersPromotionsComponent implements OnInit {
   currentTab: any;
 
   ngOnInit(): void {
-      this.getSlides();
+    this.getSlides();
   }
 
-  
+
   getSlides() {
     this.api.getPageSlides({ pageUrl: '/offers-promotions' }).subscribe({
       next: (res: any) => {
         console.log(res);
         this.metaData = res.data.offers_promotions;
         this.currentImg = this.metaData[0].image_full_url;
-        this.currentTab = this.metaData[0].start_date_formatted ;
+        this.currentTab = this.metaData[0].start_date_formatted;
       },
       error: (err) => {
       }
     });
   }
 
-  imageLoaded(){
+  imageLoaded() {
     this.isImageLoading = false;
   }
 
