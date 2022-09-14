@@ -3681,11 +3681,61 @@ button.swiper-pagination-bullet {
 .terms__and__conditions__context__text p {
   margin-bottom: 16px !important;
 }
-.terms__and__conditions__context__text ul, .terms__and__conditions__context__text li {
+.terms__and__conditions__context__text ul,
+.terms__and__conditions__context__text li {
   list-style: disc !important;
 }
 .terms__and__conditions__context__text ul {
   padding-left: 16px !important;
+}
+@media screen and (max-width: 768px) {
+  .page__title {
+    font-size: 40px !important;
+  }
+}
+.breadcrumb__yellow__banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  background-color: #d1b83a;
+  text-transform: uppercase;
+  color: #FFF;
+  font-size: 16px;
+}
+.card {
+  margin: 10px;
+  width: 300px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+.card .image img {
+  max-width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.card .content {
+  padding: 20px 30px;
+}
+.card.is-loading .image,
+.card.is-loading .tabs {
+  background: #eee;
+  background: linear-gradient(110deg, #ececec 8%, #f5f5f5 18%, #ececec 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s shine linear infinite;
+}
+.card.is-loading .image, .card.is-loading .tabs {
+  height: 200px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+@keyframes shine {
+  to {
+    background-position-x: -200%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map*/
