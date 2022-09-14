@@ -3697,27 +3697,13 @@ button.swiper-pagination-bullet {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 45px;
   width: 100%;
   background-color: #d1b83a;
   text-transform: uppercase;
   color: #FFF;
-  font-size: 16px;
-}
-.card {
-  margin: 10px;
-  width: 300px;
-  background: #fff;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-}
-.card .image img {
-  max-width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-}
-.card .content {
-  padding: 20px 30px;
+  font-weight: bold;
+  font-size: 32px !important;
+  padding: 20px !important;
 }
 .card.is-loading .image,
 .card.is-loading .tabs {
@@ -3727,8 +3713,8 @@ button.swiper-pagination-bullet {
   background-size: 200% 100%;
   animation: 1.5s shine linear infinite;
 }
-.card.is-loading .image, .card.is-loading .tabs {
-  height: 200px;
+.card.is-loading .image,
+.card.is-loading .tabs {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
