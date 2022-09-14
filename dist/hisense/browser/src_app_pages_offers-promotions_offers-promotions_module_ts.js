@@ -52,9 +52,11 @@ class OffersPromotionsComponent {
         this.state.mobileNavToggle.next(false);
     }
     changeTab(obj) {
-        this.isImageLoading = true;
-        this.currentImg = obj.image_full_url;
-        this.currentTab = obj.start_date_formatted;
+        if (this.currentImg != obj.image_full_url) {
+            this.isImageLoading = true;
+            this.currentImg = obj.image_full_url;
+            this.currentTab = obj.start_date_formatted;
+        }
     }
     ngOnInit() {
         this.getSlides();
@@ -76,7 +78,7 @@ class OffersPromotionsComponent {
     }
 }
 OffersPromotionsComponent.ɵfac = function OffersPromotionsComponent_Factory(t) { return new (t || OffersPromotionsComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_0__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService)); };
-OffersPromotionsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: OffersPromotionsComponent, selectors: [["app-offers-promotions"]], decls: 9, vars: 5, consts: [[1, "breadcrumb__yellow__banner"], [1, "container", 3, "ngClass"], [1, "col1", "tabs"], ["id", "themeslist", 1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "col2", "image", 2, "max-width", "800px"], ["width", "800", "height", "800", 3, "src", "load", 4, "ngIf"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], ["width", "800", "height", "800", 3, "src", "load"]], template: function OffersPromotionsComponent_Template(rf, ctx) { if (rf & 1) {
+OffersPromotionsComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: OffersPromotionsComponent, selectors: [["app-offers-promotions"]], decls: 9, vars: 5, consts: [[1, "breadcrumb__yellow__banner"], [1, "container", 3, "ngClass"], [1, "col1", "tabs"], ["id", "themeslist", 1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "col2", "image", 2, "max-width", "800px"], [3, "src", "load", 4, "ngIf"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [3, "src", "load"]], template: function OffersPromotionsComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "h1");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Offers and promotions");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
