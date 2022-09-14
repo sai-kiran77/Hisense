@@ -3699,11 +3699,14 @@ button.swiper-pagination-bullet {
   align-items: center;
   width: 100%;
   background-color: #d1b83a;
-  text-transform: uppercase;
   color: #FFF;
-  font-weight: bold;
-  font-size: 32px !important;
   padding: 20px !important;
+}
+.breadcrumb__yellow__banner h1 {
+  text-transform: uppercase;
+  font-weight: bold !important;
+  font-size: 32px !important;
+  margin: 0 !important;
 }
 .card.is-loading .image,
 .card.is-loading .tabs {
