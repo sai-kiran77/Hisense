@@ -98,14 +98,14 @@ export class FooterComponent implements OnInit {
 
     ngOnInit(): void {
         this.api.headerItems.subscribe((data: any) => {
-            this.navLinks = data.map((obj: any) => {
-                return {
-                    ...obj,
-                    "image": obj.thumb_image_small
-                }
-            })
-            console.log(data);
-
+            if (data) {
+                this.navLinks = data.map((obj: any) => {
+                    return {
+                        ...obj,
+                        "image": obj.thumb_image_small
+                    }
+                })
+            }
         }, (err) => {
             console.log(err);
         })

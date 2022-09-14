@@ -10,9 +10,11 @@ import { environment } from 'src/environments/environment';
 })
 export class OffersPromotionsComponent implements OnInit {
 
-  metaData: any = []
-
+  metaData: any = [];
+  isImageLoading = true;
+  
   changeTab(obj: any){
+    this.isImageLoading = true;
     this.currentImg = obj.image_full_url;
     this.currentTab = obj.start_date_formatted ;
   }
@@ -22,11 +24,13 @@ export class OffersPromotionsComponent implements OnInit {
     this.state.mobileNavToggle.next(false);
   }
 
-  currentImg: any;
+  currentImg: any = "https://www.partrunner.com/en/assets/images/banner_image-1200x724.png";
   currentTab: any;
 
   ngOnInit(): void {
-    this.getSlides();
+    setTimeout(()=>{
+      this.getSlides();
+    },5000)
   }
 
   
@@ -41,6 +45,11 @@ export class OffersPromotionsComponent implements OnInit {
       error: (err) => {
       }
     });
+  }
+
+  imageLoaded(){
+    this.isImageLoading = false;
+    console.log('came here');
   }
 
 }

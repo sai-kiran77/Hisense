@@ -1,5 +1,5 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { Meta, Title } from '@angular/platform-browser';
+import { Component, OnDestroy, OnInit, ViewChildren } from '@angular/core';
+import { DomSanitizer, Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { takeWhile } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
@@ -23,7 +23,8 @@ export class CategoryComponent implements OnInit,OnDestroy {
     private state: GlobalStateService,
     private title: Title,
     private meta: Meta,
-    private router: Router) {
+    private router: Router,
+    public sanitizer: DomSanitizer,) {
     this.state.mobileNavToggle.next(false);
 
   }
@@ -47,11 +48,19 @@ export class CategoryComponent implements OnInit,OnDestroy {
     // })
     
   }
-  
+
   loadMetaData(category: string){
     this.api.getSlugData(category).pipe(takeWhile(_=>this.alive)).subscribe({
       next: (res: any) => {
+        console.log(res);
+        res.data.cover_media = res.data.cover_media.map((obj: any)=>{
+          return {
+            ...obj,
+            sanatized_url: this.getVideoLink(obj.full_url)
+          }
+        })
         this.metaData = res.data;
+        console.log(this.metaData)
         this.seoTags(res.data.seo_info);
         // if(this.fragment){
         //   location.hash = '';
@@ -83,6 +92,17 @@ export class CategoryComponent implements OnInit,OnDestroy {
         }
       }
     })
+  }
+
+  getVideoLink(url: string) {
+    console.log(url);
+    url = url.split('?')[0] + '?autoplay=1&mute=0;';
+    console.log(url);
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  load(){
+    console.log('loaded');
   }
 
   ngOnDestroy(){

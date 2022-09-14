@@ -1,30 +1,29 @@
 <ng-container *ngIf="!show404">
     <section class="catalog" id="catalog-page">
-        <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
+        <!-- <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
             <div class="catalog-banner__content">
                 <div class="catalog-banner__content-inner">
                     <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
                     <h3 class="catalog-banner__sub__title" *ngIf="metaData?.subcategories.length == 1">{{metaData?.subcategories[0].name}}</h3>
-    
-                    <!-- <div class="catalog-banner__description">
-                        <p>
-                            Plenty of choice <br>
-                            to find the best fit for your home
-                        </p>
-                    </div> -->
                 </div>
             </div>
             <div class="catalog-banner__image-wrapper">
                 <img [alt]="metaData?.name" class="catalog-banner__image" [src]="metaData?.thumb_image_medium.full_url">
             </div>
+        </div> -->
+        <div class="breadcrumb__yellow__banner">
+            <span>{{metaData?.name}}</span>
         </div>
+        <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video'">
+            <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%" height="655" [src]="media?.sanatized_url"></iframe>
+        </ng-container>
     </section>
     <div class="product-listing" style="padding: 1rem;">
         <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
             <!-- <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a> -->
             <div *ngFor="let prodCat of subCat.category_products">
                 <div class="product__category__title">{{prodCat.product.name}}</div>
-    
+
                 <div class="product-listing-inner">
                     <a class="product-listing-tab" [routerLink]="prod.relative_url"
                         *ngFor="let prod of prodCat.product.product_variants">
@@ -46,7 +45,7 @@
         </div>
         <div style="padding: 1rem;" *ngFor="let prodCat of metaData?.category_products">
             <div class="product__category__title">{{prodCat.product.name}}</div>
-    
+
             <div class="product-listing-inner">
                 <a class="product-listing-tab" [routerLink]="prod.relative_url"
                     *ngFor="let prod of prodCat.product.product_variants">
