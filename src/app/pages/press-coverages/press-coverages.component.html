@@ -1,10 +1,21 @@
-<div class="page__cover page__section page__section_centered">
+<!-- <div class="page__cover page__section page__section_centered">
     <div class="page__cover-inner desktop-banner"
         style="background-color: rgb(32, 32, 32); transform: translateY(0px);"></div>
     <div class="page__cover-inner mobile-banner" style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
     </div>
     <div class="page__container">
         <h1 class="page__title">IN THE NEWS</h1>
+    </div>
+</div> -->
+
+<div class="breadcrumb__yellow__banner">
+    <h1>IN THE NEWS</h1>
+</div>
+
+<div class="col1 tabs">
+    <div class="list-group" id="themeslist">
+        <a class="list-group-item list-group-item-action" *ngFor="let tab of metaDataTabs"
+            [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
     </div>
 </div>
 
@@ -23,7 +34,8 @@
     </div>
     <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
-        <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index" (click)="getMetaData(i+1)">{{i+1}}</a>
+        <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
+            (click)="getMetaData(i+1)">{{i+1}}</a>
         <a (click)="getMetaData(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
-      </div>
+    </div>
 </div>

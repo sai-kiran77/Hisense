@@ -96,7 +96,7 @@ export class CategoryComponent implements OnInit,OnDestroy {
 
   getVideoLink(url: string) {
     console.log(url);
-    url = url.split('?')[0] + '?autoplay=1&mute=0;';
+    url = url.split('?')[0] + '?autoplay=0&mute=0&showinfo=1&controls=1;';
     console.log(url);
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }

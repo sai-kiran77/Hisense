@@ -47,8 +47,10 @@ export class ApiService {
     });
   }
 
-  getTechTestimonials(endpoint: string = '/tech-testimonials'){
-    return this.http.get(this.baseURL + endpoint);
+  getTechTestimonials(params: any,endpoint: string = '/tech-testimonials'){
+    return this.http.get(this.baseURL + endpoint,{
+      params
+    });
   }
 
   getHeaderItems(endpoint: string = '/pages/website-header'){

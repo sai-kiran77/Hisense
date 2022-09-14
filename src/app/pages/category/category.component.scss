@@ -353,3 +353,17 @@
     font-size: 20px;
     font-weight: bold;
 }
+
+.btn-hisense-more{
+    text-align: center;
+    font-weight: 400;
+    display: inline-block;
+    padding: 16px 24px;
+    text-transform: none !important;
+    border-radius: 36px;
+    color: #fff;
+    background: #6debe6;
+    background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
+    background-size: 200%;
+    transition: all 0.6s ease;
+}

@@ -1,12 +1,15 @@
-<div class="card is-loading">
+<div class="breadcrumb__yellow__banner">
+    <h1>Offers and promotions</h1>
+</div>
+<!-- <div class="card is-loading">
     <div class="image"></div>
     <div class="content">
         <h2></h2>
         <p></p>
     </div>
-</div>
+</div> -->
 
-<div class="container card is-loading">
+<div class="container" [ngClass]="{'card is-loading': isImageLoading}">
     <div class="col1 tabs">
         <div class="list-group" id="themeslist">
             <a class="list-group-item list-group-item-action" *ngFor="let obj of metaData"
@@ -14,7 +17,7 @@
                 (click)="changeTab(obj)">{{obj.start_date_formatted }}</a>
         </div>
     </div>
-    <div class="col2 image">
+    <div class="col2 image" style="max-width: 800px">
         <img width="800" height="800" (load)="imageLoaded()" *ngIf="currentImg" [src]="currentImg" />
     </div>
 </div>

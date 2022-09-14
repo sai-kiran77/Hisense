@@ -12,13 +12,55 @@
             </div>
         </div> -->
         <div class="breadcrumb__yellow__banner">
-            <span>{{metaData?.name}}</span>
+            <h1>{{metaData?.name}}</h1>
         </div>
         <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video'">
-            <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%" height="655" [src]="media?.sanatized_url"></iframe>
+            <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%"
+                height="655" [src]="media?.sanatized_url"></iframe>
         </ng-container>
     </section>
-    <div class="product-listing" style="padding: 1rem;">
+
+    <div class="product-listing" *ngIf="!metaData?.parent_category_id">
+        <div class="product-listing-inner" style="flex-wrap: wrap !important;width: 80% !important;margin: auto !important;">
+            <a class="product-listing-tab" style="min-width: 350px;width: auto !important;flex: 1;" [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories">
+                <a class="product-listing-img" style="width: 100%;height: 150px;display: flex;justify-content: center;
+                align-items: center; overflow: visible;">
+                    <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url" style="max-height: 100px;max-width: 75% !important;">
+                    <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png" style="max-height: 100px;max-width: 75% !important;">
+                </a>
+                <div style="margin-top: 40px;">
+                    <div class="product-listing-tab-content">
+                        <h4>{{prod.name}}</h4>
+                        <!-- <div class="product-listing-description"></div> -->
+                    </div>
+                    <div><a class="btn-hisense-more">More Detail</a></div>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- <div class="product-listing" *ngIf="!metaData?.parent_category_id">
+        <div class="product-listing-inner" style="flex-wrap: nowrap !important;width: 80%;margin: auto;">
+            <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
+                <a class="product-listing-tab" [routerLink]="subCat.relative_url" style="width: 100% !important;min-height: 350px !important;">
+                    <a class="product-listing-img trackin" style="overflow: visible !important;">
+                        <img *ngIf="subCat?.thumb_image?.full_url" [src]="subCat?.thumb_image?.full_url">
+                        <img *ngIf="!subCat?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
+                    </a>
+                    <div style="margin-top: auto;">
+                        <div class="product-listing-tab-content">
+                            <h4>{{subCat.name}}</h4>
+                        </div>
+                        <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
+                            <div><a class="btn-hisense">More Detail</a></div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div> -->
+
+    <div class="product-listing" style="padding: 1rem;" *ngIf="metaData?.parent_category_id">
         <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
             <!-- <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a> -->
             <div *ngFor="let prodCat of subCat.category_products">

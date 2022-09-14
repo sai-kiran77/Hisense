@@ -24,13 +24,12 @@ export class OffersPromotionsComponent implements OnInit {
     this.state.mobileNavToggle.next(false);
   }
 
-  currentImg: any = "https://www.partrunner.com/en/assets/images/banner_image-1200x724.png";
+  currentImg: any;
+  //  = "https://www.partrunner.com/en/assets/images/banner_image-1200x724.png";
   currentTab: any;
 
   ngOnInit(): void {
-    setTimeout(()=>{
       this.getSlides();
-    },5000)
   }
 
   
@@ -49,7 +48,6 @@ export class OffersPromotionsComponent implements OnInit {
 
   imageLoaded(){
     this.isImageLoading = false;
-    console.log('came here');
   }
 
 }

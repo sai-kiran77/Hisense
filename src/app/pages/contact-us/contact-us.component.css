@@ -4116,3 +4116,20 @@ input[type=submit] {
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
+
+.breadcrumb__yellow__banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #d1b83a;
+    text-transform: uppercase;
+    color: #FFF;
+    padding: 20px !important;
+}
+
+.breadcrumb__yellow__banner h1 {
+    font-weight: bold !important;
+    font-size: 32px !important;
+    margin: 0 !important;
+}

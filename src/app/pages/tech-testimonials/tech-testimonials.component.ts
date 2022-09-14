@@ -12,6 +12,26 @@ export class TechTestimonialsComponent implements OnInit {
 
   testimonials: any = [];
 
+  totalPagesinTen: any = [];
+
+  params = {
+    per_page: 10,
+    page: 1
+  }
+
+  metaDataTabs = ['National', 'Global'];
+  currentTab = 'National';
+
+  changeTab(tab: any) {
+    this.currentTab = tab;
+    if (this.currentTab == 'Global') {
+      this.testimonials = [];
+      this.totalPagesinTen = [];
+    } else {
+      this.getTechTestimonials(1);
+    }
+  }
+
   constructor(private state: GlobalStateService,
     public sanitizer: DomSanitizer,
     private api: ApiService) {
@@ -19,7 +39,14 @@ export class TechTestimonialsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.api.getTechTestimonials().subscribe({
+    this.getTechTestimonials();
+  }
+  
+  getTechTestimonials(page?: any){
+    if (page) {
+      this.params.page = page;
+    }
+    this.api.getTechTestimonials(this.params).subscribe({
       next: (res: any) => {
         this.testimonials = res.data;
       },
