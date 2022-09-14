@@ -1,4 +1,4 @@
-<div class="page__cover page__section page__section_centered">
+<!-- <div class="page__cover page__section page__section_centered">
         <div class="page__cover-inner desktop-banner"
                 style="background-color: rgb(32, 32, 32); transform: translateY(0px);"></div>
         <div class="page__cover-inner mobile-banner"
@@ -7,6 +7,10 @@
         <div class="page__container">
                 <h1 class="page__title">TERMS AND CONDITIONS</h1>
         </div>
+</div> -->
+
+<div class="breadcrumb__yellow__banner">
+        <h1>TERMS AND CONDITIONS</h1>
 </div>
 
 <!-- <div class="container">
@@ -354,7 +358,8 @@
                         <h2 *ngIf="metaData[currentIndex]?.sub_heading">{{metaData[currentIndex]?.sub_heading}}</h2>
                         <h3 *ngIf="metaData[currentIndex]?.date_range">({{metaData[currentIndex]?.date_range}})</h3>
 
-                        <img *ngIf="metaData[currentIndex]?.content_image_full_url" [src]="metaData[currentIndex]?.content_image_full_url" />
+                        <img *ngIf="metaData[currentIndex]?.content_image_full_url"
+                                [src]="metaData[currentIndex]?.content_image_full_url" />
 
                         <div class="terms__and__conditions__context__text">
                                 <div *ngIf="metaData[currentIndex]?.content_text"

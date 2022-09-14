@@ -9,7 +9,7 @@
     }
 }
 
-.product-listing-tab{
+.product-listing-tab {
     color: black !important;
 }
 
@@ -354,16 +354,194 @@
     font-weight: bold;
 }
 
-.btn-hisense-more{
+.btn-hisense-more,
+.btn-hisense-learn {
     text-align: center;
     font-weight: 400;
     display: inline-block;
-    padding: 16px 24px;
+    padding: 4px 8px;
+    white-space: nowrap;
     text-transform: none !important;
-    border-radius: 36px;
+    border-radius: 12px;
     color: #fff;
     background: #6debe6;
     background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
     background-size: 200%;
     transition: all 0.6s ease;
+}
+
+.btn-hisense-learn {
+    background: white !important;
+    border: 1px solid black !important;
+    color: black !important;
+}
+
+.product__size {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: auto;
+    width: 80%;
+    cursor: pointer;
+
+    .item {
+        font-size: 12px;
+        line-height: 1.7em;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: auto;
+        color: #6b6b6b;
+        text-align: center;
+        vertical-align: top;
+        font-weight: 600;
+        border: 1px solid #d9d9d9;
+        border-radius: 3px;
+        margin: 2px 1px 4px;
+        padding: 4px 8px;
+        white-space: nowrap;
+
+        &.active {
+            border: 2px solid #00b3ac;
+        }
+    }
+}
+
+.product-listing-inner.product-listing-grid-layout {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr 1fr !important;
+    gap: 1rem !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .product-listing-inner.product-listing-grid-layout {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .product-listing-inner.product-listing-grid-layout {
+        grid-template-columns: 1fr 1fr !important;
+    }
+}
+
+.modal {
+    display: block !important;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+
+}
+
+.modal h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #000 !important;
+}
+
+
+.js-close {
+    font-size: 1.25em;
+    font-weight: bold;
+    background-color: #000;
+    border: none;
+    padding: 0.5em 1em;
+    color: #fff;
+    box-shadow: 0 0 0 2px #000 inset;
+    border-radius: 0.25em;
+    cursor: pointer;
+    margin: auto;
+    transition: background 0.4s ease, color 0.4s ease;
+
+}
+
+.js-close:hover {
+    box-shadow: 0 0 0 2px #000 inset;
+    color: #000;
+    background-color: transparent;
+}
+
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    width: 60%;
+    border-radius: 0.5rem;
+    padding: 2em 3em;
+    text-align: center;
+    border-radius: 0.5em;
+}
+
+.close-button {
+    float: right;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.product__head-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-content: center;
+    margin: 20px auto;
+    width: 80%;
+}
+
+.purchase__link__image {
+    border-radius: 10px;
+}
+
+.product__head-button {
+    display: inline-block;
+    vertical-align: top;
+    padding: 16px 18px;
+    margin-right: 8px;
+    margin-bottom: 12px;
+    color: currentColor;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+
+.amazon {
+    border: 2px solid #F39731;
+}
+
+.flipkart {
+    border: 2px solid #1B7AD4;
+}
+
+.tata_cliq {
+    border: 2px solid #A5303D;
+}
+
+.reliance_digital {
+    border: 0px solid #D83F2A;
 }

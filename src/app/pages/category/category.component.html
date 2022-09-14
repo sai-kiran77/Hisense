@@ -15,8 +15,12 @@
             <h1>{{metaData?.name}}</h1>
         </div>
         <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video'">
-            <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%"
-                height="655" [src]="media?.sanatized_url"></iframe>
+            <div [ngClass]="{'card is-loading': isVideoLoading}">
+                <div class="image" style="width:100%;height:655px;">
+                    <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%"
+                        height="655" [src]="media?.sanatized_url"></iframe>
+                </div>
+            </div>
         </ng-container>
     </section>
 
@@ -88,25 +92,49 @@
     </div>
 
     <div class="product-listing" *ngIf="metaData?.parent_category_id">
-        <div class="product-listing-inner"
-            style="flex-wrap: wrap !important;width: 80% !important;margin: auto !important;">
+        <div class="product-listing-inner product-listing-grid-layout"
+            style="flex-wrap: wrap !important;width: 90% !important;margin: auto !important;">
             <ng-container *ngFor="let product of metaData?.category_products">
-                <ng-container *ngIf="product.product.product_variants.length">
-                    <a #currentindex data-index="0" class="product-listing-tab" style="min-width: 400px;width: auto !important;flex: 1;">
-                        <span style="font-size: 20px;" >{{product?.product?.name}}</span>
-                        <a class="product-listing-img" style="width: 100%;height: 275px;display: flex;justify-content: center;
-                        align-items: center; overflow: visible;">
-                            <img *ngIf="product?.product?.product_variants[0]?.thumb_image_medium?.full_url" [src]="product?.product?.product_variants[0]?.thumb_image_medium?.full_url"
-                                style="max-height: 225px;max-width: 90% !important;">
-                            <img *ngIf="!product?.product?.product_variants[0]?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png"
+                <ng-container *ngIf="product.product?.product_variants.length">
+                    <a #currentindex data-index="0" class="product-listing-tab"
+                        style="width: auto !important;flex: 1;cursor: default;">
+                        <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span>
+                        <a class="product-listing-img" style="width: 100%;height: 225px;display: flex;justify-content: center;
+                        align-items: center; overflow: visible;cursor: default;">
+                            <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                style="max-height: 225px;width: 225px !important;">
+                            <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                src="assets/images/prod__placeholder.png"
                                 style="max-height: 200px;max-width: 90% !important;">
                         </a>
+                        <div>
+                            <div style="font-size: 10px;color: gray;">Modal Code</div>
+                            <span
+                                style="font-size: 20px;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
+                        </div>
                         <div style="margin-top: 40px;">
                             <div class="product-listing-tab-content">
                                 <!-- <h4>{{prod.name}}</h4> -->
                                 <!-- <div class="product-listing-description"></div> -->
+                                <div class="product__size">
+                                    <div [ngClass]="{'active':product.currentIndex == i}" class="item"
+                                        (click)="product.currentIndex = i"
+                                        *ngFor="let size of product.product.product_variants;let i = index;">
+                                        {{size?.variant_size}}
+                                    </div>
+                                </div>
                             </div>
-                            <div><a class="btn-hisense-more">More Detail</a></div>
+                            <div style="display: flex;
+                            justify-content: center;
+                            gap: 20px;">
+                                <a class="btn-hisense-learn"
+                                    [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
+                                    More</a>
+                                <a class="btn-hisense-more"
+                                    (click)="buyOptions(product?.product?.product_variants[product.currentIndex]?.relative_url)">Where
+                                    to buy</a>
+                            </div>
                         </div>
                     </a>
                 </ng-container>
@@ -166,3 +194,23 @@
 <ng-container *ngIf="show404">
     <app-not-found></app-not-found>
 </ng-container>
+
+
+<div class="modal" (click)="showPurchaseLinksModal = false" [ngClass]="{'show-modal': showPurchaseLinksModal}">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-image">
+            <div *ngIf="purchaseLinks.length">
+                <div class="product__head-buttons">
+                    <a [href]="link?.purchase_link" target="_blank" *ngFor="let link of purchaseLinks">
+                        <img class="purchase__link__image" [src]="getVendorImage(link.vendor)"
+                            [ngClass]="[link.vendor]">
+                    </a>
+                </div>
+            </div>
+            <div *ngIf="!purchaseLinks.length">
+                This product is not available for purchase right now.
+            </div>
+        </div>
+        <button (click)="showPurchaseLinksModal = false" class="js-close">Dismiss</button>
+    </div>
+</div>
