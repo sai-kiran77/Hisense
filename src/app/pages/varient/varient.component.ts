@@ -67,7 +67,7 @@ export class VarientComponent implements OnInit {
     })
   }
 
-  spec: Partial<Spec> = {};
+  spec: Partial<Spec | undefined>;
 
   loadMetaData(category: string) {
     this.show404 = false;

@@ -51,7 +51,7 @@
             </section>
         </div>
 
-        <div style="background-color: #f5f5f5;" class="product__specs__container">
+        <div style="background-color: #f5f5f5;" *ngIf="spec" class="product__specs__container">
             <h1 class="text-center">Product Specifications</h1>
             <section class="product__specs">
                 <div class="spec" *ngFor="let obj of spec | keyvalue">

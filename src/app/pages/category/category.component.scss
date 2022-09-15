@@ -9,14 +9,14 @@
 //     }
 // }
 
-.product-listing .product-listing-inner .product-listing-tab > * {
+.product-listing .product-listing-inner .product-listing-tab>* {
     overflow: visible !important;
 
-// .product-listing {
-//     .product-listing-inner {
-//         .product-listing-tab {
-//         }
-//     }
+    // .product-listing {
+    //     .product-listing-inner {
+    //         .product-listing-tab {
+    //         }
+    //     }
 }
 
 // .product__category__title {
@@ -383,8 +383,8 @@
     color: black !important;
 }
 
-.product__sub__category{
-    .product-listing-tab-content{
+.product__sub__category {
+    .product-listing-tab-content {
         height: 160px;
     }
 }
@@ -422,21 +422,32 @@
 
 .product-listing-inner.product-listing-grid-layout {
     display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr !important;
-    gap: 1rem !important;
+    // grid-template-columns: 1fr 1fr 1fr !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 250px)) !important;
+    gap: 2.5rem !important;
+    justify-content: center;
+    
 }
 
-@media screen and (max-width: 1100px) {
-    .product-listing-inner.product-listing-grid-layout {
-        grid-template-columns: 1fr 1fr !important;
+
+.product__sub__category{
+    .product-listing-grid-layout{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 350px)) !important;
     }
 }
 
-@media screen and (max-width: 767px) {
-    .product-listing-inner.product-listing-grid-layout {
-        grid-template-columns: 1fr !important;
-    }
-}
+
+// @media screen and (max-width: 1100px) {
+//     .product-listing-inner.product-listing-grid-layout {
+//         grid-template-columns: 1fr 1fr !important;
+//     }
+// }
+
+// @media screen and (max-width: 767px) {
+//     .product-listing-inner.product-listing-grid-layout {
+//         grid-template-columns: 1fr !important;
+//     }
+// }
 
 .modal {
     display: block !important;
@@ -568,7 +579,7 @@
     bottom: 0 !important;
 }
 
-.top__specifications{
+.top__specifications {
     margin-bottom: 24px;
     margin-top: 0 !important;
     font-size: 14px;
