@@ -6,12 +6,12 @@ import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
-interface Spec{
-  all_specifications: { 
+interface Spec {
+  all_specifications: {
     [key: string]: {
       [key: string]: string;
     };
-  } 
+  }
 }
 
 declare var Swiper: any;
@@ -92,58 +92,67 @@ export class VarientComponent implements OnInit {
         //   this.showFlag = true;
         // }
         setTimeout(() => {
-          let swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            autoplay: {
-              delay: 5000,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-
-          // let galleryThumbs = new Swiper(".thumbsSlider", {
-          //   centeredSlides: true,
-          //   centeredSlidesBounds: true,
-          //   direction: "horizontal",
-          //   spaceBetween: 10,
-          //   slidesPerView: 3,
-          //   freeMode: false,
-          //   watchSlidesVisibility: true,
-          //   watchSlidesProgress: true,
-          //   watchOverflow: true,
-          //   breakpoints: {
-          //     768: {
-          //       direction: "vertical",
-          //       slidesPerView: 3
-          //     }
-          //   }
-          // });
-          // let galleryTop = new Swiper(".mySwiper", {
-          //   direction: "horizontal",
-          //   spaceBetween: 10,
+          // let swiper = new Swiper(".mySwiper", {
+          //   slidesPerView: 1,
+          //   spaceBetween: 30,
+          //   loop: true,
+          //   pagination: {
+          //     el: ".swiper-pagination",
+          //     clickable: true,
+          //   },
+          //   autoplay: {
+          //     delay: 5000,
+          //   },
           //   navigation: {
           //     nextEl: ".swiper-button-next",
-          //     prevEl: ".swiper-button-prev"
+          //     prevEl: ".swiper-button-prev",
           //   },
-          //   a11y: {
-          //     prevSlideMessage: "Previous slide",
-          //     nextSlideMessage: "Next slide",
-          //   },
-          //   keyboard: {
-          //     enabled: true,
-          //   },
-          //   thumbs: {
-          //     swiper: galleryThumbs
-          //   }
           // });
+
+          let galleryThumbs = new Swiper(".thumbsSlider", {
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            direction: "horizontal",
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: false,
+            // loop: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            // watchOverflow: true,
+            breakpoints: {
+              992: {
+                direction: "vertical",
+                slidesPerView: 5
+              }
+            }
+          });
+          let galleryTop = new Swiper(".mySwiper", {
+            direction: "horizontal",
+            spaceBetween: 10,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev"
+            },
+            // loop: true,
+            a11y: {
+              prevSlideMessage: "Previous slide",
+              nextSlideMessage: "Next slide",
+            },
+            keyboard: {
+              enabled: true,
+            },
+            thumbs: {
+              swiper: galleryThumbs
+            }
+          });
+
+          galleryTop.on("slideChangeTransitionStart", function () {
+            galleryThumbs.slideTo(galleryTop.activeIndex);
+          });
+          galleryThumbs.on("transitionStart", function () {
+            galleryTop.slideTo(galleryThumbs.activeIndex);
+          });
         })
       },
       error: (e) => {

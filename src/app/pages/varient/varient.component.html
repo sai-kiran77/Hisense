@@ -1,29 +1,23 @@
 <ng-container *ngIf="!show404">
     <div class="product">
-        <div class="product__head product__head_ui_black " id="overview">
-            <div class="product__heade__image" style="position: relative;">
-                <div class="carousel" *ngIf="metaData?.slider_images?.length">
-                    <div class="carousel-container">
-                        <div class="carousel-images" [ngStyle]="{'transform':position}">
-                            <div style="padding-bottom: 50px;" class="swiper mySwiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images">
-                                        <img style="max-height: 30vh;" class="carousel-image current-image"
-                                            [src]="slide?.full_url" alt="image">
-                                    </div>
-                                </div>
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-                                <div class="swiper-pagination"></div>
+        <div class="swiper__container">
+            <div class="swiper__wrapper main__swiper">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images">
+                            <img style="max-height: 50vh;" class="carousel-image main__image current-image" [src]="slide?.full_url"
+                                alt="image">
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-pagination"></div> -->
+                    <div thumbsSlider="" class="swiper thumbsSlider">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide thumb__slide" *ngFor="let slide of metaData?.slider_images">
+                                <img class="carousel-image current-image" [src]="slide?.full_url" alt="image">
                             </div>
                         </div>
-                        <!-- <div thumbsSlider="" class="swiper thumbsSlider">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide thumb__slide" *ngFor="let slide of metaData?.slider_images">
-                                    <img class="carousel-image current-image" [src]="slide?.full_url" alt="image">
-                                </div>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
@@ -40,8 +34,28 @@
                 </div>
             </div>
         </div>
+        <!-- <div class="product__head product__head_ui_black " id="overview"> -->
+        <!-- <div class="product__heade__image"> -->
+        <!-- <div class="carousel"> -->
+        <!-- <div class="carousel-container"> -->
+        <!-- <div class="carousel-images" [ngStyle]="{'transform':position}"> -->
 
-        <div class="product__body">
+        <!-- </div> -->
+
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- </div> -->
+
+        <div class="page__tabs__container">
+            <div class="wrapper">
+                <div><a href="#productDescription" target="_self">Overview</a></div> 
+                <div *ngIf="spec"><a href="#specs" target="_self">Specifications</a></div> 
+                <div><a routerLink="/contact-us">Support</a></div> 
+            </div>
+        </div>
+
+        <div id="productDescription" class="product__body">
             <section>
                 <div class="row" *ngFor="let obj of metaData?.product?.description_images">
                     <div class="product__block">
@@ -51,13 +65,13 @@
             </section>
         </div>
 
-        <div style="background-color: #f5f5f5;" *ngIf="spec" class="product__specs__container">
+        <div id="specs" style="background-color: #f5f5f5;" *ngIf="spec" class="product__specs__container">
             <h1 class="text-center">Product Specifications</h1>
             <section class="product__specs">
                 <div class="spec" *ngFor="let obj of spec | keyvalue">
                     <div class="spec__headng" [innerHTML]="obj.key"></div>
                     <div class="spec__items">
-                        <div  *ngFor="let item of obj?.value | keyvalue">
+                        <div *ngFor="let item of obj?.value | keyvalue">
                             <div class="key" [innerHTML]="item.key"></div>
                             <div class="value" [innerHTML]="item.value"></div>
                         </div>

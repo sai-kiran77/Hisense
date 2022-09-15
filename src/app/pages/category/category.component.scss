@@ -364,18 +364,18 @@
 //     font-weight: bold;
 // }
 
-.btn-hisense-more,
-.btn-hisense-learn {
-    text-align: center;
-    font-weight: 400;
-    padding: 12px 20px;
-    white-space: nowrap;
-    ;
-    border-radius: 12px;
-    color: #fff;
-    background: #6debe6;
-    background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
-}
+// .btn-hisense-more,
+// .btn-hisense-learn {
+//     text-align: center;
+//     font-weight: 400;
+//     padding: 12px 20px;
+//     white-space: nowrap;
+//     ;
+//     border-radius: 12px;
+//     color: #fff;
+//     background: #6debe6;
+//     background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
+// }
 
 .btn-hisense-learn {
     background: white !important;
@@ -423,7 +423,7 @@
 .product-listing-inner.product-listing-grid-layout {
     display: grid !important;
     // grid-template-columns: 1fr 1fr 1fr !important;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 250px)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 270px)) !important;
     gap: 2.5rem !important;
     justify-content: center;
     
@@ -577,6 +577,7 @@
     left: 0 !important;
     right: 0 !important;
     bottom: 0 !important;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 18%);
 }
 
 .top__specifications {

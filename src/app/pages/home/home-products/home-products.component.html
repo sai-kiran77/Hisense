@@ -1,16 +1,16 @@
 <div class="product-listing">
-    <div class="product-listing-inner" style="flex-wrap: wrap !important;width: 80% !important;margin: auto !important;">
-        <a class="product-listing-tab" *ngFor="let prod of products" [routerLink]="prod.url">
+    <div class="product-listing-inner" style="flex-wrap: wrap !important;width: 96% !important;margin: auto !important;">
+        <div class="product-listing-tab" *ngFor="let prod of products" [routerLink]="prod.url">
             <a class="product-listing-img">
-                <img [src]="prod.image" style="max-height: 100px;max-width: 75% !important;">
+                <img [src]="prod.image" style="max-height: 200px;max-width: 96% !important;">
             </a>
             <div style="margin-top: auto;">
                 <div class="product-listing-tab-content">
                     <h4>{{prod.text}}</h4>
                     <!-- <div class="product-listing-description"></div> -->
                 </div>
-                <div><a class="btn-hisense" target="_self">More Detail</a></div>
+                <div><a class="btn-hisense-v2" target="_self">More Detail</a></div>
             </div>
-        </a>
+        </div>
     </div>
 </div>
