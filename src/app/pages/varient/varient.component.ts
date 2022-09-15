@@ -6,6 +6,14 @@ import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
+interface Spec{
+  all_specifications: { 
+    [key: string]: {
+      [key: string]: string;
+    };
+  } 
+}
+
 declare var Swiper: any;
 
 @Component({
@@ -16,7 +24,7 @@ declare var Swiper: any;
 })
 export class VarientComponent implements OnInit {
 
-  metaData: any;
+  metaData: any = {};
   alive = true;
   currentIndex = 0;
   show404 = false;
@@ -59,12 +67,16 @@ export class VarientComponent implements OnInit {
     })
   }
 
+  spec: Partial<Spec> = {};
+
   loadMetaData(category: string) {
     this.show404 = false;
     this.api.getVarientData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
         this.metaData = res.data;
         this.seoTags(res.data.seo_info);
+        this.spec = this.metaData['all_specifications'];
+        console.log(this.metaData['all_specifications']);
         // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
         // res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
         // || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
@@ -96,6 +108,42 @@ export class VarientComponent implements OnInit {
               prevEl: ".swiper-button-prev",
             },
           });
+
+          // let galleryThumbs = new Swiper(".thumbsSlider", {
+          //   centeredSlides: true,
+          //   centeredSlidesBounds: true,
+          //   direction: "horizontal",
+          //   spaceBetween: 10,
+          //   slidesPerView: 3,
+          //   freeMode: false,
+          //   watchSlidesVisibility: true,
+          //   watchSlidesProgress: true,
+          //   watchOverflow: true,
+          //   breakpoints: {
+          //     768: {
+          //       direction: "vertical",
+          //       slidesPerView: 3
+          //     }
+          //   }
+          // });
+          // let galleryTop = new Swiper(".mySwiper", {
+          //   direction: "horizontal",
+          //   spaceBetween: 10,
+          //   navigation: {
+          //     nextEl: ".swiper-button-next",
+          //     prevEl: ".swiper-button-prev"
+          //   },
+          //   a11y: {
+          //     prevSlideMessage: "Previous slide",
+          //     nextSlideMessage: "Next slide",
+          //   },
+          //   keyboard: {
+          //     enabled: true,
+          //   },
+          //   thumbs: {
+          //     swiper: galleryThumbs
+          //   }
+          // });
         })
       },
       error: (e) => {

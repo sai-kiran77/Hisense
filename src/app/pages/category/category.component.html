@@ -25,9 +25,10 @@
     </section>
 
     <div class="product-listing" *ngIf="!metaData?.parent_category_id">
-        <div class="product-listing-inner"
+        <div class="product-listing-inner product-listing-grid-layout"
             style="flex-wrap: wrap !important;width: 80% !important;margin: auto !important;">
-            <a class="product-listing-tab" style="min-width: 350px;width: auto !important;flex: 1;"
+            <a class="product-listing-tab"
+                style="width: auto !important;flex: 1;padding: 16px 8px !important;padding-bottom: 32px !important;"
                 [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories">
                 <a class="product-listing-img" style="width: 100%;height: 150px;display: flex;justify-content: center;
                 align-items: center; overflow: visible;">
@@ -36,12 +37,12 @@
                     <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
                         style="max-height: 100px;max-width: 75% !important;">
                 </a>
-                <div style="margin-top: 40px;">
+                <div style="margin-top: 20px;">
                     <div class="product-listing-tab-content">
                         <h4>{{prod.name}}</h4>
                         <!-- <div class="product-listing-description"></div> -->
                     </div>
-                    <div><a class="btn-hisense-more">More Detail</a></div>
+                    <div style="margin-top: 32px !important;"><a class="btn-hisense-more">More Detail</a></div>
                 </div>
             </a>
         </div>
@@ -68,36 +69,13 @@
         </div>
     </div> -->
 
-    <div class="product-listing" *ngIf="!metaData?.parent_category_id">
-        <div class="product-listing-inner"
-            style="flex-wrap: wrap !important;width: 80% !important;margin: auto !important;">
-            <a class="product-listing-tab" style="min-width: 350px;width: auto !important;flex: 1;"
-                [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories">
-                <a class="product-listing-img" style="width: 100%;height: 150px;display: flex;justify-content: center;
-                align-items: center; overflow: visible;">
-                    <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
-                        style="max-height: 100px;max-width: 75% !important;">
-                    <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
-                        style="max-height: 100px;max-width: 75% !important;">
-                </a>
-                <div style="margin-top: 40px;">
-                    <div class="product-listing-tab-content">
-                        <h4>{{prod.name}}</h4>
-                        <!-- <div class="product-listing-description"></div> -->
-                    </div>
-                    <div><a class="btn-hisense-more">More Detail</a></div>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <div class="product-listing" *ngIf="metaData?.parent_category_id">
+    <div class="product-listing product__sub__category" *ngIf="metaData?.parent_category_id">
         <div class="product-listing-inner product-listing-grid-layout"
             style="flex-wrap: wrap !important;width: 90% !important;margin: auto !important;">
             <ng-container *ngFor="let product of metaData?.category_products">
                 <ng-container *ngIf="product.product?.product_variants.length">
                     <a #currentindex data-index="0" class="product-listing-tab"
-                        style="width: auto !important;flex: 1;cursor: default;">
+                        style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
                         <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span>
                         <a class="product-listing-img" style="width: 100%;height: 225px;display: flex;justify-content: center;
                         align-items: center; overflow: visible;cursor: default;">
@@ -108,12 +86,12 @@
                                 src="assets/images/prod__placeholder.png"
                                 style="max-height: 200px;max-width: 90% !important;">
                         </a>
-                        <div>
-                            <div style="font-size: 10px;color: gray;">Modal Code</div>
+                        <div style="margin-top: 10px !important;">
+                            <div style="font-size: 10px;color: gray;">Model Code</div>
                             <span
                                 style="font-size: 20px;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
                         </div>
-                        <div style="margin-top: 40px;">
+                        <div style="margin-top: 0px !important">
                             <div class="product-listing-tab-content">
                                 <!-- <h4>{{prod.name}}</h4> -->
                                 <!-- <div class="product-listing-description"></div> -->
@@ -125,9 +103,20 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="top__specifications">
+                                <ng-container *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
+                                    <div style="font-size: 10px;color: gray;">Top Features</div>
+                                    <div
+                                        *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications">
+                                        {{spec}}
+                                    </div>
+                                </ng-container>
+                            </div>
+
                             <div style="display: flex;
                             justify-content: center;
-                            gap: 20px;">
+                            gap: 20px;margin-top: 10px !important;">
                                 <a class="btn-hisense-learn"
                                     [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
                                     More</a>
@@ -198,7 +187,7 @@
 
 <div class="modal" (click)="showPurchaseLinksModal = false" [ngClass]="{'show-modal': showPurchaseLinksModal}">
     <div class="modal-content" (click)="$event.stopPropagation()">
-        <div class="modal-image">
+        <div class="modal-container">
             <div *ngIf="purchaseLinks.length">
                 <div class="product__head-buttons">
                     <a [href]="link?.purchase_link" target="_blank" *ngFor="let link of purchaseLinks">
