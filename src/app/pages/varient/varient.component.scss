@@ -1548,14 +1548,14 @@
 .swiper-button-prev,
 .swiper-container-rtl .swiper-button-next {
     // background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    left: 15% !important;
+    left: 120px !important;
     right: auto;
 }
 
 .swiper-button-next,
 .swiper-container-rtl .swiper-button-prev {
     // background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23007aff'%2F%3E%3C%2Fsvg%3E");
-    right: 15% !important;
+    right: 20px !important;
     left: auto;
 }
 
@@ -7630,7 +7630,7 @@ p {
     .main-menu__submenu-item_language {
         text-align: right;
         position: absolute;
-        max-width: 70%;
+        max-width: 75%;
         right: 0;
         bottom: 0;
     }
@@ -11725,6 +11725,7 @@ html {
     max-width: 120px;
     position: absolute;
     top: 0;
+    background-color: white;
     left: 0;
 
     .swiper-wrapper {
@@ -11734,6 +11735,9 @@ html {
 
 .main__swiper {
     width: 60vw;
+    .mySwiper{
+        padding-left: 120px;
+    }
 }
 
 .product__head-text-column {
@@ -11759,10 +11763,15 @@ html {
         .main__image {
             height: 30vh !important;
         }
+        .mySwiper{
+            padding-left: 0px;
+        }
     }
 
     .product__head-text-column {
         text-align: center;
+        margin-top: 24px;
+        padding-right: 0;
     }
 
     .thumbsSlider {

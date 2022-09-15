@@ -9,8 +9,8 @@
                                 alt="image">
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <!-- <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div> -->
                     <!-- <div class="swiper-pagination"></div> -->
                     <div thumbsSlider="" class="swiper thumbsSlider">
                         <div class="swiper-wrapper">
@@ -49,13 +49,13 @@
 
         <div class="page__tabs__container">
             <div class="wrapper">
-                <div><a href="#productDescription" target="_self">Overview</a></div> 
-                <div *ngIf="spec"><a href="#specs" target="_self">Specifications</a></div> 
+                <div><a (click)="scrollToOverview()">Overview</a></div> 
+                <div *ngIf="spec"><a (click)="scrollToSpecs()">Specifications</a></div> 
                 <div><a routerLink="/contact-us">Support</a></div> 
             </div>
         </div>
 
-        <div id="productDescription" class="product__body">
+        <div #productDescription id="productDescription" class="product__body">
             <section>
                 <div class="row" *ngFor="let obj of metaData?.product?.description_images">
                     <div class="product__block">
@@ -65,7 +65,7 @@
             </section>
         </div>
 
-        <div id="specs" style="background-color: #f5f5f5;" *ngIf="spec" class="product__specs__container">
+        <div #specs id="specs" style="background-color: #f5f5f5;" *ngIf="spec" class="product__specs__container">
             <h1 class="text-center">Product Specifications</h1>
             <section class="product__specs">
                 <div class="spec" *ngFor="let obj of spec | keyvalue">

@@ -24,6 +24,9 @@ declare var Swiper: any;
 })
 export class VarientComponent implements OnInit {
 
+  @ViewChild('productDescription') overview: any;
+  @ViewChild('specs') specs: any;
+
   metaData: any = {};
   alive = true;
   currentIndex = 0;
@@ -186,6 +189,14 @@ export class VarientComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  scrollToOverview(){
+    this.overview.nativeElement.scrollIntoView({ behavior: "smooth" });
+  }
+
+  scrollToSpecs(){
+    this.specs.nativeElement.scrollIntoView({ behavior: "smooth" });
   }
 
   ngOnDestroy() {
