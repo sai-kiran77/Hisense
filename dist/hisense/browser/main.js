@@ -42,6 +42,10 @@ const routes = [
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_fifa-event_fifa-event_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/fifa-event/fifa-event.module */ 9476)).then(m => m.FifaEventModule)
             },
             {
+                path: 'wheel-of-fortune',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_spinner_spinner_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/spinner/spinner.module */ 8169)).then(m => m.SpinnerModule)
+            },
+            {
                 path: 'about-us',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_about-us_about-us_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/about-us/about-us.module */ 9902)).then(m => m.AboutUsModule)
             },
