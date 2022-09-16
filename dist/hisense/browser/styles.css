@@ -3700,12 +3700,12 @@ button.swiper-pagination-bullet {
   width: 100%;
   background-color: #d1b83a;
   color: #FFF;
-  padding: 20px !important;
+  padding: 12px !important;
 }
 .breadcrumb__yellow__banner h1 {
   text-transform: uppercase;
   font-weight: bold !important;
-  font-size: 32px !important;
+  font-size: 24px !important;
   margin: 0 !important;
 }
 .card.is-loading .image,
@@ -3734,6 +3734,7 @@ html {
 }
 .product-listing-tab::before {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
+  border-radius: 0 !important;
 }
 header a, footer a {
   color: #1d1d1f !important;
@@ -3746,12 +3747,13 @@ header a, footer a {
   text-align: center;
   font-weight: 400;
   padding: 16px;
-  border-radius: 30px;
+  border-radius: 0 !important;
   color: #fff !important;
   background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
   background-size: 200%;
   display: block;
-  width: 100%;
+  width: auto !important;
+  display: inline-block !important;
 }
 .btn-hisense-v2 * {
   color: white !important;
