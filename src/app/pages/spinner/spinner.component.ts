@@ -81,4 +81,10 @@ export class SpinnerComponent implements OnInit {
       this.idToLandOn = this.seed[Math.floor(Math.random() * this.seed.length)];
     }, 1000);
   }
+
+  imageLoading = true;
+
+  imageLoaded() {
+    this.imageLoading = false;
+  }
 }
