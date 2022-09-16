@@ -26,6 +26,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
       },
       {
+        path: 'wheel-of-fortune',
+        loadChildren: () => import('./pages/spinner/spinner.module').then(m => m.SpinnerModule)
+      },
+      {
         path: 'about-us',
         loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
       },
