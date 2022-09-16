@@ -121,3 +121,14 @@ p {
     justify-content: center;
     margin: 3rem;
 }
+
+.youtube__fake__img__wrapper{
+    position: relative;
+    cursor: pointer;
+    svg{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(2);
+    }
+}

@@ -19,7 +19,7 @@
 </div>
 
 <div class="container">
-    <div class="wpb_column vc_column_container vc_col-sm-6" *ngFor="let obj of testimonials">
+    <div class="wpb_column vc_column_container vc_col-sm-6" *ngFor="let obj of paginatedTestimonials">
         <div class="vc_column-inner">
             <div class="wpb_wrapper">
                 <div class="wpb_text_column wpb_content_element  vc_custom_1643340962550">
@@ -36,8 +36,18 @@
                 <div class="wpb_raw_code wpb_content_element wpb_raw_html" style="text-align: center;">
                     <div class="wpb_wrapper">
                         <div class="text-center-img">
-                            <iframe style="min-width: 90%;min-height: 300px;" [src]="getVideoLink(obj.youtube_url)"
-                                title="YouTube video player" frameborder="0"
+                            <div *ngIf="!obj.playVideo" class="youtube__fake__img__wrapper" (click)="playVideo(obj)">
+                                <img
+                                    [src]="obj.youtube_thumb_image" style="width: 90%;height: 300px;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="1.43em" height="1em"
+                                    preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 180">
+                                    <path fill="red"
+                                        d="M250.346 28.075A32.18 32.18 0 0 0 227.69 5.418C207.824 0 127.87 0 127.87 0S47.912.164 28.046 5.582A32.18 32.18 0 0 0 5.39 28.24c-6.009 35.298-8.34 89.084.165 122.97a32.18 32.18 0 0 0 22.656 22.657c19.866 5.418 99.822 5.418 99.822 5.418s79.955 0 99.82-5.418a32.18 32.18 0 0 0 22.657-22.657c6.338-35.348 8.291-89.1-.164-123.134Z" />
+                                    <path fill="#FFF" d="m102.421 128.06l66.328-38.418l-66.328-38.418z" />
+                                </svg>
+                            </div>
+                            <iframe *ngIf="obj.playVideo" style="width: 90%;height: 300px;"
+                                [src]="getVideoLink(obj.youtube_url)" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
                         </div>
@@ -46,10 +56,12 @@
             </div>
         </div>
     </div>
+</div>
+<div class="container">
     <div class="pagination">
-        <a (click)="getTechTestimonials(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
+        <a (click)="getPaginatedTestimonials(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
         <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
-            (click)="getTechTestimonials(i+1)">{{i+1}}</a>
-        <a (click)="getTechTestimonials(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
+            (click)="getPaginatedTestimonials(i+1)">{{i+1}}</a>
+        <a (click)="getPaginatedTestimonials(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
     </div>
 </div>

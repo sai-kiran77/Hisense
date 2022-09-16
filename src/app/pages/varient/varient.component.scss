@@ -11716,9 +11716,15 @@ html {
     max-width: 80px;
 
     img {
-        border: 2px solid #00b3ac;
+        border: 1px solid #d5d4d4;
         padding: 2px;
     }
+}
+
+.swiper-slide-thumb-active.thumb__slide {
+        img {
+            border: 1px solid #00b3ac;
+        }
 }
 
 .thumbsSlider {
@@ -11735,7 +11741,8 @@ html {
 
 .main__swiper {
     width: 60vw;
-    .mySwiper{
+
+    .mySwiper {
         padding-left: 120px;
     }
 }
@@ -11763,7 +11770,8 @@ html {
         .main__image {
             height: 30vh !important;
         }
-        .mySwiper{
+
+        .mySwiper {
             padding-left: 0px;
         }
     }
