@@ -43,7 +43,7 @@ export class HomeProductsComponent implements OnInit {
         this.products = data.map((obj: any) => {
           return {
             ...obj,
-            "image": obj.thumb_image_small
+            "image": obj.thumb_image_medium
           }
         })
       }
