@@ -15,6 +15,7 @@
 
 .product-listing-inner {
     flex-wrap: nowrap !important;
+    justify-content: center;
 }
 
 .product-listing-img {
@@ -25,6 +26,22 @@
     overflow: visible !important;
 }
 
-.product-listing-tab{
+.product-listing-tab {
     gap: 15px;
+}
+
+.product-listing-tab {
+    width: 25% !important;
+}
+
+@media screen and (max-width: 1100px) {
+    .product-listing-tab {
+        width: 33.33% !important;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-listing-tab {
+        width: 100% !important;
+    }
 }
