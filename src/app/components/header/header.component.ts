@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
     @Input() top = false;
     newsSubDropdownToggle = false;
+    aboutSubDropDownToggle = false;
 
     newsSubLinks = [
         {
@@ -27,10 +28,18 @@ export class HeaderComponent implements OnInit {
             text: 'Tech Testimonials',
             url: '/tech-testimonials'
         },
+        // {
+        //     image: 'assets/images/tv.png',
+        //     text: 'Offers/Promotions',
+        //     url: '/offers-promotions/'
+        // },
+    ]
+
+    aboutSubLinks = [
         {
-            image: 'assets/images/tv.png',
-            text: 'Offers/Promotions',
-            url: '/offers-promotions/'
+            text: 'Mission',
+            url: '/about-us',
+            fragment: '#mission'
         },
     ]
 

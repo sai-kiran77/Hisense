@@ -4519,9 +4519,21 @@ html {
     border-radius: 0 !important ;
 }
 
-header,footer{
+header{
     a{
         color: #1d1d1f !important;
+    }
+}
+
+footer{
+    a{
+        color: white !important;
+    }
+
+    dd{
+        a{
+            color: #00b3ac !important;
+        }
     }
 }
 

@@ -29,13 +29,21 @@ const routes: Routes = [
         path: 'wheel-of-fortune',
         loadChildren: () => import('./pages/spinner/spinner.module').then(m => m.SpinnerModule)
       },
+      // {
+      //   path: 'about-us',
+      //   loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+      // },
       {
-        path: 'about-us',
-        loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+        path: 'about-hisense',
+        loadChildren: () => import('./pages/about-hisense/about-hisense.module').then(m => m.AboutHisenseModule)
       },
       {
         path: 'contact-us',
         loadChildren: () => import('./pages/contact-us/contact-us.module').then(m => m.ContactUsModule)
+      },
+      {
+        path: 'support',
+        loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
       },
       {
         path: 'privacy-policy',

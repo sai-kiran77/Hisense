@@ -32,6 +32,7 @@
             <img [src]="data?.image_full_url">
         </div>
     </div>
+    <div *ngIf="metaData?.data.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
     <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
         <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"

@@ -15,7 +15,8 @@ export class PressCoveragesComponent implements OnInit {
 
   params = {
     per_page: 10,
-    page: 1
+    page: 1,
+    country: 'national'
   }
   metaData: any;
   metaDataTabs = ['National', 'Global'];
@@ -26,7 +27,12 @@ export class PressCoveragesComponent implements OnInit {
     if (this.currentTab == 'Global') {
       this.metaData = [];
       this.totalPagesinTen = [];
+      this.params.country = 'global';
+      this.getMetaData(1);
     } else {
+      this.metaData = [];
+      this.totalPagesinTen = [];
+      this.params.country = 'national';
       this.getMetaData(1);
     }
   }

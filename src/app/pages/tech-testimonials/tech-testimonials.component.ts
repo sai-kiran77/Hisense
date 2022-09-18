@@ -11,9 +11,12 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 export class TechTestimonialsComponent implements OnInit {
 
   testimonials: any = [];
+  
   paginatedTestimonials: any = [];
+  GlobalpaginatedTestimonials: any = [];
 
   totalPagesinTen: any = [];
+  GlobaltotalPagesinTen: any = [];
 
   params = {
     per_page: 10,
@@ -24,14 +27,24 @@ export class TechTestimonialsComponent implements OnInit {
   currentTab = 'National';
 
   changeTab(tab: any) {
-    this.currentTab = tab;
-    if (this.currentTab == 'Global') {
-      this.testimonials = [];
-      this.totalPagesinTen = [];
-      this.paginatedTestimonials = [];
-    } else {
-      this.getTechTestimonials(1);
+    this.params = {
+      per_page: 10,
+      page: 1
     }
+    this.currentTab = tab;
+    this.totalPagesinTen = [];
+    this.paginatedTestimonials = [];
+    let currentTestimonials = [];
+    if (this.currentTab == 'Global') {
+      currentTestimonials = this.testimonials.filter((obj: any) => obj.country == 'global');
+      this.paginatedTestimonials = currentTestimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+    } else {
+      currentTestimonials = this.testimonials.filter((obj: any) => obj.country == 'national');
+      this.paginatedTestimonials = currentTestimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+      // this.getTechTestimonials(1);
+    }
+    this.totalPagesinTen = new Array(Math.ceil(currentTestimonials.length / this.params.per_page));
+    console.log(this.paginatedTestimonials);
   }
 
   constructor(private state: GlobalStateService,
@@ -51,7 +64,7 @@ export class TechTestimonialsComponent implements OnInit {
     this.api.getTechTestimonials(this.params).subscribe({
       next: (res: any) => {
         this.testimonials = res.data;
-        this.paginatedTestimonials = res.data.slice(((this.params.page - 1) * 10), this.params.per_page);
+        this.paginatedTestimonials = res.data.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
         console.log(res.data);
         this.totalPagesinTen = new Array(Math.ceil(res.data.length / this.params.per_page));
       },
@@ -66,7 +79,7 @@ export class TechTestimonialsComponent implements OnInit {
       this.params.page = page;
     }
     console.log(((this.params.page - 1) * 10), (((this.params.page) * 10)))
-    this.paginatedTestimonials = this.testimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+    this.paginatedTestimonials = this.testimonials.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
     console.log(this.paginatedTestimonials);
   }
 
