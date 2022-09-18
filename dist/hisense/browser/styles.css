@@ -3736,8 +3736,14 @@ html {
   box-shadow: 0 3px 4px rgba(0, 0, 0, 0.18);
   border-radius: 0 !important;
 }
-header a, footer a {
+header a {
   color: #1d1d1f !important;
+}
+footer a {
+  color: white !important;
+}
+footer dd a {
+  color: #00b3ac !important;
 }
 .btn-hisense-v2 {
   pointer-events: all;
