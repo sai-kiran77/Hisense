@@ -71,7 +71,7 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'offers-promotions',
+        path: 'warranty-information',
         loadChildren: () => import('./pages/offers-promotions/offers-promotions.module').then(m => m.OffersPromotionsModule)
       },
       // {

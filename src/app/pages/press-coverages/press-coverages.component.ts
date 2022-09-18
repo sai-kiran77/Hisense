@@ -54,9 +54,9 @@ export class PressCoveragesComponent implements OnInit {
     this.api.getPressCoverages(this.params).subscribe((res: any) => {
       this.metaData = res.data;
       this.totalPagesinTen = new Array(res.data.last_page);
-      if (this.container) {
-        this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
-      }
+      // if (this.container) {
+      //   this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
+      // }
     }, (err) => {
       console.log(err);
     })

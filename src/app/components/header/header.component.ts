@@ -405,6 +405,7 @@ export class HeaderComponent implements OnInit {
             for (let obj of this.navLinks) {
                 obj.subDropdownToggle = false;
             }
+            this.newsSubDropdownToggle = false;
         });
     }
 
