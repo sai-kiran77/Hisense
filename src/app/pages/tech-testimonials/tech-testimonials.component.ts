@@ -23,7 +23,8 @@ export class TechTestimonialsComponent implements OnInit {
     page: 1
   }
 
-  metaDataTabs = ['National', 'Global'];
+  // metaDataTabs = ['National', 'Global'];
+  metaDataTabs = ['National'];
   currentTab = 'National';
 
   changeTab(tab: any) {
