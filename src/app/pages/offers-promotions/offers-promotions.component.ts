@@ -10,11 +10,15 @@ import { environment } from 'src/environments/environment';
 })
 export class OffersPromotionsComponent implements OnInit {
 
-  metaData: any = []
+  metaData: any = [];
+  isImageLoading = true;
 
-  changeTab(obj: any){
-    this.currentImg = obj.image_full_url;
-    this.currentTab = obj.start_date_formatted ;
+  changeTab(obj: any) {
+    if (this.currentImg != obj.image_full_url) {
+      this.isImageLoading = true;
+      this.currentImg = obj.image_full_url;
+      this.currentTab = obj.start_date_formatted;
+    }
   }
 
   constructor(private state: GlobalStateService,
@@ -23,24 +27,29 @@ export class OffersPromotionsComponent implements OnInit {
   }
 
   currentImg: any;
+  //  = "https://www.partrunner.com/en/assets/images/banner_image-1200x724.png";
   currentTab: any;
 
   ngOnInit(): void {
     this.getSlides();
   }
 
-  
+
   getSlides() {
     this.api.getPageSlides({ pageUrl: '/offers-promotions' }).subscribe({
       next: (res: any) => {
         console.log(res);
         this.metaData = res.data.offers_promotions;
         this.currentImg = this.metaData[0].image_full_url;
-        this.currentTab = this.metaData[0].start_date_formatted ;
+        this.currentTab = this.metaData[0].start_date_formatted;
       },
       error: (err) => {
       }
     });
+  }
+
+  imageLoaded() {
+    this.isImageLoading = false;
   }
 
 }

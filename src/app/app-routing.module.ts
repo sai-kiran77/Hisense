@@ -26,12 +26,24 @@ const routes: Routes = [
       //   loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
       // },
       {
-        path: 'about-us',
-        loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+        path: 'wheel-of-fortune',
+        loadChildren: () => import('./pages/spinner/spinner.module').then(m => m.SpinnerModule)
+      },
+      // {
+      //   path: 'about-us',
+      //   loadChildren: () => import('./pages/about-us/about-us.module').then(m => m.AboutUsModule)
+      // },
+      {
+        path: 'about-hisense',
+        loadChildren: () => import('./pages/about-hisense/about-hisense.module').then(m => m.AboutHisenseModule)
       },
       {
         path: 'contact-us',
         loadChildren: () => import('./pages/contact-us/contact-us.module').then(m => m.ContactUsModule)
+      },
+      {
+        path: 'support',
+        loadChildren: () => import('./pages/support/support.module').then(m => m.SupportModule)
       },
       {
         path: 'privacy-policy',
@@ -59,7 +71,7 @@ const routes: Routes = [
         pathMatch: 'full'
       },
       {
-        path: 'offers-promotions',
+        path: 'warranty-information',
         loadChildren: () => import('./pages/offers-promotions/offers-promotions.module').then(m => m.OffersPromotionsModule)
       },
       // {

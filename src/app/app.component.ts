@@ -187,6 +187,21 @@ export class AppComponent {
         case '/call-center-manager':
           this.router.navigate(['/contact-us'])
           break;
+        case '/range':
+          this.router.navigate(['/c/tv'])
+          break;
+        case '/c/pure-flat-refrigerators':
+          this.router.navigate(['/c/multi-door-refrigerators'])
+          break;
+        case '/c/top-freezer-refrigerators':
+          this.router.navigate(['/c/side-by-side-refrigerators'])
+          break;
+        case '/offers-promotions':
+          this.router.navigate(['/warranty-information'])
+          break;
+        case '/v/43A56E':
+          this.router.navigate(['/v/43A56F'])
+          break;
       }
     }
   }

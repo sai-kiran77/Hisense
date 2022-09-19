@@ -15,30 +15,49 @@ export class PressCoveragesComponent implements OnInit {
 
   params = {
     per_page: 10,
-    page: 1
+    page: 1,
+    country: 'national'
   }
   metaData: any;
+  metaDataTabs = ['National', 'Global'];
+  currentTab = 'National';
+
+  changeTab(tab: any) {
+    this.currentTab = tab;
+    if (this.currentTab == 'Global') {
+      this.metaData = [];
+      this.totalPagesinTen = [];
+      this.params.country = 'global';
+      this.getMetaData(1);
+    } else {
+      this.metaData = [];
+      this.totalPagesinTen = [];
+      this.params.country = 'national';
+      this.getMetaData(1);
+    }
+  }
 
   constructor(private api: ApiService,
-    private state: GlobalStateService) { 
+    private state: GlobalStateService) {
     this.state.mobileNavToggle.next(false);
   }
 
   ngOnInit(): void {
     this.getMetaData();
   }
-  
-  getMetaData(page?: any){
-    if(page){
+
+  getMetaData(page?: any) {
+    if (page) {
       this.params.page = page;
     }
-    this.api.getPressCoverages(this.params).subscribe((res: any)=>{
+    
+    this.api.getPressCoverages(this.params).subscribe((res: any) => {
       this.metaData = res.data;
       this.totalPagesinTen = new Array(res.data.last_page);
-      if(this.container){
-        this.container.nativeElement.scrollIntoView({behavior: "smooth"});
-      }
-    },(err)=>{
+      // if (this.container) {
+      //   this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
+      // }
+    }, (err) => {
       console.log(err);
     })
   }

@@ -4149,6 +4149,15 @@ th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+
+th{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* tr:nth-child(even) {
+    background-color: #dddddd;
+} */
 @media screen and (min-width: 991px) {
     .flex-wrapper{
         display: grid;

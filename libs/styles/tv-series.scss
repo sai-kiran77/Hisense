@@ -5258,32 +5258,32 @@ footer a.icon-region:hover,
   border: 1px solid #fff;
   color: #fff;
 }
-@media screen and (min-width: 768px) {
-  .product-listing
-    .product-listing-inner
-    .product-listing-tab:hover
-    .product-listing-tab-buttons
-    > *
-    a {
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
-    pointer-events: all;
-    opacity: 1;
-    background-color: #00aaa6;
-  }
-  .product-listing
-    .product-listing-inner
-    .product-listing-tab:hover
-    .product-listing-img
-    img {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
-  }
-}
+// @media screen and (min-width: 768px) {
+//   .product-listing
+//     .product-listing-inner
+//     .product-listing-tab:hover
+//     .product-listing-tab-buttons
+//     > *
+//     a {
+//     -webkit-transform: scale(1);
+//     -moz-transform: scale(1);
+//     -ms-transform: scale(1);
+//     transform: scale(1);
+//     pointer-events: all;
+//     opacity: 1;
+//     background-color: #00aaa6;
+//   }
+//   .product-listing
+//     .product-listing-inner
+//     .product-listing-tab:hover
+//     .product-listing-img
+//     img {
+//     -webkit-transform: scale(1.1);
+//     -moz-transform: scale(1.1);
+//     -ms-transform: scale(1.1);
+//     transform: scale(1.1);
+//   }
+// }
 .product-listing .view-more {
   text-align: center;
   margin-top: 20px;

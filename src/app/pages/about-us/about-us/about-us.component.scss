@@ -17,11 +17,6 @@
     }
 }
 
-h1 {
-    margin: 0.67em 0;
-    font-size: 2em;
-}
-
 figcaption,
 figure,
 main {
@@ -5944,36 +5939,17 @@ p {
 
 .page__container {
     width: 100%;
-    // max-width: 740px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     position: relative;
     z-index: 2;
 }
 
 .page__title {
-    font-family: 'Avalon', Helvetica, sans-serif;
     font-weight: 600;
     font-size: 60px;
     line-height: 1.2;
     text-transform: uppercase;
-    padding-top: 80px;
-}
-
-@media only screen and (max-width: 46.9em) {
-    .page__title {
-        font-size: 40px;
-    }
-}
-
-@media only screen and (max-width: 46.9em) {
-    .page__title {
-        padding-top: 40px;
-    }
-}
-
-.page__title:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 16px;
 }
 
 .page__title_centered {
@@ -5986,18 +5962,6 @@ p {
     font-size: 80px;
     line-height: 1.125;
     text-transform: uppercase;
-}
-
-@media only screen and (max-width: 80em) {
-    .page__title_bigger {
-        font-size: 60px;
-    }
-}
-
-@media only screen and (max-width: 46.9em) {
-    .page__title_bigger {
-        font-size: 50px;
-    }
 }
 
 .page__title-description {
@@ -7072,26 +7036,13 @@ p {
 }
 
 .raw-html h3 {
-    font-size: 38px;
+    font-size: 32px;
     margin-bottom: 1em;
-}
-
-@media only screen and (max-width: 46.9em) {
-    .raw-html h3 {
-        font-size: 32px;
-    }
 }
 
 .raw-html p {
-    font-size: 15px;
-    line-height: 1.615384615384615;
+    font-size: 16px;
     margin-bottom: 1em;
-}
-
-@media only screen and (max-width: 46.9em) {
-    .raw-html p {
-        font-size: 14px;
-    }
 }
 
 .raw-html ul,
@@ -7100,14 +7051,6 @@ p {
     line-height: 1.615384615384615;
     margin-bottom: 1em;
     list-style-position: inside;
-}
-
-@media only screen and (max-width: 46.9em) {
-
-    .raw-html ul,
-    .raw-html ol {
-        font-size: 14px;
-    }
 }
 
 .raw-html ol {
@@ -8966,18 +8909,22 @@ min-height: 100%;
     width: 27px !important;
 }
 
-.sports-marketing{
-    width: 100%;
+.sports-marketing {
+    width: 80%;
     height: 100%;
     height: auto;
     display: block;
+    margin: auto;
     justify-items: center;
-    div{
+
+    div {
         position: relative;
         overflow: hidden;
-        img{
+
+        img {
             transition: all 0.6s ease-out;
-            &:hover{
+
+            &:hover {
                 // position: absolute;
                 // top: 0;
                 // left: 0;

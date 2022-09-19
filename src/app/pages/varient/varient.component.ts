@@ -6,6 +6,14 @@ import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
+interface Spec {
+  all_specifications: {
+    [key: string]: {
+      [key: string]: string;
+    };
+  }
+}
+
 declare var Swiper: any;
 
 @Component({
@@ -16,7 +24,10 @@ declare var Swiper: any;
 })
 export class VarientComponent implements OnInit {
 
-  metaData: any;
+  @ViewChild('productDescription') overview: any;
+  @ViewChild('specs') specs: any;
+
+  metaData: any = {};
   alive = true;
   currentIndex = 0;
   show404 = false;
@@ -59,12 +70,16 @@ export class VarientComponent implements OnInit {
     })
   }
 
+  spec: Partial<Spec | undefined>;
+
   loadMetaData(category: string) {
     this.show404 = false;
     this.api.getVarientData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
         this.metaData = res.data;
         this.seoTags(res.data.seo_info);
+        this.spec = this.metaData['all_specifications'];
+        console.log(this.metaData['all_specifications']);
         // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
         // res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
         // || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
@@ -80,28 +95,74 @@ export class VarientComponent implements OnInit {
         //   this.showFlag = true;
         // }
         setTimeout(() => {
-          let swiper = new Swiper(".mySwiper", {
-            slidesPerView: 1,
-            spaceBetween: 30,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            autoplay: {
-              delay: 5000,
-            },
+          // let swiper = new Swiper(".mySwiper", {
+          //   slidesPerView: 1,
+          //   spaceBetween: 30,
+          //   loop: true,
+          //   pagination: {
+          //     el: ".swiper-pagination",
+          //     clickable: true,
+          //   },
+          //   autoplay: {
+          //     delay: 5000,
+          //   },
+          //   navigation: {
+          //     nextEl: ".swiper-button-next",
+          //     prevEl: ".swiper-button-prev",
+          //   },
+          // });
+
+          let galleryThumbs = new Swiper(".thumbsSlider", {
+            centeredSlides: true,
+            centeredSlidesBounds: true,
+            direction: "horizontal",
+            spaceBetween: 10,
+            slidesPerView: 5,
+            freeMode: false,
+            // loop: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+            // watchOverflow: true,
+            breakpoints: {
+              992: {
+                direction: "vertical",
+                slidesPerView: 5
+              }
+            }
+          });
+          let galleryTop = new Swiper(".mySwiper", {
+            direction: "horizontal",
+            spaceBetween: 10,
             navigation: {
               nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
+              prevEl: ".swiper-button-prev"
             },
+            // loop: true,
+            a11y: {
+              prevSlideMessage: "Previous slide",
+              nextSlideMessage: "Next slide",
+            },
+            keyboard: {
+              enabled: true,
+            },
+            thumbs: {
+              swiper: galleryThumbs
+            }
+          });
+
+          galleryTop.on("slideChangeTransitionStart", function () {
+            galleryThumbs.slideTo(galleryTop.activeIndex);
+          });
+          galleryThumbs.on("transitionStart", function () {
+            galleryTop.slideTo(galleryThumbs.activeIndex);
           });
         })
       },
       error: (e) => {
         console.log(e);
+        this.router.navigate(['']);
         // this.router.navigate(['404']);
-        this.show404 = true;
+        // this.show404 = true;
       }
     })
   }
@@ -117,10 +178,10 @@ export class VarientComponent implements OnInit {
         return 'assets/amazon.png';
       case "flipkart":
         return 'assets/flipkart.png';
-      case "tata_cliq":
-        return 'assets/tata-cliq.jpg';
-      case "jio_mart":
-        return 'assets/jiomart.png';
+      // case "tata_cliq":
+      //   return 'assets/tata-cliq.jpg';
+      // case "jio_mart":
+      //   return 'assets/jiomart.png';
       case "reliance_digital":
         return 'assets/reliance-digital.png';
       case "croma":
@@ -128,6 +189,14 @@ export class VarientComponent implements OnInit {
       default:
         return '';
     }
+  }
+
+  scrollToOverview(){
+    this.overview.nativeElement.scrollIntoView({ behavior: "smooth" });
+  }
+
+  scrollToSpecs(){
+    this.specs.nativeElement.scrollIntoView({ behavior: "smooth" });
   }
 
   ngOnDestroy() {

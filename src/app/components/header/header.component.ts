@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
     @Input() top = false;
     newsSubDropdownToggle = false;
+    aboutSubDropDownToggle = false;
 
     newsSubLinks = [
         {
@@ -27,10 +28,18 @@ export class HeaderComponent implements OnInit {
             text: 'Tech Testimonials',
             url: '/tech-testimonials'
         },
+        // {
+        //     image: 'assets/images/tv.png',
+        //     text: 'Offers/Promotions',
+        //     url: '/offers-promotions/'
+        // },
+    ]
+
+    aboutSubLinks = [
         {
-            image: 'assets/images/tv.png',
-            text: 'Offers/Promotions',
-            url: '/offers-promotions/'
+            text: 'Mission',
+            url: '/about-us',
+            fragment: '#mission'
         },
     ]
 
@@ -336,6 +345,7 @@ export class HeaderComponent implements OnInit {
         private api: ApiService) {
         this.subscribeToSidebarNavigation();
         this.api.getHeaderItems().subscribe((res: any) => {
+            this.api.headerItems.next(res.data);
             this.navLinks = res.data.map((obj: any) => {
                 return {
                     ...obj,
@@ -395,6 +405,7 @@ export class HeaderComponent implements OnInit {
             for (let obj of this.navLinks) {
                 obj.subDropdownToggle = false;
             }
+            this.newsSubDropdownToggle = false;
         });
     }
 

@@ -1,4 +1,4 @@
-<div class="page__cover page__section page__section_centered">
+<!-- <div class="page__cover page__section page__section_centered">
     <div class="page__cover-inner desktop-banner"
         style="background-color: rgb(32, 32, 32); transform: translateY(0px);"></div>
     <div class="page__cover-inner mobile-banner" style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
@@ -6,24 +6,37 @@
     <div class="page__container">
         <h1 class="page__title">IN THE NEWS</h1>
     </div>
+</div> -->
+
+<div class="breadcrumb__yellow__banner">
+    <h1>Press Coverages</h1>
+</div>
+
+<div class="col1 tabs">
+    <div class="list-group" id="themeslist">
+        <a class="list-group-item list-group-item-action" *ngFor="let tab of metaDataTabs"
+            [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
+    </div>
 </div>
 
 <div class="container" #container>
-    <div class="row" style="display: grid;grid-template-columns: 2fr 1fr;" *ngFor="let data of metaData?.data">
-        <div>
+    <div class="row" style="display: flex;" *ngFor="let data of metaData?.data">
+        <div style="flex: 0 0 75%;">
             <!-- <h3 class="title italics">{{data.title}}</h3> -->
-            <p class="f-24"> {{data.title}} </p>
+            <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
             <p *ngIf="data?.vendor">({{data?.vendor}})</p>
             <p>{{data?.description}}</p>
             <a [href]="data?.external_url" class=" btn btn-default read-more-btn" target="_blank">Read More</a>
         </div>
-        <div>
+        <div style="flex: 0 0 25%;">
             <img [src]="data?.image_full_url">
         </div>
     </div>
+    <div *ngIf="metaData?.data.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
     <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
-        <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index" (click)="getMetaData(i+1)">{{i+1}}</a>
+        <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
+            (click)="getMetaData(i+1)">{{i+1}}</a>
         <a (click)="getMetaData(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
-      </div>
+    </div>
 </div>

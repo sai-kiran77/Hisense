@@ -20,7 +20,8 @@
                             </button>
                             <div class="section-title">{{obj.text}}</div>
                             <div class="sub-menu" style="background-color: white;">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']" style="width: 200px !important;">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']"
+                                    style="width: 200px !important;">
                                     <span class="thumbnail" style="overflow: hidden;">
                                         <div class="img">
                                             <img [src]="subLink.image" [alt]="subLink.text"
@@ -35,7 +36,10 @@
                 </ul>
                 <ul class="right">
                     <li>
-                        <a>In The News</a>
+                        <a routerLink="/FIFA-2022">FIFA 2022</a>
+                    </li>
+                    <li class="in-the-news dropdown">
+                        <a class="dropbtn">In The News</a>
                         <a (click)="newsSubDropdownToggle = true" class="toggle-dropdown"
                             id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
                             aria-label="Toggle dropdown"></a>
@@ -46,19 +50,45 @@
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">In The News</div>
-                            <div class="sub-menu">
-                                <a  [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
+                            <div class="sub-menu ">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
                                     style="justify-content: center;">
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
                         </div>
+                        <div class="dropdown-content">
+                            <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
+                                style="justify-content: center;">
+                                <span class="title">{{subLink.text}}</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="dropdown">
+                        <a class="" routerLink="/about-hisense">About Hisense</a>
+                        <!-- <div [ngClass]="{'menu-in': aboutSubDropDownToggle}" class="dropdown-menu"
+                            aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="aboutSubDropDownToggle = false" class="mobile-back" type="button"
+                                aria-label="Toggle sub navigation">
+                                <span class="navbar-back-icon"></span>
+                            </button>
+                            <div class="section-title">About Hisense</div>
+                            <div class="sub-menu ">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of aboutSubLinks"
+                                    style="justify-content: center;" [fragment]="subLink?.fragment">
+                                    <span class="title">{{subLink.text}}</span>
+                                </a>
+                            </div>
+                        </div> -->
+                        <!-- <div class="dropdown-content">
+                            <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
+                                style="justify-content: center;">
+                                <span class="title">{{subLink.text}}</span>
+                            </a>
+                        </div> -->
                     </li>
                     <li class="">
-                        <a routerLink="/about-us">About Us</a>
-                    </li>
-                    <li class="">
-                        <a routerLink="/contact-us">Contact Us</a>
+                        <a routerLink="/support">Support</a>
                     </li>
                 </ul>
             </div>

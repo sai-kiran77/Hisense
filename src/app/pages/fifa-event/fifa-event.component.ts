@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -194,8 +195,11 @@ export class FifaEventComponent implements OnInit {
     "desktop_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`,
     "mobile_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`
   }
-
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
+  
+  
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,
+  private state: GlobalStateService) {
+    this.state.mobileNavToggle.next(false);
   }
 
   ngOnInit(): void {

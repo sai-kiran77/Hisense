@@ -1,0 +1,105 @@
+.page__wrapper {
+    height: calc(100vh - 80px);
+    width: 100%w;
+    background-image: url(../../../assets/party.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-size: 54px;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+
+    h3 {
+        // font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.spinner__wrapper {
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+        cursor: pointer;
+        position: absolute;
+        // width: 37px;
+        // height: 37px;
+        // background: url(../../../assets/football.svg);
+        border-radius: 50%;
+        top: 47.65%;
+        left: 45%;
+    }
+}
+
+
+.spin-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #fff;
+    border: 3.2px solid #eff1f7;
+    box-shadow: 0 7.15653px 0 1.78913px rgb(0 0 0 / 13%);
+}
+
+.absolute {
+    position: absolute;
+}
+
+.spin-btn {
+    width: 50px;
+    // z-index: 20;
+    height: 50px;
+    background-color: rgba(52, 142, 246, 1);
+    border: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    cursor: pointer;
+
+}
+
+.spinner-wheel-spin-button {
+    min-width: 0;
+    padding: 0;
+    border-radius: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .spinner__wrapper {
+        .icon {
+            top: 48.45%;
+            left: 44%;
+        }
+    }
+
+    svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .spin-btn-wrap {
+        height: 50px;
+        width: 50px;
+    }
+
+    .spin-btn {
+        width: 40px;
+        height: 40px;
+    }
+}

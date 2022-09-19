@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { MainSliderUIComponent } from './UI/main-slider/main-slider.component';
 import { SwiperModule } from 'swiper/angular';
 import { ProductSeriesComponent } from './UI/product-series/product-series.component';
+import { FooterV2Component } from './footer-v2/footer-v2.component';
 
 const components = [
   HeaderComponent,
@@ -18,12 +19,13 @@ const components = [
   LinksFooterComponent,
   SocialLinksFooterComponent,
   ProductSeriesComponent,
-  MainSliderUIComponent
+  MainSliderUIComponent,
+  FooterV2Component
 ];
 
 @NgModule({
   declarations: [
-    ...components
+    ...components,
   ],
   imports: [
     CommonModule,
