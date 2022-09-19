@@ -125,7 +125,8 @@ class TechTestimonialsComponent {
             per_page: 10,
             page: 1
         };
-        this.metaDataTabs = ['National', 'Global'];
+        // metaDataTabs = ['National', 'Global'];
+        this.metaDataTabs = ['National'];
         this.currentTab = 'National';
         this.state.mobileNavToggle.next(false);
     }
