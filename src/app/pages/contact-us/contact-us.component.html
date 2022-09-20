@@ -189,7 +189,10 @@
                                             required!</span>
                                     </div>
                                 </div>
-                                <div (click)="onSubmit()" class="btn-hisense-v2">Submit</div>
+                                <button (click)="onSubmit()" class="btn-hisense-v2 submit__btn" [disabled]="isLoading">
+                                    <span>Submit</span>
+                                    <span *ngIf="isLoading" class="busy"></span>
+                                </button>
                             </div>
                         </div>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>

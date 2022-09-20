@@ -32,15 +32,20 @@ export class ContactUsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  isLoading = false;
+
   onSubmit() {
     if (this.form && this.form.valid) {
+      this.isLoading = true;
       this.api.postContactUsForm(this.form.value).subscribe((res: any) => {
         this.modalMessage = res.message;
         this.modalImageName = 'assets/images/success.webp';
+        this.isLoading = false;
       }, (err: any) => {
         console.log(err);
         this.modalImageName = 'assets/images/warning.png'
         this.modalMessage = err.message;
+        this.isLoading = false;
       })
     } else {
       this.isFormSubmitted = true;
