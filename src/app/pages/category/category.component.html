@@ -111,7 +111,7 @@
                                     *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
                                     <div style="font-size: 14px;color: gray;font-weight: bold;">Top Features</div>
                                     <div *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
-                                        style="font-size: 16px;font-weight: bold;">
+                                        style="font-size: 16px;">
                                         {{spec}}
                                     </div>
                                 </ng-container>
@@ -123,7 +123,7 @@
                                 <a class="btn-hisense-v2 btn-hisense-learn"
                                     [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
                                     More</a>
-                                <a class="btn-hisense-v2"
+                                <a class="btn-hisense-v2" *ngIf="product?.product?.product_variants[product.currentIndex]?.product_variant_purchase_links_count"
                                     (click)="buyOptions(product?.product?.product_variants[product.currentIndex]?.relative_url)">Where
                                     to buy</a>
                             </div>
