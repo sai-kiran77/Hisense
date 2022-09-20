@@ -3381,14 +3381,16 @@ button.swiper-pagination-bullet {
   margin-left: auto;
   margin-right: auto;
 }
-.mySwiper .swiper-button-prev {
+.mySwiper .swiper-button-prev, .mySwiperHome .swiper-button-prev {
   left: 20px;
 }
-.mySwiper .swiper-button-next {
+.mySwiper .swiper-button-next, .mySwiperHome .swiper-button-next {
   right: 20px;
 }
 .mySwiper .swiper-button-prev,
-.mySwiper .swiper-button-next {
+.mySwiperHome .swiper-button-prev,
+.mySwiper .swiper-button-next,
+.mySwiperHome .swiper-button-next {
   position: absolute;
   width: 50px !important;
   height: 50px !important;
@@ -3402,8 +3404,12 @@ button.swiper-pagination-bullet {
   transition: all 0.3s ease-out;
 }
 .mySwiper .swiper-button-prev::after, .mySwiper .swiper-button-prev::before,
+.mySwiperHome .swiper-button-prev::after,
+.mySwiperHome .swiper-button-prev::before,
 .mySwiper .swiper-button-next::after,
-.mySwiper .swiper-button-next::before {
+.mySwiper .swiper-button-next::before,
+.mySwiperHome .swiper-button-next::after,
+.mySwiperHome .swiper-button-next::before {
   font-size: 20px;
   color: #fff;
   display: flex;
@@ -3414,21 +3420,29 @@ button.swiper-pagination-bullet {
   opacity: 0.5;
 }
 .mySwiper .swiper-button-prev:hover,
-.mySwiper .swiper-button-next:hover {
+.mySwiperHome .swiper-button-prev:hover,
+.mySwiper .swiper-button-next:hover,
+.mySwiperHome .swiper-button-next:hover {
   transform: translateY(-50%) scale(1.1);
 }
 .mySwiper .swiper-button-prev:hover::after, .mySwiper .swiper-button-prev:hover::before,
+.mySwiperHome .swiper-button-prev:hover::after,
+.mySwiperHome .swiper-button-prev:hover::before,
 .mySwiper .swiper-button-next:hover::after,
-.mySwiper .swiper-button-next:hover::before {
+.mySwiper .swiper-button-next:hover::before,
+.mySwiperHome .swiper-button-next:hover::after,
+.mySwiperHome .swiper-button-next:hover::before {
   opacity: 1;
 }
 @media screen and (max-width: 767px) {
   .mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev {
+.mySwiper .swiper-button-prev, .mySwiperHome .swiper-button-next,
+.mySwiperHome .swiper-button-prev {
     display: none;
   }
 }
-.mySwiper .swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet,
+.mySwiperHome .swiper-pagination-bullet {
   position: relative;
   width: 30px;
   height: 30px;
@@ -3439,10 +3453,12 @@ button.swiper-pagination-bullet {
   border: none;
   opacity: 1;
 }
-.mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.mySwiperHome .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border: solid 3px #E6E6E6;
 }
-.mySwiper .swiper-pagination-bullet::before {
+.mySwiper .swiper-pagination-bullet::before,
+.mySwiperHome .swiper-pagination-bullet::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -3454,12 +3470,12 @@ button.swiper-pagination-bullet {
   border-radius: 50%;
   transition: all 0.3s ease-out;
 }
-.mySwiper .swiper-pagination-bullet:hover::before {
+.mySwiper .swiper-pagination-bullet:hover::before,
+.mySwiperHome .swiper-pagination-bullet:hover::before {
   transform: translate(-50%, -50%) scale(1.25);
 }
 .main-visual {
   width: 100%;
-  min-height: 320px;
   overflow: hidden;
 }
 .main-visual .slide-item {
