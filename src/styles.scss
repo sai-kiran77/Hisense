@@ -3978,7 +3978,7 @@ ul li {
 
 
 
-.mySwiper {
+.mySwiper,.mySwiperHome {
     .swiper-button-prev {
         left: 20px;
     }
@@ -3989,7 +3989,9 @@ ul li {
 }
 
 .mySwiper .swiper-button-prev,
-.mySwiper .swiper-button-next {
+.mySwiperHome .swiper-button-prev,
+.mySwiper .swiper-button-next,
+.mySwiperHome .swiper-button-next {
     position: absolute;
     width: 50px !important;
     height: 50px !important;
@@ -4035,7 +4037,7 @@ ul li {
 }
 
 @media screen and (max-width: 767px) {
-    .mySwiper {
+    .mySwiper,.mySwiperHome {
 
         .swiper-button-next,
         .swiper-button-prev {
@@ -4050,7 +4052,8 @@ ul li {
 //     transform: translate(-50%) !important;
 // }
 
-.mySwiper .swiper-pagination-bullet {
+.mySwiper .swiper-pagination-bullet,
+.mySwiperHome .swiper-pagination-bullet {
     position: relative;
     width: 30px;
     height: 30px;
@@ -4131,7 +4134,7 @@ ul li {
 
 .main-visual {
     width: 100%;
-    min-height: 320px;
+    // min-height: 320px;
     overflow: hidden;
 }
 

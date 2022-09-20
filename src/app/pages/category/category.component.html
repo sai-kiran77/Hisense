@@ -109,11 +109,13 @@
                             <div class="top__specifications">
                                 <ng-container
                                     *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
-                                    <div style="font-size: 14px;color: gray;font-weight: bold;">Top Features</div>
-                                    <div *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
-                                        style="font-size: 16px;">
-                                        {{spec}}
-                                    </div>
+                                    <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">Top Features</div>
+                                    <ul style="list-style: inside !important;">
+                                        <li *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
+                                            style="font-size: 16px;list-style: inside !important;">
+                                            {{spec}}
+                                        </li>
+                                    </ul>
                                 </ng-container>
                             </div>
 
@@ -123,7 +125,8 @@
                                 <a class="btn-hisense-v2 btn-hisense-learn"
                                     [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
                                     More</a>
-                                <a class="btn-hisense-v2" *ngIf="product?.product?.product_variants[product.currentIndex]?.product_variant_purchase_links_count"
+                                <a class="btn-hisense-v2"
+                                    *ngIf="product?.product?.product_variants[product.currentIndex]?.product_variant_purchase_links_count"
                                     (click)="buyOptions(product?.product?.product_variants[product.currentIndex]?.relative_url)">Where
                                     to buy</a>
                             </div>
