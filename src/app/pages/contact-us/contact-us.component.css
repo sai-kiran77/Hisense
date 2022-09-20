@@ -3924,6 +3924,10 @@ a:hover {
     a.stick-bar__link.desktop-banner {
         display: block !important;
     }
+
+    .modal h3 {
+        font-size: 15px;
+    }
 }
 
 .footer__submenu-link,
@@ -4136,6 +4140,8 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
+    overflow-x: auto;
+    display: block;
 }
 
 td,
@@ -4144,10 +4150,6 @@ th {
     text-align: left !important;
     padding: 8px !important;
     white-space: nowrap !important;
-}
-
-tr:nth-child(even) {
-    background-color: #dddddd;
 }
 
 th{
@@ -4159,9 +4161,43 @@ th{
     background-color: #dddddd;
 } */
 @media screen and (min-width: 991px) {
-    .flex-wrapper{
+    .flex-wrapper {
         display: grid;
         gap: 2rem;
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+.submit__btn {
+    border: none;
+    outline: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.busy {
+    animation: spin 1s infinite linear;
+    display: inline-block;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    color: #fff !important;
+}
+
+.busy::before {
+    content: "\25E0";
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(359deg);
     }
 }
