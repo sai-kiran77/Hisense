@@ -42,7 +42,7 @@ export class MainSliderComponent implements OnInit {
         this.slides = res.data.home_page_slides;
 
         setTimeout(()=>{
-          let swiper = new Swiper(".mySwiper", {
+          let swiper = new Swiper(".mySwiperHome", {
             slidesPerView: 1,
             loop: true,
             pagination: {

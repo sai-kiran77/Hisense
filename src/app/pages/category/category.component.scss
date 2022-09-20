@@ -606,5 +606,10 @@ display: grid !important;
     display: flex;
     flex-direction: column;
     // gap: 8px;
+    text-align: left;
     min-height: 145px;
+    
+    li{
+        padding-left: 25px;
+    }
 }
