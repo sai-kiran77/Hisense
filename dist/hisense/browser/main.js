@@ -2225,13 +2225,17 @@ __webpack_require__.r(__webpack_exports__);
 
 function ShellComponent_marquee_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "marquee", 2)(1, "a", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "New Launch - Delight 4k Series A6H is here.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Coming soon- 4K 120Hz Native Pannel Qled TV");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " \u00A0\u00A0\u00A0 ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "a", 4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "NOW AVAILABLE THE 120 INCH HISENSE ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](6, "img", 5);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](7, " IN INDIA. ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "New Launch-\"Tornado 2.0\" 102 watts 6 Speaker system sound by Jbl");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, " \u00A0\u00A0\u00A0 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "a", 5);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8, "NOW AVAILABLE THE 120 INCH HISENSE ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](9, "img", 6);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](10, " IN INDIA. ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
 } }
 const _c0 = function (a0) { return { "m-top-45": a0 }; };
@@ -2268,8 +2272,8 @@ class ShellComponent {
     }
 }
 ShellComponent.ɵfac = function ShellComponent_Factory(t) { return new (t || ShellComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
-ShellComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: ShellComponent, selectors: [["app-shell"]], decls: 5, vars: 5, consts: [["class", "dummy", "onmouseover", "this.stop();", "onmouseout", "this.start();", 4, "ngIf"], [3, "ngClass", "top"], ["onmouseover", "this.stop();", "onmouseout", "this.start();", 1, "dummy"], ["routerLink", "/v/75A6H"], ["routerLink", "/c/laser-tv"], ["src", "https://hisense-apis.bloginguru.com/media/pages/home/laser-tv-marquee.webp", "alt", "Laser TV Logo"]], template: function ShellComponent_Template(rf, ctx) { if (rf & 1) {
-        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, ShellComponent_marquee_0_Template, 8, 0, "marquee", 0);
+ShellComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineComponent"]({ type: ShellComponent, selectors: [["app-shell"]], decls: 5, vars: 5, consts: [["class", "dummy", "onmouseover", "this.stop();", "onmouseout", "this.start();", 4, "ngIf"], [3, "ngClass", "top"], ["onmouseover", "this.stop();", "onmouseout", "this.start();", 1, "dummy"], ["routerLink", "/v/65U7H"], ["routerLink", "/v/55A7H"], ["routerLink", "/c/laser-tv"], ["src", "https://hisense-apis.bloginguru.com/media/pages/home/laser-tv-marquee.webp", "alt", "Laser TV Logo"]], template: function ShellComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](0, ShellComponent_marquee_0_Template, 11, 0, "marquee", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](1, "app-header", 1)(2, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](3, "footer");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "app-footer-v2");
