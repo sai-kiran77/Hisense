@@ -2225,13 +2225,13 @@ __webpack_require__.r(__webpack_exports__);
 
 function ShellComponent_marquee_0_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "marquee", 2)(1, "a", 3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Coming soon- 4K 120Hz Native Pannel Qled TV");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](2, "Coming soon- 4K 120Hz Native Panel Qled TV");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " \u00A0\u00A0\u00A0 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, " \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](4, "a", 4);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](5, "New Launch-\"Tornado 2.0\" 102 watts 6 Speaker system sound by Jbl");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, " \u00A0\u00A0\u00A0 ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](6, " \u00A0\u00A0\u00A0\u00A0\u00A0\u00A0 ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](7, "a", 5);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8, "NOW AVAILABLE THE 120 INCH HISENSE ");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](9, "img", 6);
