@@ -17,8 +17,15 @@
         <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video'">
             <div [ngClass]="{'card is-loading': isVideoLoading}">
                 <div class="image" style="width:100%;height:400px;">
-                    <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media" width="100%"
-                        height="400" [src]="media?.sanatized_url"></iframe>
+                    <ng-container *ngIf="metaData?.cover_media[0]?.video_vendor != 'file'">
+                        <iframe allow="autoplay" (load)="load()"
+                            *ngFor="let media of metaData?.cover_media" width="100%" height="400"
+                            [src]="media?.sanatized_url"></iframe>
+                    </ng-container>
+                    <video style="height: 100%;width: 100%;" autoplay controls *ngIf="metaData?.cover_media[0]?.video_vendor == 'file'">
+                        <source [src]="metaData?.cover_media[0]?.full_url" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </ng-container>
@@ -109,7 +116,8 @@
                             <div class="top__specifications">
                                 <ng-container
                                     *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
-                                    <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">Top Features</div>
+                                    <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">Top
+                                        Features</div>
                                     <ul style="list-style: inside !important;">
                                         <li *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
                                             style="font-size: 16px;list-style: inside !important;">
