@@ -70,7 +70,7 @@ function CategoryComponent_ng_container_0_ng_container_5_Template(rf, ctx) { if 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", (ctx_r4.metaData == null ? null : ctx_r4.metaData.cover_media[0] == null ? null : ctx_r4.metaData.cover_media[0].video_vendor) != "file");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", (ctx_r4.metaData == null ? null : ctx_r4.metaData.cover_media[0] == null ? null : ctx_r4.metaData.cover_media[0].video_vendor) == "file");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", ctx_r4.showVideo && (ctx_r4.metaData == null ? null : ctx_r4.metaData.cover_media[0] == null ? null : ctx_r4.metaData.cover_media[0].video_vendor) == "file");
 } }
 function CategoryComponent_ng_container_0_div_6_div_2_img_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "img", 26);
@@ -313,6 +313,7 @@ class CategoryComponent {
         this.purchaseLinks = [];
         this.showPurchaseLinksModal = false;
         this.isVideoLoading = true;
+        this.showVideo = false;
         this.loadedCount = 0;
         this.state.mobileNavToggle.next(false);
     }
@@ -333,6 +334,7 @@ class CategoryComponent {
         // })
     }
     loadMetaData(category) {
+        this.showVideo = false;
         this.api.getSlugData(category).pipe((0,rxjs__WEBPACK_IMPORTED_MODULE_4__.takeWhile)(_ => this.alive)).subscribe({
             next: (res) => {
                 console.log(res);
@@ -342,6 +344,9 @@ class CategoryComponent {
                 res.data.category_products = res.data.category_products.map((obj, i) => {
                     return Object.assign(Object.assign({}, obj), { currentIndex: 0 });
                 });
+                // setTimeout(()=>{
+                this.showVideo = true;
+                // },100)
                 this.metaData = res.data;
                 console.log(this.metaData);
                 this.seoTags(res.data.seo_info);
