@@ -52,7 +52,10 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   }
 
+  showVideo = false;
+
   loadMetaData(category: string) {
+    this.showVideo = false;
     this.api.getSlugData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
         console.log(res);
@@ -68,6 +71,9 @@ export class CategoryComponent implements OnInit, OnDestroy {
             currentIndex: 0
           }
         })
+        // setTimeout(()=>{
+          this.showVideo = true;
+        // },100)
         this.metaData = res.data;
         console.log(this.metaData)
         this.seoTags(res.data.seo_info);
