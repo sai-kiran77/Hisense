@@ -104,7 +104,7 @@ export class PerfectMatch2022Component implements OnInit {
     }, 1000);
   }
 
-  imageLoading = true;
+  imageLoading = false;
 
   imageLoaded() {
     this.imageLoading = false;

@@ -18,9 +18,9 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes),
     NgxWheelModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forChild(routes),
   ]
 })
 export class PerfectMatch2022Module { }
