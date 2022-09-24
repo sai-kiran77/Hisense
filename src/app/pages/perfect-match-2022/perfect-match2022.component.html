@@ -1,5 +1,6 @@
 <div class="bg-image"></div>
 <div class="page__wrapper card" [ngClass]="{'is-loading': imageLoading}">
+    <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
     <ng-container *ngIf="currentStep == 1">
         <form [formGroup]="signupForm">
             <div class="form__blur"></div>
@@ -64,7 +65,6 @@
     </ng-container>
 
     <ng-container *ngIf="currentStep == 2">
-        <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
         <ng-container *ngIf="!imageLoading">
             <!-- <h1>Wheel of Fortune</h1>
             <h3>Try your luck by participating below</h3> -->
