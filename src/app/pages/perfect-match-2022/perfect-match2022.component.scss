@@ -1,0 +1,247 @@
+// @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=DynaPuff:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;600&display=swap');
+
+.bg-image {
+    background-image: url(../../../assets/Spin-The-Wheel-Website-Banner.jpg);
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 80px;
+    filter: blur(1px);
+}
+
+.page__wrapper {
+    height: calc(100vh - 80px);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+        font-size: 54px;
+        margin-bottom: 24px;
+        font-weight: bold;
+    }
+
+    h3 {
+        // font-weight: bold;
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+}
+
+.spinner__wrapper {
+    position: relative;
+    cursor: pointer;
+
+    .icon {
+        cursor: pointer;
+        position: absolute;
+        // width: 37px;
+        // height: 37px;
+        // background: url(../../../assets/football.svg);
+        border-radius: 50%;
+        top: 41.65%;
+        left: 45%;
+    }
+}
+
+
+.spin-btn-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    border-radius: 50%;
+    background: #d3a774;
+    border: 6.2px solid #d3a774;
+    box-shadow: 0 7.15653px 0 1.78913px rgb(0 0 0 / 6%);
+}
+
+.absolute {
+    position: absolute;
+}
+
+.spin-btn {
+    width: 50px;
+    // z-index: 20;
+    height: 50px;
+    // background-color: rgba(52, 142, 246, 1);
+    background-color: #d3a774;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    cursor: pointer;
+
+}
+
+.spinner-wheel-spin-button {
+    min-width: 0;
+    padding: 0;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+
+@media screen and (max-width: 768px) {
+    .spinner__wrapper {
+        .icon {
+            top: 48.45%;
+            left: 44%;
+        }
+    }
+
+    svg {
+        width: 30px !important;
+        height: 30px !important;
+    }
+
+    .spin-btn-wrap {
+        height: 50px;
+        width: 50px;
+    }
+
+    .spin-btn {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+
+form {
+    z-index: 1;
+    color: black;
+    min-width: 450px;
+    padding: 16px;
+    // position: relative;
+    background-color: rgba(255,255,255,0.9);
+    position: relative;
+    border: 6px solid #00B3ac;
+    border-radius: 8px;
+    // box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    // .form__blur {
+    //     filter: blur(1px);
+    //     position: absolute;
+    //     width: 100%;
+    //     height: 100%;
+    //     top: 0;
+    //     left: 0;
+    // }
+
+    * {
+        font-family: 'Dancing Script', cursive;
+    }
+
+    // .container{
+    //     position: absolute;
+    //     z-index: 2;
+    // }
+
+    h2,
+    p {
+        margin-bottom: 16px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+}
+
+.text-danger {
+    color: red;
+    margin-left: 4px;
+    font-size: 14px;
+    text-align: left;
+    span {
+        display: block;
+    }
+}
+
+
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #00B3ac;
+    color: white;
+    padding: 14px 5rem;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    // width: 100%;
+    opacity: 0.9;
+    font-weight: bold;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin: 16px auto;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 0 !important;
+    display: inline-block;
+    // border: none;
+    display: block;
+    background: rgba(255,255,255,0.8);
+    border-radius: 6px;
+    border: 1px solid #00B3ac;
+    outline: none;
+
+    &::placeholder {
+        color: black;
+    }
+}
+
+// input:focus {
+//     outline: 3px solid #00B3ac;
+//     // outline: 3px solid #C16E25;
+// }
+
+label {
+    text-align: left;
+    display: block;
+}
+
+.loader {
+    width: 24px;
+    height: 24px;
+    border: 5px solid #FFF;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}

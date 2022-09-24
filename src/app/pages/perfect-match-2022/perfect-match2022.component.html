@@ -1,0 +1,107 @@
+<div class="bg-image"></div>
+<div class="page__wrapper card" [ngClass]="{'is-loading': imageLoading}">
+    <ng-container *ngIf="currentStep == 1">
+        <form [formGroup]="signupForm">
+            <div class="form__blur"></div>
+            <div class="container">
+                <h2>Register Now</h2>
+                <p>Please fill the form to create an account.</p>
+                <hr>
+
+                <div>
+                    <label for="name"><b>Name</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['name'].errors">
+                        <span *ngIf="signupForm.controls['name'].errors['required']">Name is required!</span>
+                        <span *ngIf="signupForm.controls['name'].errors['pattern']">Name can only contain
+                            alphabets!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email"><b>Email</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['email'].errors">
+                        <span *ngIf="signupForm.controls['email'].errors['required']">Email is required!</span>
+                        <span *ngIf="signupForm.controls['email'].errors['email']">Enter a valid email!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="phone"><b>Phone</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['phone'].errors">
+                        <span *ngIf="signupForm.controls['phone'].errors['required']">Phone Number is
+                            required!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['minlength']">Phone Number can only contain
+                            10
+                            digits!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['maxlength']">Phone Number can only contain
+                            10
+                            digits!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['pattern']">Phone Number can only contain
+                            digits!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="pincode"><b>Pincode</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode"
+                        formControlName="zipcode">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['zipcode'].errors">
+                        <span *ngIf="signupForm.controls['zipcode'].errors['required']">Pincode is required!</span>
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <button type="button" class="submit__btn" (click)="onSubmit()">
+                        <span>Submit</span>
+                        <span *ngIf="signupLoading" class="loader"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep == 2">
+        <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
+        <ng-container *ngIf="!imageLoading">
+            <!-- <h1>Wheel of Fortune</h1>
+            <h3>Try your luck by participating below</h3> -->
+            <form class="spinner__wrapper">
+                <div class="icon">
+                    <div class="absolute spin-btn-wrap">
+                        <button type="button"
+                            class="aha-button spinner-wheel-spin-button spin-btn aha-button-xs aha-button-primary">
+                            <!-- <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" name="play"
+                                class="path-fill-current inline-block" viewBox="0 0 22 24">
+                                <path
+                                    d="M19.669 10.385L6.199 2.257c-1.094-.66-2.77-.02-2.77 1.613v16.253c0 1.465 1.557 2.348 2.77 1.613l13.47-8.124c1.201-.723 1.205-2.504 0-3.227z"
+                                    fill="#fff"></path>
+                            </svg> -->
+                        </button>
+                    </div>
+                </div>
+                <ng-container *ngIf="width && height">
+                    <ngx-wheel Roulette [width]="width" [height]="height" [spinDuration]="8" [items]="items"
+                        [innerRadius]="20" [spinAmount]="10" [textOrientation]="textOrientation"
+                        [textAlignment]="textAlignment" pointerStrokeColor="white" [pointerFillColor]="'#d3a774'"
+                        [idToLandOn]="idToLandOn" [disableSpinOnClick]="true" (onSpinStart)="before()"
+                        (onSpinComplete)="after()">
+                    </ngx-wheel>
+                </ng-container>
+                <div class="clearfix">
+                    <button type="button" class="submit__btn" (click)="spin()">
+                        <span>Spin</span>
+                        <span *ngIf="isSpinning" class="loader"></span>
+                    </button>
+                </div>
+            </form>
+        </ng-container>
+    </ng-container>
+</div>
+
+<audio #myaudio id="myAudio">
+    <source src="../../../assets/audio/mixkit-fantasy-game-success-notification-270.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>

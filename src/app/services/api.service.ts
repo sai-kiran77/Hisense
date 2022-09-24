@@ -36,6 +36,10 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
+  PerfectMatch(body: any, endpoint: string = '/campaigns/perfect-match-2022/register') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
   login(body: any, endpoint: string = '/delightful-india/login') {
     return this.http.post(this.baseURL + endpoint, body);
   }
