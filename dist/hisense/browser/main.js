@@ -38,12 +38,16 @@ const routes = [
                 loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("src_app_pages_delightful-india_delightful-india_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/delightful-india/delightful-india.module */ 6598)).then(m => m.DelightfulIndiaModule)
             },
             {
+                path: 'perfect-match-2022',
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_pages_perfect-match-2022_perfect-match-2022_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/perfect-match-2022/perfect-match-2022.module */ 1087)).then(m => m.PerfectMatch2022Module)
+            },
+            {
                 path: 'FIFA-2022',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_fifa-event_fifa-event_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/fifa-event/fifa-event.module */ 9476)).then(m => m.FifaEventModule)
             },
             {
                 path: 'wheel-of-fortune',
-                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_spinner_spinner_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/spinner/spinner.module */ 8169)).then(m => m.SpinnerModule)
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("common"), __webpack_require__.e("src_app_pages_spinner_spinner_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/spinner/spinner.module */ 8169)).then(m => m.SpinnerModule)
             },
             // {
             //   path: 'about-us',
@@ -2602,6 +2606,9 @@ class ApiService {
         return this.http.post(this.baseURL + endpoint, body);
     }
     signup(body, endpoint = '/delightful-india/register') {
+        return this.http.post(this.baseURL + endpoint, body);
+    }
+    PerfectMatch(body, endpoint = '/campaigns/perfect-match-2022/register') {
         return this.http.post(this.baseURL + endpoint, body);
     }
     login(body, endpoint = '/delightful-india/login') {
