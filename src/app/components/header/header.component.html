@@ -33,6 +33,37 @@
                             </div>
                         </div>
                     </li>
+                    <li>
+                        <a routerLink="/new-launches">New Launches</a>
+                    </li>
+                    <!-- <li>
+                        <a [routerLink]="'/new-launches'">New Launches</a>
+                        <div style="width: 25%;" (click)="newLaunchesDropDownToggle = true">
+                            <a style="margin-left: auto !important;" class="toggle-dropdown"
+                                id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
+                                aria-label="Toggle dropdown"></a>
+                        </div>
+                        <div [ngClass]="{'menu-in': newLaunchesDropDownToggle}" class="dropdown-menu"
+                            aria-labelledby="toggle-dropdown-tv-and-audio">
+                            <button (click)="newLaunchesDropDownToggle = false" class="mobile-back" type="button"
+                                aria-label="Toggle sub navigation">
+                                <span class="navbar-back-icon"></span>
+                            </button>
+                            <div class="section-title">New Launches</div>
+                            <div class="sub-menu" style="background-color: white;">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of obj['sub-menu']"
+                                    style="width: 200px !important;">
+                                    <span class="thumbnail" style="overflow: hidden;">
+                                        <div class="img">
+                                            <img [src]="subLink.image" [alt]="New Launches"
+                                                style="object-fit: contain;max-height: 180px;min-width: 170px;">
+                                        </div>
+                                    </span>
+                                    <span class="title">New Launches</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li> -->
                 </ul>
                 <ul class="right">
                     <li>

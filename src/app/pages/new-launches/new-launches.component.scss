@@ -1,0 +1,60 @@
+.ls-bg {
+    cursor: pointer;
+}
+
+.get__started__btn {
+    position: absolute;
+    bottom: 15px;
+    padding: 1rem 2rem;
+    z-index: 100;
+    right: 20%;
+    background: #FF9E06;
+    background: linear-gradient(to bottom right, #FF9E06, #50C138);
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 3rem;
+    cursor: pointer;
+    color: white;
+    transition: background 300ms ease-in-out;
+
+    &:hover {
+        /* Created with https://www.css-gradient.com */
+        background: #FF9C01;
+        background: -webkit-linear-gradient(top left, #FF9C01, #FFA501);
+        background: -moz-linear-gradient(top left, #FF9C01, #FFA501);
+        background: linear-gradient(to bottom right, #FF9C01, #FFA501);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .get__started__btn {
+        display: none;
+    }
+}
+
+// .carousel-nav--btn {
+.swiper-pagination-bullet {
+    color: #09cbc6 !important;
+    border: none !important;
+    width: 10px !important;
+    height: 10px !important;
+    outline: none !important;
+    margin: 7px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    border: 2px solid #09cbc6 !important;
+    transition: background-color 500ms !important;
+    cursor: pointer !important;
+
+    &::before {
+        display: none !important;
+    }
+}
+
+// .current-btn {
+//     background: rgba(0, 0, 0, 1);
+// }
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #00b3ac !important;
+}

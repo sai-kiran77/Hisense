@@ -22,6 +22,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/delightful-india/delightful-india.module').then(m => m.DelightfulIndiaModule)
       },
       {
+        path: 'new-launches',
+        loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
+      },
+      {
         path: 'FIFA-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
       },
