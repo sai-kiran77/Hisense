@@ -1,6 +1,6 @@
 <div class="bg-image"></div>
 <div class="page__wrapper card" [ngClass]="{'is-loading': imageLoading}">
-    <!-- <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;"> -->
+    <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
     <ng-container *ngIf="currentStep == 1">
         <form [formGroup]="signupForm">
             <div class="form__blur"></div>
