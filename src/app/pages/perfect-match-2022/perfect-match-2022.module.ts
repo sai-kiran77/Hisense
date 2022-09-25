@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PerfectMatch2022Component } from './perfect-match2022.component';
 import { RouterModule, Routes } from '@angular/router';
 import { NgxWheelModule } from 'ngx-wheel';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -20,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     NgxWheelModule,
     ReactiveFormsModule,
+    FormsModule,
     RouterModule.forChild(routes),
   ]
 })
