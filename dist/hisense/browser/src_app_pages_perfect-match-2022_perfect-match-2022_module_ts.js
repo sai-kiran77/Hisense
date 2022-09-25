@@ -738,10 +738,10 @@ class PerfectMatch2022Component {
     this.alive = true;
     this.innerRadius = 25;
     this.signupForm = this.fb.group({
-      name: ['sdada', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern(/^[A-Za-z ]+$/)]],
-      email: ['saikirantdsfdest2@yopmail.com', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.email]],
-      phone: ['9234567890', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.maxLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern(/^[0-9]*$/)]],
-      zipcode: ['123456', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required]] // terms: ['', [Validators.required]]
+      name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern(/^[A-Za-z ]+$/)]],
+      email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.email]],
+      phone: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.minLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.maxLength(10), _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern(/^[0-9]*$/)]],
+      zipcode: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required]] // terms: ['', [Validators.required]]
 
     });
     this.seed = ['Umbrella', 'Football', 'Water Bottle', 'Cap', 'Washing Machine', 'TV', 'FIFA 2022 Ticket', 'Better luck next time'];
