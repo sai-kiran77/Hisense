@@ -44,6 +44,31 @@ export class PerfectMatch2022Component implements OnInit {
     private title: Title,
     private meta: Meta,) {
     this.state.mobileNavToggle.next(false);
+    this.title.setTitle("Perfect match contest! | Hisense India");
+    this.meta.updateTag({
+      name: 'description',
+      content: "Participate in Hisense India Perfect Match contest and get a chance to win daily goodies and lucky draw!"
+    })
+    this.meta.updateTag({
+      property: "og:description",
+      content: "Participate in Hisense India Perfect Match contest and get a chance to win daily goodies and lucky draw!"
+    })
+    this.meta.updateTag({
+      property: "og:image",
+      content: "https://api.hisense-india.com/media/pages/home/slider/desktop-image-1664126417-347.jpeg"
+    })
+    this.meta.updateTag({
+      property: "og:site_name",
+      content: "Hisense India"
+    })
+    this.meta.updateTag({
+      property: "og:title",
+      content: "Perfect match contest! | Hisense India"
+    })
+    this.meta.updateTag({
+      property: "og:url",
+      content: "https://hisense-demo.bloginguru.com/perfect-match-2022/17bd66f2-3cfb-11ed-bbf7-02757926c1f2"
+    })
     if (isPlatformBrowser(this.platformId)) {
       // if (window.innerWidth <= 375) {
       //   this.height = 300;
@@ -53,9 +78,9 @@ export class PerfectMatch2022Component implements OnInit {
       //   this.height = 340;
       //   this.width = 340;
       // } else if (window.innerWidth <= 576) {
-        //   this.height = 375;
-        //   this.width = 375;
-        //   this.textFontSize = "11";
+      //   this.height = 375;
+      //   this.width = 375;
+      //   this.textFontSize = "11";
       // } else 
       if (window.innerWidth <= 768) {
         this.textFontSize = "12";
@@ -191,10 +216,10 @@ export class PerfectMatch2022Component implements OnInit {
     //   alert(`Congratulations you are eligible for ${this.seed[this.idToLandOn]}`);
     // }, 750)
     // setTimeout(() => {
-      this.wheel.reset();
-      this.currentStep = 4;
-      this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
-      // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
+    this.wheel.reset();
+    this.currentStep = 4;
+    this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
+    // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
     // }, 1000);
   }
 
