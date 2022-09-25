@@ -870,16 +870,81 @@ a.social-btn.youtube {
     top: 100%;
     transform: translate(-50%, -50%);
     z-index: 999999999;
-    // transform: translate(-1px, -28px);
 }
 
 .wheel__back__img {
-    // width: 425px;
-    // height: 488px;
     position: absolute;
     width: 337px !important;
     height: 388px !important;
     left: 50%;
     top: 100%;
-    transform: translate(-50%,-39%);
+    transform: translate(-50%, -39%);
+}
+
+.wheel__back__football__img {
+    position: absolute;
+    top: 95%;
+    width: 55px;
+    z-index: 9999999999;
+    border-radius: 50%;
+    height: 55px;
+    left: 44%
+}
+
+form.spinner__wrapper {
+    max-width: 450px !important;
+}
+
+// @media screen and (min-width: 375px) {
+//     .wheel__back__football__img {   
+//         left: 43%;
+//     }
+// }
+
+// @media screen and (min-width: 400px) {
+//     .wheel__back__football__img {   
+//         left: 44%;
+//     }
+// }
+
+// @media screen and (min-width: 550px) {
+//     .wheel__back__football__img {   
+//         left: 45%;
+//     }
+// }
+
+@media screen and (min-width: 768px) {
+    .ngx-wheel {
+        position: absolute;
+        top: 0;
+        left: 0;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -49%);
+        z-index: 999999999;
+    }
+
+    .wheel__back__img {
+        position: absolute;
+        width: 496px !important;
+        height: 570px !important;
+        left: 50%;
+        top: 80%;
+        transform: translate(-50%, -39%);
+    }
+
+    form.spinner__wrapper {
+        min-width: 600px !important;
+        margin: 20px 0;
+        min-height: 750px;
+    }
+
+    .step__3{
+        height: 120%;
+    }
+
+    .wheel__back__football__img {
+        top: 78%;
+        left: 45%;
+    }
 }

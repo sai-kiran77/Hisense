@@ -19,17 +19,18 @@ export class PerfectMatch2022Component implements OnInit {
   width;
   height;
   currentStep = 1;
-  textFontSize = "16";
+  textFontSize = "18";
   alive = true;
+  innerRadius = 25;
 
   @ViewChild(NgxWheelComponent, { static: false }) wheel: any;
   @ViewChild('myaudio', { static: false }) audio: any;
 
   signupForm = this.fb.group({
-    name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
-    email: ['', [Validators.required, Validators.email]],
-    phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
-    zipcode: ['', [Validators.required]],
+    name: ['sdada', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
+    email: ['saikirantdsfdest2@yopmail.com', [Validators.required, Validators.email]],
+    phone: ['9234567890', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+    zipcode: ['123456', [Validators.required]],
     // terms: ['', [Validators.required]]
   });
 
@@ -51,19 +52,20 @@ export class PerfectMatch2022Component implements OnInit {
       // } else if (window.innerWidth <= 450) {
       //   this.height = 340;
       //   this.width = 340;
-        this.textFontSize = "12";
       // } else if (window.innerWidth <= 576) {
-      //   this.height = 375;
-      //   this.width = 375;
-      //   this.textFontSize = "11";
-      // } else if (window.innerWidth <= 768) {
-      //   this.height = 400;
-      //   this.width = 400;
-      //   this.textFontSize = "12";
-      // } else {
+        //   this.height = 375;
+        //   this.width = 375;
+        //   this.textFontSize = "11";
+      // } else 
+      if (window.innerWidth <= 768) {
+        this.textFontSize = "12";
         this.height = 350;
         this.width = 350;
-      // }
+        this.innerRadius = 20;
+      } else {
+        this.height = 500;
+        this.width = 500;
+      }
     }
   }
 
@@ -71,7 +73,7 @@ export class PerfectMatch2022Component implements OnInit {
   idToLandOn: any;
   items: any[] = [];
   textOrientation: TextOrientation = TextOrientation.HORIZONTAL;
-  textAlignment: TextAlignment = TextAlignment.CENTER;
+  textAlignment: TextAlignment = TextAlignment.INNER;
 
   ngOnInit() {
     this.route.params.pipe(takeWhile(_ => this.alive)).subscribe((routeParams: any) => {
@@ -129,14 +131,14 @@ export class PerfectMatch2022Component implements OnInit {
     })
     const obj = data?.meta;
     // data.meta.forEach((obj: any) => {
-      if (obj) {
-        for (let key in obj.attributes) {
-          this.meta.updateTag({
-            property: key,
-            content: obj.attributes[key]
-          })
-        }
+    if (obj) {
+      for (let key in obj.attributes) {
+        this.meta.updateTag({
+          property: key,
+          content: obj.attributes[key]
+        })
       }
+    }
     // })
   }
 
@@ -185,15 +187,15 @@ export class PerfectMatch2022Component implements OnInit {
     this.audio.nativeElement.play();
     // audio.play();
     this.isSpinning = false;
-    setTimeout(() => {
-      alert(`Congratulations you are eligible for ${this.seed[this.idToLandOn]}`);
-    }, 750)
-    setTimeout(() => {
+    // setTimeout(() => {
+    //   alert(`Congratulations you are eligible for ${this.seed[this.idToLandOn]}`);
+    // }, 750)
+    // setTimeout(() => {
       this.wheel.reset();
       this.currentStep = 4;
       this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
       // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
-    }, 1000);
+    // }, 1000);
   }
 
   imageLoading = true;
