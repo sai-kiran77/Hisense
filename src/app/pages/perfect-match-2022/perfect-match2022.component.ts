@@ -27,10 +27,10 @@ export class PerfectMatch2022Component implements OnInit {
   @ViewChild('myaudio', { static: false }) audio: any;
 
   signupForm = this.fb.group({
-    name: ['sdada', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
-    email: ['saikirantdsfdest2@yopmail.com', [Validators.required, Validators.email]],
-    phone: ['9234567890', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
-    zipcode: ['123456', [Validators.required]],
+    name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
+    email: ['', [Validators.required, Validators.email]],
+    phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],
+    zipcode: ['', [Validators.required]],
     // terms: ['', [Validators.required]]
   });
 
