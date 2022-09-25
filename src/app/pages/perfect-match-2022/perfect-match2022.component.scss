@@ -300,17 +300,17 @@ label {
             * {
                 margin-bottom: 12px !important;
             }
-        
+
             h2 {
                 font-size: 20px;
                 font-weight: bold;
             }
-        
+
             h3 {
                 font-size: 16px;
             }
 
-            p{
+            p {
                 font-size: 14px !important;
             }
         }
@@ -335,8 +335,8 @@ label {
     }
 
     form {
-        width: 95%;
-        padding: 24px 8px;
+        width: 98%;
+        padding: 24px 4px;
     }
 }
 
@@ -849,4 +849,37 @@ a.social-btn.ig {
 a.social-btn.youtube {
     background-image: url("../../../assets/icon-youtube.svg");
     background-color: #eb212e;
+}
+
+.relative {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.ngx-wheel {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    // z-index: 999999999;
+    // transform: translateY(-10px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    z-index: 999999999;
+    // transform: translate(-1px, -28px);
+}
+
+.wheel__back__img {
+    // width: 425px;
+    // height: 488px;
+    position: absolute;
+    width: 337px !important;
+    height: 388px !important;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%,-39%);
 }

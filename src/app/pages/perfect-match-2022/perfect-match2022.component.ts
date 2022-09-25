@@ -44,26 +44,26 @@ export class PerfectMatch2022Component implements OnInit {
     private meta: Meta,) {
     this.state.mobileNavToggle.next(false);
     if (isPlatformBrowser(this.platformId)) {
-      if (window.innerWidth <= 375) {
-        this.height = 300;
-        this.width = 300;
-        this.textFontSize = "10";
-      } else if (window.innerWidth <= 450) {
-        this.height = 340;
-        this.width = 340;
-        this.textFontSize = "10";
-      } else if (window.innerWidth <= 576) {
-        this.height = 375;
-        this.width = 375;
-        this.textFontSize = "11";
-      } else if (window.innerWidth <= 768) {
-        this.height = 400;
-        this.width = 400;
+      // if (window.innerWidth <= 375) {
+      //   this.height = 300;
+      //   this.width = 300;
+      //   this.textFontSize = "10";
+      // } else if (window.innerWidth <= 450) {
+      //   this.height = 340;
+      //   this.width = 340;
         this.textFontSize = "12";
-      } else {
-        this.height = 500;
-        this.width = 500;
-      }
+      // } else if (window.innerWidth <= 576) {
+      //   this.height = 375;
+      //   this.width = 375;
+      //   this.textFontSize = "11";
+      // } else if (window.innerWidth <= 768) {
+      //   this.height = 400;
+      //   this.width = 400;
+      //   this.textFontSize = "12";
+      // } else {
+        this.height = 350;
+        this.width = 350;
+      // }
     }
   }
 
@@ -80,6 +80,7 @@ export class PerfectMatch2022Component implements OnInit {
         this.getRegistrationSummary(routeParams['uuid']);
       }
     });
+    this.setSpinData();
   }
 
   getRegistrationSummary(uuid: any) {

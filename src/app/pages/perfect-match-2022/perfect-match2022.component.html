@@ -155,28 +155,32 @@
             <!-- <h1>Wheel of Fortune</h1>
             <h3>Try your luck by participating below</h3> -->
             <form class="spinner__wrapper">
-                <div class="icon">
+                <!-- <div class="icon">
                     <div class="absolute spin-btn-wrap">
                         <button type="button"
                             class="aha-button spinner-wheel-spin-button spin-btn aha-button-xs aha-button-primary">
-                            <!-- <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" name="play"
-                                class="path-fill-current inline-block" viewBox="0 0 22 24">
-                                <path
-                                    d="M19.669 10.385L6.199 2.257c-1.094-.66-2.77-.02-2.77 1.613v16.253c0 1.465 1.557 2.348 2.77 1.613l13.47-8.124c1.201-.723 1.205-2.504 0-3.227z"
-                                    fill="#fff"></path>
-                            </svg> -->
                         </button>
                     </div>
+                </div> -->
+                <!-- <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" name="play"
+                    class="path-fill-current inline-block" viewBox="0 0 22 24">
+                    <path
+                        d="M19.669 10.385L6.199 2.257c-1.094-.66-2.77-.02-2.77 1.613v16.253c0 1.465 1.557 2.348 2.77 1.613l13.47-8.124c1.201-.723 1.205-2.504 0-3.227z"
+                        fill="#fff"></path>
+                </svg> -->
+                <div class="relative">
+                    <img class="wheel__back__img" src="assets/wheel_back.png" width="434" height="434">
+                    <ng-container *ngIf="width && height">
+                        <!-- [ngStyle]="{'width': width + 'px', 'height': height + 'px'}" -->
+                        <ngx-wheel class="ngx-wheel" Roulette [width]="width" [height]="height" [spinDuration]="8" [items]="items"
+                            [innerRadius]="0" [spinAmount]="10" [textOrientation]="textOrientation"
+                            [textAlignment]="textAlignment" pointerStrokeColor="white" [pointerFillColor]="'#d3a774'"
+                            [idToLandOn]="idToLandOn" [disableSpinOnClick]="true" (onSpinStart)="before()"
+                            (onSpinComplete)="after()">
+                        </ngx-wheel>
+                    </ng-container>
                 </div>
-                <ng-container *ngIf="width && height">
-                    <ngx-wheel Roulette [width]="width" [height]="height" [spinDuration]="8" [items]="items"
-                        [innerRadius]="20" [spinAmount]="10" [textOrientation]="textOrientation"
-                        [textAlignment]="textAlignment" pointerStrokeColor="white" [pointerFillColor]="'#d3a774'"
-                        [idToLandOn]="idToLandOn" [disableSpinOnClick]="true" (onSpinStart)="before()"
-                        (onSpinComplete)="after()">
-                    </ngx-wheel>
-                </ng-container>
-                <div class="clearfix">
+                <div class="clearfix" style="margin-top: auto;">
                     <button type="button" class="submit__btn" (click)="spin()">
                         <span>Spin</span>
                         <span *ngIf="isSpinning" class="loader"></span>
