@@ -1,0 +1,214 @@
+<div *ngIf="currentStep != 4" [ngClass]="{'step__3':currentStep == 3}" class="bg-image"></div>
+<div class="page-wrapper card" [ngClass]="{'is-loading': imageLoading,'height-auto thakyou__step': currentStep == 4,'step__3':currentStep == 3}">
+    <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
+    <div class="page__heading" *ngIf="currentStep == 4">
+        <h2>Congratulations!</h2>
+        <h3 *ngIf="thankYouMessage">{{thankYouMessage}}</h3>
+        <p>Please Share this page on social media</p>
+    </div>
+    <ng-container *ngIf="currentStep == 1">
+        <form [formGroup]="signupForm">
+            <div class="form__blur"></div>
+            <div class="container">
+                <h2>Register Now</h2>
+                <p>Please fill the form to create an account.</p>
+                <hr>
+
+                <div>
+                    <label for="name"><b>Name</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Name" name="name" id="name" formControlName="name">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['name'].errors">
+                        <span *ngIf="signupForm.controls['name'].errors['required']">Name is required!</span>
+                        <span *ngIf="signupForm.controls['name'].errors['pattern']">Name can only contain
+                            alphabets!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="email"><b>Email</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Email" name="email" id="email" formControlName="email">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['email'].errors">
+                        <span *ngIf="signupForm.controls['email'].errors['required']">Email is required!</span>
+                        <span *ngIf="signupForm.controls['email'].errors['email']">Enter a valid email!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="phone"><b>Phone</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Phone Number" name="phone" formControlName="phone">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['phone'].errors">
+                        <span *ngIf="signupForm.controls['phone'].errors['required']">Phone Number is
+                            required!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['minlength']">Phone Number can only contain
+                            10
+                            digits!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['maxlength']">Phone Number can only contain
+                            10
+                            digits!</span>
+                        <span *ngIf="signupForm.controls['phone'].errors['pattern']">Phone Number can only contain
+                            digits!</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="pincode"><b>Pincode</b><span class="text-danger">*</span></label>
+                    <input type="text" placeholder="Enter Pincode" name="pincode" id="pincode"
+                        formControlName="zipcode">
+                    <div class="text-danger" *ngIf="isSignupFormSubmitted && signupForm.controls['zipcode'].errors">
+                        <span *ngIf="signupForm.controls['zipcode'].errors['required']">Pincode is required!</span>
+                    </div>
+                </div>
+
+                <div class="clearfix">
+                    <button type="button" class="submit__btn" (click)="onSubmit()">
+                        <span>Submit</span>
+                        <span *ngIf="signupLoading" class="loader"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep == 2">
+        <form>
+            <!-- <div class="form__blur"></div> -->
+            <div class="container">
+                <!-- start Quiz button -->
+                <!-- <div class="start_btn" *ngIf="showStartQuiz"><button (click)="onStartQuiz()">Start Quiz</button></div> -->
+
+                <!-- Info Box -->
+                <div class="info_box" [ngClass]="{'activeInfo': showRules}">
+                    <div class="info-title"><span>Some Rules of this Quiz</span></div>
+                    <ol class="info-list">
+                        <li class="info">You will have only <span>30 seconds</span> per each question.</li>
+                        <!-- <li class="info">2. Once you select your answer, it can't be undone.</li> -->
+                        <li class="info">You can't select any option once time goes off.</li>
+                        <li class="info">You can't exit from the Quiz while you're playing.</li>
+                        <li class="info">You'll get points on the basis of your correct answers.</li>
+                    </ol>
+                    <div class="buttons" style="justify-content: center;">
+                        <!-- <button class="quit">Exit Quiz</button> -->
+                        <button class="start_btn" style="white-space: nowrap;" (click)="onContinueRules()">Start Quiz</button>
+                    </div>
+                </div>
+
+                <!-- Quiz Box -->
+                <div class="quiz_box" [ngClass]="{'activeQuiz': showQuestions}">
+                    <header>
+                        <div class="title">Quiz</div>
+                        <div class="timer">
+                            <div class="time_left_txt">{{timeText}}</div>
+                            <div class="timer_sec">{{timeCount}}</div>
+                        </div>
+                        <div class="time_line"></div>
+                    </header>
+                    <section>
+                        <div class="que_text">
+                            <!-- Here I've inserted question from JavaScript -->
+                            {{currentQuestion}}
+                        </div>
+                        <div class="option_list">
+                            <!-- Here I've inserted options from JavaScript -->
+                            <label class="option" *ngFor="let option of currentOptions">
+                                <input type="radio" name="option" [value]="option.id" [(ngModel)]="selectedOption">
+                                <span>{{option?.answer}}</span>
+                            </label>
+                        </div>
+                    </section>
+
+                    <!-- footer of Quiz Box -->
+                    <footer>
+                        <div class="total_que">
+                            <!-- Here I've inserted Question Count Number from JavaScript -->
+                            {{currentQuestionNumber}} of {{questions.length}} Questions
+                        </div>
+                        <button [ngClass]="{'show': showQuestions}" (click)="onNextQuestion()" class="next_btn"
+                            *ngIf="currentQuestionNumber != questions.length">Next Que</button>
+                        <button [ngClass]="{'show': showQuestions}" (click)="onSubmitQuiz()" class="next_btn"
+                            *ngIf="currentQuestionNumber == questions.length">Submit</button>
+                    </footer>
+                </div>
+
+                <!-- Result Box -->
+                <div class="result_box" [ngClass]="{'activeResult': showQuizResults}">
+                    <div class="icon">
+                        <!-- <i class="fas fa-crown"></i> -->
+                        <img *ngIf="!quizStatus" width="48" height="48" src="assets/warning.svg" alt="warning">
+                        <img *ngIf="quizStatus" width="48" height="48" src="assets/crown.svg" alt="warning">
+                    </div>
+                    <div class="complete_text">You've completed the Quiz!</div>
+                    <!-- Here I've inserted Score Result from JavaScript -->
+                    <div class="score_text">{{quizResultMessage}}</div>
+                    <div class="buttons">
+                        <button class="quit" (click)="onQuitQuiz()">Quit Quiz</button>
+                        <button class="restart" *ngIf="!quizStatus" (click)="onReplayQuiz()">Replay Quiz</button>
+                        <button class="restart" *ngIf="quizStatus" (click)="onSpinTheWheel()">Spin the Wheel</button>
+                    </div>
+                </div>
+
+            </div>
+        </form>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep == 3">
+        <ng-container *ngIf="!imageLoading">
+            <!-- <h1>Wheel of Fortune</h1>
+            <h3>Try your luck by participating below</h3> -->
+            <form class="spinner__wrapper">
+                <!-- <div class="icon">
+                    <div class="absolute spin-btn-wrap">
+                        <button type="button"
+                            class="aha-button spinner-wheel-spin-button spin-btn aha-button-xs aha-button-primary">
+                        </button>
+                    </div>
+                </div> -->
+                <!-- <svg width="40" height="40" fill="none" xmlns="http://www.w3.org/2000/svg" name="play"
+                    class="path-fill-current inline-block" viewBox="0 0 22 24">
+                    <path
+                        d="M19.669 10.385L6.199 2.257c-1.094-.66-2.77-.02-2.77 1.613v16.253c0 1.465 1.557 2.348 2.77 1.613l13.47-8.124c1.201-.723 1.205-2.504 0-3.227z"
+                        fill="#fff"></path>
+                </svg> -->
+                <div class="relative">
+                    <img class="wheel__back__img" src="assets/wheel_back.png" width="434" height="434">
+                    <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30">
+                    <ng-container *ngIf="width && height">
+                        <!-- [ngStyle]="{'width': width + 'px', 'height': height + 'px'}" -->
+                        <ngx-wheel class="ngx-wheel" Roulette [width]="width" [height]="height" [spinDuration]="8" [items]="items"
+                            [innerRadius]="innerRadius" [spinAmount]="10" [textOrientation]="textOrientation"
+                            [textAlignment]="textAlignment" pointerStrokeColor="white" [pointerFillColor]="'#d3a774'"
+                            [idToLandOn]="idToLandOn" [disableSpinOnClick]="true" (onSpinStart)="before()"
+                            (onSpinComplete)="after()">
+                        </ngx-wheel>
+                    </ng-container>
+                </div>
+                <div class="clearfix" style="margin-top: auto;">
+                    <button type="button" class="submit__btn" (click)="spin()">
+                        <span>Spin</span>
+                        <span *ngIf="isSpinning" class="loader"></span>
+                    </button>
+                </div>
+            </form>
+        </ng-container>
+    </ng-container>
+
+    <ng-container *ngIf="currentStep == 4">
+        <form>
+            <img class="thankyou__img" [src]="thankYouImage">
+
+            <div style="display: flex;gap: 12px;padding: 0 15px 10px;justify-content: center;">
+                <a style="min-height: auto;" class="social-btn fb" [href]="socialLinks?.facebook"
+                    target="_blank">Facebook</a>
+                <a style="min-height: auto;" class="social-btn twitter" [href]="socialLinks?.twitter"
+                    target="_blank">Twitter</a>
+                <!-- <a style="min-height: auto;" class="social-btn youtube"
+                    href="https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA" target="_blank">Youtube</a> -->
+                <a style="min-height: auto;" class="social-btn ig"></a>
+            </div>
+        </form>
+    </ng-container>
+</div>
+
+<audio #myaudio id="myAudio">
+    <source src="../../../assets/audio/mixkit-fantasy-game-success-notification-270.wav" type="audio/ogg">
+    Your browser does not support the audio element.
+</audio>

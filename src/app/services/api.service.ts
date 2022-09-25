@@ -36,6 +36,24 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
+  PerfectMatch(body: any, endpoint: string = '/campaigns/perfect-match-2022/register') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
+  submitPerfectMatchQuiz(body: any, endpoint: string = '/campaigns/perfect-match-2022/submit-quiz') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
+  spinTheWheel(body: any, endpoint: string = '/campaigns/perfect-match-2022/spin-the-wheel') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
+  registrationSummary(params: any, endpoint: string = '/campaigns/perfect-match-2022/get-summary') {
+    return this.http.get(this.baseURL + endpoint, {
+      params
+    });
+  }
+
   login(body: any, endpoint: string = '/delightful-india/login') {
     return this.http.post(this.baseURL + endpoint, body);
   }
