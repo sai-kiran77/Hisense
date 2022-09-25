@@ -71,7 +71,7 @@
 
     <ng-container *ngIf="currentStep == 2">
         <form>
-            <div class="form__blur"></div>
+            <!-- <div class="form__blur"></div> -->
             <div class="container">
                 <!-- start Quiz button -->
                 <!-- <div class="start_btn" *ngIf="showStartQuiz"><button (click)="onStartQuiz()">Start Quiz</button></div> -->
@@ -191,14 +191,14 @@
             <img class="thankyou__img" [src]="thankYouImage">
 
             <div style="display: flex;gap: 12px;padding: 0 15px 10px;justify-content: center;">
-                <a style="min-height: auto;" class="social-btn fb" href="https://www.facebook.com/HisenseIndiaOfficial/"
+                <a style="min-height: auto;" class="social-btn fb" [href]="socialLinks?.facebook"
                     target="_blank">Facebook</a>
-                <a style="min-height: auto;" class="social-btn twitter" href="https://twitter.com/Hisense_IND"
+                <a style="min-height: auto;" class="social-btn twitter" [href]="socialLinks?.twitter"
                     target="_blank">Twitter</a>
-                <a style="min-height: auto;" class="social-btn youtube"
+                <!-- <a style="min-height: auto;" class="social-btn youtube"
                     href="https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA" target="_blank">Youtube</a>
                 <a style="min-height: auto;" class="social-btn ig"
-                    href="https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA" target="_blank">Youtube</a>
+                    href="https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA" target="_blank">Youtube</a> -->
             </div>
         </form>
     </ng-container>

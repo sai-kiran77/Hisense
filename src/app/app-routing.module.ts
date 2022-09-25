@@ -26,6 +26,10 @@ const routes: Routes = [
         loadChildren: () => import('./pages/perfect-match-2022/perfect-match-2022.module').then(m => m.PerfectMatch2022Module)
       },
       {
+        path: 'perfect-match-2022/:uuid',
+        loadChildren: () => import('./pages/perfect-match-2022/perfect-match-2022.module').then(m => m.PerfectMatch2022Module)
+      },
+      {
         path: 'FIFA-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
       },

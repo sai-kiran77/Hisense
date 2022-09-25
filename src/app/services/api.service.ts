@@ -48,8 +48,8 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
-  registrationSummary(body: any, params: any, endpoint: string = '/campaigns/perfect-match-2022/get-summary') {
-    return this.http.post(this.baseURL + endpoint, body, {
+  registrationSummary(params: any, endpoint: string = '/campaigns/perfect-match-2022/get-summary') {
+    return this.http.get(this.baseURL + endpoint, {
       params
     });
   }

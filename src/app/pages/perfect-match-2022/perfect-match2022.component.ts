@@ -1,7 +1,10 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core';
 import { FormBuilder, NgModel, Validators } from '@angular/forms';
+import { Title, Meta } from '@angular/platform-browser';
+import { ActivatedRoute, Router } from '@angular/router';
 import { NgxWheelComponent, TextAlignment, TextOrientation } from 'ngx-wheel';
+import { takeWhile } from 'rxjs/operators';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
@@ -17,6 +20,7 @@ export class PerfectMatch2022Component implements OnInit {
   height;
   currentStep = 1;
   textFontSize = "16";
+  alive = true;
 
   @ViewChild(NgxWheelComponent, { static: false }) wheel: any;
   @ViewChild('myaudio', { static: false }) audio: any;
@@ -33,7 +37,11 @@ export class PerfectMatch2022Component implements OnInit {
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
     private fb: FormBuilder,
     private api: ApiService,
-    private state: GlobalStateService) {
+    private state: GlobalStateService,
+    private route: ActivatedRoute,
+    private router: Router,
+    private title: Title,
+    private meta: Meta,) {
     this.state.mobileNavToggle.next(false);
     if (isPlatformBrowser(this.platformId)) {
       if (window.innerWidth <= 375) {
@@ -66,7 +74,31 @@ export class PerfectMatch2022Component implements OnInit {
   textAlignment: TextAlignment = TextAlignment.CENTER;
 
   ngOnInit() {
+    this.route.params.pipe(takeWhile(_ => this.alive)).subscribe((routeParams: any) => {
+      // console.log(routeParams);
+      if (routeParams['uuid']) {
+        this.getRegistrationSummary(routeParams['uuid']);
+      }
+    });
+  }
 
+  getRegistrationSummary(uuid: any) {
+    const params = {
+      registration_uuid: uuid
+    }
+    this.api.registrationSummary(params).subscribe((res: any) => {
+      // console.log(res);
+      if (res?.data?.next_step == 'thank_you') {
+        this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
+        this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+        this.socialLinks = res?.data?.next_step_data?.thank_you?.social_share_links
+        this.currentStep = 4;
+        this.seoTags(res?.data?.next_step_data?.thank_you?.seo_info);
+      }
+    }, (err: any) => {
+      console.log(err);
+      this.router.navigate(['/perfect-match-2022']);
+    })
   }
 
   ngAfterViewInit() {
@@ -88,6 +120,25 @@ export class PerfectMatch2022Component implements OnInit {
     }));
   }
 
+  seoTags(data: any) {
+    this.title.setTitle(data.title);
+    this.meta.updateTag({
+      name: 'description',
+      content: data.description
+    })
+    const obj = data?.meta;
+    // data.meta.forEach((obj: any) => {
+      if (obj) {
+        for (let key in obj.attributes) {
+          this.meta.updateTag({
+            property: key,
+            content: obj.attributes[key]
+          })
+        }
+      }
+    // })
+  }
+
   reset() {
     this.wheel.reset();
   }
@@ -99,6 +150,8 @@ export class PerfectMatch2022Component implements OnInit {
   isSpinning = false;
   thankYouImage: any;
   thankYouMessage: any;
+  thankYouUUID: any;
+  socialLinks: any;
 
   async spin() {
     if (this.isSpinning) {
@@ -113,14 +166,15 @@ export class PerfectMatch2022Component implements OnInit {
     this.wheel.spin();
 
     this.api.spinTheWheel({ user_id: this.loggedInUserData.id, spin_wheel_prize_id: this.idToLandOn + 1 }).subscribe((res: any) => {
-      console.log(res);
+      // console.log(res);
       if (res?.data?.next_step == 'thank_you') {
-        this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
-        this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+        // this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
+        // this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+        this.thankYouUUID = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_registration?.uuid;
+        this.socialLinks = res?.data?.next_step_data?.thank_you?.social_share_links;
+        this.seoTags(res?.data?.next_step_data?.thank_you?.seo_info);
       }
     }, (err: any) => {
-      console.log(err);
-      this.signupLoading = false;
       console.log(err);
     })
   }
@@ -136,6 +190,7 @@ export class PerfectMatch2022Component implements OnInit {
     setTimeout(() => {
       this.wheel.reset();
       this.currentStep = 4;
+      this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
       // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
     }, 1000);
   }
@@ -157,7 +212,7 @@ export class PerfectMatch2022Component implements OnInit {
       this.api.PerfectMatch(this.signupForm.value).subscribe((res: any) => {
         this.loggedInUserData = res?.data?.user;
         this.signupLoading = false;
-        console.log(res);
+        // console.log(res);
         if (res?.data?.next_step == "take_quiz") {
           this.currentStep = 2;
           this.showRules = true;
@@ -171,12 +226,12 @@ export class PerfectMatch2022Component implements OnInit {
         }
 
         if (res?.data?.next_step == 'thank_you') {
-          this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
-          this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
-          this.currentStep = 4;
+          // this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
+          // this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+          // this.currentStep = 4;
+          this.router.navigate(['/perfect-match-2022', res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_registration?.uuid]);
         }
       }, (err: any) => {
-        console.log(err);
         this.signupLoading = false;
         console.log(err);
       })
@@ -267,19 +322,19 @@ export class PerfectMatch2022Component implements OnInit {
       answer_id: this.selectedOption,
     });
     this.selectedOption = null;
-    console.log(this.quizAnswers);
-    console.log(this.loggedInUserData);
+    // console.log(this.quizAnswers);
+    // console.log(this.loggedInUserData);
     this.api.submitPerfectMatchQuiz({ quiz: this.quizAnswers, user_id: this.loggedInUserData.id }).subscribe((res: any) => {
       // this.loggedInUserData = res?.data?.user;
       // this.signupLoading = false;
       this.resetQuizCurrentContentDisplay();
-      console.log(res);
+      // console.log(res);
       if (res?.data?.next_step == "take_quiz") {
         this.quizResultMessage = "and sorry , you didn't score enough to pass the quiz";
         this.quizStatus = 0;
         this.showQuizResults = true;
         this.questions = res?.data?.next_step_data?.quiz_questions;
-        console.log(this.questions);
+        // console.log(this.questions);
       }
 
       if (res?.data?.next_step == 'spin_wheel') {
@@ -295,8 +350,6 @@ export class PerfectMatch2022Component implements OnInit {
       console.log(err);
       this.resetQuizCurrentContentDisplay();
       this.showRules = true;
-      // this.signupLoading = false;
-      console.log(err);
     })
   }
 

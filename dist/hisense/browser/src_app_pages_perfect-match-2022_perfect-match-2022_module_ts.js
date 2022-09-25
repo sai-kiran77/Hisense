@@ -64,8 +64,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/forms */ 587);
 /* harmony import */ var ngx_wheel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-wheel */ 1798);
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! rxjs/operators */ 2566);
 /* harmony import */ var src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! src/app/services/api.service */ 5830);
 /* harmony import */ var src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/global-state.service */ 6007);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+
+
+
 
 
 
@@ -347,12 +353,12 @@ function PerfectMatch2022Component_ng_container_4_Template(rf, ctx) {
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_label_37_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_label_36_Template(rf, ctx) {
   if (rf & 1) {
     const _r33 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "label", 53)(1, "input", 54);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function PerfectMatch2022Component_ng_container_5_label_37_Template_input_ngModelChange_1_listener($event) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("ngModelChange", function PerfectMatch2022Component_ng_container_5_label_36_Template_input_ngModelChange_1_listener($event) {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r33);
       const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return ctx_r32.selectedOption = $event;
@@ -379,12 +385,12 @@ const _c1 = function (a0) {
   };
 };
 
-function PerfectMatch2022Component_ng_container_5_button_41_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_button_40_Template(rf, ctx) {
   if (rf & 1) {
     const _r35 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 55);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_41_Template_button_click_0_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_40_Template_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r35);
       const ctx_r34 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return ctx_r34.onNextQuestion();
@@ -399,12 +405,12 @@ function PerfectMatch2022Component_ng_container_5_button_41_Template(rf, ctx) {
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_button_42_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_button_41_Template(rf, ctx) {
   if (rf & 1) {
     const _r37 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 55);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_42_Template_button_click_0_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_41_Template_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r37);
       const ctx_r36 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return ctx_r36.onSubmitQuiz();
@@ -419,24 +425,24 @@ function PerfectMatch2022Component_ng_container_5_button_42_Template(rf, ctx) {
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_img_45_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_img_44_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "img", 56);
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_img_46_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_img_45_Template(rf, ctx) {
   if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](0, "img", 57);
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_button_54_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_button_53_Template(rf, ctx) {
   if (rf & 1) {
     const _r39 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 58);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_54_Template_button_click_0_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_53_Template_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r39);
       const ctx_r38 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return ctx_r38.onReplayQuiz();
@@ -446,12 +452,12 @@ function PerfectMatch2022Component_ng_container_5_button_54_Template(rf, ctx) {
   }
 }
 
-function PerfectMatch2022Component_ng_container_5_button_55_Template(rf, ctx) {
+function PerfectMatch2022Component_ng_container_5_button_54_Template(rf, ctx) {
   if (rf & 1) {
     const _r41 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "button", 58);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_55_Template_button_click_0_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_button_54_Template_button_click_0_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r41);
       const ctx_r40 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](2);
       return ctx_r40.onSpinTheWheel();
@@ -484,85 +490,83 @@ function PerfectMatch2022Component_ng_container_5_Template(rf, ctx) {
     const _r43 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
 
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "form");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](2, "div", 11);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 12)(4, "div", 27)(5, "div", 28)(6, "span");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](7, "Some Rules of this Quiz");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](1, "form")(2, "div", 12)(3, "div", 27)(4, "div", 28)(5, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](6, "Some Rules of this Quiz");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "ol", 29)(9, "li", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](10, "You will have only ");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](11, "span");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, "30 seconds");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](7, "ol", 29)(8, "li", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9, "You will have only ");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "span");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "30 seconds");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](13, " per each question.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, " per each question.");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](14, "li", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15, "You can't select any option once time goes off.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "li", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](14, "You can't select any option once time goes off.");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "li", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](17, "You can't exit from the Quiz while you're playing.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](15, "li", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](16, "You can't exit from the Quiz while you're playing.");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](18, "li", 30);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](19, "You'll get points on the basis of your correct answers.");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](17, "li", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](18, "You'll get points on the basis of your correct answers.");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](20, "div", 31)(21, "button", 32);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_Template_button_click_21_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "div", 31)(20, "button", 32);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_Template_button_click_20_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r43);
       const ctx_r42 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return ctx_r42.onContinueRules();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](22, "Start Quiz");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](21, "Start Quiz");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "div", 33)(24, "header")(25, "div", 34);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](26, "Quiz");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](22, "div", 33)(23, "header")(24, "div", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](25, "Quiz");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](27, "div", 35)(28, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](29);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](26, "div", 35)(27, "div", 36);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](28);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](30, "div", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](31);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](29, "div", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](30);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](32, "div", 38);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](31, "div", 38);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](33, "section")(34, "div", 39);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](32, "section")(33, "div", 39);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](34);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](36, "div", 40);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](37, PerfectMatch2022Component_ng_container_5_label_37_Template, 4, 3, "label", 41);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](35, "div", 40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](36, PerfectMatch2022Component_ng_container_5_label_36_Template, 4, 3, "label", 41);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](38, "footer")(39, "div", 42);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](40);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](37, "footer")(38, "div", 42);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](39);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](40, PerfectMatch2022Component_ng_container_5_button_40_Template, 2, 3, "button", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](41, PerfectMatch2022Component_ng_container_5_button_41_Template, 2, 3, "button", 43);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](42, PerfectMatch2022Component_ng_container_5_button_42_Template, 2, 3, "button", 43);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](43, "div", 44)(44, "div", 45);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](45, PerfectMatch2022Component_ng_container_5_img_45_Template, 1, 0, "img", 46);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](46, PerfectMatch2022Component_ng_container_5_img_46_Template, 1, 0, "img", 47);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](42, "div", 44)(43, "div", 45);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](44, PerfectMatch2022Component_ng_container_5_img_44_Template, 1, 0, "img", 46);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](45, PerfectMatch2022Component_ng_container_5_img_45_Template, 1, 0, "img", 47);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](47, "div", 48);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](48, "You've completed the Quiz!");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](46, "div", 48);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](47, "You've completed the Quiz!");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](49, "div", 49);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](50);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](48, "div", 49);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](49);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](51, "div", 50)(52, "button", 51);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_Template_button_click_52_listener() {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](50, "div", 50)(51, "button", 51);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function PerfectMatch2022Component_ng_container_5_Template_button_click_51_listener() {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r43);
       const ctx_r44 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
       return ctx_r44.onQuitQuiz();
     });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](53, "Quit Quiz");
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](52, "Quit Quiz");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](53, PerfectMatch2022Component_ng_container_5_button_53_Template, 2, 0, "button", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](54, PerfectMatch2022Component_ng_container_5_button_54_Template, 2, 0, "button", 52);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](55, PerfectMatch2022Component_ng_container_5_button_55_Template, 2, 0, "button", 52);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
   }
 
   if (rf & 2) {
     const ctx_r3 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](16, _c2, ctx_r3.showRules));
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](19);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](18, _c3, ctx_r3.showQuestions));
@@ -683,12 +687,6 @@ function PerfectMatch2022Component_ng_container_7_Template(rf, ctx) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](6, "a", 66);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](7, "Twitter");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "a", 67);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9, "Youtube");
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "a", 68);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "Youtube");
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementContainerEnd"]();
   }
@@ -697,6 +695,10 @@ function PerfectMatch2022Component_ng_container_7_Template(rf, ctx) {
     const ctx_r5 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("src", ctx_r5.thankYouImage, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("href", ctx_r5.socialLinks == null ? null : ctx_r5.socialLinks.facebook, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("href", ctx_r5.socialLinks == null ? null : ctx_r5.socialLinks.twitter, _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsanitizeUrl"]);
   }
 }
 
@@ -708,13 +710,18 @@ const _c5 = function (a0, a1) {
 };
 
 class PerfectMatch2022Component {
-  constructor(platformId, fb, api, state) {
+  constructor(platformId, fb, api, state, route, router, title, meta) {
     this.platformId = platformId;
     this.fb = fb;
     this.api = api;
     this.state = state;
+    this.route = route;
+    this.router = router;
+    this.title = title;
+    this.meta = meta;
     this.currentStep = 1;
     this.textFontSize = "16";
+    this.alive = true;
     this.signupForm = this.fb.group({
       name: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.pattern(/^[A-Za-z ]+$/)]],
       email: ['', [_angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.required, _angular_forms__WEBPACK_IMPORTED_MODULE_4__.Validators.email]],
@@ -770,7 +777,35 @@ class PerfectMatch2022Component {
     }
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.params.pipe((0,rxjs_operators__WEBPACK_IMPORTED_MODULE_7__.takeWhile)(_ => this.alive)).subscribe(routeParams => {
+      // console.log(routeParams);
+      if (routeParams['uuid']) {
+        this.getRegistrationSummary(routeParams['uuid']);
+      }
+    });
+  }
+
+  getRegistrationSummary(uuid) {
+    const params = {
+      registration_uuid: uuid
+    };
+    this.api.registrationSummary(params).subscribe(res => {
+      var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q; // console.log(res);
+
+
+      if (((_a = res === null || res === void 0 ? void 0 : res.data) === null || _a === void 0 ? void 0 : _a.next_step) == 'thank_you') {
+        this.thankYouImage = (_e = (_d = (_c = (_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step_data) === null || _c === void 0 ? void 0 : _c.thank_you) === null || _d === void 0 ? void 0 : _d.campaign_perfect_match_2022_spin_wheel_prize) === null || _e === void 0 ? void 0 : _e.image_full_url;
+        this.thankYouMessage = (_j = (_h = (_g = (_f = res === null || res === void 0 ? void 0 : res.data) === null || _f === void 0 ? void 0 : _f.next_step_data) === null || _g === void 0 ? void 0 : _g.thank_you) === null || _h === void 0 ? void 0 : _h.campaign_perfect_match_2022_spin_wheel_prize) === null || _j === void 0 ? void 0 : _j.message;
+        this.socialLinks = (_m = (_l = (_k = res === null || res === void 0 ? void 0 : res.data) === null || _k === void 0 ? void 0 : _k.next_step_data) === null || _l === void 0 ? void 0 : _l.thank_you) === null || _m === void 0 ? void 0 : _m.social_share_links;
+        this.currentStep = 4;
+        this.seoTags((_q = (_p = (_o = res === null || res === void 0 ? void 0 : res.data) === null || _o === void 0 ? void 0 : _o.next_step_data) === null || _p === void 0 ? void 0 : _p.thank_you) === null || _q === void 0 ? void 0 : _q.seo_info);
+      }
+    }, err => {
+      console.log(err);
+      this.router.navigate(['/perfect-match-2022']);
+    });
+  }
 
   ngAfterViewInit() {// console.log(this.wheel);
   }
@@ -788,6 +823,25 @@ class PerfectMatch2022Component {
       textFillStyle: "black",
       textFontSize: this.textFontSize
     }));
+  }
+
+  seoTags(data) {
+    this.title.setTitle(data.title);
+    this.meta.updateTag({
+      name: 'description',
+      content: data.description
+    });
+    const obj = data === null || data === void 0 ? void 0 : data.meta; // data.meta.forEach((obj: any) => {
+
+    if (obj) {
+      for (let key in obj.attributes) {
+        this.meta.updateTag({
+          property: key,
+          content: obj.attributes[key]
+        });
+      }
+    } // })
+
   }
 
   reset() {
@@ -819,17 +873,18 @@ class PerfectMatch2022Component {
         user_id: _this.loggedInUserData.id,
         spin_wheel_prize_id: _this.idToLandOn + 1
       }).subscribe(res => {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l; // console.log(res);
 
-        console.log(res);
 
         if (((_a = res === null || res === void 0 ? void 0 : res.data) === null || _a === void 0 ? void 0 : _a.next_step) == 'thank_you') {
-          _this.thankYouImage = (_e = (_d = (_c = (_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step_data) === null || _c === void 0 ? void 0 : _c.thank_you) === null || _d === void 0 ? void 0 : _d.campaign_perfect_match_2022_spin_wheel_prize) === null || _e === void 0 ? void 0 : _e.image_full_url;
-          _this.thankYouMessage = (_j = (_h = (_g = (_f = res === null || res === void 0 ? void 0 : res.data) === null || _f === void 0 ? void 0 : _f.next_step_data) === null || _g === void 0 ? void 0 : _g.thank_you) === null || _h === void 0 ? void 0 : _h.campaign_perfect_match_2022_spin_wheel_prize) === null || _j === void 0 ? void 0 : _j.message;
+          // this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
+          // this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+          _this.thankYouUUID = (_e = (_d = (_c = (_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step_data) === null || _c === void 0 ? void 0 : _c.thank_you) === null || _d === void 0 ? void 0 : _d.campaign_perfect_match_2022_registration) === null || _e === void 0 ? void 0 : _e.uuid;
+          _this.socialLinks = (_h = (_g = (_f = res === null || res === void 0 ? void 0 : res.data) === null || _f === void 0 ? void 0 : _f.next_step_data) === null || _g === void 0 ? void 0 : _g.thank_you) === null || _h === void 0 ? void 0 : _h.social_share_links;
+
+          _this.seoTags((_l = (_k = (_j = res === null || res === void 0 ? void 0 : res.data) === null || _j === void 0 ? void 0 : _j.next_step_data) === null || _k === void 0 ? void 0 : _k.thank_you) === null || _l === void 0 ? void 0 : _l.seo_info);
         }
       }, err => {
-        console.log(err);
-        _this.signupLoading = false;
         console.log(err);
       });
     })();
@@ -845,7 +900,8 @@ class PerfectMatch2022Component {
     }, 750);
     setTimeout(() => {
       this.wheel.reset();
-      this.currentStep = 4; // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
+      this.currentStep = 4;
+      this.router.navigate(['/perfect-match-2022', this.thankYouUUID]); // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
     }, 1000);
   }
 
@@ -859,11 +915,10 @@ class PerfectMatch2022Component {
 
     if (this.signupForm && this.signupForm.valid) {
       this.api.PerfectMatch(this.signupForm.value).subscribe(res => {
-        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t, _u;
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q;
 
         this.loggedInUserData = (_a = res === null || res === void 0 ? void 0 : res.data) === null || _a === void 0 ? void 0 : _a.user;
-        this.signupLoading = false;
-        console.log(res);
+        this.signupLoading = false; // console.log(res);
 
         if (((_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step) == "take_quiz") {
           this.currentStep = 2;
@@ -879,12 +934,12 @@ class PerfectMatch2022Component {
         }
 
         if (((_l = res === null || res === void 0 ? void 0 : res.data) === null || _l === void 0 ? void 0 : _l.next_step) == 'thank_you') {
-          this.thankYouImage = (_q = (_p = (_o = (_m = res === null || res === void 0 ? void 0 : res.data) === null || _m === void 0 ? void 0 : _m.next_step_data) === null || _o === void 0 ? void 0 : _o.thank_you) === null || _p === void 0 ? void 0 : _p.campaign_perfect_match_2022_spin_wheel_prize) === null || _q === void 0 ? void 0 : _q.image_full_url;
-          this.thankYouMessage = (_u = (_t = (_s = (_r = res === null || res === void 0 ? void 0 : res.data) === null || _r === void 0 ? void 0 : _r.next_step_data) === null || _s === void 0 ? void 0 : _s.thank_you) === null || _t === void 0 ? void 0 : _t.campaign_perfect_match_2022_spin_wheel_prize) === null || _u === void 0 ? void 0 : _u.message;
-          this.currentStep = 4;
+          // this.thankYouImage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.image_full_url;
+          // this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
+          // this.currentStep = 4;
+          this.router.navigate(['/perfect-match-2022', (_q = (_p = (_o = (_m = res === null || res === void 0 ? void 0 : res.data) === null || _m === void 0 ? void 0 : _m.next_step_data) === null || _o === void 0 ? void 0 : _o.thank_you) === null || _p === void 0 ? void 0 : _p.campaign_perfect_match_2022_registration) === null || _q === void 0 ? void 0 : _q.uuid]);
         }
       }, err => {
-        console.log(err);
         this.signupLoading = false;
         console.log(err);
       });
@@ -961,9 +1016,9 @@ class PerfectMatch2022Component {
       question_id: this.currentQuestionId,
       answer_id: this.selectedOption
     });
-    this.selectedOption = null;
-    console.log(this.quizAnswers);
-    console.log(this.loggedInUserData);
+    this.selectedOption = null; // console.log(this.quizAnswers);
+    // console.log(this.loggedInUserData);
+
     this.api.submitPerfectMatchQuiz({
       quiz: this.quizAnswers,
       user_id: this.loggedInUserData.id
@@ -972,15 +1027,13 @@ class PerfectMatch2022Component {
       // this.signupLoading = false;
 
 
-      this.resetQuizCurrentContentDisplay();
-      console.log(res);
+      this.resetQuizCurrentContentDisplay(); // console.log(res);
 
       if (((_a = res === null || res === void 0 ? void 0 : res.data) === null || _a === void 0 ? void 0 : _a.next_step) == "take_quiz") {
         this.quizResultMessage = "and sorry , you didn't score enough to pass the quiz";
         this.quizStatus = 0;
         this.showQuizResults = true;
-        this.questions = (_c = (_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step_data) === null || _c === void 0 ? void 0 : _c.quiz_questions;
-        console.log(this.questions);
+        this.questions = (_c = (_b = res === null || res === void 0 ? void 0 : res.data) === null || _b === void 0 ? void 0 : _b.next_step_data) === null || _c === void 0 ? void 0 : _c.quiz_questions; // console.log(this.questions);
       }
 
       if (((_d = res === null || res === void 0 ? void 0 : res.data) === null || _d === void 0 ? void 0 : _d.next_step) == 'spin_wheel') {
@@ -994,9 +1047,7 @@ class PerfectMatch2022Component {
     }, err => {
       console.log(err);
       this.resetQuizCurrentContentDisplay();
-      this.showRules = true; // this.signupLoading = false;
-
-      console.log(err);
+      this.showRules = true;
     });
   }
 
@@ -1029,7 +1080,7 @@ class PerfectMatch2022Component {
 }
 
 PerfectMatch2022Component.ɵfac = function PerfectMatch2022Component_Factory(t) {
-  return new (t || PerfectMatch2022Component)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__.PLATFORM_ID), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__.GlobalStateService));
+  return new (t || PerfectMatch2022Component)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__.PLATFORM_ID), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Meta));
 };
 
 PerfectMatch2022Component.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
@@ -1050,7 +1101,7 @@ PerfectMatch2022Component.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_M
   },
   decls: 12,
   vars: 10,
-  consts: [["class", "bg-image", 4, "ngIf"], [1, "page-wrapper", "card", 3, "ngClass"], ["src", "assets/Spin-The-Wheel-Website-Banner.jpg", 2, "display", "none", 3, "load"], ["class", "page__heading", 4, "ngIf"], [4, "ngIf"], ["id", "myAudio"], ["myaudio", ""], ["src", "../../../assets/audio/mixkit-fantasy-game-success-notification-270.wav", "type", "audio/ogg"], [1, "bg-image"], [1, "page__heading"], [3, "formGroup"], [1, "form__blur"], [1, "container"], ["for", "name"], [1, "text-danger"], ["type", "text", "placeholder", "Enter Name", "name", "name", "id", "name", "formControlName", "name"], ["class", "text-danger", 4, "ngIf"], ["for", "email"], ["type", "text", "placeholder", "Enter Email", "name", "email", "id", "email", "formControlName", "email"], ["for", "phone"], ["type", "text", "placeholder", "Enter Phone Number", "name", "phone", "formControlName", "phone"], ["for", "pincode"], ["type", "text", "placeholder", "Enter Pincode", "name", "pincode", "id", "pincode", "formControlName", "zipcode"], [1, "clearfix"], ["type", "button", 1, "submit__btn", 3, "click"], ["class", "loader", 4, "ngIf"], [1, "loader"], [1, "info_box", 3, "ngClass"], [1, "info-title"], [1, "info-list"], [1, "info"], [1, "buttons", 2, "justify-content", "center"], [1, "start_btn", 2, "white-space", "nowrap", 3, "click"], [1, "quiz_box", 3, "ngClass"], [1, "title"], [1, "timer"], [1, "time_left_txt"], [1, "timer_sec"], [1, "time_line"], [1, "que_text"], [1, "option_list"], ["class", "option", 4, "ngFor", "ngForOf"], [1, "total_que"], ["class", "next_btn", 3, "ngClass", "click", 4, "ngIf"], [1, "result_box", 3, "ngClass"], [1, "icon"], ["width", "48", "height", "48", "src", "assets/warning.svg", "alt", "warning", 4, "ngIf"], ["width", "48", "height", "48", "src", "assets/crown.svg", "alt", "warning", 4, "ngIf"], [1, "complete_text"], [1, "score_text"], [1, "buttons"], [1, "quit", 3, "click"], ["class", "restart", 3, "click", 4, "ngIf"], [1, "option"], ["type", "radio", "name", "option", 3, "value", "ngModel", "ngModelChange"], [1, "next_btn", 3, "ngClass", "click"], ["width", "48", "height", "48", "src", "assets/warning.svg", "alt", "warning"], ["width", "48", "height", "48", "src", "assets/crown.svg", "alt", "warning"], [1, "restart", 3, "click"], [1, "spinner__wrapper"], [1, "absolute", "spin-btn-wrap"], ["type", "button", 1, "aha-button", "spinner-wheel-spin-button", "spin-btn", "aha-button-xs", "aha-button-primary"], ["Roulette", "", "pointerStrokeColor", "white", 3, "width", "height", "spinDuration", "items", "innerRadius", "spinAmount", "textOrientation", "textAlignment", "pointerFillColor", "idToLandOn", "disableSpinOnClick", "onSpinStart", "onSpinComplete"], [1, "thankyou__img", 3, "src"], [2, "display", "flex", "gap", "12px", "padding", "0 15px 10px", "justify-content", "center"], ["href", "https://www.facebook.com/HisenseIndiaOfficial/", "target", "_blank", 1, "social-btn", "fb", 2, "min-height", "auto"], ["href", "https://twitter.com/Hisense_IND", "target", "_blank", 1, "social-btn", "twitter", 2, "min-height", "auto"], ["href", "https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA", "target", "_blank", 1, "social-btn", "youtube", 2, "min-height", "auto"], ["href", "https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA", "target", "_blank", 1, "social-btn", "ig", 2, "min-height", "auto"]],
+  consts: [["class", "bg-image", 4, "ngIf"], [1, "page-wrapper", "card", 3, "ngClass"], ["src", "assets/Spin-The-Wheel-Website-Banner.jpg", 2, "display", "none", 3, "load"], ["class", "page__heading", 4, "ngIf"], [4, "ngIf"], ["id", "myAudio"], ["myaudio", ""], ["src", "../../../assets/audio/mixkit-fantasy-game-success-notification-270.wav", "type", "audio/ogg"], [1, "bg-image"], [1, "page__heading"], [3, "formGroup"], [1, "form__blur"], [1, "container"], ["for", "name"], [1, "text-danger"], ["type", "text", "placeholder", "Enter Name", "name", "name", "id", "name", "formControlName", "name"], ["class", "text-danger", 4, "ngIf"], ["for", "email"], ["type", "text", "placeholder", "Enter Email", "name", "email", "id", "email", "formControlName", "email"], ["for", "phone"], ["type", "text", "placeholder", "Enter Phone Number", "name", "phone", "formControlName", "phone"], ["for", "pincode"], ["type", "text", "placeholder", "Enter Pincode", "name", "pincode", "id", "pincode", "formControlName", "zipcode"], [1, "clearfix"], ["type", "button", 1, "submit__btn", 3, "click"], ["class", "loader", 4, "ngIf"], [1, "loader"], [1, "info_box", 3, "ngClass"], [1, "info-title"], [1, "info-list"], [1, "info"], [1, "buttons", 2, "justify-content", "center"], [1, "start_btn", 2, "white-space", "nowrap", 3, "click"], [1, "quiz_box", 3, "ngClass"], [1, "title"], [1, "timer"], [1, "time_left_txt"], [1, "timer_sec"], [1, "time_line"], [1, "que_text"], [1, "option_list"], ["class", "option", 4, "ngFor", "ngForOf"], [1, "total_que"], ["class", "next_btn", 3, "ngClass", "click", 4, "ngIf"], [1, "result_box", 3, "ngClass"], [1, "icon"], ["width", "48", "height", "48", "src", "assets/warning.svg", "alt", "warning", 4, "ngIf"], ["width", "48", "height", "48", "src", "assets/crown.svg", "alt", "warning", 4, "ngIf"], [1, "complete_text"], [1, "score_text"], [1, "buttons"], [1, "quit", 3, "click"], ["class", "restart", 3, "click", 4, "ngIf"], [1, "option"], ["type", "radio", "name", "option", 3, "value", "ngModel", "ngModelChange"], [1, "next_btn", 3, "ngClass", "click"], ["width", "48", "height", "48", "src", "assets/warning.svg", "alt", "warning"], ["width", "48", "height", "48", "src", "assets/crown.svg", "alt", "warning"], [1, "restart", 3, "click"], [1, "spinner__wrapper"], [1, "absolute", "spin-btn-wrap"], ["type", "button", 1, "aha-button", "spinner-wheel-spin-button", "spin-btn", "aha-button-xs", "aha-button-primary"], ["Roulette", "", "pointerStrokeColor", "white", 3, "width", "height", "spinDuration", "items", "innerRadius", "spinAmount", "textOrientation", "textAlignment", "pointerFillColor", "idToLandOn", "disableSpinOnClick", "onSpinStart", "onSpinComplete"], [1, "thankyou__img", 3, "src"], [2, "display", "flex", "gap", "12px", "padding", "0 15px 10px", "justify-content", "center"], ["target", "_blank", 1, "social-btn", "fb", 2, "min-height", "auto", 3, "href"], ["target", "_blank", 1, "social-btn", "twitter", 2, "min-height", "auto", 3, "href"]],
   template: function PerfectMatch2022Component_Template(rf, ctx) {
     if (rf & 1) {
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](0, PerfectMatch2022Component_div_0_Template, 1, 0, "div", 0);
@@ -1061,9 +1112,9 @@ PerfectMatch2022Component.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_M
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](3, PerfectMatch2022Component_div_3_Template, 6, 1, "div", 3);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](4, PerfectMatch2022Component_ng_container_4_Template, 46, 6, "ng-container", 4);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](5, PerfectMatch2022Component_ng_container_5_Template, 56, 22, "ng-container", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](5, PerfectMatch2022Component_ng_container_5_Template, 55, 22, "ng-container", 4);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](6, PerfectMatch2022Component_ng_container_6_Template, 2, 1, "ng-container", 4);
-      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](7, PerfectMatch2022Component_ng_container_7_Template, 12, 1, "ng-container", 4);
+      _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](7, PerfectMatch2022Component_ng_container_7_Template, 8, 3, "ng-container", 4);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "audio", 5, 6);
       _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](10, "source", 7);
