@@ -55,7 +55,7 @@ export class PerfectMatch2022Component implements OnInit {
     })
     this.meta.updateTag({
       property: "og:image",
-      content: "https://hisense-apis.bloginguru.com/media/pages/campaigns/perfect-match-2022/sports_cap.webp"
+      content: "https://api.hisense-india.com/media/pages/home/slider/desktop-image-1664126417-347.jpeg"
     })
     this.meta.updateTag({
       property: "og:site_name",
