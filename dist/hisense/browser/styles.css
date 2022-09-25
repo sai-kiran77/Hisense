@@ -435,11 +435,6 @@ h6 {
   margin: 0 auto;
   transition: padding-top 0.5s ease-out;
 }
-@media (max-width: 1023px) {
-  .page-wrapper {
-    padding-top: 60px;
-  }
-}
 @media (max-width: 767px) {
   .page-wrapper {
     overflow: hidden;
