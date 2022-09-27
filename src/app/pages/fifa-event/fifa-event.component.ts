@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
@@ -195,14 +196,21 @@ export class FifaEventComponent implements OnInit {
     "desktop_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`,
     "mobile_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`
   }
-  
-  
+
+  yesterdayDate: any;
+
+
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
-  private state: GlobalStateService) {
+    private state: GlobalStateService,
+    private api: ApiService) {
     this.state.mobileNavToggle.next(false);
+    const date = new Date();
+    this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${date.getDate() - 1}`;
+    // console.log(this.yesterdayDate);
   }
 
   ngOnInit(): void {
+    this.getRegistrations({ target: { value: this.yesterdayDate } });
   }
 
   ngAfterViewInit() {
@@ -250,9 +258,26 @@ export class FifaEventComponent implements OnInit {
     }
   }
 
-  // ngDoCheck() {
-  //   console.log('chnage detected');
-  // }
+  registrations: any;
+
+  getRegistrations(event: any) {
+    console.log(event.target.value)
+    const params = {
+      date: event.target.value,
+      user_progress: 'prize_winners'
+    };
+
+    this.api.getRegistrations(params).subscribe((data: any) => {
+      console.log(data);
+      if (data.data.length) {
+        this.registrations = data.data;
+      } else {
+        this.registrations = [];
+      }
+    }, (err) => {
+      console.log(err);
+    })
+  }
 
   ngOnDestroy() {
     if (this.x) {

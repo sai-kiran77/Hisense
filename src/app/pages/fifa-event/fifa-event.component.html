@@ -59,6 +59,27 @@
             </div>
         </div>
     </section>
+    <section class="date__picker">
+        <div class="wrapper">
+            <h3>Daily Winners</h3>
+            <input min="2022-09-26" [max]="yesterdayDate" [value]="yesterdayDate" type="date" name="date" id="date" (change)="getRegistrations($event)">
+            <div *ngIf="registrations">
+                <table *ngIf="registrations.length">
+                    <tr style="background: #00b3ac;">
+                        <th style="border-top-left-radius: 8px;">Name</th>
+                        <th>Phone number</th>
+                        <th style="border-top-right-radius: 8px;">Prize won</th>
+                    </tr>
+                    <tr *ngFor="let record of registrations">
+                        <td>{{record.user.name}}</td>
+                        <td><a class="telephone" [href]="'tel:'+record.user.phone">{{record.user.phone}}</a></td>
+                        <td>{{record.spin_wheel_prize.description}}</td>
+                    </tr>
+                </table>
+                <div class="no-records" *ngIf="!registrations.length">No winners found! Check back later</div>
+            </div>
+        </div>
+    </section>
     <section class="groups">
         <div class="card" *ngFor="let group of groups">
             <div class="card__heading">{{group.heading}}</div>

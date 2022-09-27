@@ -80,4 +80,10 @@ export class ApiService {
       params
     });
   }
+
+  getRegistrations(params: any,endpoint: string = '/campaigns/perfect-match-2022/registrations'){
+    return this.http.get(this.baseURL + endpoint,{
+      params
+    });
+  }
 }
