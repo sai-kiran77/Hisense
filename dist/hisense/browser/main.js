@@ -2455,6 +2455,11 @@ class ApiService {
             params
         });
     }
+    getRegistrations(params, endpoint = '/campaigns/perfect-match-2022/registrations') {
+        return this.http.get(this.baseURL + endpoint, {
+            params
+        });
+    }
 }
 ApiService.ɵfac = function ApiService_Factory(t) { return new (t || ApiService)(_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵinject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_3__.HttpClient)); };
 ApiService.ɵprov = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵdefineInjectable"]({ token: ApiService, factory: ApiService.ɵfac, providedIn: 'root' });
@@ -2502,7 +2507,7 @@ __webpack_require__.r(__webpack_exports__);
 // The list of file replacements can be found in `angular.json`.
 const environment = {
     production: false,
-    baseApiUrl: 'https://hisense-apis.bloginguru.com'
+    baseApiUrl: 'https://api.hisense-india.com'
 };
 /*
  * For easier debugging in development mode, you can import the following file
