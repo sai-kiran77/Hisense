@@ -28,7 +28,10 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/robots.txt",
+              "src/sitemap.xml",
+              "src/googlea03311c2c378ce08.html"
             ],
             "styles": [
               "src/styles.scss"
