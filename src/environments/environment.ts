@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  baseApiUrl:'https://api.hisense-india.com'
+  baseApiUrl:'https://hisense-apis.bloginguru.com'
 };
 
 /*
