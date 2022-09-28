@@ -29,10 +29,10 @@ const routes: Routes = [
         path: 'perfect-match-2022/:uuid',
         loadChildren: () => import('./pages/perfect-match-2022/perfect-match-2022.module').then(m => m.PerfectMatch2022Module)
       },
-      {
-        path: 'new-launches',
-        loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
-      },
+      // {
+      //   path: 'new-launches',
+      //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
+      // },
       {
         path: 'FIFA-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
