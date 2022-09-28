@@ -129,7 +129,7 @@ header {
               bottom: -7px;
               left: 50%;
               width: 0;
-              border-bottom: 1px solid #00b3ac;
+              border-bottom: 1px solid #00AAA6;
               -webkit-transform: translateX(-50%);
               -moz-transform: translateX(-50%);
               -ms-transform: translateX(-50%);
@@ -179,7 +179,7 @@ header {
 
               a:hover {
                 color: #FFF;
-                background-color: #00B3AC;
+                background-color: #00AAA6;
               }
             }
 
@@ -230,7 +230,7 @@ header {
 
           //active nav link based on route
           &.active>a:first-of-type {
-            color: #00b3ac;
+            color: #00AAA6;
 
             &::before {
               width: 100%;

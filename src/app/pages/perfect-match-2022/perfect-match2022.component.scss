@@ -110,7 +110,7 @@ form {
     // position: relative;
     background-color: rgba(255, 255, 255, 0.9);
     // position: relative;
-    border: 6px solid #00B3ac;
+    border: 6px solid #00AAA6;
     border-radius: 8px;
     // box-shadow: rgb(0 0 0 / 25%) 0px 54px 55px, rgb(0 0 0 / 12%) 0px -12px 30px, rgb(0 0 0 / 12%) 0px 4px 6px, rgb(0 0 0 / 17%) 0px 12px 13px, rgb(0 0 0 / 9%) 0px -3px 5px;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
@@ -166,7 +166,7 @@ hr {
 
 /* Set a style for all buttons */
 button {
-    background-color: #00B3ac;
+    background-color: #00AAA6;
     color: white;
     padding: 14px 5rem;
     margin: 8px 0;
@@ -192,7 +192,7 @@ input {
     display: block;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 6px;
-    border: 1px solid #00B3ac;
+    border: 1px solid #00AAA6;
     outline: none;
 
     &::placeholder {
@@ -201,7 +201,7 @@ input {
 }
 
 // input:focus {
-//     outline: 3px solid #00B3ac;
+//     outline: 3px solid #00AAA6;
 //     // outline: 3px solid #C16E25;
 // }
 
@@ -391,7 +391,7 @@ label {
     font-size: 25px;
     font-weight: 500;
     color: #fff;
-    background-color: #00b3ac;
+    background-color: #00AAA6;
     padding: 15px 30px;
     outline: none;
     border: none;
@@ -434,7 +434,7 @@ label {
 
 .info_box .info-list .info span {
     font-weight: 600;
-    color: #00b3ac;
+    color: #00AAA6;
 }
 
 .info_box .buttons {
@@ -518,7 +518,7 @@ label {
     border-radius: 5px;
     line-height: 30px;
     text-align: center;
-    background: #00b3ac;
+    background: #00AAA6;
     // border: 1px solid #343a40;
     user-select: none;
     margin-left: 8px;
@@ -645,7 +645,7 @@ footer button {
     outline: none;
     color: #fff;
     border-radius: 5px;
-    background: #00b3ac;
+    background: #00AAA6;
     border: 1px solid #09cbc6;
     line-height: 10px;
     opacity: 0;
@@ -726,7 +726,7 @@ footer button.show {
 
 .buttons button.restart {
     color: #fff;
-    background: #00b3ac;
+    background: #00AAA6;
 }
 
 .buttons button.restart:hover {
@@ -734,7 +734,7 @@ footer button.show {
 }
 
 .buttons button.quit {
-    color: #00b3ac;
+    color: #00AAA6;
     background: #fff;
     border: 1px solid #09cbc6;
 }
@@ -775,7 +775,7 @@ input[type="radio"] {
 
 /* appearance for checked radiobutton */
 input[type="radio"]:checked {
-    background-color: #00b3ac;
+    background-color: #00AAA6;
 }
 
 .page__heading {
