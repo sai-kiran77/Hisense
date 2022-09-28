@@ -64,7 +64,7 @@ svg {
 }
 
 .card {
-    background-color: #00b3ac;
+    background-color: #00AAA6;
     color: white;
     border-radius: 12px;
     padding-top: 16px;
@@ -145,7 +145,7 @@ svg {
             padding: 8px 16px;
             font-size: 15px;
             // font-weight: bold;
-            border: 1px solid #00b3ac;
+            border: 1px solid #00AAA6;
             border-radius: 6px;
         }
 
@@ -159,14 +159,14 @@ svg {
             margin: auto;
             box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
             .telephone{
-                color: #00b3ac !important;
+                color: #00AAA6 !important;
             }
 
             tr{
                 width: 100%;
                 // border: none !important;
                 &:last-child {
-                    border-bottom: 3px solid #00b3ac;
+                    border-bottom: 3px solid #00AAA6;
                 }
             }
         }

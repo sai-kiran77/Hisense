@@ -65,14 +65,14 @@
             <input min="2022-09-26" [max]="yesterdayDate" [value]="yesterdayDate" type="date" name="date" id="date" (change)="getRegistrations($event)">
             <div *ngIf="registrations">
                 <table *ngIf="registrations.length">
-                    <tr style="background: #00b3ac;">
+                    <tr style="background: #00AAA6;">
                         <th style="border-top-left-radius: 8px;">Name</th>
                         <th>Phone number</th>
                         <th style="border-top-right-radius: 8px;">Prize won</th>
                     </tr>
                     <tr *ngFor="let record of registrations">
                         <td>{{record.user.name}}</td>
-                        <td><a class="telephone" [href]="'tel:'+record.user.phone">{{record.user.phone}}</a></td>
+                        <td>{{record.user.phone}}</td>
                         <td>{{record.spin_wheel_prize.description}}</td>
                     </tr>
                 </table>

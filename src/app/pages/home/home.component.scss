@@ -282,7 +282,7 @@ ul.series-container li .top nav a {
         bottom: -7px;
         left: 50%;
         width: 0;
-        border-bottom: 1px solid #00B3AC;
+        border-bottom: 1px solid #00AAA6;
         -webkit-transform: translateX(-50%);
         -moz-transform: translateX(-50%);
         -ms-transform: translateX(-50%);
@@ -296,7 +296,7 @@ ul.series-container li .top nav a {
 }
 
 ul.series-container li .top nav a.active {
-    color: #00B3AC;
+    color: #00AAA6;
 
     &::before {
         width: 100%;

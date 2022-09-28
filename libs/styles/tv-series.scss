@@ -1160,7 +1160,7 @@ img.b2t.show {
   line-height: 120%;
 }
 .form-message.success {
-  color: #00b3ac !important;
+  color: #00AAA6 !important;
 }
 .form-message.error {
   color: red !important;
@@ -1190,7 +1190,7 @@ img.b2t.show {
   }
 }
 p .highlight {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 .slick-loading .slick-list {
   background-image: none !important;
@@ -1239,7 +1239,7 @@ p .highlight {
   top: 25px;
   // // background: url(/.resources/webresources/images/common/icon-3d-model.svg)
     // no-repeat left center;
-  color: #00b3ac;
+  color: #00AAA6;
   font-weight: 700;
   padding-left: 35px;
   font-size: 16px;
@@ -1361,7 +1361,7 @@ p .highlight {
 }
 @media (hover: hover), (-ms-high-contrast: none) {
   .model-3d-lightbox .model-3d-wrap .ui-btn:hover {
-    background-color: #00b3ac;
+    background-color: #00AAA6;
   }
 }
 .model-3d-lightbox .close {
@@ -1589,7 +1589,7 @@ p .highlight {
   }
 }
 #latest-news .main-visual .text-box .news-topics {
-  color: #00b3ac;
+  color: #00AAA6;
   margin-bottom: 13px;
 }
 @media screen and (max-width: 820px) {
@@ -2185,7 +2185,7 @@ header nav.main-nav ul li:last-of-type {
     cursor: pointer;
   }
   header nav.main-nav ul li.hover a {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 }
 @media (hover: hover) and (max-width: 1023px),
@@ -2231,7 +2231,7 @@ header nav.main-nav ul li:hover .dropdown-menu {
   screen and (-ms-high-contrast: active),
   (-ms-high-contrast: none) and (pointer: fine) {
   header nav.main-nav ul li:hover a {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 }
 @media (hover: hover) and (max-width: 1023px),
@@ -2249,7 +2249,7 @@ header nav.main-nav ul li:hover .dropdown-menu {
   }
 }
 header nav.main-nav ul li.active > a:first-of-type {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 header nav.main-nav ul li.active > a:first-of-type::before {
   width: 100%;
@@ -2318,7 +2318,7 @@ header nav.main-nav ul li a::before {
   bottom: -7px;
   left: 50%;
   width: 0;
-  border-bottom: 1px solid #00b3ac;
+  border-bottom: 1px solid #00AAA6;
   -webkit-transform: translateX(-50%);
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
@@ -2487,7 +2487,7 @@ header nav.main-nav ul li .dropdown-menu a {
   header nav.main-nav ul li .dropdown-menu a:hover,
   header nav.main-nav ul li .dropdown-menu a.active {
     color: #fff;
-    background-color: #00b3ac;
+    background-color: #00AAA6;
   }
 }
 @media (hover: hover) and (pointer: fine) and (max-width: 1023px) {
@@ -2678,7 +2678,7 @@ header nav.main-nav ul li .dropdown-menu .kitchen:before {
 }
 .searchbox .searchbar .searchInput {
   padding: 10px 30px;
-  background: #00b3ac;
+  background: #00AAA6;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -2842,7 +2842,7 @@ header nav.main-nav ul li .dropdown-menu .kitchen:before {
   margin-right: 20px;
 }
 .searchbox .pt-list .detail h4 .s {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 @media (max-width: 1023px) {
   .searchbox .searchbar {
@@ -2931,7 +2931,7 @@ header nav.main-nav ul li .dropdown-menu .kitchen:before {
 }
 .cookie-consent .btn-container a {
   display: block;
-  color: #00b3ac;
+  color: #00AAA6;
   font-size: 14px;
 }
 @media screen and (min-width: 1023px) {
@@ -2954,7 +2954,7 @@ a.button {
   display: block;
   color: #fff !important;
   padding: 8px 20px;
-  background-color: #00b3ac;
+  background-color: #00AAA6;
   -webkit-border-radius: 30px;
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
@@ -3075,8 +3075,8 @@ a.button:hover {
   border: 1px solid #1d1d1f;
 }
 .cookie-consent-wrap input[type="checkbox"]:checked {
-  background: #00b3ac;
-  border-color: #00b3ac;
+  background: #00AAA6;
+  border-color: #00AAA6;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -3340,7 +3340,7 @@ footer .footer-links-container .subscribe-container p {
 }
 footer .footer-links-container .subscribe-container a.subscribe-link {
   display: block;
-  color: #00b3ac;
+  color: #00AAA6;
   font-size: 16px;
 }
 footer .footer-links-container .subscribe-container a.subscribe-link:hover {
@@ -3379,7 +3379,7 @@ footer .footer-links-container .subscribe-container .btn-subscribe {
   display: inline-block;
   width: auto;
   font-size: 16px;
-  color: #00b3ac;
+  color: #00AAA6;
   background: #f8f8f8;
   padding: 12px 20px;
   -webkit-border-radius: 30px;
@@ -4215,7 +4215,7 @@ footer a.icon-region:hover,
     .overview-content
     .btn-container
     a:hover {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 }
 .overview-full-col
@@ -5616,7 +5616,7 @@ footer a.icon-region:hover,
     .overview-content
     .btn-container
     a:hover {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 }
 .overview-two-col
