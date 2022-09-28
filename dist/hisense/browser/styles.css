@@ -8,7 +8,7 @@
 @charset "UTF-8";
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #00b3ac;
+  --primary: #00AAA6;
   --secondary: #09cbc6;
   --neutral-dark: #1d1d1f;
   --neutral-medium: #4a4a4a;
@@ -19,7 +19,14 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: "Hisense Sans Alfabet";
+}
+@font-face {
+  font-family: "Hisense Sans Alfabet";
+  src: url('Hisense-Sans-Alfabet-Bold.otf');
+  src: url('Hisense-Sans-Alfabet-Light.otf');
+  src: url('Hisense-Sans-Alfabet-Medium.otf');
+  src: url('Hisense-Sans-Alfabet.otf');
 }
 .flex {
   display: flex;
@@ -1070,7 +1077,7 @@ img.b2t.show {
   line-height: 120%;
 }
 .form-message.success {
-  color: #00b3ac !important;
+  color: #00AAA6 !important;
 }
 .form-message.error {
   color: #f00 !important;
@@ -1097,7 +1104,7 @@ img.b2t.show {
   }
 }
 p .highlight {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 .slick-loading .slick-list {
   background-image: none !important;
@@ -1142,7 +1149,7 @@ p .highlight {
   left: 15px;
   top: 25px;
   background: url(/.resources/webresources/images/common/icon-3d-model.svg) no-repeat left center;
-  color: #00b3ac;
+  color: #00AAA6;
   font-weight: 700;
   padding-left: 35px;
 }
@@ -1242,7 +1249,7 @@ p .highlight {
 }
 @media (hover: hover), (-ms-high-contrast: none) {
   .model-3d-lightbox .model-3d-wrap .ui-btn:hover {
-    background-color: #00b3ac;
+    background-color: #00AAA6;
   }
 }
 .model-3d-lightbox .close {
@@ -1460,7 +1467,7 @@ p .highlight {
   }
 }
 #latest-news .main-visual .text-box .news-topics {
-  color: #00b3ac;
+  color: #00AAA6;
   margin-bottom: 13px;
 }
 @media screen and (max-width: 820px) {
@@ -1629,7 +1636,7 @@ h2.sub-title {
   }
 }
 h2.sub-title strong {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 @media (max-width: 767px) {
   h2.sub-title {
@@ -1795,19 +1802,19 @@ ul.series-container li .top nav a::before {
   bottom: -7px;
   left: 50%;
   width: 0;
-  border-bottom: 1px solid #00b3ac;
+  border-bottom: 1px solid #00AAA6;
   transform: translateX(-50%);
   transition: all 0.4s ease-out;
 }
 ul.series-container li .top nav a.active {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 ul.series-container li .top nav a.active::before {
   width: 100%;
 }
 @media (hover: hover) and (pointer: fine) and (max-width: 1024px) {
   ul.series-container li .top nav a:hover {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 
   ul.series-container li .top nav a:hover::before {
@@ -1900,7 +1907,7 @@ ul.series-container li .content .btn-container a:last-child {
 }
 @media (hover: hover) and (pointer: fine) {
   ul.series-container li .content .btn-container a:hover {
-    color: #00b3ac;
+    color: #00AAA6;
   }
 }
 ul.series-container li .content .btn-container a.btn-more {
@@ -2039,7 +2046,7 @@ ul.series-container li .content .btn-container a.btn-more:after {
   }
 }
 .about-container .slide-item .content p span {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 .about-container .slide-item .content a.btn-more {
   display: block;
@@ -2417,7 +2424,7 @@ body.menu-in {
 }
 .searchbox .searchbar .searchInput {
   padding: 10px 30px;
-  background: #00b3ac;
+  background: #00AAA6;
   width: 100%;
   position: relative;
   z-index: 2;
@@ -2574,7 +2581,7 @@ body.menu-in {
   margin-right: 20px;
 }
 .searchbox .pt-list .detail h4 .s {
-  color: #00b3ac;
+  color: #00AAA6;
 }
 @media (max-width: 1023px) {
   .searchbox .searchbar {
@@ -2669,7 +2676,7 @@ body.menu-in {
 }
 .cookie-consent .btn-container a {
   display: block;
-  color: #00b3ac;
+  color: #00AAA6;
 }
 .cookie-consent .btn-container a {
   font-size: 14px;
@@ -2694,7 +2701,7 @@ a.button {
   display: block;
   color: #fff !important;
   padding: 8px 20px;
-  background-color: #00b3ac;
+  background-color: #00AAA6;
   border-radius: 30px;
   transition: all 0.3s ease-out;
 }
@@ -2808,8 +2815,8 @@ a.button:hover {
   border: 1px solid #1d1d1f;
 }
 .cookie-consent-wrap input[type=checkbox]:checked {
-  background: #00b3ac;
-  border-color: #00b3ac;
+  background: #00AAA6;
+  border-color: #00AAA6;
   -webkit-appearance: none;
   appearance: none;
 }
@@ -3377,10 +3384,12 @@ button.swiper-pagination-bullet {
   margin-left: auto;
   margin-right: auto;
 }
-.mySwiper .swiper-button-prev, .mySwiperHome .swiper-button-prev {
+.mySwiper .swiper-button-prev,
+.mySwiperHome .swiper-button-prev {
   left: 20px;
 }
-.mySwiper .swiper-button-next, .mySwiperHome .swiper-button-next {
+.mySwiper .swiper-button-next,
+.mySwiperHome .swiper-button-next {
   right: 20px;
 }
 .mySwiper .swiper-button-prev,
@@ -3432,7 +3441,8 @@ button.swiper-pagination-bullet {
 }
 @media screen and (max-width: 767px) {
   .mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev, .mySwiperHome .swiper-button-next,
+.mySwiper .swiper-button-prev,
+.mySwiperHome .swiper-button-next,
 .mySwiperHome .swiper-button-prev {
     display: none;
   }
@@ -3739,7 +3749,7 @@ button.swiper-pagination-bullet {
   }
 }
 a {
-  color: #00b3ac !important;
+  color: #00AAA6 !important;
 }
 html {
   scroll-behavior: smooth !important;
@@ -3755,7 +3765,7 @@ footer a {
   color: white !important;
 }
 footer dd a {
-  color: #00b3ac !important;
+  color: #00AAA6 !important;
 }
 .btn-hisense-v2 {
   pointer-events: all;
