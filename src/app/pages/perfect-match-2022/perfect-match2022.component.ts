@@ -273,7 +273,7 @@ export class PerfectMatch2022Component implements OnInit {
           });
           this.spinPrizes.push({
             class: this.classNames[5],
-            icon_full_url: this.spinPrizes[4].icon_full_url
+            icon_full_url: "https://api.hisense-india.com/media/pages/campaigns/perfect-match-2022/icons/lucky_draw_2.webp"
           })
           // console.log(this.spinPrizes);
           this.setSpinData();
@@ -406,7 +406,7 @@ export class PerfectMatch2022Component implements OnInit {
         });
         this.spinPrizes.push({
           class: this.classNames[5],
-          icon_full_url: this.spinPrizes[4].icon_full_url
+          icon_full_url: "https://api.hisense-india.com/media/pages/campaigns/perfect-match-2022/icons/lucky_draw_2.webp"
         })
         // console.log(this.spinPrizes);
         this.setSpinData();

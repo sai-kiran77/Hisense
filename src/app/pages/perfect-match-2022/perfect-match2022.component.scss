@@ -1126,9 +1126,60 @@ form.spinner__wrapper {
 
     .wheel__back {
         position: absolute;
-        width: 319px;
+        width: 321px;
         top: -10px;
-        left: 14px;
+        left: 50px;
         height: 372px;
+    }
+}
+@media screen and (max-width: 445px) {
+    .wheel__back {
+        left: 48px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .wheel__back {
+        left: 45px;
+    }
+}
+@media screen and (max-width: 435px) {
+    .wheel__back {
+        left: 43px;
+    }
+}
+@media screen and (max-width: 430px) {
+    .wheel__back {
+        left: 41px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .wheel__back {
+        left: 39px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .wheel__back {
+        left: 37px;
+    }
+}
+@media screen and (max-width: 415px) {
+    .wheel__back {
+        left: 33px;
+    }
+}
+@media screen and (max-width: 410px) {
+    .wheel__back {
+        left: 30px;
+    }
+}
+@media screen and (max-width: 405px) {
+    .wheel__back {
+        left: 27px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    .wheel__back {
+        left: 18px;
     }
 }

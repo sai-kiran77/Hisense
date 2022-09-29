@@ -125,7 +125,7 @@
                             {{currentQuestionNumber}} of {{questions.length}} Questions
                         </div>
                         <button [ngClass]="{'show': showQuestions}" (click)="onNextQuestion()" class="next_btn"
-                            *ngIf="currentQuestionNumber != questions.length">Next Que</button>
+                            *ngIf="currentQuestionNumber != questions.length">Next</button>
                         <button [ngClass]="{'show': showQuestions}" (click)="onSubmitQuiz()" class="next_btn"
                             *ngIf="currentQuestionNumber == questions.length">Submit</button>
                     </footer>
@@ -184,7 +184,7 @@
                 </div> -->
                 <div class="mainbox" id="mainbox">
                     <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30">
-                    <img src="assets/wheel_back.png" class="wheel__back" alt="">
+                    <img src="assets/wheel_back.webp" class="wheel__back" alt="">
                     <div class="spinner__container" [ngStyle]="{'transform': rotateDeg}">
 
                         <div *ngFor="let prize of spinPrizes" [class]="prize.class"><img [src]="prize.icon_full_url">
