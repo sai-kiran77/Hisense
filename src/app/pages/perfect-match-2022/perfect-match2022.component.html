@@ -1,5 +1,6 @@
 <div *ngIf="currentStep != 4" [ngClass]="{'step__3':currentStep == 3}" class="bg-image"></div>
-<div class="page-wrapper card" [ngClass]="{'is-loading': imageLoading,'height-auto thakyou__step': currentStep == 4,'step__3':currentStep == 3}">
+<div class="page-wrapper card"
+    [ngClass]="{'is-loading': imageLoading,'height-auto thakyou__step': currentStep == 4,'step__3':currentStep == 3}">
     <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
     <div class="page__heading" *ngIf="currentStep == 4">
         <h2>Congratulations!</h2>
@@ -88,7 +89,8 @@
                     </ol>
                     <div class="buttons" style="justify-content: center;">
                         <!-- <button class="quit">Exit Quiz</button> -->
-                        <button class="start_btn" style="white-space: nowrap;" (click)="onContinueRules()">Start Quiz</button>
+                        <button class="start_btn" style="white-space: nowrap;" (click)="onContinueRules()">Start
+                            Quiz</button>
                     </div>
                 </div>
 
@@ -123,7 +125,7 @@
                             {{currentQuestionNumber}} of {{questions.length}} Questions
                         </div>
                         <button [ngClass]="{'show': showQuestions}" (click)="onNextQuestion()" class="next_btn"
-                            *ngIf="currentQuestionNumber != questions.length">Next Que</button>
+                            *ngIf="currentQuestionNumber != questions.length">Next</button>
                         <button [ngClass]="{'show': showQuestions}" (click)="onSubmitQuiz()" class="next_btn"
                             *ngIf="currentQuestionNumber == questions.length">Submit</button>
                     </footer>
@@ -168,11 +170,10 @@
                         d="M19.669 10.385L6.199 2.257c-1.094-.66-2.77-.02-2.77 1.613v16.253c0 1.465 1.557 2.348 2.77 1.613l13.47-8.124c1.201-.723 1.205-2.504 0-3.227z"
                         fill="#fff"></path>
                 </svg> -->
-                <div class="relative">
+                <!-- <div class="relative">
                     <img class="wheel__back__img" src="assets/wheel_back.png" width="434" height="434">
                     <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30">
                     <ng-container *ngIf="width && height">
-                        <!-- [ngStyle]="{'width': width + 'px', 'height': height + 'px'}" -->
                         <ngx-wheel class="ngx-wheel" Roulette [width]="width" [height]="height" [spinDuration]="8" [items]="items"
                             [innerRadius]="innerRadius" [spinAmount]="10" [textOrientation]="textOrientation"
                             [textAlignment]="textAlignment" pointerStrokeColor="white" [pointerFillColor]="'#d3a774'"
@@ -180,6 +181,23 @@
                             (onSpinComplete)="after()">
                         </ngx-wheel>
                     </ng-container>
+                </div> -->
+                <div class="mainbox" id="mainbox">
+                    <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30">
+                    <img src="assets/wheel_back.webp" class="wheel__back" alt="">
+                    <div class="spinner__container" [ngStyle]="{'transform': rotateDeg}">
+
+                        <div *ngFor="let prize of spinPrizes" [class]="prize.class"><img [src]="prize.icon_full_url">
+                        </div>
+                        <!-- <div class="one"><img src="./prize.webp"></div>
+                        <div class="two"><img src="./prize.webp"></div>
+                        <div class="three"><img src="./prize.webp"></div>
+                        <div class="four"><img src="./prize.webp"></div>
+                        <div class="five"><img src="./prize.webp"></div>
+                        <div class="six"><img src="./prize.webp"></div> -->
+                    </div>
+                    <div class="stoper"></div>
+
                 </div>
                 <div class="clearfix" style="margin-top: auto;">
                     <button type="button" class="submit__btn" (click)="spin()">

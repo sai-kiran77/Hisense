@@ -23,8 +23,13 @@ export class PerfectMatch2022Component implements OnInit {
   alive = true;
   innerRadius = 25;
 
+  spinPrizes: any = [];
+  classNames = ['one','two','three','four','five','six'];
+
   @ViewChild(NgxWheelComponent, { static: false }) wheel: any;
   @ViewChild('myaudio', { static: false }) audio: any;
+
+  rotateDeg = '0deg';
 
   signupForm = this.fb.group({
     name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
@@ -190,8 +195,13 @@ export class PerfectMatch2022Component implements OnInit {
     // } else {
     // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
     // }
-    await new Promise((resolve) => setTimeout(resolve, 0));
-    this.wheel.spin();
+    // await new Promise((resolve) => setTimeout(resolve, 0));
+    // this.wheel.spin();
+
+    // console.log(this.idToLandOn);
+    this.rotateDeg = `rotate(${-((360 * 5) + (this.idToLandOn * 60)) + 'deg'})`;
+    // console.log(this.rotateDeg);
+    // // debugger;
 
     this.api.spinTheWheel({ user_id: this.loggedInUserData.id, spin_wheel_prize_id: this.idToLandOn + 1 }).subscribe((res: any) => {
       // console.log(res);
@@ -204,24 +214,29 @@ export class PerfectMatch2022Component implements OnInit {
       }
     }, (err: any) => {
       console.log(err);
-    })
+    });
+
+    setTimeout(()=>{
+      this.currentStep = 4;
+      this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
+    },3800);
   }
 
-  after() {
-    // alert("You have been bamboozled");
-    this.audio.nativeElement.play();
-    // audio.play();
-    this.isSpinning = false;
-    // setTimeout(() => {
-    //   alert(`Congratulations you are eligible for ${this.seed[this.idToLandOn]}`);
-    // }, 750)
-    // setTimeout(() => {
-    this.wheel.reset();
-    this.currentStep = 4;
-    this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
-    // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
-    // }, 1000);
-  }
+  // after() {
+  //   // alert("You have been bamboozled");
+  //   this.audio.nativeElement.play();
+  //   // audio.play();
+  //   this.isSpinning = false;
+  //   // setTimeout(() => {
+  //   //   alert(`Congratulations you are eligible for ${this.seed[this.idToLandOn]}`);
+  //   // }, 750)
+  //   // setTimeout(() => {
+  //   this.wheel.reset();
+  //   this.currentStep = 4;
+  //   this.router.navigate(['/perfect-match-2022', this.thankYouUUID]);
+  //   // this.idToLandOn = Math.floor(Math.random() * this.seed.length);
+  //   // }, 1000);
+  // }
 
   imageLoading = true;
 
@@ -249,7 +264,18 @@ export class PerfectMatch2022Component implements OnInit {
         if (res?.data?.next_step == 'spin_wheel') {
           this.currentStep = 3;
           this.idToLandOn = res?.data?.next_step_data?.spin_wheel_prize_id - 1;
-          this.seed = res?.data?.next_step_data?.spin_wheel_prizes?.map((obj: any) => obj.name);
+          this.seed = res?.data?.next_step_data?.spin_wheel_prizes?.map((obj: any,i: any) => {
+            this.spinPrizes.push({
+              class: this.classNames[i],
+              icon_full_url: obj.icon_full_url 
+            })
+            return obj.name;
+          });
+          this.spinPrizes.push({
+            class: this.classNames[5],
+            icon_full_url: "https://api.hisense-india.com/media/pages/campaigns/perfect-match-2022/icons/lucky_draw_2.webp"
+          })
+          // console.log(this.spinPrizes);
           this.setSpinData();
         }
 
@@ -371,7 +397,18 @@ export class PerfectMatch2022Component implements OnInit {
         this.showQuizResults = true;
 
         this.idToLandOn = res?.data?.next_step_data?.spin_wheel_prize_id - 1;
-        this.seed = res?.data?.next_step_data?.spin_wheel_prizes?.map((obj: any) => obj.name);
+        this.seed = res?.data?.next_step_data?.spin_wheel_prizes?.map((obj: any,i: any) => {
+          this.spinPrizes.push({
+            class: this.classNames[i],
+            icon_full_url: obj.icon_full_url 
+          })
+          return obj.name;
+        });
+        this.spinPrizes.push({
+          class: this.classNames[5],
+          icon_full_url: "https://api.hisense-india.com/media/pages/campaigns/perfect-match-2022/icons/lucky_draw_2.webp"
+        })
+        // console.log(this.spinPrizes);
         this.setSpinData();
       }
     }, (err: any) => {
