@@ -1,0 +1,101 @@
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-wrapper{
+    background-color: #f0efef;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    height: auto;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    color: #09cbc6 !important;
+    border: none !important;
+    width: 10px !important;
+    height: 10px !important;
+    outline: none !important;
+    margin: 7px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    border: 2px solid #09cbc6 !important;
+    transition: background-color 500ms !important;
+    cursor: pointer !important;
+
+    &::before {
+        display: none !important;
+    }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #00AAA6 !important;
+}
+
+.section__heading{
+    font-size: 32px;
+    padding: 24px;
+}
+
+.customer__testiomnial__swiper{
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        justify-content: flex-start;
+        padding: 32px 16px;
+        .customer__title{
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .customer__name{
+            font-size: 16px;
+            font-weight:normal;
+        }
+        .customer__review{
+            font-size: 12px;
+        }
+
+        .customer__rating{
+            display: flex;
+            gap: 4px;
+        }
+
+    }
+}
+
+.mb-3{
+    margin-bottom: 16px;
+}
+.customer_testiomonials__section{
+    background-color: #e5e5e5;
+    .w-80{
+        width: 80%;
+        margin: auto;
+    }
+}
