@@ -1,13 +1,16 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID } from '@angular/core';
+import { Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
 
+declare var Swiper: any;
+
 @Component({
   selector: 'app-fifa-event',
   templateUrl: './fifa-event.component.html',
-  styleUrls: ['./fifa-event.component.scss']
+  styleUrls: ['./fifa-event.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class FifaEventComponent implements OnInit {
 
@@ -16,6 +19,20 @@ export class FifaEventComponent implements OnInit {
   minutes: any = '00';
   seconds: any = '00';
   x: any;
+
+  tabs = ["About FIFA 2022","How to participate"];
+  currentTab = "About FIFA 2022";
+
+  slides = [
+    {
+      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/1.webp`,
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/1.webp`
+    },
+    {
+      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/2.webp`,
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/2.webp`
+    }
+  ]
 
   groups = [
     {
@@ -209,7 +226,33 @@ export class FifaEventComponent implements OnInit {
     // console.log(this.yesterdayDate);
   }
 
+  swiper: any;
+
   ngOnInit(): void {
+    setTimeout(() => {
+      this.swiper = new Swiper(".mySwiperHome", {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        autoplay: {
+          delay: 6000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+      this.swiper.on('slideChange', (event: any) => {
+        if(event.activeIndex % 2 == 1){
+          this.currentTab = this.tabs[0];
+        }else{
+          this.currentTab = this.tabs[1];
+        }
+      });
+    })
     this.getRegistrations({ target: { value: this.yesterdayDate } });
   }
 
@@ -277,6 +320,15 @@ export class FifaEventComponent implements OnInit {
     }, (err) => {
       console.log(err);
     })
+  }
+
+  changeTab(tab: any){
+    this.currentTab = tab;
+    if(tab == this.tabs[0]){
+      this.swiper.slidePrev();
+    }else{
+      this.swiper.slideNext();
+    }
   }
 
   ngOnDestroy() {
