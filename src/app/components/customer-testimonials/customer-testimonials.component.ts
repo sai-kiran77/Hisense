@@ -10,31 +10,55 @@ declare var Swiper: any;
 })
 export class CustomerTestimonialsComponent implements OnInit {
 
-  @Input() customerTestimonials:any = [];
+  _customerTestimonials: any;
+  get customerTestimonials() {
+    return this._customerTestimonials
+  }
+  @Input() set customerTestimonials(val) {
+    if (val.length) {
+      val.pop();
+      this._customerTestimonials = val;
+      this.intializeSwiper();
+    }
+  };
 
   constructor() { }
 
   ngOnInit(): void {
-    var swiper = new Swiper(".customer__testiomnial__swiper", {
+  }
+
+  ngAfterViewInit() {
+  }
+
+  intializeSwiper() {
+    const swiper = new Swiper(".customer__testiomnial__swiper", {
       slidesPerView: 1,
-      spaceBetween: 15,
+      spaceBetween: 30,
+      slidesPerGroup: 1,
+      loop: true,
+      loopFillGroupWithBlank: true,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      autoplay: {
+        delay: 6000,
+      },
       breakpoints: {
         768: {
-          slidesPerView: 2
+          slidesPerView: 2,
+          slidesPerGroup: 2
         },
         1023: {
-          slidesPerView: 3
+          slidesPerView: 3,
+          slidesPerGroup: 3
         }
       }
     });
-  }
-
-  ngAfterViewInit(){
-    
   }
 
 }
