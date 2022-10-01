@@ -1,113 +1,123 @@
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-    height: auto;
-
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: flex-start;
-    -webkit-align-items: flex-start;
-    align-items: flex-start;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 20px;
-    height: 20px;
-}
-
-.swiper-pagination-bullet {
-    color: #09cbc6 !important;
-    border: none !important;
-    width: 10px !important;
-    height: 10px !important;
-    outline: none !important;
-    margin: 7px !important;
-    border-radius: 50% !important;
-    background: transparent !important;
-    border: 2px solid #09cbc6 !important;
-    transition: background-color 500ms !important;
-    cursor: pointer !important;
-
-    &::before {
-        display: none !important;
-    }
-}
-
-.swiper-pagination-bullet.swiper-pagination-bullet-active {
-    background: #00AAA6 !important;
-}
-
-
-.customer__testiomnial__swiper {
-    background-color: #f0efef;
-
-    .swiper-slide {
-
-        .slide__wrapper {
-
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
-            justify-content: flex-start;
-            padding: 20px 16px;
-
-            .customer__title {
-                font-size: 20px;
-                font-weight: bold;
-            }
-
-            .customer__name {
-                font-size: 16px;
-                font-weight: normal;
-            }
-
-            .customer__review {
-                font-size: 12px;
-            }
-
-            .customer__rating {
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                gap: 4px;
-            }
-        }
-
-    }
-}
-
-.mb-3 {
-    margin-bottom: 16px;
-}
-
 .customer_testiomonials__section {
-    background-color: #B43017;
+    background-color: #d1b83a;
 
     .wrapper {
         margin: 32px auto;
         width: 90%;
         margin: auto;
         padding: 32px 0;
+        padding-bottom: 60px;
+    }
+
+    .swiper-wrapper{
+        margin-bottom: 35px;
     }
 
     .section__heading {
         font-size: 32px;
-        padding: 24px;
+        padding: 24px 0;
         color: white;
+        white-space: nowrap;
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        height: auto;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: flex-start;
+        -webkit-align-items: flex-start;
+        align-items: flex-start;
+    }
+
+    .swiper-slide img {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    .swiper-pagination{
+        bottom: -10px;
+    }
+
+    .swiper-pagination-bullet {
+        color: #09cbc6 !important;
+        border: none !important;
+        width: 10px !important;
+        height: 10px !important;
+        outline: none !important;
+        margin: 7px !important;
+        border-radius: 50% !important;
+        background: transparent !important;
+        border: 2px solid #09cbc6 !important;
+        transition: background-color 500ms !important;
+        cursor: pointer !important;
+
+        &::before {
+            display: none !important;
+        }
+    }
+
+    .swiper-pagination-bullet.swiper-pagination-bullet-active {
+        background: #00AAA6 !important;
+    }
+
+
+    .customer__testiomnial__swiper {
+        // background-color: #f0efef;
+
+        .swiper-slide {
+
+            .slide__wrapper {
+
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                justify-content: flex-start;
+                padding: 20px 16px;
+
+                .customer__title {
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+
+                .customer__name {
+                    font-size: 16px;
+                    font-weight: normal;
+                }
+
+                .customer__review {
+                    font-size: 12px;
+                }
+
+                .customer__rating {
+                    display: flex;
+                    justify-content: center;
+                    align-content: center;
+                    gap: 4px;
+                }
+            }
+
+        }
+    }
+
+    .mb-3 {
+        margin-bottom: 16px;
     }
 }

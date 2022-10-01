@@ -33,8 +33,8 @@ export class CustomerTestimonialsComponent implements OnInit {
   intializeSwiper() {
     const swiper = new Swiper(".customer__testiomnial__swiper", {
       slidesPerView: 1,
-      spaceBetween: 30,
       slidesPerGroup: 1,
+      spaceBetween: 30,
       loop: true,
       loopFillGroupWithBlank: true,
       pagination: {
