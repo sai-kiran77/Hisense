@@ -1,0 +1,22 @@
+<section class="customer_testiomonials__section">
+    <div class="wrapper">
+        <h1 class="text__center section__heading mb-3">Our happy customers</h1>
+        <div class="swiper customer__testiomnial__swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let data of customerTestimonials">
+                    <div class="slide__wrapper">
+                        <div class="customer__title">{{data.title}}</div>
+                        <div class="customer__name">{{data.name}}</div>
+                        <div class="customer__review">{{data.description}}</div>
+                        <div class="customer__rating">
+                            <img width="20" height="20" *ngFor="let start of [].constructor(data.rating)" src="assets/star.svg" alt="rating">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>

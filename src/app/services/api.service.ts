@@ -81,7 +81,7 @@ export class ApiService {
     });
   }
 
-  getRegistrations(params: any,endpoint: string = 'https://api.hisense-india.com/campaigns/perfect-match-2022/registrations'){
+  getRegistrations(params: any,endpoint: string = 'https://api.hisense-india.com/v1/campaigns/perfect-match-2022/registrations'){
     return this.http.get(endpoint,{
       params
     });

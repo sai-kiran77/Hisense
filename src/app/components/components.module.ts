@@ -11,6 +11,7 @@ import { MainSliderUIComponent } from './UI/main-slider/main-slider.component';
 import { SwiperModule } from 'swiper/angular';
 import { ProductSeriesComponent } from './UI/product-series/product-series.component';
 import { FooterV2Component } from './footer-v2/footer-v2.component';
+import { CustomerTestimonialsComponent } from './customer-testimonials/customer-testimonials.component';
 
 const components = [
   HeaderComponent,
@@ -20,7 +21,8 @@ const components = [
   SocialLinksFooterComponent,
   ProductSeriesComponent,
   MainSliderUIComponent,
-  FooterV2Component
+  FooterV2Component,
+  CustomerTestimonialsComponent,
 ];
 
 @NgModule({

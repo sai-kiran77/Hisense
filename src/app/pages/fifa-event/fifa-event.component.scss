@@ -208,3 +208,81 @@ svg {
         }
     }
 }
+
+
+.ls-bg {
+    cursor: pointer;
+}
+
+.swiper-pagination-bullet {
+    color: #09cbc6 !important;
+    border: none !important;
+    width: 10px !important;
+    height: 10px !important;
+    outline: none !important;
+    margin: 7px !important;
+    border-radius: 50% !important;
+    background: transparent !important;
+    border: 2px solid #09cbc6 !important;
+    transition: background-color 500ms !important;
+    cursor: pointer !important;
+
+    &::before {
+        display: none !important;
+    }
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #00AAA6 !important;
+}
+
+.fifa__tabs__container{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 16px 0;
+    .tabs{
+        // background: #eae9e9;
+        border-radius: 50px;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .list-group {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+        gap: 16px;
+        a {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: -1px;
+            background-color: #fff;
+            white-space: nowrap;
+            border: 1.2px solid #09cbc6;
+            border-radius: 16px;
+        }
+        .active {
+            color: #fff;
+            // background-color: #2FA4E7 !important;
+            background-color: #00AAA6 !important;
+            border-color: #00AAA6 !important;
+        }
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .fifa__tabs__container{
+        .tabs{
+            padding: 12px;
+        }
+        .list-group {
+            gap: 12px;
+            a {
+                padding: 0.75rem 1rem;
+                border: 1.2px solid #09cbc6;
+                border-radius: 16px;
+            }
+        }
+    }
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 
 // import Swiper core and required modules
 // import SwiperCore, { Pagination, Navigation, Autoplay } from "swiper";
@@ -19,6 +19,8 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class MainSliderComponent implements OnInit {
 
+  @Input() slides: any = [];
+
   // {
   //   url:'/delightful-india',
   //   image:`${environment.baseApiUrl}/media/pages/home/Delightful-India-slide.jpg`,
@@ -28,41 +30,7 @@ export class MainSliderComponent implements OnInit {
   constructor(private api: ApiService) {
 
   }
-
-  slides: any = [];
-
   ngOnInit(): void {
-    this.getSlides();
-  }
-
-  getSlides() {
-    this.api.getPageSlides({ pageUrl: '/' }).subscribe({
-      next: (res: any) => {
-        // console.log(res);
-        this.slides = res.data.home_page_slides;
-
-        setTimeout(()=>{
-          let swiper = new Swiper(".mySwiperHome", {
-            slidesPerView: 1,
-            loop: true,
-            pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-            },
-            autoplay: {
-              delay: 6000,
-            },
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-          });
-        })
-      },
-      error: (err) => {
-
-      }
-    });
   }
 
 }
