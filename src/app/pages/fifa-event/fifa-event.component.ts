@@ -25,12 +25,12 @@ export class FifaEventComponent implements OnInit {
 
   slides = [
     {
-      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/1.webp`,
-      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/1.webp`
+      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`,
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`
     },
     {
-      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/2.webp`,
-      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/new-arrivals/slider/2.webp`
+      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-mobile.webp`,
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-desktop.webp`
     }
   ]
 
@@ -207,13 +207,6 @@ export class FifaEventComponent implements OnInit {
 
   environment = environment
 
-  fifaDetails = {
-    "desktop_image": "slide-1-300822.webp",
-    "mobile_image": "slide-1-300822-mobile.webp",
-    "desktop_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`,
-    "mobile_image_full_url": `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`
-  }
-
   yesterdayDate: any;
 
 
@@ -222,7 +215,7 @@ export class FifaEventComponent implements OnInit {
     private api: ApiService) {
     this.state.mobileNavToggle.next(false);
     const date = new Date();
-    this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${date.getDate() - 1}`;
+    this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
     // console.log(this.yesterdayDate);
   }
 

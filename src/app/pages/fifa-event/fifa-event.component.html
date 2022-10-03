@@ -7,8 +7,8 @@
                         <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
                             <a style="width: 100%;">
                                 <picture>
-                                    <source media="(min-width:768px)" [srcset]="fifaDetails.desktop_image_full_url">
-                                    <img [src]="fifaDetails.mobile_image_full_url" style="width: 100%;" class="banner" class="ls-bg">
+                                    <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
+                                    <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner" class="ls-bg">
                                 </picture>
                             </a>
                         </div>
@@ -97,10 +97,10 @@
         </section>
     </section>
     <section *ngIf="currentTab == 'How to participate'">
-        <picture>
+        <!-- <picture>
             <source media="(min-width:768px)" srcset="assets/steps-to-participate-desktop.png">
             <img src="assets/steps-to-participate-mobile.png" style="width: 100%;" class="banner" class="ls-bg">
-        </picture>
+        </picture> -->
         <section class="date__picker">
             <div class="wrapper">
                 <h3>Daily Winners</h3>
