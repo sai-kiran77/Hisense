@@ -25,12 +25,14 @@ export class FifaEventComponent implements OnInit {
 
   slides = [
     {
-      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Mobile.webp`,
-      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/fifa-2022/FIFA-World-Cup-Banner-Desktop.webp`
+      mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-mobile.webp`,
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-desktop.webp`,
+      redirectTo: null
     },
     {
       mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-mobile.webp`,
-      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-desktop.webp`
+      desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-desktop.webp`,
+      redirectTo: '/perfect-match-2022'
     }
   ]
 
