@@ -5,7 +5,7 @@
                 <div class="swiper mySwiperHome">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
-                            <a style="width: 100%;">
+                            <a style="width: 100%;" [routerLink]="slide.redirectTo">
                                 <picture>
                                     <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
                                     <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner" class="ls-bg">
@@ -97,10 +97,10 @@
         </section>
     </section>
     <section *ngIf="currentTab == 'How to participate'">
-        <!-- <picture>
-            <source media="(min-width:768px)" srcset="assets/steps-to-participate-desktop.png">
-            <img src="assets/steps-to-participate-mobile.png" style="width: 100%;" class="banner" class="ls-bg">
-        </picture> -->
+        <picture>
+            <source media="(min-width:768px)" [srcset]="environment.baseApiUrl + '/media/pages/campaigns/perfect-match-2022/steps-to-participate-desktop.webp'">
+            <img [src]="environment.baseApiUrl + '/media/pages/campaigns/perfect-match-2022/steps-to-participate-mobile.webp'" style="width: 100%;" class="banner" class="ls-bg">
+        </picture>
         <section class="date__picker">
             <div class="wrapper">
                 <h3>Daily Winners</h3>
