@@ -784,7 +784,7 @@ class PerfectMatch2022Component {
     this.quizResultMessage = '';
     this.quizStatus = 0;
     this.state.mobileNavToggle.next(false);
-    this.title.setTitle("Perfect match contest! | Hisense India");
+    this.title.setTitle("Perfect Match contest! | Hisense India");
     this.meta.updateTag({
       name: 'description',
       content: "Participate in Hisense India Perfect Match contest and get a chance to win daily goodies and lucky draw!"
@@ -803,7 +803,7 @@ class PerfectMatch2022Component {
     });
     this.meta.updateTag({
       property: "og:title",
-      content: "Perfect match contest! | Hisense India"
+      content: "Perfect Match contest! | Hisense India"
     });
     this.meta.updateTag({
       property: "og:url",

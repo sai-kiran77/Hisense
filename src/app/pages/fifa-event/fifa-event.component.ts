@@ -20,7 +20,7 @@ export class FifaEventComponent implements OnInit {
   seconds: any = '00';
   x: any;
 
-  tabs = ["About FIFA 2022","Perfect match"];
+  tabs = ["About FIFA 2022","Perfect Match"];
   currentTab = "About FIFA 2022";
 
   slides = [
