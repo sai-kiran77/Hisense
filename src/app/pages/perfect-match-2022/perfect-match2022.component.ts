@@ -49,7 +49,7 @@ export class PerfectMatch2022Component implements OnInit {
     private title: Title,
     private meta: Meta,) {
     this.state.mobileNavToggle.next(false);
-    this.title.setTitle("Perfect match contest! | Hisense India");
+    this.title.setTitle("Perfect Match contest! | Hisense India");
     this.meta.updateTag({
       name: 'description',
       content: "Participate in Hisense India Perfect Match contest and get a chance to win daily goodies and lucky draw!"
@@ -68,7 +68,7 @@ export class PerfectMatch2022Component implements OnInit {
     })
     this.meta.updateTag({
       property: "og:title",
-      content: "Perfect match contest! | Hisense India"
+      content: "Perfect Match contest! | Hisense India"
     })
     this.meta.updateTag({
       property: "og:url",
