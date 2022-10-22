@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-shell',
@@ -9,12 +10,13 @@ import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router
 export class ShellComponent implements OnInit {
 
   currentRoute: any;
+  environment = environment;
 
   constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.currentRoute = this.router.url.split('?')[0];
-    console.log(this.currentRoute);
+    // console.log(this.currentRoute);
 
     this.router.events.subscribe((event) => {
       // if (event instanceof NavigationStart) {

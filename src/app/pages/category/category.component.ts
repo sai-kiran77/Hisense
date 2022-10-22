@@ -58,7 +58,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
     this.showVideo = false;
     this.api.getSlugData(category).pipe(takeWhile(_ => this.alive)).subscribe({
       next: (res: any) => {
-        console.log(res);
+        // console.log(res);
         res.data.cover_media = res.data.cover_media.map((obj: any) => {
           return {
             ...obj,
@@ -75,7 +75,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
           this.showVideo = true;
         // },100)
         this.metaData = res.data;
-        console.log(this.metaData)
+        // console.log(this.metaData)
         this.seoTags(res.data.seo_info);
         // if(this.fragment){
         //   location.hash = '';
@@ -111,14 +111,14 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   getVideoLink(url: string) {
     url = url.split('?')[0] + '?autoplay=1&mute=0&showinfo=1&controls=1;';
-    console.log(url);
+    // console.log(url);
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 
   buyOptions(url: any) {
     this.api.getVarientData(url.slice(3)).subscribe({
       next: (res: any) => {
-        console.log(res?.data?.product_variant_purchase_links);
+        // console.log(res?.data?.product_variant_purchase_links);
         this.purchaseLinks = res?.data?.product_variant_purchase_links;
         this.showPurchaseLinksModal = true;
       },
@@ -149,7 +149,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   loadedCount = 0;
   load() {
-    console.log('loaded');
+    // console.log('loaded');
     this.loadedCount++;
     if(this.loadedCount == 2){
       this.isVideoLoading = false;

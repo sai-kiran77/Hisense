@@ -19,7 +19,7 @@ export class AppComponent {
     if (isPlatformBrowser(this.platformId)) {
       // console.log(window.location.pathname)
       let path = window.location.pathname;
-      console.log(path);
+      // console.log(path);
       if(path.slice(-1) == '/'){
         path = path.slice(0,-1);
       }
