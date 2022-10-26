@@ -362,7 +362,7 @@
                                 [src]="metaData[currentIndex]?.content_image_full_url" />
 
                         <div class="terms__and__conditions__context__text">
-                                <div *ngIf="metaData[currentIndex]?.content_text"
+                                <div style="word-break:break-all;" *ngIf="metaData[currentIndex]?.content_text"
                                         [innerHTML]="metaData[currentIndex]?.content_text"></div>
                         </div>
                 </ng-container>
