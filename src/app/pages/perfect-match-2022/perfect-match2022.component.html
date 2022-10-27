@@ -224,6 +224,15 @@
             </div>
         </form>
     </ng-container>
+    <ng-container *ngIf="currentStep == 0">
+        <form style="max-width: 500px">
+            <div>
+                <h3 style="line-height: 1.5;">This event has been ended.</h3>
+                <h3 style="line-height: 1.5;">Thank you for participating in Perfect Match 2022</h3>
+            </div>
+        </form>
+    </ng-container>
+
 </div>
 
 <audio #myaudio id="myAudio">

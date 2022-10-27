@@ -23,9 +23,9 @@ export class AppComponent {
       if(path.slice(-1) == '/'){
         path = path.slice(0,-1);
       }
-      if(path.includes('perfect-match-2022')){
-        this.router.navigate(['/'])
-      }else{
+      // if(path.includes('perfect-match-2022')){
+      //   this.router.navigate(['/'])
+      // }else{
         switch (path) {
           case '/30-39':
             this.router.navigate(['/c/laser-tv']);
@@ -206,7 +206,7 @@ export class AppComponent {
             this.router.navigate(['/v/43A56F'])
             break;
         }
-      }
+      // }
     }
   }
 }

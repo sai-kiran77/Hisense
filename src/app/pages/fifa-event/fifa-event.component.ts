@@ -217,8 +217,9 @@ export class FifaEventComponent implements OnInit {
     private api: ApiService) {
     this.state.mobileNavToggle.next(false);
     const date = new Date();
-    this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
+    // this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
     // console.log(this.yesterdayDate);
+    this.yesterdayDate = '2022-10-25';
   }
 
   swiper: any;

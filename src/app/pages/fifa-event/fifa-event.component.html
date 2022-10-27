@@ -104,7 +104,7 @@
         <section class="date__picker">
             <div class="wrapper">
                 <h3>Daily Winners</h3>
-                <input min="2022-09-26" [max]="yesterdayDate" [value]="yesterdayDate" type="date" name="date" id="date" (change)="getRegistrations($event)">
+                <input min="2022-09-26" max="2022-10-25" value="2022-10-25" type="date" name="date" id="date" (change)="getRegistrations($event)">
                 <div *ngIf="registrations">
                     <table *ngIf="registrations.length">
                         <tr style="background: #00b3ac;">
