@@ -207,7 +207,7 @@
 <div class="modal" (click)="modalMessage = ''" [ngClass]="{'show-modal': modalMessage}">
     <div class="modal-content" (click)="$event.stopPropagation()">
         <div class="modal-image">
-            <img [src]="modalImageName" style="transform: scale(2.5);">
+            <img [src]="modalImageName" style="transform: scale(2.5);" alt="status">
         </div>
         <h1 *ngIf="modalImageName === 'assets/images/warning.png'">Error!</h1>
         <!-- <span (click)="modalMessage = ''" class="close-button">&times;</span> -->

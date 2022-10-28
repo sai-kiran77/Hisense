@@ -1,7 +1,7 @@
 <div *ngIf="currentStep != 4" [ngClass]="{'step__3':currentStep == 3}" class="bg-image"></div>
 <div class="page-wrapper card"
     [ngClass]="{'is-loading': imageLoading,'height-auto thakyou__step': currentStep == 4,'step__3':currentStep == 3}">
-    <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;">
+    <img src="assets/Spin-The-Wheel-Website-Banner.jpg" (load)="imageLoaded()" style="display: none;" alt="spin the wheel banner">
     <div class="page__heading" *ngIf="currentStep == 4">
         <h2>Congratulations!</h2>
         <h3 *ngIf="thankYouMessage">{{thankYouMessage}}</h3>
@@ -136,7 +136,7 @@
                     <div class="icon">
                         <!-- <i class="fas fa-crown"></i> -->
                         <img *ngIf="!quizStatus" width="48" height="48" src="assets/warning.svg" alt="warning">
-                        <img *ngIf="quizStatus" width="48" height="48" src="assets/crown.svg" alt="warning">
+                        <img *ngIf="quizStatus" width="48" height="48" src="assets/crown.svg" alt="success">
                     </div>
                     <div class="complete_text">You've completed the Quiz!</div>
                     <!-- Here I've inserted Score Result from JavaScript -->
@@ -183,11 +183,11 @@
                     </ng-container>
                 </div> -->
                 <div class="mainbox" id="mainbox">
-                    <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30">
-                    <img src="assets/wheel_back.webp" class="wheel__back" alt="">
+                    <img class="wheel__back__football__img" src="assets/football.jpeg" width="30" height="30" alt="football">
+                    <img src="assets/wheel_back.webp" class="wheel__back" alt="wheel background">
                     <div class="spinner__container" [ngStyle]="{'transform': rotateDeg}">
 
-                        <div *ngFor="let prize of spinPrizes" [class]="prize.class"><img [src]="prize.icon_full_url">
+                        <div *ngFor="let prize of spinPrizes;let i = index" [class]="prize.class"><img [src]="prize.icon_full_url" [alt]="'prize ' + (i + 1)">
                         </div>
                         <!-- <div class="one"><img src="./prize.webp"></div>
                         <div class="two"><img src="./prize.webp"></div>
@@ -211,7 +211,7 @@
 
     <ng-container *ngIf="currentStep == 4">
         <form>
-            <img class="thankyou__img" [src]="thankYouImage">
+            <img class="thankyou__img" [src]="thankYouImage" alt="Thank you">
 
             <div style="display: flex;gap: 12px;padding: 0 15px 10px;justify-content: center;">
                 <a style="min-height: auto;" class="social-btn fb" [href]="socialLinks?.facebook"

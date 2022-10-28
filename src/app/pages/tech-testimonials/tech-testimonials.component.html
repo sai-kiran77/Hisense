@@ -21,7 +21,7 @@
 </div>
 
 <div class="container">
-    <div class="wpb_column vc_column_container vc_col-sm-6" *ngFor="let obj of paginatedTestimonials">
+    <div class="wpb_column vc_column_container vc_col-sm-6" *ngFor="let obj of paginatedTestimonials;let i = index">
         <div class="vc_column-inner">
             <div class="wpb_wrapper">
                 <div class="wpb_text_column wpb_content_element  vc_custom_1643340962550">
@@ -40,7 +40,7 @@
                         <div class="text-center-img">
                             <div *ngIf="!obj.playVideo" class="youtube__fake__img__wrapper" (click)="playVideo(obj)">
                                 <img
-                                    [src]="obj.youtube_thumb_image" style="width: 90%;height: 300px;">
+                                    [src]="obj.youtube_thumb_image" style="width: 90%;height: 300px;" [alt]="'youtube thumbnail ' + (i + 1)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.43em" height="1em"
                                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 180">
                                     <path fill="red"

@@ -9,7 +9,7 @@
                             <picture>
                                 <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
                                 <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
-                                    class="ls-bg">
+                                    class="ls-bg" [alt]="'slide banner ' + (i + 1)">
                             </picture>
                         </a>
                     </div>

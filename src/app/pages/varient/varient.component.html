@@ -4,9 +4,9 @@
             <div class="swiper__wrapper main__swiper">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images">
+                        <div class="swiper-slide" *ngFor="let slide of metaData?.slider_images;let i = index">
                             <img style="max-height: 50vh;" class="carousel-image main__image current-image" [src]="slide?.full_url"
-                                alt="image">
+                                [alt]="'carousel image ' + (i + 1)">
                         </div>
                     </div>
                     <!-- <div class="swiper-button-next"></div>
@@ -14,8 +14,8 @@
                     <!-- <div class="swiper-pagination"></div> -->
                     <div thumbsSlider="" class="swiper thumbsSlider">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide thumb__slide" *ngFor="let slide of metaData?.slider_images">
-                                <img class="carousel-image current-image" [src]="slide?.full_url" alt="image">
+                            <div class="swiper-slide thumb__slide" *ngFor="let slide of metaData?.slider_images;let i = index">
+                                <img class="carousel-image current-image" [src]="slide?.full_url" [alt]="'carousel thumb image ' + (i + 1)">
                             </div>
                         </div>
                     </div>
@@ -27,9 +27,9 @@
                 <div class="product__head-description">{{metaData?.short_description}}</div>
                 <div class="product__head-buttons" style="display: flex;flex-wrap: wrap;gap: 6px;">
                     <a [href]="link?.purchase_link" target="_blank"
-                        *ngFor="let link of metaData?.product_variant_purchase_links">
+                        *ngFor="let link of metaData?.product_variant_purchase_links;let i = index">
                         <img class="purchase__link__image" [src]="getVendorImage(link.vendor)"
-                            [ngClass]="[link.vendor]">
+                            [ngClass]="[link.vendor]" [alt]="'vendor ' + (i + 1)">
                     </a>
                 </div>
             </div>
@@ -57,9 +57,9 @@
 
         <div #productDescription id="productDescription" class="product__body">
             <section>
-                <div class="row" *ngFor="let obj of metaData?.product?.description_images">
+                <div class="row" *ngFor="let obj of metaData?.product?.description_images;let i = index">
                     <div class="product__block">
-                        <img class="product__full-image" [src]="obj.full_url">
+                        <img class="product__full-image" [src]="obj.full_url" [alt]="'product description ' + (i + 1)">
                     </div>
                 </div>
             </section>

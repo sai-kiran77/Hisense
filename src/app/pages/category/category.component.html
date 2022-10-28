@@ -40,9 +40,11 @@
                 <a class="product-listing-img" style="display: flex;justify-content: center;
                 align-items: center; overflow: visible;">
                     <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
-                        style="max-height: 300px;max-width: 96% !important;">
+                        style="max-height: 300px;max-width: 96% !important;"
+                        [alt]="prod.name">
                     <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
-                        style="max-height: 300px;max-width: 96% !important;">
+                        style="max-height: 300px;max-width: 96% !important;"
+                        alt="product placeholder">
                 </a>
                 <div style="margin-top: auto;" class="mobile-m-40">
                     <div class="product-listing-tab-content">
@@ -89,10 +91,12 @@
                         align-items: center; overflow: visible;cursor: default;">
                             <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                 [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                style="max-height: 280px;max-width: 100% !important;">
+                                style="max-height: 280px;max-width: 100% !important;"
+                                [alt]="product?.product?.name">
                             <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                 src="assets/images/prod__placeholder.png"
-                                style="max-height: 280px;max-width: 100% !important;">
+                                style="max-height: 280px;max-width: 100% !important;"
+                                alt="product placeholder">
                         </a>
                         <div>
                             <div style="font-size: 14px;color: gray;font-weight: bold;">Model Code</div>
@@ -204,9 +208,9 @@
         <div class="modal-container">
             <div *ngIf="purchaseLinks.length">
                 <div class="product__head-buttons">
-                    <a [href]="link?.purchase_link" target="_blank" *ngFor="let link of purchaseLinks">
+                    <a [href]="link?.purchase_link" target="_blank" *ngFor="let link of purchaseLinks;let i = index">
                         <img class="purchase__link__image" [src]="getVendorImage(link.vendor)"
-                            [ngClass]="[link.vendor]">
+                            [ngClass]="[link.vendor]" [alt]="'vendor ' + (i + 1)">
                     </a>
                 </div>
             </div>
