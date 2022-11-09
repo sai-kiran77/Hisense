@@ -81,6 +81,12 @@ export class ApiService {
     });
   }
 
+  getContactUsMetaData(params: any,endpoint: string = '/pages/metadata'){
+    return this.http.get(this.baseURL + endpoint,{
+      params
+    });
+  }
+
   getRegistrations(params: any,endpoint: string = 'https://api.hisense-india.com/v1/campaigns/perfect-match-2022/registrations'){
     return this.http.get(endpoint,{
       params

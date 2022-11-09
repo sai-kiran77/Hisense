@@ -1,21 +1,9 @@
 <section class="page">
-
-    <!-- <div class="page__cover page__section page__section_centered" data-ui-white="">
-        <div class="page__cover-inner desktop-banner"
-            style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
-        </div>
-        <div class="page__cover-inner mobile-banner"
-            style="background-color: rgb(32, 32, 32); transform: translateY(0px);">
-        </div>
-        <div class="page__container">
-            <h1 class="page__title">Contact Us</h1>
-        </div>
-    </div> -->
     <div class="breadcrumb__yellow__banner">
         <h1>contact us</h1>
     </div>
 
-    <div class="container" style="margin-top:60px; margin-bottom:60px;">
+    <div class="contact__us__container" style="margin-top:60px; margin-bottom:60px;">
         <div class="flex-wrapper">
             <div>
                 <h4>For installation and service support only</h4>
@@ -49,7 +37,6 @@
                 </div>
 
                 <h4 style="margin-top:40px;">For Complaints</h4>
-                <!-- <h5>Hisense</h5> -->
                 <table>
                     <tr>
                         <th>Escalation level</th>
@@ -78,34 +65,6 @@
                         <td><a href="mailto:india@hisense.com" class="mailto">india@hisense.com</a></td>
                     </tr>
                 </table>
-                <!-- <h5>Toshiba</h5>
-                <table style="margin-top: 20px;">
-                    <tr>
-                        <th>Escalation level</th>
-                        <th>Method</th>
-                        <th>Toll Free Number</th>
-                    </tr>
-                    <tr>
-                        <td>Level 1</td>
-                        <td>Call</td>
-                        <td><a class="telephone" href="tel:1800123960960.00">1800123960960.00</a></td>
-                    </tr>
-                    <tr>
-                        <td>Level 2</td>
-                        <td>E-mail</td>
-                        <td><a href="mailto:Tvindia.service@toshiba-visual.com" class="mailto">Tvindia.service@toshiba-visual.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Level 3</td>
-                        <td>E-mail</td>
-                        <td><a href="mailto:in.servicehead@hisense.com" class="mailto">in.servicehead@hisense.com</a></td>
-                    </tr>
-                    <tr>
-                        <td>Queries</td>
-                        <td>E-mail</td>
-                        <td><a href="mailto:india@hisense.com" class="mailto">india@hisense.com</a></td>
-                    </tr>
-                </table> -->
 
                 <h4 style="margin-top:40px;">Corporate Office</h4>
                 <div class="row" style="margin-top:20px;">
@@ -115,7 +74,7 @@
                     </div>
                 </div>
             </div>
-            <div style="border:2px solid black; padding:20px;">
+            <!-- <div style="border:2px solid black; padding:20px;">
                 <h2 style="font-size: 30px;">Have a Query?</h2>
                 <div role="form" class="wpcf7" id="wpcf7-f2330-o1" lang="en-US" dir="ltr">
                     <div class="screen-reader-response">
@@ -197,6 +156,239 @@
                         </div>
                         <div class="wpcf7-response-output" aria-hidden="true"></div>
                     </form>
+                </div>
+            </div> -->
+
+            <div class="service__request__form">
+                <div class="step">
+                    <div class="step__head">
+                        <h3>Your Product Choice</h3>
+                    </div>
+                    <div class="step__body">
+                        <form *ngIf="metaData">
+                            <div class="product__choice__container">
+                                <div class="product__input__container">
+                                    <div class="form__group">
+                                        <label>Select Product</label>
+                                        <div class="form__control">
+                                            <ng-select (change)="selectSearchProductChanged($event)"
+                                                [items]="productVarients" bindLabel="productFullDetails" bindValue="id"
+                                                [(ngModel)]="selectedVarient" [ngModelOptions]="{standalone: true}"
+                                                placeholder="Select Product">
+                                            </ng-select>
+                                            <div *ngIf="isFormSubmitted && !selectedVarient" #ErrorMessage
+                                                class="error__message"><span>Product is Required!</span></div>
+                                        </div>
+                                    </div>
+                                    <span class="my-3 text-center">OR</span>
+                                    <div class="form__group">
+                                        <label>Select by Category</label>
+                                        <div class="category__select__container">
+                                            <select (change)="updateCategory($event)">
+                                                <option value="null" disabled selected>Select Category</option>
+                                                <option *ngFor="let cat of metaData.categories" [value]="cat.id">
+                                                    {{cat.name}}</option>
+                                            </select>
+                                            <select *ngIf="selectedCategory" (change)="updateSubCategory($event)">
+                                                <option value="null" disabled selected>Select Sub Category</option>
+                                                <option *ngFor="let subCat of selectedCategory.subcategories"
+                                                    [value]="subCat.id">{{subCat.name}}</option>
+                                            </select>
+                                            <select *ngIf="selectedSubCategory" (change)="updateProduct($event)">
+                                                <option value="null" disabled selected>Select Product</option>
+                                                <option *ngFor="let varient of selectedSubCategory.category_products"
+                                                    [value]="varient.product.id">{{varient.product.name}}</option>
+                                            </select>
+                                            <select *ngIf="selectedProduct" (change)="updateProductVarient($event)">
+                                                <option value="null">Select Product Varient</option>
+                                                <option *ngFor="let varient of selectedProduct.product.product_variants"
+                                                    [value]="varient.id">{{varient.name}}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="preview__container">
+                                    <div *ngIf="selectedProductVarient;else elseBlock">
+                                        <div class="selected__product__img">
+                                            <img [src]="selectedProductVarient.thumb_image.full_url"
+                                                [alt]="selectedProductVarient.thumb_image.filename">
+                                        </div>
+                                        <div class="mt-5 selected__product__name text__center">
+                                            {{selectedProductVarient.name}}</div>
+                                        <div class="mt-1 font-14 selected__product__code text__center">
+                                            {{selectedProductVarient.code}}</div>
+                                        <div class="mt-1 font-14 selected__product__variant_size text__center">
+                                            {{selectedProductVarient.variant_size}}</div>
+                                        <button style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
+                                            style="text-transform: uppercase;"><a [routerLink]="selectedProductVarient.relative_url" target="_blank">Click Here to view Product</a></button>
+                                    </div>
+
+                                    <ng-template #elseBlock>
+                                        <div
+                                            class="flex flex-column justify-content-center align-items-center w-80 m-auto">
+                                            <img alt="No Image" src="assets/no-image.svg" width="110" height="77">
+                                            <div class="text__center mt-3">Enter Model Name or Select by Product
+                                                Category <span class="text__danger">*</span></div>
+                                        </div>
+                                    </ng-template>
+                                </div>
+                            </div>
+
+
+                        </form>
+
+                        <form class="mt-3 purchase__date__section">
+                            <div class="form__group p-3">
+                                <label>Product Purchase Date <span class="text__danger">*</span></label>
+                                <div class="form__control">
+                                    <input [(ngModel)]="product_purchase_date" type="date"
+                                        name="date" id="date" [max]="today" (change)="setRegistrationDate($event)">
+                                    <div *ngIf="isFormSubmitted && !product_purchase_date" #ErrorMessage
+                                        class="error__message"><span>Purchase Date is Required!</span></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step__head">
+                        <h3>Product Issue</h3>
+                    </div>
+                    <div class="step__body">
+                        <form *ngIf="metaData">
+                            <div class="form__group symptoms__container">
+                                <label>Symptoms <span class="text__danger">*</span></label>
+                                <div class="form__control flex flex-column" style="gap: 1rem;">
+                                    <div>
+                                        <select (change)="changeTopic($event)" style="width: 100%;">
+                                            <option disabled selected value="null">Topic</option>
+                                            <option *ngFor="let topic of metaData.contact_topics" [value]="topic.title">
+                                                {{topic.title}}</option>
+                                        </select>
+                                        <div *ngIf="isFormSubmitted && !selectedTopic?.title" #ErrorMessage
+                                            class="error__message"><span>Topic is Required!</span></div>
+                                    </div>
+                                    <div>
+                                        <select (change)="changeSubTopic($event)" style="width: 100%;"
+                                            [disabled]="!selectedTopic?.sub_topics?.length">
+                                            <option value="null" disabled selected>Sub Topic</option>
+                                            <option *ngFor="let topic of selectedTopic?.sub_topics" [value]="topic">
+                                                {{topic}}</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form__group mt-3">
+                                <label>Description <span class="text__danger">*</span></label>
+                                <div class="form__control">
+                                    <textarea style="width: 100%;" [(ngModel)]="body" cols="30" rows="6"
+                                        [ngModelOptions]="{standalone: true}"></textarea>
+                                    <div *ngIf="isFormSubmitted && !body" #ErrorMessage
+                                        class="error__message"><span>Description is Required!</span></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step__head">
+                        <h3>Contact Information</h3>
+                    </div>
+                    <div class="step__body">
+                        <form *ngIf="metaData">
+                            <div class="contact__information__form mb-5">
+                                <div class="form__group">
+                                    <label>Name <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !name" #ErrorMessage
+                                    class="error__message"><span>Name is Required!</span></div>
+                                </div>
+                                <div class="form__group">
+                                    <label>Phone Number <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !phone" #ErrorMessage
+                                    class="error__message"><span>Phone Number is Required!</span></div>
+                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && (phone.length != 10 || checkPhonePattern())">
+                                        <span>Phone Number should contain 10 digits!</span>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <label>Email <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !email" #ErrorMessage
+                                    class="error__message"><span>Email is Required!</span></div>
+                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && checkEmailPattern()">
+                                        <span>Phone Number should contain 10 digits!</span>
+                                    </div>
+                                </div>
+                                <div class="form__group">
+                                    <label>Address <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !address" #ErrorMessage
+                                    class="error__message"><span>Address is Required!</span></div>
+                                </div>
+                                <div class="form__group">
+                                    <label>City <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !city" #ErrorMessage
+                                    class="error__message"><span>City is Required!</span></div>
+                                </div>
+                                <div class="form__group">
+                                    <label>State <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="state1" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !state1" #ErrorMessage
+                                    class="error__message"><span>State is Required!</span></div>
+                                </div>
+                                <div class="form__group">
+                                    <label>Pin Code <span class="text__danger">*</span></label>
+                                    <div class="form__control">
+                                        <input type="text" [(ngModel)]="zipcode" [ngModelOptions]="{standalone: true}">
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !zipcode" #ErrorMessage
+                                    class="error__message"><span>Pin Code is Required!</span></div>
+                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && (zipcode.length != 6 || checkPhonePattern(zipcode))">
+                                        <span>Pin Code should contain 6 digits!</span></div>
+                                </div>
+                            </div>
+                            <div class="privacy__policy pt-5">
+                                <div class="form__group">
+                                    <label>Privacy Policy</label>
+                                    <div class="form__control flex align-items-center" style="gap: 8px;">
+                                        <input type="checkbox" [(ngModel)]="privacyPolicy"
+                                            [ngModelOptions]="{standalone: true}">
+                                        <span class="aggreement__text">I agree with the data protection policy. <span
+                                                class="text__danger">*</span> &nbsp;<a routerLink="/privacy-policy"
+                                                class="link-text" target="_blank" title="Opens in a new window">Read
+                                                More</a></span>
+                                    </div>
+                                    <div *ngIf="isFormSubmitted && !privacyPolicy" #ErrorMessage
+                                    class="error__message"><span>Policy Agreement is not checked!</span></div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="flex justify-content-center my-5">
+                    <button (click)="onSubmit()" style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
+                        [disabled]="isLoading">
+                        <span>Submit</span>
+                        <span *ngIf="isLoading" class="busy"></span>
+                    </button>
                 </div>
             </div>
         </div>
