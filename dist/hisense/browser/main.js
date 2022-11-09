@@ -2587,6 +2587,11 @@ class ApiService {
             params
         });
     }
+    getContactUsMetaData(params, endpoint = '/pages/metadata') {
+        return this.http.get(this.baseURL + endpoint, {
+            params
+        });
+    }
     getRegistrations(params, endpoint = 'https://api.hisense-india.com/v1/campaigns/perfect-match-2022/registrations') {
         return this.http.get(endpoint, {
             params
