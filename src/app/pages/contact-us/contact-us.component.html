@@ -173,10 +173,9 @@
                                         <div class="form__control">
                                             <ng-select (change)="selectSearchProductChanged($event)"
                                                 [items]="productVarients" bindLabel="productFullDetails" bindValue="id"
-                                                [(ngModel)]="selectedVarient" [ngModelOptions]="{standalone: true}"
-                                                placeholder="Select Product">
+                                                [(ngModel)]="selectedVarient" [ngModelOptions]="{standalone: true}">
                                             </ng-select>
-                                            <div *ngIf="isFormSubmitted && !selectedVarient" #ErrorMessage
+                                            <div *ngIf="isFormSubmitted && !selectedProductVarient" #ErrorMessage
                                                 class="error__message"><span>Product is Required!</span></div>
                                         </div>
                                     </div>
@@ -184,43 +183,53 @@
                                     <div class="form__group">
                                         <label>Select by Category</label>
                                         <div class="category__select__container">
-                                            <select (change)="updateCategory($event)">
+                                            <select (change)="updateCategory($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedCategoryId">
                                                 <option value="null" disabled selected>Select Category</option>
                                                 <option *ngFor="let cat of metaData.categories" [value]="cat.id">
                                                     {{cat.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedCategory" (change)="updateSubCategory($event)">
+                                            <select *ngIf="selectedCategory" (change)="updateSubCategory($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSubCategoryId">
                                                 <option value="null" disabled selected>Select Sub Category</option>
                                                 <option *ngFor="let subCat of selectedCategory.subcategories"
                                                     [value]="subCat.id">{{subCat.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedSubCategory" (change)="updateProduct($event)">
-                                                <option value="null" disabled selected>Select Product</option>
+                                            <select *ngIf="selectedSubCategory" (change)="updateProduct($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductId">
+                                                <option value="null" disabled selected>Select Product Group</option>
                                                 <option *ngFor="let varient of selectedSubCategory.category_products"
                                                     [value]="varient.product.id">{{varient.product.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedProduct" (change)="updateProductVarient($event)">
-                                                <option value="null">Select Product Varient</option>
+                                            <select *ngIf="selectedProduct" (change)="updateProductVarient($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductVarientId">
+                                                <option value="null">Select Product</option>
                                                 <option *ngFor="let varient of selectedProduct.product.product_variants"
                                                     [value]="varient.id">{{varient.name}}</option>
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="form__group">
+                                        <label>Product Purchase Date <span class="text__danger">*</span></label>
+                                        <div class="form__control">
+                                            <input [(ngModel)]="product_purchase_date" type="date" name="date" id="date"
+                                                [max]="today" (change)="setRegistrationDate($event)" class="w-100">
+                                            <div *ngIf="isFormSubmitted && !product_purchase_date" #ErrorMessage
+                                                class="error__message"><span>Purchase Date is Required!</span></div>
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="preview__container">
-                                    <div *ngIf="selectedProductVarient;else elseBlock">
+                                    <div *ngIf="selectedProductVarient;else elseBlock" class="flex flex-column justify-content-center align-items-center" style="padding: 24px;">
                                         <div class="selected__product__img">
                                             <img [src]="selectedProductVarient.thumb_image.full_url"
                                                 [alt]="selectedProductVarient.thumb_image.filename">
                                         </div>
                                         <div class="mt-5 selected__product__name text__center">
                                             {{selectedProductVarient.name}}</div>
-                                        <div class="mt-1 font-14 selected__product__code text__center">
+                                        <div class="mt-2 font-14 selected__product__code text__center" *ngIf="selectedProductVarient.name != selectedProductVarient.code">
                                             {{selectedProductVarient.code}}</div>
-                                        <div class="mt-1 font-14 selected__product__variant_size text__center">
+                                        <div class="mt-2 font-14 selected__product__variant_size text__center">
                                             {{selectedProductVarient.variant_size}}</div>
-                                        <button style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
-                                            style="text-transform: uppercase;"><a [routerLink]="selectedProductVarient.relative_url" target="_blank">Click Here to view Product</a></button>
+                                        <a [routerLink]="selectedProductVarient.relative_url" style="text-decoration: none;" target="_blank">
+                                            <button style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
+                                                >Click Here to view Product</button></a>
                                     </div>
 
                                     <ng-template #elseBlock>
@@ -235,18 +244,6 @@
                             </div>
 
 
-                        </form>
-
-                        <form class="mt-3 purchase__date__section">
-                            <div class="form__group p-3">
-                                <label>Product Purchase Date <span class="text__danger">*</span></label>
-                                <div class="form__control">
-                                    <input [(ngModel)]="product_purchase_date" type="date"
-                                        name="date" id="date" [max]="today" (change)="setRegistrationDate($event)">
-                                    <div *ngIf="isFormSubmitted && !product_purchase_date" #ErrorMessage
-                                        class="error__message"><span>Purchase Date is Required!</span></div>
-                                </div>
-                            </div>
                         </form>
                     </div>
                 </div>
@@ -284,8 +281,9 @@
                                 <div class="form__control">
                                     <textarea style="width: 100%;" [(ngModel)]="body" cols="30" rows="6"
                                         [ngModelOptions]="{standalone: true}"></textarea>
-                                    <div *ngIf="isFormSubmitted && !body" #ErrorMessage
-                                        class="error__message"><span>Description is Required!</span></div>
+                                    <div *ngIf="isFormSubmitted && !body" #ErrorMessage class="error__message">
+                                        <span>Description is Required!</span>
+                                    </div>
                                 </div>
                             </div>
                         </form>
@@ -304,17 +302,20 @@
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !name" #ErrorMessage
-                                    class="error__message"><span>Name is Required!</span></div>
+                                    <div *ngIf="isFormSubmitted && !name" #ErrorMessage class="error__message">
+                                        <span>Name is Required!</span>
+                                    </div>
                                 </div>
                                 <div class="form__group">
                                     <label>Phone Number <span class="text__danger">*</span></label>
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="phone" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !phone" #ErrorMessage
-                                    class="error__message"><span>Phone Number is Required!</span></div>
-                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && (phone.length != 10 || checkPhonePattern())">
+                                    <div *ngIf="isFormSubmitted && !phone" #ErrorMessage class="error__message">
+                                        <span>Phone Number is Required!</span>
+                                    </div>
+                                    <div class="error__message" #ErrorMessage
+                                        *ngIf="isFormSubmitted && (phone.length != 10 || checkPhonePattern())">
                                         <span>Phone Number should contain 10 digits!</span>
                                     </div>
                                 </div>
@@ -323,9 +324,11 @@
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !email" #ErrorMessage
-                                    class="error__message"><span>Email is Required!</span></div>
-                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && checkEmailPattern()">
+                                    <div *ngIf="isFormSubmitted && !email" #ErrorMessage class="error__message">
+                                        <span>Email is Required!</span>
+                                    </div>
+                                    <div class="error__message" #ErrorMessage
+                                        *ngIf="isFormSubmitted && checkEmailPattern()">
                                         <span>Phone Number should contain 10 digits!</span>
                                     </div>
                                 </div>
@@ -334,34 +337,40 @@
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="address" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !address" #ErrorMessage
-                                    class="error__message"><span>Address is Required!</span></div>
+                                    <div *ngIf="isFormSubmitted && !address" #ErrorMessage class="error__message">
+                                        <span>Address is Required!</span>
+                                    </div>
                                 </div>
                                 <div class="form__group">
                                     <label>City <span class="text__danger">*</span></label>
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="city" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !city" #ErrorMessage
-                                    class="error__message"><span>City is Required!</span></div>
+                                    <div *ngIf="isFormSubmitted && !city" #ErrorMessage class="error__message">
+                                        <span>City is Required!</span>
+                                    </div>
                                 </div>
                                 <div class="form__group">
                                     <label>State <span class="text__danger">*</span></label>
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="state1" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !state1" #ErrorMessage
-                                    class="error__message"><span>State is Required!</span></div>
+                                    <div *ngIf="isFormSubmitted && !state1" #ErrorMessage class="error__message">
+                                        <span>State is Required!</span>
+                                    </div>
                                 </div>
                                 <div class="form__group">
                                     <label>Pin Code <span class="text__danger">*</span></label>
                                     <div class="form__control">
                                         <input type="text" [(ngModel)]="zipcode" [ngModelOptions]="{standalone: true}">
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !zipcode" #ErrorMessage
-                                    class="error__message"><span>Pin Code is Required!</span></div>
-                                    <div class="error__message" #ErrorMessage *ngIf="isFormSubmitted && (zipcode.length != 6 || checkPhonePattern(zipcode))">
-                                        <span>Pin Code should contain 6 digits!</span></div>
+                                    <div *ngIf="isFormSubmitted && !zipcode" #ErrorMessage class="error__message">
+                                        <span>Pin Code is Required!</span>
+                                    </div>
+                                    <div class="error__message" #ErrorMessage
+                                        *ngIf="isFormSubmitted && (zipcode.length != 6 || checkPhonePattern(zipcode))">
+                                        <span>Pin Code should contain 6 digits!</span>
+                                    </div>
                                 </div>
                             </div>
                             <div class="privacy__policy pt-5">
@@ -375,8 +384,9 @@
                                                 class="link-text" target="_blank" title="Opens in a new window">Read
                                                 More</a></span>
                                     </div>
-                                    <div *ngIf="isFormSubmitted && !privacyPolicy" #ErrorMessage
-                                    class="error__message"><span>Policy Agreement is not checked!</span></div>
+                                    <div *ngIf="isFormSubmitted && !privacyPolicy" #ErrorMessage class="error__message">
+                                        <span>Policy Agreement is not checked!</span>
+                                    </div>
                                 </div>
                             </div>
                         </form>

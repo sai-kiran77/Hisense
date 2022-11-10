@@ -1,3 +1,4 @@
+import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
@@ -50,43 +51,60 @@ export class ContactUsComponent implements OnInit {
   getMetaData() {
     this.api.getContactUsMetaData({ pageUrl: '/contact-us' }).subscribe((res: any) => {
       // console.log(res);
-      this.productVarients = res.data.product_variants.map((item: any) => { 
-        item.productFullDetails = `${item.name} (${item.code})` 
-        return item; 
+      this.productVarients = res.data.product_variants.map((item: any) => {
+        item.productFullDetails = `${item.name} (${item.code})`
+        return item;
       });
 
       this.metaData = res.data;
-    },(err)=>{
+    }, (err) => {
       console.log(err);
     })
   }
 
   selectedCategory: any = null;
-  updateCategory(event: any){
+  updateCategory(event: any) {
     // console.log(this.metaData.categories, event.target.value);
-    this.selectedCategory = this.metaData.categories.find((cat: any)=> cat.id == event.target.value);
+    this.selectedCategory = this.metaData.categories.find((cat: any) => cat.id == event.target.value);
     // console.log(this.selectedCategory);
+    this.selectedCategoryId = this.selectedCategory.id;
+    this.selectedSubCategoryId = null;
+    this.selectedProductId = null;
+    this.selectedProductVarientId = null;
   }
 
-  selectedSubCategory: any = null;
-  updateSubCategory(event: any){
+  selectedSubCategory: any;
+  updateSubCategory(event: any) {
     // console.log(this.selectedCategory.subcategories, event.target.value);
-    this.selectedSubCategory = this.selectedCategory.subcategories.find((cat: any)=> cat.id == event.target.value);
+    this.selectedSubCategory = this.selectedCategory.subcategories.find((cat: any) => cat.id == event.target.value);
     // console.log(this.selectedSubCategory);
+    this.selectedSubCategoryId = this.selectedSubCategory.id;
+    this.selectedProductId = null;
+    this.selectedProductVarientId = null;
   }
 
   selectedProduct: any = null;
-  updateProduct(event: any){
+  updateProduct(event: any) {
     // console.log(this.selectedSubCategory.category_products, event.target.value);
-    this.selectedProduct = this.selectedSubCategory.category_products.find((cat: any)=> cat.product.id == event.target.value);
+    this.selectedProduct = this.selectedSubCategory.category_products.find((cat: any) => cat.product.id == event.target.value);
+    this.selectedProductId = this.selectedProduct.product.id;
+    this.selectedProductVarientId = null;
+    if (this.selectedProduct.product.product_variants.length == 1) {
+      this.updateProductVarient({ target: { value: this.selectedProduct.product.product_variants[0].id }})
+    }
     // console.log(this.selectedProduct);
   }
 
-  updateProductVarient(event: any){
+  selectedProductVarientId = null;
+  selectedProductId = null;
+  selectedCategoryId = null;
+  selectedSubCategoryId = null;
+  updateProductVarient(event: any) {
     // console.log(event.target.value);
-    this.selectedProductVarient = this.selectedProduct.product.product_variants.find((cat: any)=> cat.id == event.target.value);
+    this.selectedProductVarient = this.selectedProduct.product.product_variants.find((cat: any) => cat.id == event.target.value);
     // console.log(this.selectedProductVarient)
     this.selectedVarient = null;
+    this.selectedProductVarientId = this.selectedProductVarient.id;
   }
 
   isLoading = false;
@@ -99,7 +117,7 @@ export class ContactUsComponent implements OnInit {
     //     this.modalImageName = 'assets/images/success.webp';
     //     this.isLoading = false;
     //   }, (err: any) => {
-        // console.log(err);
+    // console.log(err);
     //     this.modalImageName = 'assets/images/warning.png'
     //     this.modalMessage = err.message;
     //     this.isLoading = false;
@@ -135,17 +153,17 @@ export class ContactUsComponent implements OnInit {
       })
     } else {
       this.isFormSubmitted = true;
-      setTimeout(()=>{
+      setTimeout(() => {
         // console.log(this.ErrorMessageRef)
-        if(this.ErrorMessageRef){
+        if (this.ErrorMessageRef) {
           this.ErrorMessageRef.nativeElement.scrollIntoView({ behavior: "smooth", block: "center" });
         }
-      },250)
+      }, 250)
     }
   }
 
   selectedProductVarient: any = null;
-  selectSearchProductChanged(event: any){
+  selectSearchProductChanged(event: any) {
     // console.log(event);
     this.selectedProductVarient = event;
     this.selectedCategory = null;
@@ -153,18 +171,18 @@ export class ContactUsComponent implements OnInit {
     this.selectedProduct = null;
   }
 
-  setRegistrationDate(event: any){
+  setRegistrationDate(event: any) {
     // console.log(event);
   }
 
   selectedTopic: any;
-  changeTopic(event: any){
-    this.selectedTopic = this.metaData.contact_topics.find((cat: any)=> cat.title == event.target.value);
+  changeTopic(event: any) {
+    this.selectedTopic = this.metaData.contact_topics.find((cat: any) => cat.title == event.target.value);
     // console.log(this.selectedTopic)
   }
 
   selectedSubTopic: any;
-  changeSubTopic(event: any){
+  changeSubTopic(event: any) {
     this.selectedSubTopic = event.target.value;
   }
 
@@ -179,11 +197,11 @@ export class ContactUsComponent implements OnInit {
   name = ''
   privacyPolicy = 0;
 
-  checkPhonePattern(value?: any){
+  checkPhonePattern(value?: any) {
     return !(/^[0-9]*$/.test(value ? value : this.phone));
   }
 
-  checkEmailPattern(){
+  checkEmailPattern() {
     return !(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.email));
   }
 

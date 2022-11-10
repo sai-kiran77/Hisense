@@ -4643,6 +4643,7 @@ a.active {
     display: block;
     width: 14px;
     height: 14px;
+    min-width: 14px;
     margin-bottom: 3px;
     margin-right: 4px;
     background: url(./assets/error.svg) no-repeat 0 0;
@@ -4658,4 +4659,16 @@ a.active {
 
 .mt-1{
     margin-top: 0.25rem;
+}
+
+.w-100{
+    width: 100% !important;
+}
+
+select::placeholder{
+    font-weight: 100 !important;
+}
+
+option{
+    font-weight: 100 !important;
 }
