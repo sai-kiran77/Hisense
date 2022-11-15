@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -40,6 +40,14 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
+  fifaRegister(body: any, endpoint: string = '/campaigns/fifa-2022/register') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
+  uploadFifaScreenshot(fd: any, endpoint: string = '/campaigns/fifa-2022/upload-screenshot') {
+    return this.http.post(this.baseURL + endpoint, fd);
+  }
+
   submitPerfectMatchQuiz(body: any, endpoint: string = '/campaigns/perfect-match-2022/submit-quiz') {
     return this.http.post(this.baseURL + endpoint, body);
   }
@@ -49,6 +57,12 @@ export class ApiService {
   }
 
   registrationSummary(params: any, endpoint: string = '/campaigns/perfect-match-2022/get-summary') {
+    return this.http.get(this.baseURL + endpoint, {
+      params
+    });
+  }
+
+  fifaRegistrationSummary(params: any, endpoint: string = '/campaigns/fifa-2022/get-summary') {
     return this.http.get(this.baseURL + endpoint, {
       params
     });

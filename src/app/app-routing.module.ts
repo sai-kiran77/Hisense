@@ -29,6 +29,14 @@ const routes: Routes = [
         path: 'perfect-match-2022/:uuid',
         loadChildren: () => import('./pages/perfect-match-2022/perfect-match-2022.module').then(m => m.PerfectMatch2022Module)
       },
+      {
+        path: 'FIFA-2022/participate',
+        loadChildren: () => import('./pages/participate-fifa-2022/participate-fifa-2022.module').then(m => m.ParticipateFifa2022Module)
+      },
+      {
+        path: 'FIFA-2022/participate/:uuid',
+        loadChildren: () => import('./pages/participate-fifa-2022/participate-fifa-2022.module').then(m => m.ParticipateFifa2022Module)
+      },
       // {
       //   path: 'new-launches',
       //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
