@@ -45,6 +45,14 @@ const routes = [
                 path: 'perfect-match-2022/:uuid',
                 loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_pages_perfect-match-2022_perfect-match-2022_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/perfect-match-2022/perfect-match-2022.module */ 1087)).then(m => m.PerfectMatch2022Module)
             },
+            {
+                path: 'FIFA-2022/participate',
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_pages_participate-fifa-2022_participate-fifa-2022_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/participate-fifa-2022/participate-fifa-2022.module */ 8194)).then(m => m.ParticipateFifa2022Module)
+            },
+            {
+                path: 'FIFA-2022/participate/:uuid',
+                loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_pages_participate-fifa-2022_participate-fifa-2022_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/participate-fifa-2022/participate-fifa-2022.module */ 8194)).then(m => m.ParticipateFifa2022Module)
+            },
             // {
             //   path: 'new-launches',
             //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
@@ -387,7 +395,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_shell_shell_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/shell/shell.component */ 278);
 /* harmony import */ var _components_components_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/components.module */ 7581);
 /* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/common/http */ 8784);
+/* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser/animations */ 3598);
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ 4101);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/core */ 3184);
+
+
+
 
 
 
@@ -408,14 +421,17 @@ AppModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵ
             _pages_home_home_module__WEBPACK_IMPORTED_MODULE_2__.HomeModule,
             swiper_angular__WEBPACK_IMPORTED_MODULE_7__.SwiperModule,
             _components_components_module__WEBPACK_IMPORTED_MODULE_4__.ComponentsModule,
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule,
+            _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__.BrowserAnimationsModule,
+            ngx_toastr__WEBPACK_IMPORTED_MODULE_10__.ToastrModule.forRoot(),
         ]] });
 (function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_5__["ɵɵsetNgModuleScope"](AppModule, { declarations: [_app_component__WEBPACK_IMPORTED_MODULE_1__.AppComponent,
         _components_shell_shell_component__WEBPACK_IMPORTED_MODULE_3__.ShellComponent], imports: [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_6__.BrowserModule, _app_routing_module__WEBPACK_IMPORTED_MODULE_0__.AppRoutingModule,
         _pages_home_home_module__WEBPACK_IMPORTED_MODULE_2__.HomeModule,
         swiper_angular__WEBPACK_IMPORTED_MODULE_7__.SwiperModule,
         _components_components_module__WEBPACK_IMPORTED_MODULE_4__.ComponentsModule,
-        _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule] }); })();
+        _angular_common_http__WEBPACK_IMPORTED_MODULE_8__.HttpClientModule,
+        _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_9__.BrowserAnimationsModule, ngx_toastr__WEBPACK_IMPORTED_MODULE_10__.ToastrModule] }); })();
 
 
 /***/ }),
@@ -2554,6 +2570,12 @@ class ApiService {
     PerfectMatch(body, endpoint = '/campaigns/perfect-match-2022/register') {
         return this.http.post(this.baseURL + endpoint, body);
     }
+    fifaRegister(body, endpoint = '/campaigns/fifa-2022/register') {
+        return this.http.post(this.baseURL + endpoint, body);
+    }
+    uploadFifaScreenshot(fd, endpoint = '/campaigns/fifa-2022/upload-screenshot') {
+        return this.http.post(this.baseURL + endpoint, fd);
+    }
     submitPerfectMatchQuiz(body, endpoint = '/campaigns/perfect-match-2022/submit-quiz') {
         return this.http.post(this.baseURL + endpoint, body);
     }
@@ -2561,6 +2583,11 @@ class ApiService {
         return this.http.post(this.baseURL + endpoint, body);
     }
     registrationSummary(params, endpoint = '/campaigns/perfect-match-2022/get-summary') {
+        return this.http.get(this.baseURL + endpoint, {
+            params
+        });
+    }
+    fifaRegistrationSummary(params, endpoint = '/campaigns/fifa-2022/get-summary') {
         return this.http.get(this.baseURL + endpoint, {
             params
         });
