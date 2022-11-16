@@ -183,22 +183,28 @@
                                     <div class="form__group">
                                         <label>Select by Category</label>
                                         <div class="category__select__container">
-                                            <select (change)="updateCategory($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedCategoryId">
+                                            <select (change)="updateCategory($event)"
+                                                [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedCategoryId">
                                                 <option value="null" disabled selected>Select Category</option>
                                                 <option *ngFor="let cat of metaData.categories" [value]="cat.id">
                                                     {{cat.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedCategory" (change)="updateSubCategory($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedSubCategoryId">
+                                            <select *ngIf="selectedCategory" (change)="updateSubCategory($event)"
+                                                [ngModelOptions]="{standalone: true}"
+                                                [(ngModel)]="selectedSubCategoryId">
                                                 <option value="null" disabled selected>Select Sub Category</option>
                                                 <option *ngFor="let subCat of selectedCategory.subcategories"
                                                     [value]="subCat.id">{{subCat.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedSubCategory" (change)="updateProduct($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductId">
+                                            <select *ngIf="selectedSubCategory" (change)="updateProduct($event)"
+                                                [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductId">
                                                 <option value="null" disabled selected>Select Product Group</option>
                                                 <option *ngFor="let varient of selectedSubCategory.category_products"
                                                     [value]="varient.product.id">{{varient.product.name}}</option>
                                             </select>
-                                            <select *ngIf="selectedProduct" (change)="updateProductVarient($event)" [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedProductVarientId">
+                                            <select *ngIf="selectedProduct" (change)="updateProductVarient($event)"
+                                                [ngModelOptions]="{standalone: true}"
+                                                [(ngModel)]="selectedProductVarientId">
                                                 <option value="null">Select Product</option>
                                                 <option *ngFor="let varient of selectedProduct.product.product_variants"
                                                     [value]="varient.id">{{varient.name}}</option>
@@ -216,20 +222,23 @@
                                     </div>
                                 </div>
                                 <div class="preview__container">
-                                    <div *ngIf="selectedProductVarient;else elseBlock" class="flex flex-column justify-content-center align-items-center" style="padding: 24px;">
+                                    <div *ngIf="selectedProductVarient;else elseBlock"
+                                        class="flex flex-column justify-content-center align-items-center"
+                                        style="padding: 24px;">
                                         <div class="selected__product__img">
                                             <img [src]="selectedProductVarient.thumb_image.full_url"
                                                 [alt]="selectedProductVarient.thumb_image.filename">
                                         </div>
                                         <div class="mt-5 selected__product__name text__center">
                                             {{selectedProductVarient.name}}</div>
-                                        <div class="mt-2 font-14 selected__product__code text__center" *ngIf="selectedProductVarient.name != selectedProductVarient.code">
+                                        <div class="mt-2 font-14 selected__product__code text__center"
+                                            *ngIf="selectedProductVarient.name != selectedProductVarient.code">
                                             {{selectedProductVarient.code}}</div>
                                         <div class="mt-2 font-14 selected__product__variant_size text__center">
                                             {{selectedProductVarient.variant_size}}</div>
-                                        <a [routerLink]="selectedProductVarient.relative_url" style="text-decoration: none;" target="_blank">
-                                            <button style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
-                                                >Click Here to view Product</button></a>
+                                        <button [routerLink]="selectedProductVarient.relative_url" style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"><a
+                                                style="text-decoration: none;" target="_blank">Click Here to view
+                                            Product</a></button>
                                     </div>
 
                                     <ng-template #elseBlock>
