@@ -2573,6 +2573,9 @@ class ApiService {
     fifaRegister(body, endpoint = '/campaigns/fifa-2022/register') {
         return this.http.post(this.baseURL + endpoint, body);
     }
+    fifaLogin(body, endpoint = '/campaigns/fifa-2022/login') {
+        return this.http.post(this.baseURL + endpoint, body);
+    }
     uploadFifaScreenshot(fd, endpoint = '/campaigns/fifa-2022/upload-screenshot') {
         return this.http.post(this.baseURL + endpoint, fd);
     }
