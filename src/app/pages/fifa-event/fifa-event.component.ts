@@ -20,7 +20,7 @@ export class FifaEventComponent implements OnInit {
   seconds: any = '00';
   x: any;
 
-  tabs = ["About FIFA 2022","Perfect Match"];
+  tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel"];
   currentTab = "About FIFA 2022";
 
   slides = [
@@ -28,6 +28,11 @@ export class FifaEventComponent implements OnInit {
       mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-mobile.webp`,
       desktop_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-desktop.webp`,
       redirectTo: null
+    },
+    {
+      mobile_image_full_url: `assets/spot-hisense.png`,
+      desktop_image_full_url: `assets/spot-hisense.png`,
+      redirectTo: '/FIFA-2022/participate'
     },
     {
       mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-2-mobile.webp`,
@@ -242,11 +247,19 @@ export class FifaEventComponent implements OnInit {
         },
       });
       this.swiper.on('slideChange', (event: any) => {
-        if(event.activeIndex % 2 == 1){
-          this.currentTab = this.tabs[0];
-        }else{
-          this.currentTab = this.tabs[1];
+        // if (event.activeIndex % 2 == 1) {
+        //   this.currentTab = this.tabs[0];
+        // } else {
+        //   this.currentTab = this.tabs[1];
+        // }
+        let activeIndex = event.activeIndex;
+        if(activeIndex == 4){
+          activeIndex = 1;
         }
+        if(activeIndex == 0){
+          activeIndex = 3;
+        }
+        this.currentTab = this.tabs[activeIndex - 1];
       });
     })
     this.getRegistrations({ target: { value: this.yesterdayDate } });
@@ -300,7 +313,6 @@ export class FifaEventComponent implements OnInit {
   registrations: any;
 
   getRegistrations(event: any) {
-    console.log(event.target.value)
     const params = {
       date: event.target.value,
       user_progress: 'prize_winners'
@@ -318,13 +330,15 @@ export class FifaEventComponent implements OnInit {
     })
   }
 
-  changeTab(tab: any){
+  changeTab(tab: any) {
     this.currentTab = tab;
-    if(tab == this.tabs[0]){
-      this.swiper.slidePrev();
-    }else{
-      this.swiper.slideNext();
-    }
+    const tabIndec = this.tabs.findIndex(t => t == tab);
+    this.swiper.slideTo(tabIndec + 1);
+    // if (tab == this.tabs[0]) {
+    //   this.swiper.slidePrev();
+    // } else {
+    //   this.swiper.slideNext();
+    // }
   }
 
   ngOnDestroy() {

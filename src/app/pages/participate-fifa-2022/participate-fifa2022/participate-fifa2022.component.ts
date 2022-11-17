@@ -22,6 +22,10 @@ export class ParticipateFifa2022Component implements OnInit {
   textFontSize = "18";
   alive = true;
   innerRadius = 25;
+  terms = false;
+  showRegister = true;
+  showLogin = false;
+  displaySocialLinks = false;
 
   spinPrizes: any = [];
   classNames = ['one', 'two', 'three', 'four', 'five', 'six'];
@@ -169,8 +173,16 @@ export class ParticipateFifa2022Component implements OnInit {
   onSubmit() {
     this.isSignupFormSubmitted = true;
     this.signupLoading = true;
-    if (this.signupForm && this.signupForm.valid) {
-      this.api.fifaRegister(this.signupForm.value).subscribe((res: any) => {
+    let apiCall = this.api.fifaRegister(this.signupForm.value);
+    let isFormValid = false;
+    if(this.showLogin){
+      if(this.terms && this.signupForm.value.phone){
+        isFormValid = true;
+        apiCall = this.api.fifaLogin({ phone: this.signupForm.value.phone });
+      }
+    }
+    if (this.signupForm && this.signupForm.valid && this.terms || isFormValid) {
+      apiCall.subscribe((res: any) => {
         this.loggedInData = res?.data;
         this.signupLoading = false;
         // console.log(res);

@@ -44,6 +44,10 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
+  fifaLogin(body: any, endpoint: string = '/campaigns/fifa-2022/login') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
   uploadFifaScreenshot(fd: any, endpoint: string = '/campaigns/fifa-2022/upload-screenshot') {
     return this.http.post(this.baseURL + endpoint, fd);
   }
