@@ -243,8 +243,8 @@ class FifaEventComponent {
                 redirectTo: null
             },
             {
-                mobile_image_full_url: `assets/spot-hisense.png`,
-                desktop_image_full_url: `assets/spot-hisense.png`,
+                mobile_image_full_url: `assets/spot-hisense.webp`,
+                desktop_image_full_url: `assets/spot-hisense.webp`,
                 redirectTo: '/FIFA-2022/participate'
             },
             {
