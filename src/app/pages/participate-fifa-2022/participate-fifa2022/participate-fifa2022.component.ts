@@ -107,6 +107,7 @@ export class ParticipateFifa2022Component implements OnInit {
   ngOnInit() {
     this.route.params.pipe(takeWhile(_ => this.alive)).subscribe((routeParams: any) => {
       if (routeParams['uuid']) {
+        this.currentStep = 4;
         this.getRegistrationSummary(routeParams['uuid']);
       }
     });

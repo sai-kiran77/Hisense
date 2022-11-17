@@ -51,6 +51,7 @@
     form {
         min-height: auto !important;
         padding: 12px 24px;
+        margin-top: 20px;
     }
 }
 
@@ -205,7 +206,7 @@ button {
 input {
     width: 100%;
     padding: 10px;
-    margin: 8px 0 0 !important;
+    // margin: 8px 0 0 !important;
     display: inline-block;
     // border: none;
     display: block;
@@ -258,6 +259,11 @@ label {
     //     .page__heading {
     //         margin-top: 36px;
     //     }
+
+    .landing__image{
+        display: none;
+    }
+
     form {
         // background: url(../../../../assets/fifa-2022-thankyou-bg.jpg) no-repeat;
         width: 575px;
@@ -312,30 +318,25 @@ label {
 }
 
 @media screen and (max-width: 768px) {
-    .spinner__wrapper {
-        .icon {
-            top: 39%;
-            left: 45.7%;
-        }
+
+    .page-wrapper{
+        height: 120%;
+    }
+
+    .landing__image {
+        background: url(../../../../assets/spot-hisense-mobile-banner.webp) no-repeat center;
+    }
+
+    .form__control {
+        margin: 16px 0;
+    }
+
+    .doll__img {
+        display: none;
     }
 
     .step {
         justify-content: center !important;
-    }
-
-    svg {
-        width: 30px !important;
-        height: 30px !important;
-    }
-
-    .spin-btn-wrap {
-        height: 50px;
-        width: 50px;
-    }
-
-    .spin-btn {
-        width: 40px;
-        height: 40px;
     }
 
     form {
@@ -875,7 +876,37 @@ form.spinner__wrapper {
 //     }
 // }
 
+.landing__image {
+    width: 100%;
+    height: inherit;
+    background-size: cover;
+    position: absolute;
+}
+
+input {
+    max-width: 337px;
+    margin: auto;
+}
+
 @media screen and (min-width: 768px) {
+
+    .doll__img {
+        position: absolute;
+        bottom: -60px;
+        width: 125px;
+        left: 0;
+    }
+
+    .landing__image {
+        background: url(../../../../assets/spot-hisense-desktop-banner.webp) no-repeat center;
+    }
+
+    .two-cols {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
     .ngx-wheel {
         position: absolute;
         top: 0;
@@ -1048,34 +1079,6 @@ form.spinner__wrapper {
     transform: translate(-50%, -50%);
 }
 
-@media screen and (max-width: 768px) {
-    .spinner__container {
-        height: 350px;
-        width: 350px;
-    }
-
-    .spinner__container div {
-        width: 200px;
-    }
-
-    .wheel__back {
-        position: absolute;
-        width: 373px;
-        top: -12px;
-        left: 28px;
-        height: 434px;
-    }
-
-    .spinner__container {
-        img {
-            width: 80px;
-            height: auto;
-            margin-bottom: 50px;
-            padding: 5px;
-        }
-    }
-}
-
 @media screen and (max-width: 450px) {
     .spinner__container {
         height: 300px;
@@ -1095,10 +1098,6 @@ form.spinner__wrapper {
     }
 }
 
-// .form__control {
-//     margin: 16px 0;
-// }
-
 .form__redirect {
     text-align: center;
     font-size: 12px;
@@ -1108,12 +1107,6 @@ form.spinner__wrapper {
         cursor: pointer;
         text-decoration: underline;
     }
-}
-
-.two-cols {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
 }
 
 .submit__btn {
@@ -1133,15 +1126,19 @@ form.spinner__wrapper {
     transition: width 1s ease-in-out;
 }
 
-.doll__img {
-    position: absolute;
-    bottom: 0;
-    width: 125px;
-    left: 0;
+.thakyou__step {
+    .doll__img {
+        display: none;
+    }
 }
 
-.step2 {
-    .doll__img {
-        width: 75px;
-    }
+input[type=checkbox] {
+    accent-color: #00AAA6;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+input[type=checkbox]:checked {
+    box-shadow: none !important;
+    color: #ffffff !important;
 }
