@@ -52,18 +52,18 @@ export class ParticipateFifa2022Component implements OnInit {
     private toastr: ToastrService,
   ) {
     this.state.mobileNavToggle.next(false);
-    this.title.setTitle("FIFA Participation contest! | Hisense India");
+    this.title.setTitle("Spot Hisense FIFA 2022 contest! | Hisense India");
     this.meta.updateTag({
       name: 'description',
-      content: "Participate in Hisense India FIFA contest and get a chance to win daily goodies and lucky draw!"
+      content: "Participate in #SpotHisense FIFA 2022 contest by Hisense India and get a chance to win goodies!"
     })
     this.meta.updateTag({
       property: "og:description",
-      content: "Participate in Hisense India FIFA contest and get a chance to win daily goodies and lucky draw!"
+      content: "Participate in #SpotHisense FIFA 2022 contest by Hisense India and get a chance to win goodies!"
     })
     this.meta.updateTag({
       property: "og:image",
-      content: "https://api.hisense-india.com/media/pages/home/slider/desktop-image-1664126417-347.jpeg"
+      content: "https://dev.hisense-india.com/assets/spot-hisense.webp"
     })
     this.meta.updateTag({
       property: "og:site_name",
@@ -71,7 +71,11 @@ export class ParticipateFifa2022Component implements OnInit {
     })
     this.meta.updateTag({
       property: "og:title",
-      content: "FIFA Match contest! | Hisense India"
+      content: "#SpotHisense FIFA 2022 contest! | Hisense India"
+    })
+    this.meta.updateTag({
+      property: "og:url",
+      content: "https://dev.hisense-india.com/FIFA-2022/participate"
     })
     if (isPlatformBrowser(this.platformId)) {
       // if (window.innerWidth <= 375) {
@@ -121,9 +125,9 @@ export class ParticipateFifa2022Component implements OnInit {
       if (res?.data?.next_step == 'thank_you') {
         this.thankYouImage = res?.data?.uploaded_image_file_full_url;
         // this.thankYouMessage = res?.data?.next_step_data?.thank_you?.campaign_perfect_match_2022_spin_wheel_prize?.message;
-        // this.socialLinks = res?.data?.next_step_data?.thank_you?.social_share_links
+        this.socialLinks = res?.data?.social_share_links
         this.currentStep = 4;
-        // this.seoTags(res?.data?.next_step_data?.thank_you?.seo_info);
+        this.seoTags(res?.data?.seo_info);
       }
     }, (err: any) => {
       console.log(err);

@@ -336,7 +336,9 @@ label {
     }
 
     .step {
-        justify-content: center !important;
+        form{
+            margin-top: 100px;
+        }
     }
 
     form {
