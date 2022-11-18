@@ -8,6 +8,7 @@ import { TextOrientation, TextAlignment } from 'ngx-wheel';
 import { takeWhile } from 'rxjs';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-participate-fifa2022',
@@ -16,21 +17,15 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 })
 export class ParticipateFifa2022Component implements OnInit {
 
-  width;
-  height;
+
+  environment = environment;
+
   currentStep = 1;
-  textFontSize = "18";
   alive = true;
-  innerRadius = 25;
   terms = false;
   showRegister = true;
   showLogin = false;
   displaySocialLinks = false;
-
-  spinPrizes: any = [];
-  classNames = ['one', 'two', 'three', 'four', 'five', 'six'];
-
-  rotateDeg = '0deg';
 
   signupForm = this.fb.group({
     name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
@@ -63,7 +58,7 @@ export class ParticipateFifa2022Component implements OnInit {
     })
     this.meta.updateTag({
       property: "og:image",
-      content: "https://dev.hisense-india.com/assets/spot-hisense.webp"
+      content: `${environment.baseApiUrl}/assets/spot-hisense.webp`
     })
     this.meta.updateTag({
       property: "og:site_name",
@@ -75,38 +70,9 @@ export class ParticipateFifa2022Component implements OnInit {
     })
     this.meta.updateTag({
       property: "og:url",
-      content: "https://dev.hisense-india.com/FIFA-2022/participate"
+      content: `${environment.baseApiUrl}/FIFA-2022/participate`
     })
-    if (isPlatformBrowser(this.platformId)) {
-      // if (window.innerWidth <= 375) {
-      //   this.height = 300;
-      //   this.width = 300;
-      //   this.textFontSize = "10";
-      // } else if (window.innerWidth <= 450) {
-      //   this.height = 340;
-      //   this.width = 340;
-      // } else if (window.innerWidth <= 576) {
-      //   this.height = 375;
-      //   this.width = 375;
-      //   this.textFontSize = "11";
-      // } else 
-      if (window.innerWidth <= 768) {
-        this.textFontSize = "12";
-        this.height = 350;
-        this.width = 350;
-        this.innerRadius = 20;
-      } else {
-        this.height = 500;
-        this.width = 500;
-      }
-    }
   }
-
-  seed = ['Umbrella', 'Football', 'Water Bottle', 'Cap', 'Washing Machine', 'TV', 'FIFA 2022 Ticket', 'Better luck next time'];
-  idToLandOn: any;
-  items: any[] = [];
-  textOrientation: TextOrientation = TextOrientation.HORIZONTAL;
-  textAlignment: TextAlignment = TextAlignment.INNER;
 
   ngOnInit() {
     this.route.params.pipe(takeWhile(_ => this.alive)).subscribe((routeParams: any) => {
@@ -155,11 +121,9 @@ export class ParticipateFifa2022Component implements OnInit {
         })
       }
     }
-    // })
   }
 
 
-  isSpinning = false;
   thankYouImage: any;
   thankYouMessage: any;
   thankYouUUID: any;
@@ -248,7 +212,6 @@ export class ParticipateFifa2022Component implements OnInit {
         this.uploadedImage = reader.result;
       };
       reader.onerror = (error) => {
-        // this.commonService.showNotification(error, ENotificationTypeStyle.warning);
         console.log(error);
         this.toastr.error('Something went Wrong!');
       };
