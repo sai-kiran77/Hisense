@@ -111,7 +111,7 @@ export class ParticipateFifa2022Component implements OnInit {
       name: 'description',
       content: data.description
     })
-    const obj = data?.meta;
+    const obj = data?.meta[0];
     // data.meta.forEach((obj: any) => {
     if (obj) {
       for (let key in obj.attributes) {
