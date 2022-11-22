@@ -123,4 +123,31 @@
             </div>
         </section>
     </section>
+    <section *ngIf="currentTab ==  'Spot Hisense'">
+        <picture>
+            <source media="(min-width:768px)" srcset="assets/spot-hisense-steps-to-participate-desktop.webp">
+            <img src="assets/spot-hisense-steps-to-participate-mobile.webp" style="width: 100%;" class="banner" class="ls-bg" alt="steps to participate">
+        </picture>
+        <section class="date__picker">
+            <div class="wrapper">
+                <h3>Daily Winners</h3>
+                <input min="2022-11-20" max="2022-11-21" value="2022-11-21" type="date" name="date" id="date" (change)="getRegistrationsOfSpotHisense($event)">
+                <div *ngIf="spotHisenseRegistrations">
+                    <table *ngIf="spotHisenseRegistrations.length">
+                        <tr style="background: #00b3ac;">
+                            <th style="border-top-left-radius: 8px;">Winner Name</th>
+                            <th>Phone number</th>
+                            <!-- <th style="border-top-right-radius: 8px;">Prize won</th> -->
+                        </tr>
+                        <tr *ngFor="let record of spotHisenseRegistrations">
+                            <td>{{record.user.name}}</td>
+                            <td>{{record.user.phone}}</td>
+                            <!-- <td>{{record.spin_wheel_prize.description}}</td> -->
+                        </tr>
+                    </table>
+                    <div class="no-records" *ngIf="!spotHisenseRegistrations.length">No winners found! Check back later</div>
+                </div>
+            </div>
+        </section>
+    </section>
 </div>

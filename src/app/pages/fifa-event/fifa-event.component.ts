@@ -41,6 +41,82 @@ export class FifaEventComponent implements OnInit {
     }
   ]
 
+  spotHisenseRegistrationsDB = [
+    {
+      user: {
+        name: 'Vaishali Maisuria',
+        phone: '9904****53',
+        date: '2022-11-21'
+      },
+    },
+    {
+      user: {
+        name: 'Rakhi Ambore',
+        phone: '8882****37',
+        date: '2022-11-21'
+      },
+    },
+    {
+      user: {
+        name: 'Sanchita Mittal',
+        phone: '9313****72',
+        date: '2022-11-21'
+      },
+    },
+    {
+      user: {
+        name: 'Manisha Swarnkar',
+        phone: '9413****67',
+        date: '2022-11-21'
+      },
+    },
+    {
+      user: {
+        name: 'PurushothamPatel',
+        phone: '9731****36',
+        date: '2022-11-21'
+      },
+    },
+
+    {
+      user: {
+        name: 'Nalini Sivakumar',
+        phone: '9790****49',
+        date: '2022-11-20'
+      },
+    },
+    {
+      user: {
+        name: 'SONALI SASMAL BERA',
+        phone: '9733****18',
+        date: '2022-11-20'
+      },
+    },
+    {
+      user: {
+        name: 'karanmantri',
+        phone: '9022****56',
+        date: '2022-11-20'
+      },
+    },
+    {
+      user: {
+        name: 'Farhan Ansari',
+        phone: '8802****81',
+        date: '2022-11-20'
+      },
+    },
+    {
+      user: {
+        name: 'Akash Kumar',
+        phone: '8210****79',
+        date: '2022-11-20'
+      },
+    }
+  ]
+
+  spotHisenseRegistrations: any = [];
+
   groups = [
     {
       heading: 'Group A',
@@ -263,6 +339,7 @@ export class FifaEventComponent implements OnInit {
       });
     })
     this.getRegistrations({ target: { value: this.yesterdayDate } });
+    this.getRegistrationsOfSpotHisense({ target: { value: '2022-11-21' } });
   }
 
   ngAfterViewInit() {
@@ -328,6 +405,10 @@ export class FifaEventComponent implements OnInit {
     }, (err) => {
       console.log(err);
     })
+  }
+
+  getRegistrationsOfSpotHisense(event: any){
+    this.spotHisenseRegistrations = this.spotHisenseRegistrationsDB.filter((obj: any) => obj.user.date == event.target.value);
   }
 
   changeTab(tab: any) {
