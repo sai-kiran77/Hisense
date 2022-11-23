@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <section *ngIf="currentTab == 'About FIFA 2022'" style="margin-top: 10px;">
+    <section class="about__fifa__tab" *ngIf="currentTab == 'About FIFA 2022'" style="margin-top: 10px;">
         <!-- <section class="countdown__wrapper">
             <div class="countdown__container">
                 <div>
@@ -84,14 +84,33 @@
                 </div>
             </div>
         </section> -->
-        <section class="groups">
-            <div class="card" *ngFor="let group of groups">
-                <div class="card__heading">{{group.heading}}</div>
-                <div class="card__body">
-                    <div *ngFor="let country of group.data">
-                        <img width="58" height="36" [src]="country.flag" [alt]="country.name">
-                        <span>{{country.name}}</span>
+        <section class="fifa__groups">
+            <div class="wrapper">
+                <h3>FIFA Groups</h3>
+                <section class="groups">
+                    <div class="card" *ngFor="let group of groups">
+                        <div class="card__heading">{{group.heading}}</div>
+                        <div class="card__body">
+                            <div *ngFor="let country of group.data">
+                                <img width="58" height="36" [src]="country.flag" [alt]="country.name">
+                                <span>{{country.name}}</span>
+                            </div>
+                        </div>
                     </div>
+                </section>
+            </div>
+        </section>
+
+        <section class="fifa__highlights" #Highlights>
+            <div class="wrapper">
+                <h3>Latest Highlights</h3>
+                <div class="highlights groups">
+                    <a [href]="card.link" target="_blank" class="highlights__card" *ngFor="let card of fifaHighlights; let i = index;">
+                        <div class="image__container">
+                            <img [src]="card.image" [alt]="'Highlights' + i">
+                        </div>
+                        <div style="font-size: 14px;padding:7px 10px;">{{card.text}}</div>
+                    </a>
                 </div>
             </div>
         </section>

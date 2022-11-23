@@ -1,5 +1,5 @@
 import { isPlatformBrowser } from '@angular/common';
-import { Component, Inject, OnInit, PLATFORM_ID, ViewEncapsulation } from '@angular/core';
+import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild, ViewEncapsulation } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
@@ -14,13 +14,15 @@ declare var Swiper: any;
 })
 export class FifaEventComponent implements OnInit {
 
+  @ViewChild('Highlights') HighlightsRef: ElementRef | any;
+
   days: any = '00';
   hours: any = '00';
   minutes: any = '00';
   seconds: any = '00';
   x: any;
 
-  tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel"];
+  tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel", "Highlights"];
   currentTab = "About FIFA 2022";
 
   slides = [
@@ -113,6 +115,49 @@ export class FifaEventComponent implements OnInit {
         date: '2022-11-20'
       },
     }
+  ]
+
+  fifaHighlights = [
+    {
+      image: 'assets/fifa_highlights/highlights_01.webp',
+      text: 'France v Australia | Group D | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/SRVD2OnUQYrQ2X9VLnGDF'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_02.webp',
+      text: 'Mexico v Poland | Group C | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/160mKwOWPi2Mlp3GrpczZu'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_03.webp',
+      text: 'Denmark v Tunisia | Group D | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/3UG46kL82RDWDgxzt3QPjM'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_04.webp',
+      text: 'Argentina v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/43Do27Etp3IapH0xwzbXOg'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_1.webp',
+      text: 'USA v Wales | Group B | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/6rnLprZqfXGriMwByd6wt8'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_2.webp',
+      text: 'Senegal v Netherlands | Group A | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/3GDVIQobvl9FaFY6w74WZ3'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_3.webp',
+      text: 'England v IR Iran | Group B | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/39GjJjsq75cbbXY0JMADYV'
+    },
+    {
+      image: 'assets/fifa_highlights/highlights_4.webp',
+      text: 'Qatar v Ecuador | Group A | FIFA World Cup Qatar 2022™',
+      link: 'https://www.fifa.com/fifaplus/en/watch/2CKN465NbbTuFcXLb6sSeQ'
+    },
   ]
 
   spotHisenseRegistrations: any = [];
@@ -314,9 +359,9 @@ export class FifaEventComponent implements OnInit {
           el: ".swiper-pagination",
           clickable: true,
         },
-        autoplay: {
-          delay: 6000,
-        },
+        // autoplay: {
+        //   delay: 6000,
+        // },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
@@ -343,48 +388,48 @@ export class FifaEventComponent implements OnInit {
   }
 
   ngAfterViewInit() {
-    if (isPlatformBrowser(this.platformId)) {
-      // Set the date we're counting down to
-      let countDownDate = new Date("Nov 20, 2022 16:00:00").getTime();
+    // if (isPlatformBrowser(this.platformId)) {
+    //   // Set the date we're counting down to
+    //   let countDownDate = new Date("Nov 20, 2022 16:00:00").getTime();
 
-      // Update the count down every 1 second
-      this.x = setInterval(() => {
+    //   // Update the count down every 1 second
+    //   this.x = setInterval(() => {
 
-        // Get today's date and time
-        let now = new Date().getTime();
+    //     // Get today's date and time
+    //     let now = new Date().getTime();
 
-        // Find the distance between now and the count down date
-        let distance = countDownDate - now;
+    //     // Find the distance between now and the count down date
+    //     let distance = countDownDate - now;
 
-        // Time calculations for days, hours, minutes and seconds
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
-        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
-        if (this.days !== days) {
-          this.days = days;
-        }
-        if (this.hours !== hours) {
-          this.hours = hours;
-        }
-        if (this.minutes !== minutes) {
-          this.minutes = minutes;
-        }
-        if (this.seconds !== seconds) {
-          this.seconds = seconds;
-        }
+    //     // Time calculations for days, hours, minutes and seconds
+    //     const days = Math.floor(distance / (1000 * 60 * 60 * 24)).toString().padStart(2, '0');
+    //     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)).toString().padStart(2, '0');
+    //     const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)).toString().padStart(2, '0');
+    //     let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    //     if (this.days !== days) {
+    //       this.days = days;
+    //     }
+    //     if (this.hours !== hours) {
+    //       this.hours = hours;
+    //     }
+    //     if (this.minutes !== minutes) {
+    //       this.minutes = minutes;
+    //     }
+    //     if (this.seconds !== seconds) {
+    //       this.seconds = seconds;
+    //     }
 
-        // Output the result in an element with id="demo"
-        // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-        //   + minutes + "m " + seconds + "s ";
+    //     // Output the result in an element with id="demo"
+    //     // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    //     //   + minutes + "m " + seconds + "s ";
 
-        // If the count down is over, write some text 
-        if (distance < 0) {
-          clearInterval(this.x);
-          // document.getElementById("demo").innerHTML = "EXPIRED";
-        }
-      }, 1000);
-    }
+    //     // If the count down is over, write some text 
+    //     if (distance < 0) {
+    //       clearInterval(this.x);
+    //       // document.getElementById("demo").innerHTML = "EXPIRED";
+    //     }
+    //   }, 1000);
+    // }
   }
 
   registrations: any;
@@ -412,9 +457,14 @@ export class FifaEventComponent implements OnInit {
   }
 
   changeTab(tab: any) {
-    this.currentTab = tab;
-    const tabIndec = this.tabs.findIndex(t => t == tab);
-    this.swiper.slideTo(tabIndec + 1);
+    if(tab != "Highlights"){
+      this.currentTab = tab;
+      const tabIndec = this.tabs.findIndex(t => t == tab);
+      this.swiper.slideTo(tabIndec + 1);
+    }else{
+      console.log(this.HighlightsRef);
+      this.HighlightsRef.nativeElement.scrollIntoView({ behavior: "smooth" });
+    }
     // if (tab == this.tabs[0]) {
     //   this.swiper.slidePrev();
     // } else {
