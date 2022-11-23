@@ -583,9 +583,9 @@ class FifaEventComponent {
                     el: ".swiper-pagination",
                     clickable: true,
                 },
-                // autoplay: {
-                //   delay: 6000,
-                // },
+                autoplay: {
+                    delay: 6000,
+                },
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
