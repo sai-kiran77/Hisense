@@ -1,28 +1,17 @@
 <ng-container *ngIf="!show404">
     <section class="catalog" id="catalog-page">
-        <!-- <div class="catalog-banner catalog-banner_ui_white" data-ui-white="" style="background-color: #000;">
-            <div class="catalog-banner__content">
-                <div class="catalog-banner__content-inner">
-                    <h1 class="catalog-banner__title">{{metaData?.name}}</h1>
-                    <h3 class="catalog-banner__sub__title" *ngIf="metaData?.subcategories.length == 1">{{metaData?.subcategories[0].name}}</h3>
-                </div>
-            </div>
-            <div class="catalog-banner__image-wrapper">
-                <img [alt]="metaData?.name" class="catalog-banner__image" [src]="metaData?.thumb_image_medium.full_url">
-            </div>
-        </div> -->
         <div class="breadcrumb__yellow__banner">
             <h1>{{metaData?.name}}</h1>
         </div>
-        <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video'">
+        <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video' && !isSmartTvPage">
             <div [ngClass]="{'card is-loading': isVideoLoading}">
                 <div class="image" style="width:100%;height:400px;">
                     <ng-container *ngIf="metaData?.cover_media[0]?.video_vendor != 'file'">
-                        <iframe allow="autoplay" (load)="load()"
-                            *ngFor="let media of metaData?.cover_media" width="100%" height="400"
-                            [src]="media?.sanatized_url"></iframe>
+                        <iframe allow="autoplay" (load)="load()" *ngFor="let media of metaData?.cover_media"
+                            width="100%" height="400" [src]="media?.sanatized_url"></iframe>
                     </ng-container>
-                    <video style="height: 100%;width: 100%;" autoplay controls *ngIf="showVideo && metaData?.cover_media[0]?.video_vendor == 'file'">
+                    <video style="height: 100%;width: 100%;" autoplay controls
+                        *ngIf="showVideo && metaData?.cover_media[0]?.video_vendor == 'file'">
                         <source [src]="metaData?.cover_media[0]?.full_url" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -31,171 +20,130 @@
         </ng-container>
     </section>
 
-    <div class="product-listing" *ngIf="!metaData?.parent_category_id">
-        <div class="product-listing-inner" style="width: 96% !important;margin: auto !important;"
-            [ngClass]="{'product-listing-grid-layout':metaData?.subcategories.length > 1}">
-            <div class="product-listing-tab" style="width: auto !important;padding: 10px 8px !important;"
-                [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories"
-                [ngClass]="{'single__cat':metaData?.subcategories.length == 1}">
-                <a class="product-listing-img" style="display: flex;justify-content: center;
-                align-items: center; overflow: visible;">
-                    <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
-                        style="max-height: 300px;max-width: 96% !important;"
-                        [alt]="prod.name">
-                    <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
-                        style="max-height: 300px;max-width: 96% !important;"
-                        alt="product placeholder">
-                </a>
-                <div style="margin-top: auto;" class="mobile-m-40">
-                    <div class="product-listing-tab-content">
-                        <h4>{{prod.name}}</h4>
-                        <!-- <div class="product-listing-description"></div> -->
-                    </div>
-                    <div style="margin-top: 32px !important;"><a class="btn-hisense-v2">More Detail</a></div>
+    <ng-container *ngIf="isSmartTvPage">
+        <section class="smart__tv__cards__container">
+            <div class="smart__tv__card" *ngFor="let card of smartTvCards" [ngStyle]="{'background-color': card.bg}">
+                <h2 class="smart__tv__card__heading">{{card.heading}}</h2>
+
+                <div class="smart__tv__card__media"><img [src]="card.image" [alt]="card.heading"></div>
+                <p class="smart__tv__media__desc">{{card.desc}}</p>
+                <div class="smart__tv__card__actions" style="margin-top: 6px;">
+                    <a [href]="'/c/smart-tv-platform#' + card.link" class="smart__tv__discover__link">Discover Android TV</a>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- <div class="product-listing" *ngIf="!metaData?.parent_category_id">
-        <div class="product-listing-inner" style="flex-wrap: nowrap !important;width: 80%;margin: auto;">
-            <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
-                <a class="product-listing-tab" [routerLink]="subCat.relative_url" style="width: 100% !important;min-height: 350px !important;">
-                    <a class="product-listing-img trackin" style="overflow: visible !important;">
-                        <img *ngIf="subCat?.thumb_image?.full_url" [src]="subCat?.thumb_image?.full_url">
-                        <img *ngIf="!subCat?.thumb_image?.full_url" src="assets/images/prod__placeholder.png">
+        <section>
+            <section [id]="card.link" class="smart__tv__description__container" *ngFor="let card of smartTvCards; let i = index">
+                <div class="smart__tv__description__column__container" [ngStyle]="{'order': i % 2 == 1 ? 1 : 'inherit' }">
+                    <div class="smart__tv__description">
+                        <h2 class="smart__tv__card__heading">{{card.heading}}</h2>
+                        <div [innerHTML]="card.htmlDesc"></div>
+                        <div class="mt-3" *ngIf="card.htmlDisclaimer" [innerHTML]="card.htmlDisclaimer"></div>
+                        <a href="#">Shop All {{card.heading}}s</a>
+                    </div>
+                </div>
+                <div class="smart__tv__description__image">
+                    <img class="w-100" style="height: 100%;" [src]="card.htmlSecImage" [alt]="card.heading">
+                </div>
+            </section>
+        </section>
+    </ng-container>
+
+    <ng-container *ngIf="!isSmartTvPage">
+        <div class="product-listing" *ngIf="!metaData?.parent_category_id">
+            <div class="product-listing-inner" style="width: 96% !important;margin: auto !important;"
+                [ngClass]="{'product-listing-grid-layout':metaData?.subcategories.length > 1}">
+                <div class="product-listing-tab" style="width: auto !important;padding: 10px 8px !important;"
+                    [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories"
+                    [ngClass]="{'single__cat':metaData?.subcategories.length == 1}">
+                    <a class="product-listing-img" style="display: flex;justify-content: center;
+                    align-items: center; overflow: visible;">
+                        <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
+                            style="max-height: 300px;max-width: 96% !important;" [alt]="prod.name">
+                        <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
+                            style="max-height: 300px;max-width: 96% !important;" alt="product placeholder">
                     </a>
-                    <div style="margin-top: auto;">
-                        <div class="product-listing-tab-content">
-                            <h4>{{subCat.name}}</h4>
-                        </div>
-                        <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
-                            <div><a class="btn-hisense">More Detail</a></div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- product__sub__category -->
-    <div class="product-listing" *ngIf="metaData?.parent_category_id">
-        <div class="product-listing-inner product-listing-grid-layout"
-            style="flex-wrap: wrap !important;width: 96% !important;margin: auto !important;">
-            <ng-container *ngFor="let product of metaData?.category_products">
-                <ng-container *ngIf="product.product?.product_variants.length">
-                    <div #currentindex data-index="0" class="product-listing-tab"
-                        style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
-                        <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span>
-                        <a class="product-listing-img" style="height: 280px;display: flex;justify-content: center;
-                        align-items: center; overflow: visible;cursor: default;">
-                            <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                style="max-height: 280px;max-width: 100% !important;"
-                                [alt]="product?.product?.name">
-                            <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                src="assets/images/prod__placeholder.png"
-                                style="max-height: 280px;max-width: 100% !important;"
-                                alt="product placeholder">
-                        </a>
-                        <div>
-                            <div style="font-size: 14px;color: gray;font-weight: bold;">Model Code</div>
-                            <span
-                                style="font-size: 24px;font-weight: bold;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
-                        </div>
-                        <div style="margin-top: 0px !important">
-                            <div class="product-listing-tab-content">
-                                <!-- <h4>{{prod.name}}</h4> -->
-                                <!-- <div class="product-listing-description"></div> -->
-                                <div class="product__size">
-                                    <ng-container *ngFor="let size of product.product.product_variants;let i = index;">
-                                        <div [ngClass]="{'active':product.currentIndex == i}" class="item"
-                                            (click)="product.currentIndex = i" *ngIf="size?.variant_size_numeric">
-                                            {{size?.variant_size_numeric}}
-                                        </div>
-                                    </ng-container>
-                                </div>
-                            </div>
-
-                            <div class="top__specifications">
-                                <ng-container
-                                    *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
-                                    <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">Top
-                                        Features</div>
-                                    <ul style="list-style: inside !important;">
-                                        <li *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
-                                            style="font-size: 16px;list-style: inside !important;">
-                                            {{spec}}
-                                        </li>
-                                    </ul>
-                                </ng-container>
-                            </div>
-
-                            <div style="display: flex;
-                            justify-content: center;
-                            gap: 20px;">
-                                <a class="btn-hisense-v2 btn-hisense-learn"
-                                    [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
-                                    More</a>
-                                <a class="btn-hisense-v2"
-                                    *ngIf="product?.product?.product_variants[product.currentIndex]?.product_variant_purchase_links_count"
-                                    (click)="buyOptions(product?.product?.product_variants[product.currentIndex]?.relative_url)">Where
-                                    to buy</a>
-                            </div>
-                        </div>
-                    </div>
-                </ng-container>
-            </ng-container>
-        </div>
-    </div>
-
-    <!-- <a class="sub__cat__link" [routerLink]="subCat.relative_url" *ngIf="metaData?.subcategories.length > 1">{{subCat.name}}</a> -->
-    <!-- <div class="product-listing" style="padding: 1rem;" *ngIf="metaData?.parent_category_id">
-        <div [id]="subCat.code" *ngFor="let subCat of metaData?.subcategories">
-            <div *ngFor="let prodCat of subCat.category_products">
-                <div class="product__category__title">{{prodCat.product.name}}</div>
-
-                <div class="product-listing-inner">
-                    <a class="product-listing-tab" [routerLink]="prod.relative_url"
-                        *ngFor="let prod of prodCat.product.product_variants">
-                        <a class="product-listing-img trackin">
-                            <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
-                            <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
-                        </a>
+                    <div style="margin-top: auto;" class="mobile-m-40">
                         <div class="product-listing-tab-content">
                             <h4>{{prod.name}}</h4>
-                            <h3>{{prod.variant_size}}</h3>
-                            <div class="product-listing-description"></div>
                         </div>
-                        <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
-                            <div><a class="btn-hisense">More Detail</a></div>
-                        </div>
-                    </a>
+                        <div style="margin-top: 32px !important;"><a class="btn-hisense-v2">More Detail</a></div>
+                    </div>
                 </div>
             </div>
         </div>
-        <div style="padding: 1rem;" *ngFor="let prodCat of metaData?.category_products">
-            <div class="product__category__title">{{prodCat.product.name}}</div>
 
-            <div class="product-listing-inner">
-                <a class="product-listing-tab" [routerLink]="prod.relative_url"
-                    *ngFor="let prod of prodCat.product.product_variants">
-                    <a class="product-listing-img trackin">
-                        <img *ngIf="prod?.thumb_image_medium?.full_url" [src]="prod?.thumb_image_medium?.full_url">
-                        <img *ngIf="!prod?.thumb_image_medium?.full_url" src="assets/images/prod__placeholder.png">
-                    </a>
-                    <div class="product-listing-tab-content">
-                        <h4>{{prod.name}}</h4>
-                        <h3>{{prod.variant_size}}</h3>
-                        <div class="product-listing-description"></div>
-                    </div>
-                    <div class="product-listing-tab-buttons trackin" style="transform: translateY(35px);">
-                        <div><a class="btn-hisense">More Detail</a></div>
-                    </div>
-                </a>
+        <!-- product__sub__category -->
+        <div class="product-listing" *ngIf="metaData?.parent_category_id">
+            <div class="product-listing-inner product-listing-grid-layout"
+                style="flex-wrap: wrap !important;width: 96% !important;margin: auto !important;">
+                <ng-container *ngFor="let product of metaData?.category_products">
+                    <ng-container *ngIf="product.product?.product_variants.length">
+                        <div #currentindex data-index="0" class="product-listing-tab"
+                            style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
+                            <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span>
+                            <a class="product-listing-img" style="height: 280px;display: flex;justify-content: center;
+                            align-items: center; overflow: visible;cursor: default;">
+                                <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                    [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                    style="max-height: 280px;max-width: 100% !important;"
+                                    [alt]="product?.product?.name">
+                                <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
+                                    src="assets/images/prod__placeholder.png"
+                                    style="max-height: 280px;max-width: 100% !important;" alt="product placeholder">
+                            </a>
+                            <div>
+                                <div style="font-size: 14px;color: gray;font-weight: bold;">Model Code</div>
+                                <span
+                                    style="font-size: 24px;font-weight: bold;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
+                            </div>
+                            <div style="margin-top: 0px !important">
+                                <div class="product-listing-tab-content">
+                                    <div class="product__size">
+                                        <ng-container
+                                            *ngFor="let size of product.product.product_variants;let i = index;">
+                                            <div [ngClass]="{'active':product.currentIndex == i}" class="item"
+                                                (click)="product.currentIndex = i" *ngIf="size?.variant_size_numeric">
+                                                {{size?.variant_size_numeric}}
+                                            </div>
+                                        </ng-container>
+                                    </div>
+                                </div>
+
+                                <div class="top__specifications">
+                                    <ng-container
+                                        *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
+                                        <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">
+                                            Top
+                                            Features</div>
+                                        <ul style="list-style: inside !important;">
+                                            <li *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
+                                                style="font-size: 16px;list-style: inside !important;">
+                                                {{spec}}
+                                            </li>
+                                        </ul>
+                                    </ng-container>
+                                </div>
+
+                                <div style="display: flex;
+                                justify-content: center;
+                                gap: 20px;">
+                                    <a class="btn-hisense-v2 btn-hisense-learn"
+                                        [routerLink]="product?.product?.product_variants[product.currentIndex]?.relative_url">Learn
+                                        More</a>
+                                    <a class="btn-hisense-v2"
+                                        *ngIf="product?.product?.product_variants[product.currentIndex]?.product_variant_purchase_links_count"
+                                        (click)="buyOptions(product?.product?.product_variants[product.currentIndex]?.relative_url)">Where
+                                        to buy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+                </ng-container>
             </div>
         </div>
-    </div> -->
+    </ng-container>
 </ng-container>
 
 <ng-container *ngIf="show404">
@@ -209,8 +157,8 @@
             <div *ngIf="purchaseLinks.length">
                 <div class="product__head-buttons">
                     <a [href]="link?.purchase_link" target="_blank" *ngFor="let link of purchaseLinks;let i = index">
-                        <img class="purchase__link__image" [src]="getVendorImage(link.vendor)"
-                            [ngClass]="[link.vendor]" [alt]="'vendor ' + (i + 1)">
+                        <img class="purchase__link__image" [src]="getVendorImage(link.vendor)" [ngClass]="[link.vendor]"
+                            [alt]="'vendor ' + (i + 1)">
                     </a>
                 </div>
             </div>
