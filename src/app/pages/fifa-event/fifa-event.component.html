@@ -101,7 +101,7 @@
             </div>
         </section>
 
-        <section class="fifa__highlights">
+        <section class="fifa__highlights" #Highlights>
             <div class="wrapper">
                 <h3>Latest Highlights</h3>
                 <div class="highlights groups">
@@ -109,7 +109,7 @@
                         <div class="image__container">
                             <img [src]="card.image" [alt]="'Highlights' + i">
                         </div>
-                        <span style="font-size: 14px;">{{card.text}}</span>
+                        <div style="font-size: 14px;padding:7px 10px;">{{card.text}}</div>
                     </a>
                 </div>
             </div>
