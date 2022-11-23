@@ -129,7 +129,7 @@
   grid-template-columns: 1fr 1fr;
 }
 .mt-3 {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 .pt-3 {
   padding-top: 1rem;
