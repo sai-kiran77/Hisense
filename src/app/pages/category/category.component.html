@@ -40,7 +40,7 @@
                         <h2 class="smart__tv__card__heading">{{card.heading}}</h2>
                         <div [innerHTML]="card.htmlDesc"></div>
                         <div class="mt-3" *ngIf="card.htmlDisclaimer" [innerHTML]="card.htmlDisclaimer"></div>
-                        <a href="#">Shop All {{card.heading}}s</a>
+                        <a [routerLink]="card.redirectLink">Shop All {{card.heading}}s</a>
                     </div>
                 </div>
                 <div class="smart__tv__description__image">

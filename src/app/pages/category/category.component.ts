@@ -57,32 +57,35 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   smartTvCards = [
     {
-      heading: "Android TV",
-      image: "https://assets.hisense-usa.com/assets/ContentBuilderImages/62c9250f23/U7G-Front-Transparent__ScaleMaxWidthWzMwNDhd.png-y9sfxt.png",
+      heading: "Google TV",
+      image: "assets/smart-tv/google-tv.webp",
       desc: "Thousands of streaming channels at your fingertips",
-      link: "Android",
+      link: "android",
       bg: "#B33846",
       htmlDesc: `<p>Puts your favourite content front and center. Where it's ready to watch or pick up where you left off. Stream more than 500,000 shows, movies and apps, as well as watch live sports and news. <br><br>With the Google Assistant built-in, you can turn on the lights, change the thermostat, add stuff to your grocery list, and control your TV with your voice. And with universal search, you can even get recommendations with Android TV.</p>`,
-      htmlSecImage: `https://assets.hisense-usa.com/assets/ContentBuilderImages/d063c4029a/cat-smart-tvs-key-feat-2__ScaleMaxWidthWzMwNDhd.jpg-9z5v27.jpg`
+      htmlSecImage: `assets/smart-tv/google-tv.webp`,
+      redirectLink: '/c/google-tv'
     },
     {
-      heading: "Fire TV",
-      image: "https://assets.hisense-usa.com/assets/ContentBuilderImages/47fdd32b84/Hisense-U6HF_ScaleMaxHeightWzc1MF0__ScaleMaxWidthWzMwNDhd.png-k3kzi4.png",
+      heading: "Vidaa",
+      image: "assets/smart-tv/vidaa-tv.webp",
       desc: "The TV that's great for entertainment.",
-      link: "Fire",
+      link: "fire",
       bg: "#d55933",
       htmlDesc: `<p>With Fire TV built-in, you can enjoy a world of entertainment from apps like Prime Video, Netflix, Disney+, Hulu, and HBO Max. Plus, stream for free with Pluto TV, &nbsp;Tubi, and more. The included Voice Remote with Alexa lets you use your voice to easily change channels, launch apps, search for titles, play music, and even control smart home devices. And you can personalize your family's viewing experience with up to six profiles, so everyone can have their own watch list, recommendations, and live TV preferences.&nbsp;</p>`,
       htmlDisclaimer: `<p><i style="font-size: 14px;">Required Disclaimer: Apps and services are subject to change or withdrawal at any time and may require separate subscriptions and compatible equipment (sold separately).</i></p>`,
-      htmlSecImage: "https://assets.hisense-usa.com/assets/ContentBuilderImages/bdfb91f6fa/fire-smart-tvs-key-feat-2_ScaleMaxWidthWzMwNDhd__ScaleMaxWidthWzMwNDhd.jpg-9z5v27.png-7vw5fw.png"
+      htmlSecImage: "assets/smart-tv/vidaa-tv.webp",
+      redirectLink: '/c/vidaa'
     },
     {
-      heading: "Google TV",
-      image: "https://assets.hisense-usa.com/assets/100DayGuarantee/2bb9f7fe47/Hisense-Google-OS-50U6G1-TV.png",
+      heading: "Android TV",
+      image: "assets/smart-tv/android-tv.webp",
       desc: "The TV that's great for everyone.",
-      link: "Google",
+      link: "google",
       bg: "#f3b602",
       htmlDesc: `<p>The entertainment you love. With a little help from Google. Google TV brings together movies, shows, live TV and more from across your apps and subscriptions and organizes them just for you. Discover new things to watch with recommendations based on what you watch and what interests you, from across your subscriptions and content available to you. Ask Google to find movies and shows, answer questions, control smart home devices, and more, with your voice. And with the Google TV app you can watch anywhere, anytime.</p>`,
-      htmlSecImage: "https://assets.hisense-usa.com/assets/ContentBuilderImages/af3e0b28d9/50U6G1_GoogleTV_Lifestyle_ScaleMaxWidthWzMwNDhd_ScaleMaxWidthWzMwNDhd__ScaleMaxWidthWzMwNDhd.jpg-g3gdmk-1.jpg-1auwmj-1.jpg-25gko8.jpg"
+      htmlSecImage: "assets/smart-tv/android-tv.webp",
+      redirectLink: '/c/android-tv'
     },
   ];
 
