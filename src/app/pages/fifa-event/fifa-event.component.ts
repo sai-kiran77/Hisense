@@ -46,6 +46,114 @@ export class FifaEventComponent implements OnInit {
   spotHisenseRegistrationsDB = [
     {
       user: {
+        name: 'Sarika Porwal',
+        phone: '8218****55',
+        date: '2022-11-24'
+      },
+    },
+    {
+      user: {
+        name: 'Paresh Rathod',
+        phone: '9904****05',
+        date: '2022-11-24'
+      },
+    },
+    {
+      user: {
+        name: 'Sundararajan',
+        phone: '9940****02',
+        date: '2022-11-24'
+      },
+    },
+    {
+      user: {
+        name: 'Gayathri Mohan',
+        phone: '8056****10',
+        date: '2022-11-24'
+      },
+    },
+    {
+      user: {
+        name: 'Kuldeep Kumar',
+        phone: '9431****11',
+        date: '2022-11-24'
+      },
+    },
+
+    {
+      user: {
+        name: 'Yatendra agrawal',
+        phone: '8923****62',
+        date: '2022-11-23'
+      },
+    },
+    {
+      user: {
+        name: 'Souvik Paul',
+        phone: '9564****86',
+        date: '2022-11-23'
+      },
+    },
+    {
+      user: {
+        name: 'Murlidhar',
+        phone: '9783****52',
+        date: '2022-11-23'
+      },
+    },
+    {
+      user: {
+        name: 'Jathin M Jaishur',
+        phone: '9567****04',
+        date: '2022-11-23'
+      },
+    },
+    {
+      user: {
+        name: 'Rubalpreet Singh',
+        phone: '9872****20',
+        date: '2022-11-23'
+      },
+    },
+
+    {
+      user: {
+        name: 'Aarav Singh',
+        phone: '7017****12',
+        date: '2022-11-22'
+      },
+    },
+    {
+      user: {
+        name: 'Sandeep Kaundal',
+        phone: '9736****07',
+        date: '2022-11-22'
+      },
+    },
+    {
+      user: {
+        name: 'Chetan Maisuria',
+        phone: '8401****06',
+        date: '2022-11-22'
+      },
+    },
+    {
+      user: {
+        name: 'Mandira Moitra',
+        phone: '9831****21',
+        date: '2022-11-22'
+      },
+    },
+    {
+      user: {
+        name: 'Sucharita Sahu',
+        phone: '8010****67',
+        date: '2022-11-22'
+      },
+    },
+
+    {
+      user: {
         name: 'Vaishali Maisuria',
         phone: '9904****53',
         date: '2022-11-21'
