@@ -4619,15 +4619,14 @@ footer {
     display: block;
     width: auto !important;
     display: inline-block !important;
-    transition: transform 200ms ease-in-out;
+    transition: background 200ms ease-in-out;
     * {
         color: white !important;
     }
 
     &:hover{
-        opacity: 0.7;
-        background: #09cbc6;
-        transform: scale(1.1);
+        background: #067977;
+        background: linear-gradient(90deg, #067977 0%, #067977 10%, #067977 40%, #067977 60%);
     }
 }
 
