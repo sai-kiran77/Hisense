@@ -675,8 +675,10 @@ class FifaEventComponent {
             this.swiper.slideTo(tabIndec + 1);
         }
         else {
-            console.log(this.HighlightsRef);
-            this.HighlightsRef.nativeElement.scrollIntoView({ behavior: "smooth" });
+            this.currentTab = this.tabs[0];
+            setTimeout(() => {
+                this.HighlightsRef.nativeElement.scrollIntoView({ behavior: "smooth" });
+            });
         }
         // if (tab == this.tabs[0]) {
         //   this.swiper.slidePrev();
