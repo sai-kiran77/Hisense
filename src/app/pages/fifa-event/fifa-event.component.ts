@@ -46,6 +46,35 @@ export class FifaEventComponent implements OnInit {
   spotHisenseRegistrationsDB = [
     {
       user: {
+        name: 'Antara Chongder',
+        phone: '9330****90',
+        date: '2022-11-25'
+      },
+    },
+    {
+      user: {
+        name: 'Anwar Basha',
+        phone: '8939****40',
+        date: '2022-11-25'
+      },
+    },
+    {
+      user: {
+        name: 'Neha',
+        phone: '9267****12',
+        date: '2022-11-25'
+      },
+    },
+    {
+      user: {
+        name: 'Paramjit',
+        phone: '8872****20',
+        date: '2022-11-25'
+      },
+    },
+
+    {
+      user: {
         name: 'Sarika Porwal',
         phone: '8218****55',
         date: '2022-11-24'
@@ -467,9 +496,9 @@ export class FifaEventComponent implements OnInit {
           el: ".swiper-pagination",
           clickable: true,
         },
-        autoplay: {
-          delay: 6000,
-        },
+        // autoplay: {
+        //   delay: 6000,
+        // },
         navigation: {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
