@@ -746,7 +746,7 @@ class PerfectMatch2022Component {
     this.router = router;
     this.title = title;
     this.meta = meta;
-    this.currentStep = 0;
+    this.currentStep = 1;
     this.textFontSize = "18";
     this.alive = true;
     this.innerRadius = 25;
