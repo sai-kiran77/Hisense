@@ -18,7 +18,7 @@ export class PerfectMatch2022Component implements OnInit {
 
   width;
   height;
-  currentStep = 0;
+  currentStep = 1;
   textFontSize = "18";
   alive = true;
   innerRadius = 25;
