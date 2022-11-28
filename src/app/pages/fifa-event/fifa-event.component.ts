@@ -46,6 +46,78 @@ export class FifaEventComponent implements OnInit {
   spotHisenseRegistrationsDB = [
     {
       user: {
+        name: 'AYAN DAS',
+        phone: '9748****38',
+        date: '2022-11-27'
+      },
+    },
+    {
+      user: {
+        name: 'Sengodan Ramasamy',
+        phone: '9447****85',
+        date: '2022-11-27'
+      },
+    },
+    {
+      user: {
+        name: 'TaniyaMannaDas',
+        phone: '8910****00',
+        date: '2022-11-27'
+      },
+    },
+    {
+      user: {
+        name: 'Navjot',
+        phone: '6397****49',
+        date: '2022-11-27'
+      },
+    },
+    {
+      user: {
+        name: 'Avijit Chatterjee',
+        phone: '8100****36',
+        date: '2022-11-27'
+      },
+    },
+
+    {
+      user: {
+        name: 'Gunjan Agrawal',
+        phone: '6397****49',
+        date: '2022-11-26'
+      },
+    },
+    {
+      user: {
+        name: 'Lakshmi Raghuraman',
+        phone: '9791****31',
+        date: '2022-11-26'
+      },
+    },
+    {
+      user: {
+        name: 'Ranjeet Banerjee',
+        phone: '7376****84',
+        date: '2022-11-26'
+      },
+    },
+    {
+      user: {
+        name: 'Tapas Sarkar',
+        phone: '9863****11',
+        date: '2022-11-26'
+      },
+    },
+    {
+      user: {
+        name: 'Karun Padington',
+        phone: '9611****26',
+        date: '2022-11-26'
+      },
+    },
+
+    {
+      user: {
         name: 'Antara Chongder',
         phone: '9330****90',
         date: '2022-11-25'
