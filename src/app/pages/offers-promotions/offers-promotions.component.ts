@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
@@ -22,8 +23,10 @@ export class OffersPromotionsComponent implements OnInit {
   }
 
   constructor(private state: GlobalStateService,
-    private api: ApiService) {
+    private api: ApiService,
+    private title: Title) {
     this.state.mobileNavToggle.next(false);
+    this.title.setTitle('Hisense India | WARRANTY INFORMATION');
   }
 
   currentImg: any;

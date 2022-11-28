@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
@@ -11,7 +11,7 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 export class TechTestimonialsComponent implements OnInit {
 
   testimonials: any = [];
-  
+
   paginatedTestimonials: any = [];
   GlobalpaginatedTestimonials: any = [];
 
@@ -50,7 +50,9 @@ export class TechTestimonialsComponent implements OnInit {
 
   constructor(private state: GlobalStateService,
     public sanitizer: DomSanitizer,
-    private api: ApiService) {
+    private api: ApiService,
+    private title: Title) {
+    this.title.setTitle('Hisense India | TECH TESTIMONIALS');
     this.state.mobileNavToggle.next(false);
   }
 

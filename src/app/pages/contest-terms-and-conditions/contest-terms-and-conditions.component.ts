@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
@@ -14,13 +15,15 @@ export class ContestTermsAndConditionsComponent implements OnInit {
   metaData: any = [];
   currentIndex = 0;
 
-  changeTab(obj: any,i:number){
+  changeTab(obj: any, i: number) {
     this.currentTab = obj.tab_name;
     this.currentIndex = i;
   }
 
   constructor(private state: GlobalStateService,
-    private api: ApiService) {
+    private api: ApiService,
+    private title: Title) {
+    this.title.setTitle('Hisense India | TERMS AND CONDITIONS');
     this.state.mobileNavToggle.next(false);
   }
 
@@ -30,13 +33,13 @@ export class ContestTermsAndConditionsComponent implements OnInit {
     this.getSlides();
   }
 
-  
+
   getSlides() {
     this.api.getPageSlides({ pageUrl: '/terms-and-conditions' }).subscribe({
       next: (res: any) => {
         // console.log(res);
         this.metaData = res.data.terms_and_conditions;
-        this.currentTab = this.metaData[0].tab_name ;
+        this.currentTab = this.metaData[0].tab_name;
       },
       error: (err) => {
       }

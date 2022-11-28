@@ -1,6 +1,7 @@
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
@@ -22,10 +23,11 @@ export class ContactUsComponent implements OnInit {
 
   constructor(private fb: FormBuilder,
     private api: ApiService,
-    private state: GlobalStateService
+    private state: GlobalStateService,
+    private title: Title
   ) {
     this.state.mobileNavToggle.next(false);
-
+    this.title.setTitle('Hisense India | Contact US');
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.pattern(/^[A-Za-z ]+$/)]],
       phone: ['', [Validators.required, Validators.minLength(10), Validators.maxLength(10), Validators.pattern(/^[0-9]*$/)]],

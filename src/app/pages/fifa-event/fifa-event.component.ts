@@ -1,5 +1,6 @@
 import { isPlatformBrowser } from '@angular/common';
 import { Component, ElementRef, Inject, OnInit, PLATFORM_ID, ViewChild, ViewEncapsulation } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 import { environment } from 'src/environments/environment';
@@ -549,11 +550,13 @@ export class FifaEventComponent implements OnInit {
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
     private state: GlobalStateService,
-    private api: ApiService) {
+    private api: ApiService,
+    private title: Title) {
     this.state.mobileNavToggle.next(false);
     const date = new Date();
     // this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
     // console.log(this.yesterdayDate);
+    this.title.setTitle('Hisense India | FIFA 2022');
     this.yesterdayDate = '2022-10-25';
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
@@ -8,8 +9,10 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 })
 export class AboutHisenseComponent implements OnInit {
 
-  constructor(private state: GlobalStateService) {
+  constructor(private state: GlobalStateService,
+    private title: Title) {
     this.state.mobileNavToggle.next(false);
+    this.title.setTitle('Hisense India | About Hisense');
   }
 
   ngOnInit(): void {

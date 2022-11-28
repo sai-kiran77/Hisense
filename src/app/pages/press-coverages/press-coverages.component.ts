@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
 
@@ -38,8 +39,10 @@ export class PressCoveragesComponent implements OnInit {
   }
 
   constructor(private api: ApiService,
-    private state: GlobalStateService) {
+    private state: GlobalStateService,
+    private title: Title) {
     this.state.mobileNavToggle.next(false);
+    this.title.setTitle('Hisense India | Press Coverages');
   }
 
   ngOnInit(): void {
