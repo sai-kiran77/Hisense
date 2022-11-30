@@ -3,6 +3,7 @@ import { Component, Inject, OnInit, PLATFORM_ID, ViewChild } from '@angular/core
 import { FormBuilder, NgModel, Validators } from '@angular/forms';
 import { Title, Meta } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 import { NgxWheelComponent, TextAlignment, TextOrientation } from 'ngx-wheel';
 import { takeWhile } from 'rxjs/operators';
 import { ApiService } from 'src/app/services/api.service';
@@ -47,7 +48,8 @@ export class PerfectMatch2022Component implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private title: Title,
-    private meta: Meta,) {
+    private meta: Meta,
+    private toastr: ToastrService,) {
     this.state.mobileNavToggle.next(false);
     this.title.setTitle("Perfect Match contest! | Hisense India");
     this.meta.updateTag({
@@ -130,6 +132,7 @@ export class PerfectMatch2022Component implements OnInit {
       }
     }, (err: any) => {
       console.log(err);
+      this.toastr.error(err.error.message);
       this.router.navigate(['/perfect-match-2022']);
     })
   }
@@ -214,6 +217,7 @@ export class PerfectMatch2022Component implements OnInit {
       }
     }, (err: any) => {
       console.log(err);
+      this.toastr.error(err.error.message);
     });
 
     setTimeout(()=>{
@@ -288,6 +292,7 @@ export class PerfectMatch2022Component implements OnInit {
       }, (err: any) => {
         this.signupLoading = false;
         console.log(err);
+        this.toastr.error(err.error.message);
       })
     } else {
       this.signupLoading = false;
@@ -415,6 +420,8 @@ export class PerfectMatch2022Component implements OnInit {
       console.log(err);
       this.resetQuizCurrentContentDisplay();
       this.showRules = true;
+      this.toastr.error(err.error.message);
+      this.currentStep = 1;
     })
   }
 
