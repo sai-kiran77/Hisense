@@ -69,6 +69,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/services/global-state.service */ 6007);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/router */ 2816);
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/platform-browser */ 318);
+/* harmony import */ var ngx_toastr__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ngx-toastr */ 4101);
+
 
 
 
@@ -737,7 +739,7 @@ const _c7 = function (a0, a1, a2) {
 };
 
 class PerfectMatch2022Component {
-  constructor(platformId, fb, api, state, route, router, title, meta) {
+  constructor(platformId, fb, api, state, route, router, title, meta, toastr) {
     this.platformId = platformId;
     this.fb = fb;
     this.api = api;
@@ -746,6 +748,7 @@ class PerfectMatch2022Component {
     this.router = router;
     this.title = title;
     this.meta = meta;
+    this.toastr = toastr;
     this.currentStep = 1;
     this.textFontSize = "18";
     this.alive = true;
@@ -876,6 +879,7 @@ class PerfectMatch2022Component {
       }
     }, err => {
       console.log(err);
+      this.toastr.error(err.error.message);
       this.router.navigate(['/perfect-match-2022']);
     });
   }
@@ -961,6 +965,8 @@ class PerfectMatch2022Component {
         }
       }, err => {
         console.log(err);
+
+        _this.toastr.error(err.error.message);
       });
 
       setTimeout(() => {
@@ -1019,6 +1025,7 @@ class PerfectMatch2022Component {
       }, err => {
         this.signupLoading = false;
         console.log(err);
+        this.toastr.error(err.error.message);
       });
     } else {
       this.signupLoading = false;
@@ -1136,6 +1143,8 @@ class PerfectMatch2022Component {
       console.log(err);
       this.resetQuizCurrentContentDisplay();
       this.showRules = true;
+      this.toastr.error(err.error.message);
+      this.currentStep = 1;
     });
   }
 
@@ -1168,7 +1177,7 @@ class PerfectMatch2022Component {
 }
 
 PerfectMatch2022Component.ɵfac = function PerfectMatch2022Component_Factory(t) {
-  return new (t || PerfectMatch2022Component)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__.PLATFORM_ID), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Meta));
+  return new (t || PerfectMatch2022Component)(_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_core__WEBPACK_IMPORTED_MODULE_3__.PLATFORM_ID), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_forms__WEBPACK_IMPORTED_MODULE_4__.FormBuilder), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_api_service__WEBPACK_IMPORTED_MODULE_1__.ApiService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](src_app_services_global_state_service__WEBPACK_IMPORTED_MODULE_2__.GlobalStateService), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.ActivatedRoute), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_8__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Title), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_9__.Meta), _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdirectiveInject"](ngx_toastr__WEBPACK_IMPORTED_MODULE_10__.ToastrService));
 };
 
 PerfectMatch2022Component.ɵcmp = /*@__PURE__*/_angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineComponent"]({
