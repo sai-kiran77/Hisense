@@ -41,4 +41,5 @@ testem.log
 .DS_Store
 Thumbs.db
 
-Hisense.pem
+hisense-development.pem
+hisense-production.pem
