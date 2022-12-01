@@ -329,6 +329,7 @@ export class PerfectMatch2022Component implements OnInit {
     this.showRules = false;
     // this.showStartQuiz = false;
     this.showQuizResults = false;
+    clearInterval(this.counter);
   }
 
   showQuestion(index: number) {
@@ -343,6 +344,7 @@ export class PerfectMatch2022Component implements OnInit {
   counter: any;
 
   startTimer(time: number) {
+    this.timeText = 'Time Left'
     clearInterval(this.counter);
     this.timeCount = time;
     this.counter = setInterval(() => {
@@ -362,6 +364,9 @@ export class PerfectMatch2022Component implements OnInit {
 
 
   onNextQuestion() {
+    if(this.currentQuestionNumber == this.questions.length){
+      this.onSubmitQuiz();
+    }
     this.quizAnswers.push({
       question_id: this.currentQuestionId,
       answer_id: this.selectedOption
@@ -422,6 +427,8 @@ export class PerfectMatch2022Component implements OnInit {
       this.showRules = true;
       this.toastr.error(err.error.message);
       this.currentStep = 1;
+      this.currentQuestionNumber = 0;
+      this.quizAnswers = [];
     })
   }
 
