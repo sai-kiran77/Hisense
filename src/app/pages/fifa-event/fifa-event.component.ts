@@ -43,389 +43,782 @@ export class FifaEventComponent implements OnInit {
     }
   ]
 
+  // spotHisenseRegistrationsDB = [
+  //   {
+  //     user: {
+  //       name: 'REKHA GOSWAMI',
+  //       phone: '7828****49',
+  //       date: '2022-11-30'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'ISHA BHATTACHARYA',
+  //       phone: '9713****36',
+  //       date: '2022-11-30'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Abdullakkutty kattoor',
+  //       phone: '8075****69',
+  //       date: '2022-11-30'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Manisha Ruhu',
+  //       phone: '7409****67',
+  //       date: '2022-11-30'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Bharat Gothwal',
+  //       phone: '8295****15',
+  //       date: '2022-11-29'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Richa jaiswal',
+  //       phone: '9312****83',
+  //       date: '2022-11-29'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'ASHIK TA',
+  //       phone: '8137****23',
+  //       date: '2022-11-29'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Vaibhava Singh',
+  //       phone: '8923****33',
+  //       date: '2022-11-29'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Reeta Karki',
+  //       phone: '9007****08',
+  //       date: '2022-11-29'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Ajay Kumar Sahoo',
+  //       phone: '9355****06',
+  //       date: '2022-11-28'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Fazal rasul',
+  //       phone: '9752****71',
+  //       date: '2022-11-28'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'VIGNESH M',
+  //       phone: '7299****43',
+  //       date: '2022-11-28'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Aripan Ray',
+  //       phone: '9432****13',
+  //       date: '2022-11-28'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Jot',
+  //       phone: '9781****42',
+  //       date: '2022-11-28'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'AYAN DAS',
+  //       phone: '9748****38',
+  //       date: '2022-11-27'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Sengodan Ramasamy',
+  //       phone: '9447****85',
+  //       date: '2022-11-27'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'TaniyaMannaDas',
+  //       phone: '8910****00',
+  //       date: '2022-11-27'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Navjot',
+  //       phone: '6397****49',
+  //       date: '2022-11-27'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Avijit Chatterjee',
+  //       phone: '8100****36',
+  //       date: '2022-11-27'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Gunjan Agrawal',
+  //       phone: '6397****49',
+  //       date: '2022-11-26'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Lakshmi Raghuraman',
+  //       phone: '9791****31',
+  //       date: '2022-11-26'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Ranjeet Banerjee',
+  //       phone: '7376****84',
+  //       date: '2022-11-26'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Tapas Sarkar',
+  //       phone: '9863****11',
+  //       date: '2022-11-26'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Karun Padington',
+  //       phone: '9611****26',
+  //       date: '2022-11-26'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Antara Chongder',
+  //       phone: '9330****90',
+  //       date: '2022-11-25'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Anwar Basha',
+  //       phone: '8939****40',
+  //       date: '2022-11-25'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Neha',
+  //       phone: '9267****12',
+  //       date: '2022-11-25'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Paramjit',
+  //       phone: '8872****20',
+  //       date: '2022-11-25'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Sarika Porwal',
+  //       phone: '8218****55',
+  //       date: '2022-11-24'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Paresh Rathod',
+  //       phone: '9904****05',
+  //       date: '2022-11-24'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Sundararajan',
+  //       phone: '9940****02',
+  //       date: '2022-11-24'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Gayathri Mohan',
+  //       phone: '8056****10',
+  //       date: '2022-11-24'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Kuldeep Kumar',
+  //       phone: '9431****11',
+  //       date: '2022-11-24'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Yatendra agrawal',
+  //       phone: '8923****62',
+  //       date: '2022-11-23'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Souvik Paul',
+  //       phone: '9564****86',
+  //       date: '2022-11-23'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Murlidhar',
+  //       phone: '9783****52',
+  //       date: '2022-11-23'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Jathin M Jaishur',
+  //       phone: '9567****04',
+  //       date: '2022-11-23'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Rubalpreet Singh',
+  //       phone: '9872****20',
+  //       date: '2022-11-23'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Aarav Singh',
+  //       phone: '7017****12',
+  //       date: '2022-11-22'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Sandeep Kaundal',
+  //       phone: '9736****07',
+  //       date: '2022-11-22'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Chetan Maisuria',
+  //       phone: '8401****06',
+  //       date: '2022-11-22'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Mandira Moitra',
+  //       phone: '9831****21',
+  //       date: '2022-11-22'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Sucharita Sahu',
+  //       phone: '8010****67',
+  //       date: '2022-11-22'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Vaishali Maisuria',
+  //       phone: '9904****53',
+  //       date: '2022-11-21'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Rakhi Ambore',
+  //       phone: '8882****37',
+  //       date: '2022-11-21'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Sanchita Mittal',
+  //       phone: '9313****72',
+  //       date: '2022-11-21'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Manisha Swarnkar',
+  //       phone: '9413****67',
+  //       date: '2022-11-21'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'PurushothamPatel',
+  //       phone: '9731****36',
+  //       date: '2022-11-21'
+  //     },
+  //   },
+
+  //   {
+  //     user: {
+  //       name: 'Nalini Sivakumar',
+  //       phone: '9790****49',
+  //       date: '2022-11-20'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'SONALI SASMAL BERA',
+  //       phone: '9733****18',
+  //       date: '2022-11-20'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'karanmantri',
+  //       phone: '9022****56',
+  //       date: '2022-11-20'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Farhan Ansari',
+  //       phone: '8802****81',
+  //       date: '2022-11-20'
+  //     },
+  //   },
+  //   {
+  //     user: {
+  //       name: 'Akash Kumar',
+  //       phone: '8210****79',
+  //       date: '2022-11-20'
+  //     },
+  //   }
+  // ]
+
   spotHisenseRegistrationsDB = [
     {
-      user: {
-        name: 'REKHA GOSWAMI',
-        phone: '7828****49',
-        date: '2022-11-30'
-      },
+     "name": "Nalini Sivakumar",
+     "phone": 9790840349,
+     "date": "2022-11-20"
     },
     {
-      user: {
-        name: 'ISHA BHATTACHARYA',
-        phone: '9713****36',
-        date: '2022-11-30'
-      },
+     "name": "SONALI SASMAL BERA",
+     "phone": 9733284718,
+     "date": "2022-11-20"
     },
     {
-      user: {
-        name: 'Abdullakkutty kattoor',
-        phone: '8075****69',
-        date: '2022-11-30'
-      },
+     "name": "karanmantri",
+     "phone": 9022149456,
+     "date": "2022-11-20"
     },
     {
-      user: {
-        name: 'Manisha Ruhu',
-        phone: '7409****67',
-        date: '2022-11-30'
-      },
-    },
-
-    {
-      user: {
-        name: 'Bharat Gothwal',
-        phone: '8295****15',
-        date: '2022-11-29'
-      },
+     "name": "Farhan Ansari",
+     "phone": 8802095181,
+     "date": "2022-11-20"
     },
     {
-      user: {
-        name: 'Richa jaiswal',
-        phone: '9312****83',
-        date: '2022-11-29'
-      },
+     "name": "Akash Kumar",
+     "phone": 8210921679,
+     "date": "2022-11-20"
     },
     {
-      user: {
-        name: 'ASHIK TA',
-        phone: '8137****23',
-        date: '2022-11-29'
-      },
+     "name": "Vaishali Maisuria",
+     "phone": 9904803453,
+     "date": "2022-11-21"
     },
     {
-      user: {
-        name: 'Vaibhava Singh',
-        phone: '8923****33',
-        date: '2022-11-29'
-      },
+     "name": "Rakhi Ambore",
+     "phone": 8882397937,
+     "date": "2022-11-21"
     },
     {
-      user: {
-        name: 'Reeta Karki',
-        phone: '9007****08',
-        date: '2022-11-29'
-      },
-    },
-
-    {
-      user: {
-        name: 'Ajay Kumar Sahoo',
-        phone: '9355****06',
-        date: '2022-11-28'
-      },
+     "name": "Sanchita Mittal",
+     "phone": 9313783972,
+     "date": "2022-11-21"
     },
     {
-      user: {
-        name: 'Fazal rasul',
-        phone: '9752****71',
-        date: '2022-11-28'
-      },
+     "name": "Manisha Swarnkar",
+     "phone": 9413500460,
+     "date": "2022-11-21"
     },
     {
-      user: {
-        name: 'VIGNESH M',
-        phone: '7299****43',
-        date: '2022-11-28'
-      },
+     "name": "PurushothamPatel",
+     "phone": 9731380036,
+     "date": "2022-11-21"
     },
     {
-      user: {
-        name: 'Aripan Ray',
-        phone: '9432****13',
-        date: '2022-11-28'
-      },
+     "name": "Aarav Singh",
+     "phone": 7017083312,
+     "date": "2022-11-22"
     },
     {
-      user: {
-        name: 'Jot',
-        phone: '9781****42',
-        date: '2022-11-28'
-      },
-    },
-
-    {
-      user: {
-        name: 'AYAN DAS',
-        phone: '9748****38',
-        date: '2022-11-27'
-      },
+     "name": "Sandeep Kaundal",
+     "phone": 9736250507,
+     "date": "2022-11-22"
     },
     {
-      user: {
-        name: 'Sengodan Ramasamy',
-        phone: '9447****85',
-        date: '2022-11-27'
-      },
+     "name": "Chetan Maisuria",
+     "phone": 8401407906,
+     "date": "2022-11-22"
     },
     {
-      user: {
-        name: 'TaniyaMannaDas',
-        phone: '8910****00',
-        date: '2022-11-27'
-      },
+     "name": "Mandira Moitra",
+     "phone": 9831345721,
+     "date": "2022-11-22"
     },
     {
-      user: {
-        name: 'Navjot',
-        phone: '6397****49',
-        date: '2022-11-27'
-      },
+     "name": "Sucharita Sahu",
+     "phone": 8010764567,
+     "date": "2022-11-22"
     },
     {
-      user: {
-        name: 'Avijit Chatterjee',
-        phone: '8100****36',
-        date: '2022-11-27'
-      },
-    },
-
-    {
-      user: {
-        name: 'Gunjan Agrawal',
-        phone: '6397****49',
-        date: '2022-11-26'
-      },
+     "name": "Yatendra agrawal",
+     "phone": 8923891962,
+     "date": "2022-11-23"
     },
     {
-      user: {
-        name: 'Lakshmi Raghuraman',
-        phone: '9791****31',
-        date: '2022-11-26'
-      },
+     "name": "Souvik Paul",
+     "phone": 9564575886,
+     "date": "2022-11-23"
     },
     {
-      user: {
-        name: 'Ranjeet Banerjee',
-        phone: '7376****84',
-        date: '2022-11-26'
-      },
+     "name": "Murlidhar",
+     "phone": 9783102152,
+     "date": "2022-11-23"
     },
     {
-      user: {
-        name: 'Tapas Sarkar',
-        phone: '9863****11',
-        date: '2022-11-26'
-      },
+     "name": "Jathin M Jaishur",
+     "phone": 9567650604,
+     "date": "2022-11-23"
     },
     {
-      user: {
-        name: 'Karun Padington',
-        phone: '9611****26',
-        date: '2022-11-26'
-      },
-    },
-
-    {
-      user: {
-        name: 'Antara Chongder',
-        phone: '9330****90',
-        date: '2022-11-25'
-      },
+     "name": "Rubalpreet Singh",
+     "phone": 9872226320,
+     "date": "2022-11-23"
     },
     {
-      user: {
-        name: 'Anwar Basha',
-        phone: '8939****40',
-        date: '2022-11-25'
-      },
+     "name": "Sarika Porwal",
+     "phone": 8218842155,
+     "date": "2022-11-24"
     },
     {
-      user: {
-        name: 'Neha',
-        phone: '9267****12',
-        date: '2022-11-25'
-      },
+     "name": "Paresh Rathod",
+     "phone": 9904954605,
+     "date": "2022-11-24"
     },
     {
-      user: {
-        name: 'Paramjit',
-        phone: '8872****20',
-        date: '2022-11-25'
-      },
-    },
-
-    {
-      user: {
-        name: 'Sarika Porwal',
-        phone: '8218****55',
-        date: '2022-11-24'
-      },
+     "name": "Sundararajan",
+     "phone": 9940387202,
+     "date": "2022-11-24"
     },
     {
-      user: {
-        name: 'Paresh Rathod',
-        phone: '9904****05',
-        date: '2022-11-24'
-      },
+     "name": "Gayathri Mohan",
+     "phone": 8056583910,
+     "date": "2022-11-24"
     },
     {
-      user: {
-        name: 'Sundararajan',
-        phone: '9940****02',
-        date: '2022-11-24'
-      },
+     "name": "Kuldeep Kumar",
+     "phone": 9431100911,
+     "date": "2022-11-24"
     },
     {
-      user: {
-        name: 'Gayathri Mohan',
-        phone: '8056****10',
-        date: '2022-11-24'
-      },
+     "name": "Antara Chongder",
+     "phone": 9330881190,
+     "date": "2022-11-25"
     },
     {
-      user: {
-        name: 'Kuldeep Kumar',
-        phone: '9431****11',
-        date: '2022-11-24'
-      },
-    },
-
-    {
-      user: {
-        name: 'Yatendra agrawal',
-        phone: '8923****62',
-        date: '2022-11-23'
-      },
+     "name": "neha",
+     "phone": 9267928112,
+     "date": "2022-11-25"
     },
     {
-      user: {
-        name: 'Souvik Paul',
-        phone: '9564****86',
-        date: '2022-11-23'
-      },
+     "name": "Paramjit",
+     "phone": 8872826320,
+     "date": "2022-11-25"
     },
     {
-      user: {
-        name: 'Murlidhar',
-        phone: '9783****52',
-        date: '2022-11-23'
-      },
+     "name": "Anwar Basha",
+     "phone": 8939201140,
+     "date": "2022-11-25"
     },
     {
-      user: {
-        name: 'Jathin M Jaishur',
-        phone: '9567****04',
-        date: '2022-11-23'
-      },
+     "name": "Gunjan Agrawal",
+     "phone": 6397544949,
+     "date": "2022-11-26"
     },
     {
-      user: {
-        name: 'Rubalpreet Singh',
-        phone: '9872****20',
-        date: '2022-11-23'
-      },
-    },
-
-    {
-      user: {
-        name: 'Aarav Singh',
-        phone: '7017****12',
-        date: '2022-11-22'
-      },
+     "name": "Lakshmi Raghuraman",
+     "phone": 9791183331,
+     "date": "2022-11-26"
     },
     {
-      user: {
-        name: 'Sandeep Kaundal',
-        phone: '9736****07',
-        date: '2022-11-22'
-      },
+     "name": "Ranjeet Banerjee",
+     "phone": 7376332084,
+     "date": "2022-11-26"
     },
     {
-      user: {
-        name: 'Chetan Maisuria',
-        phone: '8401****06',
-        date: '2022-11-22'
-      },
+     "name": "Tapas Sarkar",
+     "phone": 9863654911,
+     "date": "2022-11-26"
     },
     {
-      user: {
-        name: 'Mandira Moitra',
-        phone: '9831****21',
-        date: '2022-11-22'
-      },
+     "name": "Karun Padington",
+     "phone": 9611652526,
+     "date": "2022-11-26"
     },
     {
-      user: {
-        name: 'Sucharita Sahu',
-        phone: '8010****67',
-        date: '2022-11-22'
-      },
-    },
-
-    {
-      user: {
-        name: 'Vaishali Maisuria',
-        phone: '9904****53',
-        date: '2022-11-21'
-      },
+     "name": "AYAN DAS",
+     "phone": 9748022438,
+     "date": "2022-11-27"
     },
     {
-      user: {
-        name: 'Rakhi Ambore',
-        phone: '8882****37',
-        date: '2022-11-21'
-      },
+     "name": "Sengodan Ramasamy",
+     "phone": 9447410485,
+     "date": "2022-11-27"
     },
     {
-      user: {
-        name: 'Sanchita Mittal',
-        phone: '9313****72',
-        date: '2022-11-21'
-      },
+     "name": "TaniyaMannaDas",
+     "phone": 8910143600,
+     "date": "2022-11-27"
     },
     {
-      user: {
-        name: 'Manisha Swarnkar',
-        phone: '9413****67',
-        date: '2022-11-21'
-      },
+     "name": "Navjot",
+     "phone": 9463323369,
+     "date": "2022-11-27"
     },
     {
-      user: {
-        name: 'PurushothamPatel',
-        phone: '9731****36',
-        date: '2022-11-21'
-      },
-    },
-
-    {
-      user: {
-        name: 'Nalini Sivakumar',
-        phone: '9790****49',
-        date: '2022-11-20'
-      },
+     "name": "Avijit Chatterjee",
+     "phone": 8100137236,
+     "date": "2022-11-27"
     },
     {
-      user: {
-        name: 'SONALI SASMAL BERA',
-        phone: '9733****18',
-        date: '2022-11-20'
-      },
+     "name": "Ajay Kumar Sahoo",
+     "phone": 9355104806,
+     "date": "2022-11-28"
     },
     {
-      user: {
-        name: 'karanmantri',
-        phone: '9022****56',
-        date: '2022-11-20'
-      },
+     "name": "Fazal rasul",
+     "phone": 9752490871,
+     "date": "2022-11-28"
     },
     {
-      user: {
-        name: 'Farhan Ansari',
-        phone: '8802****81',
-        date: '2022-11-20'
-      },
+     "name": "VIGNESH M",
+     "phone": 7299209943,
+     "date": "2022-11-28"
     },
     {
-      user: {
-        name: 'Akash Kumar',
-        phone: '8210****79',
-        date: '2022-11-20'
-      },
+     "name": "Aripan Ray",
+     "phone": 9432180513,
+     "date": "2022-11-28"
+    },
+    {
+     "name": "Jot",
+     "phone": 9781346542,
+     "date": "2022-11-28"
+    },
+    {
+     "name": "Bharat Gothwal",
+     "phone": 8295229015,
+     "date": "2022-11-29"
+    },
+    {
+     "name": "Richa jaiswal",
+     "phone": 9312160083,
+     "date": "2022-11-29"
+    },
+    {
+     "name": "ASHIK TA",
+     "phone": 8137855223,
+     "date": "2022-11-29"
+    },
+    {
+     "name": "Vaibhava Singh",
+     "phone": 8923333433,
+     "date": "2022-11-29"
+    },
+    {
+     "name": "Reeta Karki",
+     "phone": 9007066808,
+     "date": "2022-11-29"
+    },
+    {
+     "name": "REKHA GOSWAMI",
+     "phone": 7828564949,
+     "date": "2022-11-30"
+    },
+    {
+     "name": "ISHA BHATTACHARYA",
+     "phone": 9713215036,
+     "date": "2022-11-30"
+    },
+    {
+     "name": "Abdullakkutty kattoor",
+     "phone": 8075357069,
+     "date": "2022-11-30"
+    },
+    {
+     "name": "Manisha Ruhu",
+     "phone": 7409542567,
+     "date": "2022-11-30"
+    },
+    {
+     "name": "Janaki Senthil",
+     "phone": 6382852247,
+     "date": "2022-12-01"
+    },
+    {
+     "name": "Dhara Tushar Unadkat",
+     "phone": 9106073335,
+     "date": "2022-12-01"
+    },
+    {
+     "name": "Mani Kamal Singha Roy",
+     "phone": 6291808812,
+     "date": "2022-12-01"
+    },
+    {
+     "name": "Paritosh Ghosh",
+     "phone": 9002959442,
+     "date": "2022-12-01"
+    },
+    {
+     "name": "Rahul Ranjan",
+     "phone": 8804740491,
+     "date": "2022-12-01"
+    },
+    {
+     "name": "Mohamed Abubacker",
+     "phone": 8015164701,
+     "date": "2022-12-02"
+    },
+    {
+     "name": "Selvi",
+     "phone": 6369305150,
+     "date": "2022-12-02"
+    },
+    {
+     "name": "Sandeep",
+     "phone": 9896616601,
+     "date": "2022-12-02"
+    },
+    {
+     "name": "Durga Prasad Sharma",
+     "phone": 9306644912,
+     "date": "2022-12-02"
+    },
+    {
+     "name": "Ashish Jain",
+     "phone": 9560907653,
+     "date": "2022-12-02"
+    },
+    {
+     "name": "MANISH R GOSWAMI",
+     "phone": 7869396075,
+     "date": "2022-12-03"
+    },
+    {
+     "name": "ASHISH KUMAR GOSWAMI",
+     "phone": 9893452747,
+     "date": "2022-12-03"
+    },
+    {
+     "name": "Priyanka shiyalvala",
+     "phone": 7802890426,
+     "date": "2022-12-03"
+    },
+    {
+     "name": "Mohamed Fadhil C",
+     "phone": 8943045508,
+     "date": "2022-12-03"
+    },
+    {
+     "name": "Shilpa Sharma",
+     "phone": 9817887269,
+     "date": "2022-12-03"
+    },
+    {
+     "name": "Harsh Patel",
+     "phone": 7065711497,
+     "date": "2022-12-04"
+    },
+    {
+     "name": "Disha soni",
+     "phone": 7723980739,
+     "date": "2022-12-04"
+    },
+    {
+     "name": "Sapna Chawla",
+     "phone": 7020317835,
+     "date": "2022-12-04"
+    },
+    {
+     "name": "Priya Naik",
+     "phone": 7588923715,
+     "date": "2022-12-04"
+    },
+    {
+     "name": "Mem Khan",
+     "phone": 9828197997,
+     "date": "2022-12-04"
+    },
+    {
+     "name": "Sarita Pradhan",
+     "phone": 9958107560,
+     "date": "2022-12-05"
+    },
+    {
+     "name": "Ashwin Kumar",
+     "phone": 9343330901,
+     "date": "2022-12-05"
+    },
+    {
+     "name": "Hetal Wadhan",
+     "phone": 9904468867,
+     "date": "2022-12-05"
+    },
+    {
+     "name": "Samita Singha Roy",
+     "phone": 8013930625,
+     "date": "2022-12-05"
+    },
+    {
+     "name": "RAHUL",
+     "phone": 9643721341,
+     "date": "2022-12-05"
     }
-  ]
+   ]
 
   fifaHighlights = [
     {
@@ -763,7 +1156,7 @@ export class FifaEventComponent implements OnInit {
   }
 
   getRegistrationsOfSpotHisense(event: any){
-    this.spotHisenseRegistrations = this.spotHisenseRegistrationsDB.filter((obj: any) => obj.user.date == event.target.value);
+    this.spotHisenseRegistrations = this.spotHisenseRegistrationsDB.filter((obj: any) => obj.date == event.target.value);
   }
 
   changeTab(tab: any) {
