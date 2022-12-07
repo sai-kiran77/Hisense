@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FifaEventComponent } from './fifa-event.component';
 import { RouterModule, Routes } from '@angular/router';
+import { MaskPhonePipe } from 'src/app/shared/pipes/mask-phone.pipe';
 
 const routes: Routes = [
   {
@@ -12,7 +13,8 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    FifaEventComponent
+    FifaEventComponent,
+    MaskPhonePipe
   ],
   imports: [
     CommonModule,

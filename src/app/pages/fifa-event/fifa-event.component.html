@@ -150,7 +150,7 @@
         <section class="date__picker">
             <div class="wrapper">
                 <h3>Daily Winners</h3>
-                <input min="2022-11-20" max="2022-11-30" value="2022-11-20" type="date" name="date" id="date" (change)="getRegistrationsOfSpotHisense($event)">
+                <input min="2022-11-20" max="2022-12-05" value="2022-11-20" type="date" name="date" id="date" (change)="getRegistrationsOfSpotHisense($event)">
                 <div *ngIf="spotHisenseRegistrations">
                     <table *ngIf="spotHisenseRegistrations.length">
                         <tr style="background: #00b3ac;">
@@ -159,8 +159,8 @@
                             <!-- <th style="border-top-right-radius: 8px;">Prize won</th> -->
                         </tr>
                         <tr *ngFor="let record of spotHisenseRegistrations">
-                            <td>{{record.user.name}}</td>
-                            <td>{{record.user.phone}}</td>
+                            <td>{{record.name}}</td>
+                            <td>{{record.phone | maskPhone}}</td>
                             <!-- <td>{{record.spin_wheel_prize.description}}</td> -->
                         </tr>
                     </table>
