@@ -1099,6 +1099,206 @@ class FifaEventComponent {
                 "phone": 7006062077,
                 "date": "2022-12-07"
             },
+            {
+                "name": "AAHANA BANSAL",
+                "phone": 7589806558,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Ajmera Anudeep",
+                "phone": 8185022797,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "MD ARMAN",
+                "phone": 8100510100,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Santosh singh",
+                "phone": 7978301410,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Shubham Sharma",
+                "phone": 7017647502,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Ankit Rahul",
+                "phone": 7989087481,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Mohit Ahuja",
+                "phone": 8668593554,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "DILWAR HUSSAIN",
+                "phone": 7002179865,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Priyanka Toshniwal",
+                "phone": 8385969304,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Shalini Antwal",
+                "phone": 7988551390,
+                "date": "08-12-2022"
+            },
+            {
+                "name": "Neha",
+                "phone": 9354574276,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Priya pusp",
+                "phone": 9811616026,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "PABITRA MONDAL",
+                "phone": 7407311734,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Tamilarasu",
+                "phone": 9444192038,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Arwa Hirani",
+                "phone": 9766890352,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Shashi B Singh",
+                "phone": 9523197077,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "GANESAN",
+                "phone": 7200728664,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Aman",
+                "phone": 8791559448,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Shashank Dhargalkar",
+                "phone": 8446599232,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Montu jain",
+                "phone": 8112265512,
+                "date": "09-12-2022"
+            },
+            {
+                "name": "Salman Hundekari",
+                "phone": 8483007868,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Naveed ahmed",
+                "phone": 6302583517,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Rashed jameel ahmed",
+                "phone": 9912434060,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Mufeez ahmed",
+                "phone": 8686722804,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Safoora fatima",
+                "phone": 9491331296,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Taufeeq ahmed",
+                "phone": 7288840613,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Zayeem ahmed",
+                "phone": 6302187579,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Aneequa fatima",
+                "phone": 9703588449,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Shaista tazeen",
+                "phone": 9493664376,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Baleegh ahmed",
+                "phone": 9885073875,
+                "date": "10-12-2022"
+            },
+            {
+                "name": "Nithish",
+                "phone": 6309381998,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Talmeez ahmed",
+                "phone": 7075059545,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Zeeshan fatima",
+                "phone": 9398794221,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "SUNITA KUMARI",
+                "phone": 7488873429,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Jyoti M Bhatt",
+                "phone": 7021345294,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "omar mukthar",
+                "phone": 9400956998,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Soumadip Moitra",
+                "phone": 9903731422,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Akash Sharma",
+                "phone": 8269345315,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Jayant goyal",
+                "phone": 9728111917,
+                "date": "11-12-2022"
+            },
+            {
+                "name": "Sarvagya Jain",
+                "phone": 7987309274,
+                "date": "11-12-2022"
+            }
         ];
         this.fifaHighlights = [
             {
@@ -1444,7 +1644,7 @@ FifaEventComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx.HighlightsRef = _t.first);
-    } }, decls: 17, vars: 5, consts: [[1, "fifa__event__container"], [1, "main-visual", "slider", "slick-initialized", "slick-slider", "slick-dotted"], [1, "slick-list", "draggable"], [1, "slick-track"], [1, "swiper", "mySwiperHome"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-button-next"], [1, "swiper-button-prev"], [1, "swiper-pagination"], [1, "flex", "fifa__tabs__container"], [1, "tabs"], [1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["class", "about__fifa__tab", "style", "margin-top: 10px;", 4, "ngIf"], [4, "ngIf"], [1, "swiper-slide"], [2, "width", "100%", 3, "routerLink"], ["media", "(min-width:768px)", 3, "srcset"], [1, "ls-bg", 2, "width", "100%", 3, "src", "alt"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "about__fifa__tab", 2, "margin-top", "10px"], [1, "fifa__groups"], [1, "wrapper"], [1, "groups"], ["class", "card", 4, "ngFor", "ngForOf"], [1, "fifa__highlights"], ["Highlights", ""], [1, "highlights", "groups"], ["target", "_blank", "class", "highlights__card", 3, "href", 4, "ngFor", "ngForOf"], [1, "card"], [1, "card__heading"], [1, "card__body"], [4, "ngFor", "ngForOf"], ["width", "58", "height", "36", 3, "src", "alt"], ["target", "_blank", 1, "highlights__card", 3, "href"], [1, "image__container"], [3, "src", "alt"], [2, "font-size", "14px", "padding", "7px 10px"], ["alt", "steps to participate", 1, "ls-bg", 2, "width", "100%", 3, "src"], [1, "date__picker"], ["min", "2022-09-26", "max", "2022-10-25", "value", "2022-10-25", "type", "date", "name", "date", "id", "date", 3, "change"], ["class", "no-records", 4, "ngIf"], [2, "background", "#00b3ac"], [2, "border-top-left-radius", "8px"], [2, "border-top-right-radius", "8px"], [1, "no-records"], ["media", "(min-width:768px)", "srcset", "assets/spot-hisense-steps-to-participate-desktop.webp"], ["src", "assets/spot-hisense-steps-to-participate-mobile.webp", "alt", "steps to participate", 1, "ls-bg", 2, "width", "100%"], ["min", "2022-11-20", "max", "2022-12-07", "value", "2022-11-20", "type", "date", "name", "date", "id", "date", 3, "change"]], template: function FifaEventComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 17, vars: 5, consts: [[1, "fifa__event__container"], [1, "main-visual", "slider", "slick-initialized", "slick-slider", "slick-dotted"], [1, "slick-list", "draggable"], [1, "slick-track"], [1, "swiper", "mySwiperHome"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-button-next"], [1, "swiper-button-prev"], [1, "swiper-pagination"], [1, "flex", "fifa__tabs__container"], [1, "tabs"], [1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["class", "about__fifa__tab", "style", "margin-top: 10px;", 4, "ngIf"], [4, "ngIf"], [1, "swiper-slide"], [2, "width", "100%", 3, "routerLink"], ["media", "(min-width:768px)", 3, "srcset"], [1, "ls-bg", 2, "width", "100%", 3, "src", "alt"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "about__fifa__tab", 2, "margin-top", "10px"], [1, "fifa__groups"], [1, "wrapper"], [1, "groups"], ["class", "card", 4, "ngFor", "ngForOf"], [1, "fifa__highlights"], ["Highlights", ""], [1, "highlights", "groups"], ["target", "_blank", "class", "highlights__card", 3, "href", 4, "ngFor", "ngForOf"], [1, "card"], [1, "card__heading"], [1, "card__body"], [4, "ngFor", "ngForOf"], ["width", "58", "height", "36", 3, "src", "alt"], ["target", "_blank", 1, "highlights__card", 3, "href"], [1, "image__container"], [3, "src", "alt"], [2, "font-size", "14px", "padding", "7px 10px"], ["alt", "steps to participate", 1, "ls-bg", 2, "width", "100%", 3, "src"], [1, "date__picker"], ["min", "2022-09-26", "max", "2022-10-25", "value", "2022-10-25", "type", "date", "name", "date", "id", "date", 3, "change"], ["class", "no-records", 4, "ngIf"], [2, "background", "#00b3ac"], [2, "border-top-left-radius", "8px"], [2, "border-top-right-radius", "8px"], [1, "no-records"], ["media", "(min-width:768px)", "srcset", "assets/spot-hisense-steps-to-participate-desktop.webp"], ["src", "assets/spot-hisense-steps-to-participate-mobile.webp", "alt", "steps to participate", 1, "ls-bg", 2, "width", "100%"], ["min", "2022-11-20", "max", "2022-12-11", "value", "2022-11-20", "type", "date", "name", "date", "id", "date", 3, "change"]], template: function FifaEventComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](6, FifaEventComponent_div_6_Template, 5, 4, "div", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
