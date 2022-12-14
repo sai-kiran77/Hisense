@@ -1298,7 +1298,107 @@ class FifaEventComponent {
                 "name": "Sarvagya Jain",
                 "phone": 7987309274,
                 "date": "2022-12-11"
-            }
+            },
+            {
+                "name": "Aryan Raj",
+                "phone": 8287557670,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "EVEWIN CHRISTON LAKRA",
+                "phone": 9934117944,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Harsh Doshi",
+                "phone": 7227087015,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Ritika",
+                "phone": 8750841230,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Vignesh",
+                "phone": 9840484613,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Adepu Parameshwar",
+                "phone": 8985453587,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "mohdtofeeq",
+                "phone": 6398267916,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Himanshu",
+                "phone": 8278276235,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Nitu naresh",
+                "phone": 8740866548,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Santosh Sharma",
+                "phone": 9518074649,
+                "date": "2022-12-12"
+            },
+            {
+                "name": "Sommy",
+                "phone": 8766330651,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Bharat",
+                "phone": 8278539458,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Adrita Hassan",
+                "phone": 9354816515,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Alamgir mondal",
+                "phone": 9874320385,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "RAHUL KUMBHAR",
+                "phone": 8087247258,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Soumen Roy",
+                "phone": 7003342132,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Vishal Bhansali",
+                "phone": 9920909532,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Suyash Parakh",
+                "phone": 7999786936,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Rma kumari",
+                "phone": 8708369332,
+                "date": "2022-12-13"
+            },
+            {
+                "name": "Varma Prashant Kumar",
+                "phone": 9510958646,
+                "date": "2022-12-13"
+            },
         ];
         this.fifaHighlights = [
             {
@@ -1644,7 +1744,7 @@ FifaEventComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵloadQuery"]()) && (ctx.HighlightsRef = _t.first);
-    } }, decls: 17, vars: 5, consts: [[1, "fifa__event__container"], [1, "main-visual", "slider", "slick-initialized", "slick-slider", "slick-dotted"], [1, "slick-list", "draggable"], [1, "slick-track"], [1, "swiper", "mySwiperHome"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-button-next"], [1, "swiper-button-prev"], [1, "swiper-pagination"], [1, "flex", "fifa__tabs__container"], [1, "tabs"], [1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["class", "about__fifa__tab", "style", "margin-top: 10px;", 4, "ngIf"], [4, "ngIf"], [1, "swiper-slide"], [2, "width", "100%", 3, "routerLink"], ["media", "(min-width:768px)", 3, "srcset"], [1, "ls-bg", 2, "width", "100%", 3, "src", "alt"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "about__fifa__tab", 2, "margin-top", "10px"], [1, "fifa__groups"], [1, "wrapper"], [1, "groups"], ["class", "card", 4, "ngFor", "ngForOf"], [1, "fifa__highlights"], ["Highlights", ""], [1, "highlights", "groups"], ["target", "_blank", "class", "highlights__card", 3, "href", 4, "ngFor", "ngForOf"], [1, "card"], [1, "card__heading"], [1, "card__body"], [4, "ngFor", "ngForOf"], ["width", "58", "height", "36", 3, "src", "alt"], ["target", "_blank", 1, "highlights__card", 3, "href"], [1, "image__container"], [3, "src", "alt"], [2, "font-size", "14px", "padding", "7px 10px"], ["alt", "steps to participate", 1, "ls-bg", 2, "width", "100%", 3, "src"], [1, "date__picker"], ["min", "2022-09-26", "max", "2022-10-25", "value", "2022-10-25", "type", "date", "name", "date", "id", "date", 3, "change"], ["class", "no-records", 4, "ngIf"], [2, "background", "#00b3ac"], [2, "border-top-left-radius", "8px"], [2, "border-top-right-radius", "8px"], [1, "no-records"], ["media", "(min-width:768px)", "srcset", "assets/spot-hisense-steps-to-participate-desktop.webp"], ["src", "assets/spot-hisense-steps-to-participate-mobile.webp", "alt", "steps to participate", 1, "ls-bg", 2, "width", "100%"], ["min", "2022-11-20", "max", "2022-12-11", "value", "2022-11-20", "type", "date", "name", "date", "id", "date", 3, "change"]], template: function FifaEventComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 17, vars: 5, consts: [[1, "fifa__event__container"], [1, "main-visual", "slider", "slick-initialized", "slick-slider", "slick-dotted"], [1, "slick-list", "draggable"], [1, "slick-track"], [1, "swiper", "mySwiperHome"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-button-next"], [1, "swiper-button-prev"], [1, "swiper-pagination"], [1, "flex", "fifa__tabs__container"], [1, "tabs"], [1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], ["class", "about__fifa__tab", "style", "margin-top: 10px;", 4, "ngIf"], [4, "ngIf"], [1, "swiper-slide"], [2, "width", "100%", 3, "routerLink"], ["media", "(min-width:768px)", 3, "srcset"], [1, "ls-bg", 2, "width", "100%", 3, "src", "alt"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "about__fifa__tab", 2, "margin-top", "10px"], [1, "fifa__groups"], [1, "wrapper"], [1, "groups"], ["class", "card", 4, "ngFor", "ngForOf"], [1, "fifa__highlights"], ["Highlights", ""], [1, "highlights", "groups"], ["target", "_blank", "class", "highlights__card", 3, "href", 4, "ngFor", "ngForOf"], [1, "card"], [1, "card__heading"], [1, "card__body"], [4, "ngFor", "ngForOf"], ["width", "58", "height", "36", 3, "src", "alt"], ["target", "_blank", 1, "highlights__card", 3, "href"], [1, "image__container"], [3, "src", "alt"], [2, "font-size", "14px", "padding", "7px 10px"], ["alt", "steps to participate", 1, "ls-bg", 2, "width", "100%", 3, "src"], [1, "date__picker"], ["min", "2022-09-26", "max", "2022-10-25", "value", "2022-10-25", "type", "date", "name", "date", "id", "date", 3, "change"], ["class", "no-records", 4, "ngIf"], [2, "background", "#00b3ac"], [2, "border-top-left-radius", "8px"], [2, "border-top-right-radius", "8px"], [1, "no-records"], ["media", "(min-width:768px)", "srcset", "assets/spot-hisense-steps-to-participate-desktop.webp"], ["src", "assets/spot-hisense-steps-to-participate-mobile.webp", "alt", "steps to participate", 1, "ls-bg", 2, "width", "100%"], ["min", "2022-11-20", "max", "2022-12-13", "value", "2022-11-20", "type", "date", "name", "date", "id", "date", 3, "change"]], template: function FifaEventComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "div", 2)(3, "div", 3)(4, "div", 4)(5, "div", 5);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵtemplate"](6, FifaEventComponent_div_6_Template, 5, 4, "div", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementEnd"]();
