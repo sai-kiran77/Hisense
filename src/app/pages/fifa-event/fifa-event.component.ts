@@ -1169,6 +1169,56 @@ export class FifaEventComponent implements OnInit {
       "name": "Varma Prashant Kumar",
       "phone": 9510958646,
       "date": "2022-12-13"
+    },							
+    {
+      "name": "Pooja Kumari",
+      "phone": 9459844900,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Amit Ahuja",
+      "phone": 8799946019,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Neha Jain",
+      "phone": 9555526456,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Vishal Y Bhansali",
+      "phone": 7021376746,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Anupam Bhowmik",
+      "phone": 9804309145,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Firdous Ansari",
+      "phone": 9125369818,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Jayshree Shah",
+      "phone": 8169470056,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Amrit Sharma",
+      "phone": 8011941188,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Rakesh",
+      "phone": 9618564806,
+      "date": "2022-12-14"
+    },
+    {
+      "name": "Vaibhav Jain",
+      "phone": 9971483579,
+      "date": "2022-12-14"
     },
 
 
