@@ -1444,6 +1444,7 @@ export class FifaEventComponent implements OnInit {
   environment = environment
 
   yesterdayDate: any;
+  spotYesterdayDate: any;
 
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object,
@@ -1453,6 +1454,7 @@ export class FifaEventComponent implements OnInit {
     this.state.mobileNavToggle.next(false);
     const date = new Date();
     // this.yesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
+    this.spotYesterdayDate = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate() - 1)).padStart(2, '0')}`;
     // console.log(this.yesterdayDate);
     this.title.setTitle('Hisense India | FIFA 2022');
     this.yesterdayDate = '2022-10-25';
@@ -1494,7 +1496,7 @@ export class FifaEventComponent implements OnInit {
       });
     })
     this.getRegistrations({ target: { value: this.yesterdayDate } });
-    this.getRegistrationsOfSpotHisense({ target: { value: '2022-11-21' } });
+    this.getRegistrationsOfSpotHisense({ target: { value: '2022-11-20' } });
   }
 
   ngAfterViewInit() {
@@ -1563,6 +1565,20 @@ export class FifaEventComponent implements OnInit {
   }
 
   getRegistrationsOfSpotHisense(event: any) {
+    this.api.getSpotRegistrations().subscribe((data: any) => {
+      console.log(data);
+      if (data.data.length) {
+        this.spotHisenseRegistrationsDB = data.data;
+        this.filterSpotHisenseRegistrationsData(event);
+      } else {
+        this.spotHisenseRegistrationsDB = [];
+      }
+    }, (err) => {
+      console.log(err);
+    })
+  }
+
+  filterSpotHisenseRegistrationsData(event: any){
     this.spotHisenseRegistrations = this.spotHisenseRegistrationsDB.filter((obj: any) => obj.date == event.target.value);
   }
 

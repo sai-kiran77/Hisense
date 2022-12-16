@@ -110,4 +110,8 @@ export class ApiService {
       params
     });
   }
+
+  getSpotRegistrations(endpoint: string = 'https://api.hisense-india.com/v1/campaigns/fifa-2022/winners'){
+    return this.http.get(endpoint);
+  }
 }
