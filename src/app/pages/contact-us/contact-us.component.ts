@@ -17,6 +17,31 @@ export class ContactUsComponent implements OnInit {
   modalMessage = '';
   modalImageName = '';
 
+  issueType = '';
+
+  issueTypes = [
+    {
+      name: 'Service',
+      id: 'service'
+    },
+    {
+      name: 'Repair',
+      id: 'repair'
+    },
+    {
+      name: 'Offers',
+      id: 'offers'
+    },
+    {
+      name: 'Campaigns',
+      id: 'campaigns'
+    },
+  ];
+
+  updateIssueType(event: any){
+    this.issueType = event.id;
+  }
+
   today;
 
   @ViewChild('ErrorMessage') ErrorMessageRef: any;
@@ -65,6 +90,7 @@ export class ContactUsComponent implements OnInit {
   }
 
   selectedCategory: any = null;
+  product_variants: any = [];
   updateCategory(event: any) {
     // console.log(this.metaData.categories, event.target.value);
     this.selectedCategory = this.metaData.categories.find((cat: any) => cat.id == event.target.value);
@@ -73,6 +99,16 @@ export class ContactUsComponent implements OnInit {
     this.selectedSubCategoryId = null;
     this.selectedProductId = null;
     this.selectedProductVarientId = null;
+    // this.updateSubCategory({ target: { value: this.selectedCategoryId }});
+    console.log(this.selectedCategory);
+    this.selectedCategory.subcategories.forEach((obj: any)=>{
+      obj.category_products.forEach((cp: any)=>{
+        cp.product.product_variants.forEach((pv: any)=>{
+          this.product_variants.push(pv);
+        })
+      })
+    })
+    console.log(this.product_variants);
   }
 
   selectedSubCategory: any;

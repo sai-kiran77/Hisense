@@ -4168,6 +4168,33 @@ th {
     }
 } */
 
+.flex-wrapper .top__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.d-sm-none {
+    display: block;
+}
+
+.d-md-none {
+    display: none;
+}
+
+
+@media screen and (max-width:1024px) {
+    .flex-wrapper .top__container{
+        grid-template-columns: 1fr;
+    }
+
+    .d-sm-none {
+        display: none;
+    }
+
+    .d-md-none {
+        display: block;
+    }
+}
 
 .submit__btn {
     border: none;
