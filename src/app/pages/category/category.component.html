@@ -28,7 +28,7 @@
                 <div class="smart__tv__card__media"><img [src]="card.image" [alt]="card.heading"></div>
                 <p class="smart__tv__media__desc">{{card.desc}}</p>
                 <div class="smart__tv__card__actions" style="margin-top: 6px;">
-                    <a [href]="'/c/smart-tv-platform#' + card.link" class="smart__tv__discover__link">Discover Android TV</a>
+                    <a [routerLink]="card.redirectLink" class="smart__tv__discover__link">Discover {{card.heading}}</a>
                 </div>
             </div>
         </section>
