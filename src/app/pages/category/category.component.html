@@ -1,6 +1,6 @@
 <ng-container *ngIf="!show404">
     <section class="catalog" id="catalog-page">
-        <div class="breadcrumb__yellow__banner">
+        <div class="breadcrumb__yellow__banner" *ngIf="!isSmartTvPage">
             <h1>{{metaData?.name}}</h1>
         </div>
         <ng-container *ngIf="metaData?.cover_media[0]?.file_type == 'video' && !isSmartTvPage">
@@ -21,6 +21,26 @@
     </section>
 
     <ng-container *ngIf="isSmartTvPage">
+        <div class="abstract__container">
+            <img src="assets/Abstract_Magic_Trail_05.jpg" alt="Abstract_Magic_Trail_05">
+            <div>
+                <div style="    position: absolute;
+                top: 50%;
+                left: 50%;
+                color: white;
+                font-size: 36px;
+                transform: translate(-50%, -50%);">
+                    <h1>{{metaData?.name}}</h1>
+                </div>
+                <div class="smart__tv__btns__container">
+                    <div class="smart__tv__card__btns" *ngFor="let card of smartTvCards">
+                        <div class="smart__tv__card__actions" style="margin-top: 6px;">
+                            <a [href]="'/c/smart-tv-platform#' + card.link" class="smart__tv__discover__link">Discover {{card.heading}}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="smart__tv__cards__container">
             <div class="smart__tv__card" *ngFor="let card of smartTvCards" [ngStyle]="{'background-color': card.bg}">
                 <h2 class="smart__tv__card__heading">{{card.heading}}</h2>
@@ -34,8 +54,10 @@
         </section>
 
         <section>
-            <section [id]="card.link" class="smart__tv__description__container" *ngFor="let card of smartTvCards; let i = index">
-                <div class="smart__tv__description__column__container" [ngStyle]="{'order': i % 2 == 1 ? 1 : 'inherit' }">
+            <section [id]="card.link" class="smart__tv__description__container"
+                *ngFor="let card of smartTvCards; let i = index">
+                <div class="smart__tv__description__column__container"
+                    [ngStyle]="{'order': i % 2 == 1 ? 1 : 'inherit' }">
                     <div class="smart__tv__description">
                         <h2 class="smart__tv__card__heading">{{card.heading}}</h2>
                         <div [innerHTML]="card.htmlDesc"></div>
