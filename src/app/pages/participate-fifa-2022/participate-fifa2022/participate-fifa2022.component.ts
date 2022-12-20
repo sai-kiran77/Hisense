@@ -20,7 +20,7 @@ export class ParticipateFifa2022Component implements OnInit {
 
   environment = environment;
 
-  currentStep = 1;
+  currentStep = 0;
   alive = true;
   terms = false;
   showRegister = true;
