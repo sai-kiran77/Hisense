@@ -749,7 +749,7 @@ class PerfectMatch2022Component {
     this.title = title;
     this.meta = meta;
     this.toastr = toastr;
-    this.currentStep = 1;
+    this.currentStep = 0;
     this.textFontSize = "18";
     this.alive = true;
     this.innerRadius = 25;
