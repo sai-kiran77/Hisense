@@ -17,6 +17,33 @@ export class ContactUsComponent implements OnInit {
   modalMessage = '';
   modalImageName = '';
 
+  issueType = 0;
+
+  issueTypes = [
+    {
+      name: 'Service',
+      id: 1
+    },
+    {
+      name: 'Repair',
+      id: 2
+    },
+    {
+      name: 'Offers',
+      id: 3
+    },
+    {
+      name: 'Campaigns',
+      id: 4
+    },
+  ];
+
+  selectedCampaign = null;
+
+  updateIssueType(event: any) {
+    this.issueType = event.target.value;
+  }
+
   today;
 
   @ViewChild('ErrorMessage') ErrorMessageRef: any;
@@ -65,14 +92,36 @@ export class ContactUsComponent implements OnInit {
   }
 
   selectedCategory: any = null;
+  product_variants: any = [];
   updateCategory(event: any) {
+    this.product_variants = [];
     // console.log(this.metaData.categories, event.target.value);
     this.selectedCategory = this.metaData.categories.find((cat: any) => cat.id == event.target.value);
     // console.log(this.selectedCategory);
-    this.selectedCategoryId = this.selectedCategory.id;
-    this.selectedSubCategoryId = null;
-    this.selectedProductId = null;
-    this.selectedProductVarientId = null;
+    if (this.selectedCategory) {
+      this.selectedCategoryId = this.selectedCategory.id;
+      // console.log(this.selectedCategory);
+      this.selectedCategory.subcategories.forEach((obj: any) => {
+        obj.category_products.forEach((cp: any) => {
+          cp.product.product_variants.forEach((pv: any) => {
+            if (pv.code != pv.name) {
+              pv.displayName = `${pv.code} - ${pv.name}`
+            } else {
+              pv.displayName = `${pv.name}`
+            }
+            this.product_variants.push(pv);
+          })
+        })
+      })
+      // console.log(this.product_variants);
+    } else {
+      this.selectedCategory = null;
+      this.selectedProductVarientId = null;
+      this.updateProductVarient({target: null});
+    }
+    // this.selectedSubCategoryId = null;
+    // this.selectedProductId = null;
+    // this.updateSubCategory({ target: { value: this.selectedCategoryId }});
   }
 
   selectedSubCategory: any;
@@ -92,42 +141,43 @@ export class ContactUsComponent implements OnInit {
     this.selectedProductId = this.selectedProduct.product.id;
     this.selectedProductVarientId = null;
     if (this.selectedProduct.product.product_variants.length == 1) {
-      this.updateProductVarient({ target: { value: this.selectedProduct.product.product_variants[0].id }})
+      this.updateProductVarient({ target: { value: this.selectedProduct.product.product_variants[0].id } })
     }
     // console.log(this.selectedProduct);
   }
 
-  selectedProductVarientId = null;
+  selectedProductVarientId: any = "";
   selectedProductId = null;
-  selectedCategoryId = null;
+  selectedCategoryId = "";
   selectedSubCategoryId = null;
   updateProductVarient(event: any) {
     // console.log(event.target.value);
-    this.selectedProductVarient = this.selectedProduct.product.product_variants.find((cat: any) => cat.id == event.target.value);
+    // this.selectedProductVarient = this.selectedProduct.product.product_variants.find((cat: any) => cat.id == event.target.value);
+    this.selectedProductVarient = this.product_variants.find((cat: any) => cat.id == event.target.value);
     // console.log(this.selectedProductVarient)
     this.selectedVarient = null;
-    this.selectedProductVarientId = this.selectedProductVarient.id;
+    if(this.selectedProductVarient){
+      this.selectedProductVarientId = this.selectedProductVarient.id;
+    }else{
+      this.selectedProductVarientId = null;
+      this.selectedProductVarient = null;
+    }
   }
 
   isLoading = false;
 
   onSubmit() {
-    // if (this.form && this.form.valid) {
-    //   this.isLoading = true;
-    //   this.api.postContactUsForm(this.form.value).subscribe((res: any) => {
-    //     this.modalMessage = res.message;
-    //     this.modalImageName = 'assets/images/success.webp';
-    //     this.isLoading = false;
-    //   }, (err: any) => {
-    // console.log(err);
-    //     this.modalImageName = 'assets/images/warning.png'
-    //     this.modalMessage = err.message;
-    //     this.isLoading = false;
-    //   })
-    // } else {
-    //   this.isFormSubmitted = true;
-    // }
-    if (this.name && this.email && this.phone && this.address && this.city && this.state1 && this.zipcode && this.selectedTopic.title && this.selectedSubTopic && this.body && this.selectedProductVarient && this.product_purchase_date && this.privacyPolicy) {
+    let isValid: any = false;
+    if (this.issueType == 1 || this.issueType == 2) {
+      isValid = this.name && this.email && this.phone && this.address && this.city && this.state1 && this.zipcode && this.selectedTopic.title && this.selectedSubTopic && this.body && this.selectedProductVarient && this.product_purchase_date && this.privacyPolicy;
+    }else if(this.issueType == 3){
+      isValid = this.name && this.email && this.phone && this.address && this.city && this.state1 && this.zipcode && this.selectedProductVarient && this.privacyPolicy;
+    }else{
+      isValid = this.name && this.email && this.phone && this.address && this.city && this.state1 && this.zipcode && this.privacyPolicy;
+    }
+
+    // console.log(isValid);
+    if (isValid) {
       this.isLoading = true;
       const body = {
         name: this.name,
@@ -139,9 +189,9 @@ export class ContactUsComponent implements OnInit {
         city: this.city,
         state: this.state1,
         zipcode: this.zipcode,
-        subject: this.selectedTopic.title,
+        subject: this.selectedTopic?.title,
         sub_topic: this.selectedSubTopic,
-        product_variant_id: this.selectedProductVarient.id,
+        product_variant_id: this.selectedProductVarient?.id || null,
       }
       this.api.postContactUsForm(body).subscribe((res: any) => {
         this.modalMessage = res.message;
