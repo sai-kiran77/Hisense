@@ -9,7 +9,7 @@
                 <div>
                     <h4>For installation and service support only</h4>
                     <div class="row" style="margin-top:20px;">
-    
+
                         <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                             <b>Email :</b>
                         </div>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                     <div class="row" style="margin-top:20px;">
-    
+
                         <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                             <b>Phone:</b>
                         </div>
@@ -28,7 +28,7 @@
                     </div>
                     <h4 style="margin-top:40px;">For Business</h4>
                     <div class="row" style="margin-top:20px;">
-    
+
                         <div class="col-sm-3 col-md-3 co-lg-3" style="padding-left:0;">
                             <b>Email :</b>
                         </div>
@@ -36,7 +36,7 @@
                             <a class="mailto" href="mailto:india@hisense.com">india@hisense.com</a>
                         </div>
                     </div>
-    
+
                     <div class="d-md-none">
                         <h4 style="margin-top:40px;">For Complaints</h4>
                         <table>
@@ -53,12 +53,14 @@
                             <tr>
                                 <td>Level 2</td>
                                 <td>E-mail</td>
-                                <td><a href="mailto:india.service@hisense.com" class="mailto">india.service@hisense.com</a></td>
+                                <td><a href="mailto:india.service@hisense.com"
+                                        class="mailto">india.service@hisense.com</a></td>
                             </tr>
                             <tr>
                                 <td>Level 3</td>
                                 <td>E-mail</td>
-                                <td><a href="mailto:in.servicehead@hisense.com" class="mailto">in.servicehead@hisense.com</a>
+                                <td><a href="mailto:in.servicehead@hisense.com"
+                                        class="mailto">in.servicehead@hisense.com</a>
                                 </td>
                             </tr>
                             <tr>
@@ -68,17 +70,18 @@
                             </tr>
                         </table>
                     </div>
-    
+
                     <h4 style="margin-top:40px;">Corporate Office</h4>
                     <div class="row" style="margin-top:20px;">
                         <div class="col-sm-12 col-md-12 co-lg-12" style="padding-left:0;">
-                            <p>Hisense India Private Limited, 009-010, Ground Floor, IHDP Business Park, Sector 127, Noida,
+                            <p>Hisense India Private Limited, 009-010, Ground Floor, IHDP Business Park, Sector 127,
+                                Noida,
                                 Uttar Pradesh-201301</p>
                         </div>
                     </div>
                 </div>
                 <div class="d-sm-none">
-                    <h4 style="margin-top:40px;">For Complaints</h4>
+                    <h4>For Complaints</h4>
                     <table>
                         <tr>
                             <th>Escalation level</th>
@@ -93,12 +96,14 @@
                         <tr>
                             <td>Level 2</td>
                             <td>E-mail</td>
-                            <td><a href="mailto:india.service@hisense.com" class="mailto">india.service@hisense.com</a></td>
+                            <td><a href="mailto:india.service@hisense.com" class="mailto">india.service@hisense.com</a>
+                            </td>
                         </tr>
                         <tr>
                             <td>Level 3</td>
                             <td>E-mail</td>
-                            <td><a href="mailto:in.servicehead@hisense.com" class="mailto">in.servicehead@hisense.com</a>
+                            <td><a href="mailto:in.servicehead@hisense.com"
+                                    class="mailto">in.servicehead@hisense.com</a>
                             </td>
                         </tr>
                         <tr>
@@ -215,29 +220,33 @@
                                         </div>
                                     </div> -->
                                     <!-- <span class="my-3 text-center">OR</span> -->
-                                    <div class="form__group">
+                                    <div class="form__group"
+                                        [ngClass]="{'align-start': issueType == 0 || issueType == 4}">
                                         <label>Select type of issue</label>
                                         <div class="form__control">
-                                            <select (change)="updateIssueType($event)"
-                                                [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="issueType">
-                                                <option value="null">Select issue type</option>
-                                                <option *ngFor="let type of issueTypes"
-                                                    [value]="type.id">{{type.name}}</option>
+                                            <select class="w-100" (change)="updateIssueType($event)"
+                                                [ngModelOptions]="{standalone: true}" [(ngModel)]="issueType">
+                                                <option value="0">Select issue type</option>
+                                                <option *ngFor="let type of issueTypes" [value]="type.id">{{type.name}}
+                                                </option>
                                             </select>
                                             <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage
                                                 class="error__message"><span>Issue type is Required!</span></div>
                                         </div>
                                     </div>
-                                    <div class="form__group">
-                                        <label>Select by Category</label>
+                                    <div class="form__group" *ngIf="issueType == 1 || issueType == 2 || issueType == 3">
                                         <div class="category__select__container">
-                                            <select (change)="updateCategory($event)"
-                                                [ngModelOptions]="{standalone: true}" [(ngModel)]="selectedCategoryId">
-                                                <option value="null" disabled selected>Select Category</option>
-                                                <option *ngFor="let cat of metaData.categories" [value]="cat.id">
-                                                    {{cat.name}}</option>
-                                            </select>
+                                            <div>
+                                                <label>Select Category</label>
+                                                <select class="w-100" (change)="updateCategory($event)"
+                                                    [ngModelOptions]="{standalone: true}"
+                                                    [(ngModel)]="selectedCategoryId">
+                                                    <option value="" disabled selected>Select Category</option>
+                                                    <option *ngFor="let cat of metaData.categories" [value]="cat.id">
+                                                        {{cat.name}}</option>
+                                                    <option value="null">Others</option>
+                                                </select>
+                                            </div>
                                             <!-- <select *ngIf="selectedCategory" (change)="updateSubCategory($event)"
                                                 [ngModelOptions]="{standalone: true}"
                                                 [(ngModel)]="selectedSubCategoryId">
@@ -251,16 +260,20 @@
                                                 <option *ngFor="let varient of selectedSubCategory.category_products"
                                                     [value]="varient.product.id">{{varient.product.name}}</option>
                                             </select> -->
-                                            <select (change)="updateProductVarient($event)"
-                                                [ngModelOptions]="{standalone: true}"
-                                                [(ngModel)]="selectedProductVarientId">
-                                                <option value="null">Select Product</option>
-                                                <option *ngFor="let varient of product_variants"
-                                                    [value]="varient.id">{{varient.name}}</option>
-                                            </select>
+                                            <div>
+                                                <label>Select Product</label>
+                                                <select class="w-100" (change)="updateProductVarient($event)"
+                                                    [ngModelOptions]="{standalone: true}"
+                                                    [(ngModel)]="selectedProductVarientId">
+                                                    <option value="">Select Product</option>
+                                                    <option *ngFor="let varient of product_variants"
+                                                        [value]="varient.id">{{varient.displayName}}</option>
+                                                    <option value="null">Others</option>
+                                                </select>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form__group">
+                                    <div class="form__group" *ngIf="issueType == 1 || issueType == 2">
                                         <label>Product Purchase Date <span class="text__danger">*</span></label>
                                         <div class="form__control">
                                             <input [(ngModel)]="product_purchase_date" type="date" name="date" id="date"
@@ -269,13 +282,25 @@
                                                 class="error__message"><span>Purchase Date is Required!</span></div>
                                         </div>
                                     </div>
+                                    <div class="form__group align-start" *ngIf="issueType == 4">
+                                        <label>Select Campaign <span class="text__danger">*</span></label>
+                                        <select class="w-100" [ngModelOptions]="{standalone: true}"
+                                            [(ngModel)]="selectedCampaign">
+                                            <option value="" disabled selected>Select Campaign</option>
+                                            <option *ngFor="let c of metaData.campaigns" [value]="c.name">
+                                                {{c.name}}</option>
+                                            <option value="null">Others</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="preview__container">
+                                <div class="preview__container"
+                                    *ngIf="issueType == 1 || issueType == 2 || issueType == 3">
                                     <div *ngIf="selectedProductVarient;else elseBlock"
                                         class="flex flex-column justify-content-center align-items-center"
                                         style="padding: 24px;">
                                         <div class="selected__product__img">
-                                            <img [src]="selectedProductVarient.thumb_image.full_url"
+                                            <img style="max-height: 175px;"
+                                                [src]="selectedProductVarient.thumb_image.full_url"
                                                 [alt]="selectedProductVarient.thumb_image.filename">
                                         </div>
                                         <div class="mt-5 selected__product__name text__center">
@@ -285,9 +310,10 @@
                                             {{selectedProductVarient.code}}</div>
                                         <div class="mt-2 font-14 selected__product__variant_size text__center">
                                             {{selectedProductVarient.variant_size}}</div>
-                                        <button [routerLink]="selectedProductVarient.relative_url" style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"><a
+                                        <button [routerLink]="selectedProductVarient.relative_url"
+                                            style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"><a
                                                 style="text-decoration: none;" target="_blank">Click Here to view
-                                            Product</a></button>
+                                                Product</a></button>
                                     </div>
 
                                     <ng-template #elseBlock>
@@ -306,7 +332,7 @@
                     </div>
                 </div>
 
-                <div class="step">
+                <div class="step" *ngIf="issueType == 1 || issueType == 2">
                     <div class="step__head">
                         <h3>Product Issue</h3>
                     </div>
@@ -314,7 +340,7 @@
                         <form *ngIf="metaData">
                             <div class="form__group symptoms__container">
                                 <label>Symptoms <span class="text__danger">*</span></label>
-                                <div class="form__control flex flex-column" style="gap: 1rem;">
+                                <div class="form__control flex flex-column two-col-md" style="gap: 1rem;">
                                     <div>
                                         <select (change)="changeTopic($event)" style="width: 100%;">
                                             <option disabled selected value="null">Topic</option>
@@ -451,6 +477,26 @@
                     </div>
                 </div>
 
+                <div class="step" *ngIf="issueType == 3 || issueType == 4">
+                    <div class="step__head">
+                        <h3>How can we help you</h3>
+                    </div>
+                    <div class="step__body">
+                        <form *ngIf="metaData">
+                            <div class="form__group symptoms__container">
+                                <label>Describe How can we help you? <span class="text__danger">*</span></label>
+                                <div class="form__control">
+                                    <textarea style="width: 100%;" [(ngModel)]="body" cols="30" rows="6"
+                                        [ngModelOptions]="{standalone: true}"></textarea>
+                                    <div *ngIf="isFormSubmitted && !body" #ErrorMessage class="error__message">
+                                        <span>Description is Required!</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
                 <div class="flex justify-content-center my-5">
                     <button (click)="onSubmit()" style="padding: 10px 20px;" class="btn-hisense-v2 submit__btn"
                         [disabled]="isLoading">
@@ -471,7 +517,7 @@
         </div>
         <h1 *ngIf="modalImageName === 'assets/images/warning.png'">Error!</h1>
         <!-- <span (click)="modalMessage = ''" class="close-button">&times;</span> -->
-        <h3 style="line-height: 1.5;margin-bottom: 2em;color: #666;">{{modalMessage}}</h3>
+        <h3 style="line-height: 1.5;margin-bottom: 2em;color: #666;white-space: break-spaces;">{{modalMessage}}</h3>
         <button (click)="modalMessage = ''" class="js-close">Dismiss</button>
     </div>
 </div>
