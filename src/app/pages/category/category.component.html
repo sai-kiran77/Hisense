@@ -22,20 +22,21 @@
 
     <ng-container *ngIf="isSmartTvPage">
         <div class="abstract__container">
-            <img src="assets/Abstract_Magic_Trail_05.jpg" alt="Abstract_Magic_Trail_05">
+            <!-- <img src="assets/Abstract_Magic_Trail_05.webp" alt="Abstract_Magic_Trail_05"> -->
             <div>
                 <div style="    position: absolute;
                 top: 50%;
                 left: 50%;
                 color: white;
                 font-size: 36px;
-                transform: translate(-50%, -50%);">
+                transform: translate(-50%, -50%);" 
+                class="abstarct__container__title">
                     <h1>{{metaData?.name}}</h1>
                 </div>
                 <div class="smart__tv__btns__container">
                     <div class="smart__tv__card__btns" *ngFor="let card of smartTvCards">
                         <div class="smart__tv__card__actions" style="margin-top: 6px;">
-                            <a [href]="'/c/smart-tv-platform#' + card.link" class="smart__tv__discover__link">Discover {{card.heading}}</a>
+                            <a [routerLink]="card.redirectLink" class="smart__tv__discover__link">Discover {{card.heading}}</a>
                         </div>
                     </div>
                 </div>

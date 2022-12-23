@@ -266,11 +266,11 @@ header {
             display: block;
             position: absolute;
             width: 25px;
-            height: 1px;
+            height: 2px;
             transition-timing-function: ease;
             transition-duration: 0.15s;
             transition-property: transform;
-            background-color: #1b1b1d;
+            background-color: #000;
           }
 
           &::before {
