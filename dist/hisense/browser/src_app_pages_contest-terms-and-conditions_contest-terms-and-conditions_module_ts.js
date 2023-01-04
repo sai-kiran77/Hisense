@@ -96,7 +96,7 @@ class ContestTermsAndConditionsComponent {
         this.api.getPageSlides({ pageUrl: '/terms-and-conditions' }).subscribe({
             next: (res) => {
                 // console.log(res)
-                this.metaData = res.data.terms_and_conditions.filter((obj) => obj.tab_name !== 'Air conditioner T&C');
+                this.metaData = res.data.terms_and_conditions;
                 this.currentTab = this.metaData[0].tab_name;
             },
             error: (err) => {
