@@ -458,7 +458,7 @@ class CategoryComponent {
                 htmlDesc: `<p>With Fire TV built-in, you can enjoy a world of entertainment from apps like Prime Video, Netflix, Disney+, Hulu, and HBO Max. Plus, stream for free with Pluto TV, &nbsp;Tubi, and more. The included Voice Remote with Alexa lets you use your voice to easily change channels, launch apps, search for titles, play music, and even control smart home devices. And you can personalize your family's viewing experience with up to six profiles, so everyone can have their own watch list, recommendations, and live TV preferences.&nbsp;</p>`,
                 htmlDisclaimer: `<p><i style="font-size: 14px;">Required Disclaimer: Apps and services are subject to change or withdrawal at any time and may require separate subscriptions and compatible equipment (sold separately).</i></p>`,
                 htmlSecImage: "assets/smart-tv/vidaa-tv.webp",
-                redirectLink: '/c/vidaa'
+                redirectLink: '/c/vidaa-tv'
             },
             {
                 heading: "Android TV",
