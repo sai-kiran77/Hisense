@@ -107,7 +107,7 @@
                 <div class="highlights groups">
                     <a [href]="card.link" target="_blank" class="highlights__card" *ngFor="let card of fifaHighlights; let i = index;">
                         <div class="image__container">
-                            <img [src]="card.image" [alt]="'Highlights' + i">
+                            <img [src]="card.image" [alt]="card.text">
                         </div>
                         <div style="font-size: 14px;padding:7px 10px;">{{card.text}}</div>
                     </a>
