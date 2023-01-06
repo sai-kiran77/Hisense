@@ -12,8 +12,8 @@
     background: white !important;
     border: 1px solid black !important;
     color: black !important;
-    
-    &:hover{
+
+    &:hover {
         background: #067977 !important;
         color: white !important;
         border: 1px solid white !important;
@@ -265,34 +265,38 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 
-    .smart__tv__card {
-        padding: 32px;
+}
 
-        .smart__tv__media__desc {
-            color: #ffffff;
-            font-weight: 400;
-            font-size: 20px;
-            line-height: 28px;
-            min-height: 84px;
-            margin-bottom: 20px;
-        }
+.smart__tv__card {
+    padding: 32px;
 
-        .smart__tv__card__actions {
-            margin-bottom: 24px;
+    .smart__tv__media__desc {
+        color: #ffffff;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        min-height: 84px;
+        margin-bottom: 20px;
+    }
 
-            .smart__tv__discover__link {
-                font-weight: 400;
-                background-color: white;
-                color: black !important;
-                padding: 14px 24px;
-                border-radius: 48px;
-                cursor: pointer;
-                transition: opacity 250ms ease-in-out;
+}
 
-                &:hover {
-                    opacity: 0.7;
-                }
-            }
+.smart__tv__card__actions {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+
+    .smart__tv__discover__link {
+        font-weight: 400;
+        background-color: white;
+        color: black !important;
+        padding: 14px 24px;
+        border-radius: 48px;
+        cursor: pointer;
+        transition: opacity 250ms ease-in-out;
+
+        &:hover {
+            opacity: 0.7;
         }
     }
 }
@@ -330,11 +334,12 @@
         }
     }
 
-    .smart__tv__description__image{
+    .smart__tv__description__image {
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+
+        img {
             max-width: 80% !important;
             max-height: 80% !important;
             object-fit: contain;
@@ -342,10 +347,60 @@
     }
 }
 
+.smart__tv__btns__container {
+    position: absolute;
+    bottom: 15%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
 @media screen and (max-width: 768px) {
 
     .smart__tv__description__container,
     .smart__tv__cards__container {
         grid-template-columns: 1fr;
+    }
+
+    .smart__tv__description__column__container {
+        order: inherit !important;
+    }
+
+    .smart__tv__btns__container {
+        bottom: 5%;
+        grid-template-columns: 1fr;
+    }
+
+    .smart__tv__card__actions {
+        margin-bottom: 6px !important;
+    }
+
+    .abstarct__container__title{
+        white-space: nowrap;
+        top: 25% !important;
+    }
+}
+
+.abstract__container {
+    position: relative;
+    background-image: url('../../../assets/Abstract_Magic_Trail_05.webp');
+    width: 100%;
+    height: 338px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.smart__tv__discover__link {
+    font-weight: 400;
+    background-color: white;
+    color: black !important;
+    padding: 14px 24px;
+    border-radius: 48px;
+    cursor: pointer;
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+        opacity: 0.7;
     }
 }
