@@ -46,47 +46,370 @@ export class FifaEventComponent implements OnInit {
 
   spotHisenseRegistrationsDB = [];
 
+  // fifaHighlights = [
+  // {
+  //   image: 'assets/fifa_highlights/highlights_01.webp',
+  //   text: 'France v Australia | Group D | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/SRVD2OnUQYrQ2X9VLnGDF'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_02.webp',
+  //   text: 'Mexico v Poland | Group C | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/160mKwOWPi2Mlp3GrpczZu'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_03.webp',
+  //   text: 'Denmark v Tunisia | Group D | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/3UG46kL82RDWDgxzt3QPjM'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_04.webp',
+  //   text: 'Argentina v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/43Do27Etp3IapH0xwzbXOg'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_1.webp',
+  //   text: 'USA v Wales | Group B | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/6rnLprZqfXGriMwByd6wt8'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_2.webp',
+  //   text: 'Senegal v Netherlands | Group A | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/3GDVIQobvl9FaFY6w74WZ3'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_3.webp',
+  //   text: 'England v IR Iran | Group B | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/39GjJjsq75cbbXY0JMADYV'
+  // },
+  // {
+  //   image: 'assets/fifa_highlights/highlights_4.webp',
+  //   text: 'Qatar v Ecuador | Group A | FIFA World Cup Qatar 2022™',
+  //   link: 'https://www.fifa.com/fifaplus/en/watch/2CKN465NbbTuFcXLb6sSeQ'
+  // },
+  // ]
+
   fifaHighlights = [
     {
-      image: 'assets/fifa_highlights/highlights_01.webp',
-      text: 'France v Australia | Group D | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/SRVD2OnUQYrQ2X9VLnGDF'
+      "link": "https://www.fifa.com/fifaplus/en/watch/63XwuAOoqYgNW0Q3E9PxJG",
+      "text": "Argentina v France | Final | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_0.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_02.webp',
-      text: 'Mexico v Poland | Group C | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/160mKwOWPi2Mlp3GrpczZu'
+      "link": "https://www.fifa.com/fifaplus/en/watch/5BAGunqVa9YUoPdZxI8MTm",
+      "text": "Croatia v Morocco | Play-off for third place | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_1.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_03.webp',
-      text: 'Denmark v Tunisia | Group D | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/3UG46kL82RDWDgxzt3QPjM'
+      "link": "https://www.fifa.com/fifaplus/en/watch/7HxpGAqmze4vGWm6dxD3tz",
+      "text": "France v Morocco | Semi-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_2.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_04.webp',
-      text: 'Argentina v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/43Do27Etp3IapH0xwzbXOg'
+      "link": "https://www.fifa.com/fifaplus/en/watch/5t0hwOhuPS6LKAJD33IQym",
+      "text": "Argentina v Croatia | Semi-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_3.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_1.webp',
-      text: 'USA v Wales | Group B | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/6rnLprZqfXGriMwByd6wt8'
+      "link": "https://www.fifa.com/fifaplus/en/watch/783zSqR6RRJrx6UiakMYc4",
+      "text": "England v France | Quarter-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_4.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_2.webp',
-      text: 'Senegal v Netherlands | Group A | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/3GDVIQobvl9FaFY6w74WZ3'
+      "link": "https://www.fifa.com/fifaplus/en/watch/4se3MdPEAeiq5n0e9eT14w",
+      "text": "Morocco v Portugal | Quarter-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_5.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_3.webp',
-      text: 'England v IR Iran | Group B | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/39GjJjsq75cbbXY0JMADYV'
+      "link": "https://www.fifa.com/fifaplus/en/watch/66evf9qAjJh9fF7GeYBmtd",
+      "text": "Netherlands v Argentina | Quarter-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_6.webp"
     },
     {
-      image: 'assets/fifa_highlights/highlights_4.webp',
-      text: 'Qatar v Ecuador | Group A | FIFA World Cup Qatar 2022™',
-      link: 'https://www.fifa.com/fifaplus/en/watch/2CKN465NbbTuFcXLb6sSeQ'
+      "link": "https://www.fifa.com/fifaplus/en/watch/7Banu6D0k8OnqDT9iVyQ8x",
+      "text": "Croatia v Brazil | Quarter-finals | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_7.webp"
     },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6yY38lFnzDNgPLLOfh4V1r",
+      "text": "Portugal v Switzerland | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_8.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2ZqLZ2FFPV6urFL8A9fIBl",
+      "text": "Morocco v Spain | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_9.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6J1vG4ELULSQz0YSIQIQGz",
+      "text": "Brazil v Korea Republic | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_10.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/24omCQte8BW85haAm9hFut",
+      "text": "Japan v Croatia | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_11.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1KduI591JSXhLPnU99xpiO",
+      "text": "England v Senegal | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_12.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/64SmxbyL5NcHO462P6j10t",
+      "text": "France v Poland | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_13.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/5hQ8DJM14tBciQZrOqq1hR",
+      "text": "Argentina v Australia | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_14.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/5XHGn2t9YobJ1GAFZKMDAT",
+      "text": "Netherlands v USA | Round of 16 | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_15.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4tOIQ1C6UD18aMMz4kJt6t",
+      "text": "Serbia v Switzerland | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_16.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6F4UYjMkwi9kMmx5ISh1j1",
+      "text": "Cameroon v Brazil | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_17.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/481dbDcqSHoBkJkYS0IXag",
+      "text": "Ghana v Uruguay | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_18.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1wjjV5kxwpSHRjeEkxidIC",
+      "text": "Korea Republic v Portugal | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_19.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4F9MvEtC1AQ5EUK8GfuE7c",
+      "text": "Costa Rica v Germany | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_20.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6aotAd7chcYlldGATxZsKB",
+      "text": "Japan v Spain | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_21.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/3LSU3XP8dlZkOve2bg61rE",
+      "text": "Canada v Morocco | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_22.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/roJqCEwj8vnE7YFIRpP0z",
+      "text": "Croatia v Belgium | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_23.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6verwbedF0SrmT4NhDH0Of",
+      "text": "Saudi Arabia v Mexico | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_24.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2uTpzYqmyXxgrjbThfuHs8",
+      "text": "Poland v Argentina | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_25.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/49Qrop8RMmusZypBZexZ9s",
+      "text": "Australia v Denmark | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_26.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/617bwDDuw2JVmo86lNJKC0",
+      "text": "Tunisia v France | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_27.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6ssnUCant3LxkpTqHK8wJI",
+      "text": "IR Iran v USA | Group B | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_28.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/63N4QLt0BNz5Xuj40n01zK",
+      "text": "Wales v England | Group B | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_29.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4i8HAhyuvDcFZxYJZQA5o9",
+      "text": "Ecuador v Senegal | Group A | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_30.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/5PSEpirzkfa7TgjPxj3K4E",
+      "text": "Netherlands v Qatar | Group A | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_31.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/71l4VxdFkXEj3PvMiiTIkz",
+      "text": "Portugal v Uruguay | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_32.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/7zzdOdEfb0YBZOLJ4OGsOE",
+      "text": "Brazil v Switzerland | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_33.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1EQcCW6cT5LMz4GwHFa4sF",
+      "text": "Korea Republic v Ghana | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_34.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6vc3floGRGFqCuYiLYcIv1",
+      "text": "Cameroon v Serbia | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_35.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/7hnoWgOU9tZgt2tpEtoKII",
+      "text": "Spain v Germany | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_36.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/70u96PRLADGUYkTQbhU0xu",
+      "text": "Croatia v Canada | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_37.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6JMVy762d1IzYHzM8hFHIE",
+      "text": "Belgium v Morocco | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_38.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6DcvUVL3mMMPgqPvH2ylyZ",
+      "text": "Japan v Costa Rica | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_39.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2v4Kywu376wjM1NWZssi92",
+      "text": "Argentina v Mexico | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_40.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1gLQObDpWTDJ3SoTp9EMp5",
+      "text": "France v Denmark | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_41.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4N5aGjb70DM5O4GokhMyB5",
+      "text": "Poland v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_42.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4DhEtG4tAmMlBpJdZ6Jjmw",
+      "text": "Tunisia v Australia | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_43.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2J6ih5nCaP2l4k6yXEfRx",
+      "text": "England v USA | Group B | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_44.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4KjYBbKEaqyNdutdfpyYaZ",
+      "text": "Netherlands v Ecuador | Group A | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_45.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/3rkJRLJHm5piA5nfErMA3k",
+      "text": "Qatar v Senegal | Group A | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_46.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6gxbAVuBi54vC5DYMG0opA",
+      "text": "Wales v IR Iran | Group B | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_47.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1uxqiACRkfkdv3Iw5XVSvP",
+      "text": "Brazil v Serbia | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_48.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1abAi3NllBGQ1Q92mXqDWq",
+      "text": "Portugal v Ghana | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_49.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4ABRMLDcJYi670lK2uIbaS",
+      "text": "Uruguay v Korea Republic | Group H | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_50.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6AtFcveidIrUbxRASo4J0G",
+      "text": "Switzerland v Cameroon | Group G | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_51.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/1OhKHQq1ygr19Cn617rb2D",
+      "text": "Belgium v Canada | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_52.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/4B5PE6zLJHWnp5M5QVLQIZ",
+      "text": "Spain v Costa Rica | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_53.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/25s19L79bTx5NPTqdNdRuJ",
+      "text": "Germany v Japan | Group E | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_54.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2O82PCHjMKnT6VU9XcfwHk",
+      "text": "Morocco v Croatia | Group F | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_55.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/SRVD2OnUQYrQ2X9VLnGDF",
+      "text": "France v Australia | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_56.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/160mKwOWPi2Mlp3GrpczZu",
+      "text": "Mexico v Poland | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_57.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/3UG46kL82RDWDgxzt3QPjM",
+      "text": "Denmark v Tunisia | Group D | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_58.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/43Do27Etp3IapH0xwzbXOg",
+      "text": "Argentina v Saudi Arabia | Group C | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_59.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/6rnLprZqfXGriMwByd6wt8",
+      "text": "USA v Wales | Group B | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_60.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/3GDVIQobvl9FaFY6w74WZ3",
+      "text": "Senegal v Netherlands | Group A | FIFA World Cup Qatar 2022™ ",
+      "image": "assets/fifa_highlights/highlights_61.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/39GjJjsq75cbbXY0JMADYV",
+      "text": "England v IR Iran | Group B | FIFA World Cup Qatar 2022™ ",
+      "image": "assets/fifa_highlights/highlights_62.webp"
+    },
+    {
+      "link": "https://www.fifa.com/fifaplus/en/watch/2CKN465NbbTuFcXLb6sSeQ",
+      "text": "Qatar v Ecuador | Group A | FIFA World Cup Qatar 2022™",
+      "image": "assets/fifa_highlights/highlights_63.webp"
+    }
   ]
 
   spotHisenseRegistrations: any = [];
@@ -399,7 +722,7 @@ export class FifaEventComponent implements OnInit {
     })
   }
 
-  filterSpotHisenseRegistrationsData(event: any){
+  filterSpotHisenseRegistrationsData(event: any) {
     this.spotHisenseRegistrations = this.spotHisenseRegistrationsDB.filter((obj: any) => obj.date == event.target.value);
   }
 
