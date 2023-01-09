@@ -389,6 +389,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    .abstarct__container__title h1{   
+        mix-blend-mode: difference;
+        filter: drop-shadow(0.05em 0.05em #09cbc6);
+    }
 }
 
 .smart__tv__discover__link {
