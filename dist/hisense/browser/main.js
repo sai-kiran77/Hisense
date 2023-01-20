@@ -53,10 +53,10 @@ const routes = [
                 path: 'FIFA-2022/participate/:uuid',
                 loadChildren: () => Promise.all(/*! import() */[__webpack_require__.e("default-node_modules_angular_forms_fesm2015_forms_mjs"), __webpack_require__.e("common"), __webpack_require__.e("src_app_pages_participate-fifa-2022_participate-fifa-2022_module_ts")]).then(__webpack_require__.bind(__webpack_require__, /*! ./pages/participate-fifa-2022/participate-fifa-2022.module */ 8194)).then(m => m.ParticipateFifa2022Module)
             },
-            // {
-            //   path: 'new-launches',
-            //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
-            // },
+            {
+                path: 'new-launches',
+                loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_new-launches_new-launches_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/new-launches/new-launches.module */ 2532)).then(m => m.NewLaunchesModule)
+            },
             {
                 path: 'FIFA-2022',
                 loadChildren: () => __webpack_require__.e(/*! import() */ "src_app_pages_fifa-event_fifa-event_module_ts").then(__webpack_require__.bind(__webpack_require__, /*! ./pages/fifa-event/fifa-event.module */ 9476)).then(m => m.FifaEventModule)
@@ -1365,10 +1365,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = ["header"];
 function HeaderComponent_li_8_a_11_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 31)(1, "span", 32)(2, "div", 33);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "img", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 32)(1, "span", 33)(2, "div", 34);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](3, "img", 35);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "span", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](4, "span", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](5);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
 } if (rf & 2) {
@@ -1382,22 +1382,22 @@ function HeaderComponent_li_8_a_11_Template(rf, ctx) { if (rf & 1) {
 const _c1 = function (a0) { return { "menu-in": a0 }; };
 function HeaderComponent_li_8_Template(rf, ctx) { if (rf & 1) {
     const _r8 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵgetCurrentView"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "li")(1, "a", 26);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "li")(1, "a", 27);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 27);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](3, "div", 28);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_li_8_Template_div_click_3_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r8); const obj_r4 = restoredCtx.$implicit; return obj_r4.subDropdownToggle = true; });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "a", 28);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](4, "a", 29);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 13)(6, "button", 14);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 14)(6, "button", 15);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_li_8_Template_button_click_6_listener() { const restoredCtx = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵrestoreView"](_r8); const obj_r4 = restoredCtx.$implicit; return obj_r4.subDropdownToggle = false; });
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](7, "span", 15);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](7, "span", 16);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "div", 16);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](8, "div", 17);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](9);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "div", 29);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, HeaderComponent_li_8_a_11_Template, 6, 4, "a", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](10, "div", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](11, HeaderComponent_li_8_a_11_Template, 6, 4, "a", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
 } if (rf & 2) {
     const obj_r4 = ctx.$implicit;
@@ -1412,8 +1412,8 @@ function HeaderComponent_li_8_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", obj_r4["sub-menu"]);
 } }
-function HeaderComponent_a_23_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 36)(1, "span", 35);
+function HeaderComponent_a_26_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 37)(1, "span", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
 } if (rf & 2) {
@@ -1422,8 +1422,8 @@ function HeaderComponent_a_23_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtextInterpolate"](subLink_r10.text);
 } }
-function HeaderComponent_a_25_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 36)(1, "span", 35);
+function HeaderComponent_a_28_Template(rf, ctx) { if (rf & 1) {
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "a", 37)(1, "span", 36);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](2);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
 } if (rf & 2) {
@@ -1532,50 +1532,52 @@ HeaderComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.header = _t.first);
-    } }, inputs: { top: "top" }, decls: 34, vars: 14, consts: [[3, "ngClass"], ["header", ""], [1, "main-nav"], ["routerLink", "/", 1, "logo"], ["id", "navbar", 1, "navbar"], [1, "navigations"], [1, "left"], [4, "ngFor", "ngForOf"], [1, "right"], ["routerLink", "/FIFA-2022"], [1, "in-the-news", "dropdown"], [1, "dropbtn"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 3, "click"], ["aria-labelledby", "toggle-dropdown-tv-and-audio", 1, "dropdown-menu", 3, "ngClass"], ["type", "button", "aria-label", "Toggle sub navigation", 1, "mobile-back", 3, "click"], [1, "navbar-back-icon"], [1, "section-title"], [1, "sub-menu"], ["style", "justify-content: center;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown-content"], [1, "dropdown"], ["routerLink", "/about-hisense", 1, ""], [1, ""], ["routerLink", "/support"], ["type", "button", "aria-controls", "navbar", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "mobile-nav-toggle", 3, "ngClass", "click"], [1, "navbar-toggler-icon"], [3, "routerLink"], [2, "width", "25%", 3, "click"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 2, "margin-left", "auto !important"], [1, "sub-menu", 2, "background-color", "white"], ["style", "width: 230px !important;", 3, "routerLink", 4, "ngFor", "ngForOf"], [2, "width", "230px !important", 3, "routerLink"], [1, "thumbnail", 2, "overflow", "hidden"], [1, "img"], [2, "object-fit", "contain", "max-height", "180px", "min-width", "170px", 3, "src", "alt"], [1, "title"], [2, "justify-content", "center", 3, "routerLink"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { top: "top" }, decls: 37, vars: 14, consts: [[3, "ngClass"], ["header", ""], [1, "main-nav"], ["routerLink", "/", 1, "logo"], ["id", "navbar", 1, "navbar"], [1, "navigations"], [1, "left"], [4, "ngFor", "ngForOf"], ["routerLink", "/new-launches"], [1, "right"], ["routerLink", "/FIFA-2022"], [1, "in-the-news", "dropdown"], [1, "dropbtn"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 3, "click"], ["aria-labelledby", "toggle-dropdown-tv-and-audio", 1, "dropdown-menu", 3, "ngClass"], ["type", "button", "aria-label", "Toggle sub navigation", 1, "mobile-back", 3, "click"], [1, "navbar-back-icon"], [1, "section-title"], [1, "sub-menu"], ["style", "justify-content: center;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown-content"], [1, "dropdown"], ["routerLink", "/about-hisense", 1, ""], [1, ""], ["routerLink", "/support"], ["type", "button", "aria-controls", "navbar", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "mobile-nav-toggle", 3, "ngClass", "click"], [1, "navbar-toggler-icon"], [3, "routerLink"], [2, "width", "25%", 3, "click"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 2, "margin-left", "auto !important"], [1, "sub-menu", 2, "background-color", "white"], ["style", "width: 230px !important;", 3, "routerLink", 4, "ngFor", "ngForOf"], [2, "width", "230px !important", 3, "routerLink"], [1, "thumbnail", 2, "overflow", "hidden"], [1, "img"], [2, "object-fit", "contain", "max-height", "180px", "min-width", "170px", 3, "src", "alt"], [1, "title"], [2, "justify-content", "center", 3, "routerLink"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "header", 0, 1)(2, "nav", 2)(3, "a", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4, "Hisense International");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](5, "div", 4)(6, "div", 5)(7, "ul", 6);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](8, HeaderComponent_li_8_Template, 12, 7, "li", 7);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "ul", 8)(10, "li")(11, "a", 9);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](12, "FIFA 2022");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](9, "li")(10, "a", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](11, "New Launches");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](12, "ul", 9)(13, "li")(14, "a", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15, "FIFA 2022");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](13, "li", 10)(14, "a", 11);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](15, "In The News");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "li", 11)(17, "a", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](18, "In The News");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](16, "a", 12);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_a_click_16_listener() { return ctx.newsSubDropdownToggle = true; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](19, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_a_click_19_listener() { return ctx.newsSubDropdownToggle = true; });
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](17, "div", 13)(18, "button", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_button_click_18_listener() { return ctx.newsSubDropdownToggle = false; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](19, "span", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](20, "div", 14)(21, "button", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_button_click_21_listener() { return ctx.newsSubDropdownToggle = false; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](22, "span", 16);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](20, "div", 16);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](21, "In The News");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](23, "div", 17);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](24, "In The News");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](22, "div", 17);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](23, HeaderComponent_a_23_Template, 3, 2, "a", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](25, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](26, HeaderComponent_a_26_Template, 3, 2, "a", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](24, "div", 19);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](25, HeaderComponent_a_25_Template, 3, 2, "a", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](27, "div", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtemplate"](28, HeaderComponent_a_28_Template, 3, 2, "a", 19);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](26, "li", 20)(27, "a", 21);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](28, "About Hisense");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](29, "li", 21)(30, "a", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](31, "About Hisense");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](29, "li", 22)(30, "a", 23);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](31, "Support");
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](32, "li", 23)(33, "a", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](34, "Support");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](32, "button", 24);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_button_click_32_listener() { return ctx.mobileNavToggle = !ctx.mobileNavToggle; });
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](33, "span", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](35, "button", 25);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵlistener"]("click", function HeaderComponent_Template_button_click_35_listener() { return ctx.mobileNavToggle = !ctx.mobileNavToggle; });
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelement"](36, "span", 26);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]()()();
     } if (rf & 2) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](6, _c2, ctx.mobileNavToggle, ctx.top));
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](8);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.navLinks);
-        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](9);
+        _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](12);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngClass", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction1"](9, _c1, ctx.newsSubDropdownToggle));
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](6);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngForOf", ctx.newsSubLinks);
