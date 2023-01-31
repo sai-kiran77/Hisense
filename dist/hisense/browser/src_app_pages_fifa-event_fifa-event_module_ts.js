@@ -270,8 +270,9 @@ class FifaEventComponent {
         this.hours = '00';
         this.minutes = '00';
         this.seconds = '00';
-        this.tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel", "Highlights"];
-        this.currentTab = "About FIFA 2022";
+        // tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel", "Highlights"];
+        this.tabs = ['Spot Hisense', "Spin the wheel"];
+        this.currentTab = "Spot Hisense";
         this.slides = [
             {
                 mobile_image_full_url: `${src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-mobile.webp`,
