@@ -23,8 +23,10 @@ export class FifaEventComponent implements OnInit {
   seconds: any = '00';
   x: any;
 
-  tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel", "Highlights"];
-  currentTab = "About FIFA 2022";
+  // tabs = ["About FIFA 2022", 'Spot Hisense', "Spin the wheel", "Highlights"];
+  tabs = ['Spot Hisense', "Spin the wheel"];
+  currentTab = "Spot Hisense";
+
 
   slides = [
     {
