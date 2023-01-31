@@ -41,10 +41,10 @@ const routes: Routes = [
       //   path: 'new-launches',
       //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
       // },
-      {
-        path: 'FIFA-2022',
-        loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
-      },
+      // {
+      //   path: 'FIFA-2022',
+      //   loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
+      // },
       {
         path: 'wheel-of-fortune',
         loadChildren: () => import('./pages/spinner/spinner.module').then(m => m.SpinnerModule)
