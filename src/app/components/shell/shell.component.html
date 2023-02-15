@@ -1,4 +1,4 @@
-<marquee *ngIf="currentRoute == '/'" class="dummy" onmouseover="this.stop();" onmouseout="this.start();">
+<!-- <marquee *ngIf="currentRoute == '/'" class="dummy" onmouseover="this.stop();" onmouseout="this.start();">
     <a routerLink="/v/65U7H">New Launch- 4K 120Hz Native Panel Qled TV</a>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <a routerLink="/v/55A7H">New Launch-"Tornado 2.0" 102 watts 6 Speaker system sound by Jbl</a>
@@ -7,7 +7,7 @@
         <img [src]="environment.baseApiUrl + '/media/pages/home/laser-tv-marquee.webp'" alt="Laser TV Logo"> IN
         INDIA.
     </a>
-</marquee>
+</marquee> -->
 
 <app-header [ngClass]="{'m-top-45':currentRoute == '/'}" [top]="currentRoute == '/'"></app-header>
 <router-outlet></router-outlet>
