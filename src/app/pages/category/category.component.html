@@ -105,16 +105,16 @@
                     <ng-container *ngIf="product.product?.product_variants.length">
                         <div #currentindex data-index="0" class="product-listing-tab"
                             style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
-                            <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span>
-                            <a class="product-listing-img" style="height: 280px;display: flex;justify-content: center;
+                            <!-- <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span> -->
+                            <a class="product-listing-img" style="display: flex;justify-content: center;
                             align-items: center; overflow: visible;cursor: default;">
                                 <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                    style="max-height: 280px;max-width: 100% !important;"
+                                    style="max-height: 200px;max-width: 100% !important;"
                                     [alt]="product?.product?.name">
                                 <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     src="assets/images/prod__placeholder.png"
-                                    style="max-height: 280px;max-width: 100% !important;" alt="product placeholder">
+                                    style="max-height: 200px;max-width: 100% !important;" alt="product placeholder">
                             </a>
                             <div>
                                 <div style="font-size: 14px;color: gray;font-weight: bold;">Model Code</div>

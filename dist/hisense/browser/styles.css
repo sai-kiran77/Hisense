@@ -3832,7 +3832,7 @@ button.swiper-pagination-bullet {
   justify-content: center;
   align-items: center;
   width: 100%;
-  background-color: #d1b83a;
+  background-color: #00AAA6;
   color: #FFF;
   padding: 12px !important;
 }
@@ -3886,10 +3886,10 @@ footer dd a {
   white-space: nowrap;
   text-align: center;
   font-weight: 400;
-  padding: 16px;
+  padding: 8px;
   border-radius: 0 !important;
-  color: #fff !important;
-  background: linear-gradient(90deg, #6debe6 0%, #39d5ce 10%, #00aaa6 40%, #067977 60%);
+  color: #00AAA6 !important;
+  background: #fff;
   background-size: 200%;
   display: block;
   width: auto !important;
@@ -3897,11 +3897,11 @@ footer dd a {
   transition: background 200ms ease-in-out;
 }
 .btn-hisense-v2 * {
-  color: white !important;
+  color: #00AAA6 !important;
 }
 .btn-hisense-v2:hover {
-  background: #067977;
-  background: linear-gradient(90deg, #067977 0%, #067977 10%, #067977 40%, #067977 60%);
+  background: #00AAA6;
+  color: #fff !important;
 }
 a.active {
   color: white !important;
