@@ -81,11 +81,12 @@
                     [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories"
                     [ngClass]="{'single__cat':metaData?.subcategories.length == 1}">
                     <a class="product-listing-img" style="display: flex;justify-content: center;
-                    align-items: center; overflow: visible;">
+                    align-items: center; overflow: visible;"
+                    [ngStyle]="{'min-height': isACPage ? '100px' : isRefrigiratorPage ? '200px' : 'auto' }">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
-                            style="max-height: 300px;max-width: 96% !important;" [alt]="prod.name">
+                            style="max-height: 300px; max-width: 85% !important" [ngStyle]="{'max-width': isACPage ? '100%' : 'auto' }" [alt]="prod.name">
                         <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
-                            style="max-height: 300px;max-width: 96% !important;" alt="product placeholder">
+                            style="max-height: 300px; max-width: 85% !important;" alt="product placeholder" [ngStyle]="{'max-width': isACPage ? '100%' : 'auto' }">
                     </a>
                     <div style="margin-top: auto;" class="mobile-m-40">
                         <div class="product-listing-tab-content">
@@ -107,19 +108,21 @@
                             style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
                             <!-- <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span> -->
                             <a class="product-listing-img" style="display: flex;justify-content: center;
-                            align-items: center; overflow: visible;cursor: default;">
+                            align-items: flex-start; overflow: visible;cursor: default;"
+                            [ngStyle]="{'min-height': isACPage ? '100px' : isRefrigiratorPage ? '200px' : 'auto' }">
                                 <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                    style="max-height: 200px;max-width: 100% !important;"
-                                    [alt]="product?.product?.name">
+                                    style="max-width: 85% !important"
+                                    [alt]="product?.product?.name"
+                                    [ngStyle]="{'max-width': isACPage ? '100%' : 'auto' }">
                                 <img *ngIf="!product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
-                                    src="assets/images/prod__placeholder.png"
-                                    style="max-height: 200px;max-width: 100% !important;" alt="product placeholder">
+                                    src="assets/images/prod__placeholder.png" style="max-width: 85% !important"
+                                     [ngStyle]="{'max-width': isACPage ? '100%' : '' }" alt="product placeholder">
                             </a>
                             <div>
-                                <div style="font-size: 14px;color: gray;font-weight: bold;">Model Code</div>
+                                <div style="font-size: 12px;color: gray;font-weight: bold;">Model Code</div>
                                 <span
-                                    style="font-size: 24px;font-weight: bold;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
+                                    style="font-size: 22px;font-weight: bold;">{{product?.product?.product_variants[product.currentIndex]?.code}}</span>
                             </div>
                             <div style="margin-top: 0px !important">
                                 <div class="product-listing-tab-content">
@@ -137,12 +140,12 @@
                                 <div class="top__specifications">
                                     <ng-container
                                         *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
-                                        <div style="font-size: 14px;color: gray;font-weight: bold;text-align: center;">
+                                        <div style="font-size: 12px;color: gray;font-weight: bold;text-align: center;">
                                             Top
                                             Features</div>
                                         <ul style="list-style: inside !important;">
                                             <li *ngFor="let spec of product?.product?.product_variants[product.currentIndex]?.top_specifications"
-                                                style="font-size: 16px;list-style: inside !important;">
+                                                style="font-size: 14px;list-style: inside !important;">
                                                 {{spec}}
                                             </li>
                                         </ul>

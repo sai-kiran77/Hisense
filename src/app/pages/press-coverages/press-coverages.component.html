@@ -28,7 +28,7 @@
             <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
             <p *ngIf="data?.vendor">({{data?.vendor}})</p>
             <p>{{data?.description}}</p>
-            <a [href]="data?.external_url" class=" btn btn-default read-more-btn" target="_blank">Read More</a>
+            <a [href]="data?.external_url" class="btn-hisense-v2" target="_blank">Read More</a>
         </div>
         <div style="flex: 0 0 25%;">
             <img [src]="data?.image_full_url" [alt]="'press coverage ' + (i + 1)">
