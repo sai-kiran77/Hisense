@@ -340,10 +340,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "AboutHisenseModule": () => (/* binding */ AboutHisenseModule)
 /* harmony export */ });
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common */ 6362);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/common */ 6362);
 /* harmony import */ var _about_hisense_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./about-hisense.component */ 2961);
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 3184);
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _overview_overview_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./overview/overview.component */ 5935);
+/* harmony import */ var _values_values_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./values/values.component */ 4747);
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/core */ 3184);
+
+
 
 
 
@@ -351,18 +355,200 @@ __webpack_require__.r(__webpack_exports__);
 
 const routes = [
     {
+        path: 'values', component: _values_values_component__WEBPACK_IMPORTED_MODULE_2__.ValuesComponent
+    },
+    {
+        path: 'overview', component: _overview_overview_component__WEBPACK_IMPORTED_MODULE_1__.OverviewComponent
+    },
+    {
         path: '', component: _about_hisense_component__WEBPACK_IMPORTED_MODULE_0__.AboutHisenseComponent
     }
 ];
 class AboutHisenseModule {
 }
 AboutHisenseModule.ɵfac = function AboutHisenseModule_Factory(t) { return new (t || AboutHisenseModule)(); };
-AboutHisenseModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineNgModule"]({ type: AboutHisenseModule });
-AboutHisenseModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineInjector"]({ imports: [[
-            _angular_common__WEBPACK_IMPORTED_MODULE_2__.CommonModule,
-            _angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule.forChild(routes)
+AboutHisenseModule.ɵmod = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineNgModule"]({ type: AboutHisenseModule });
+AboutHisenseModule.ɵinj = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵdefineInjector"]({ imports: [[
+            _angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule,
+            _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule.forChild(routes)
         ]] });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵsetNgModuleScope"](AboutHisenseModule, { declarations: [_about_hisense_component__WEBPACK_IMPORTED_MODULE_0__.AboutHisenseComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_2__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_3__.RouterModule] }); })();
+(function () { (typeof ngJitMode === "undefined" || ngJitMode) && _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵsetNgModuleScope"](AboutHisenseModule, { declarations: [_about_hisense_component__WEBPACK_IMPORTED_MODULE_0__.AboutHisenseComponent,
+        _overview_overview_component__WEBPACK_IMPORTED_MODULE_1__.OverviewComponent,
+        _values_values_component__WEBPACK_IMPORTED_MODULE_2__.ValuesComponent], imports: [_angular_common__WEBPACK_IMPORTED_MODULE_4__.CommonModule, _angular_router__WEBPACK_IMPORTED_MODULE_5__.RouterModule] }); })();
+
+
+/***/ }),
+
+/***/ 5935:
+/*!********************************************************************!*\
+  !*** ./src/app/pages/about-hisense/overview/overview.component.ts ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "OverviewComponent": () => (/* binding */ OverviewComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+
+class OverviewComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+OverviewComponent.ɵfac = function OverviewComponent_Factory(t) { return new (t || OverviewComponent)(); };
+OverviewComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: OverviewComponent, selectors: [["app-overview"]], decls: 2, vars: 0, template: function OverviewComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](1, "overview works!");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJvdmVydmlldy5jb21wb25lbnQuc2NzcyJ9 */"] });
+
+
+/***/ }),
+
+/***/ 4747:
+/*!****************************************************************!*\
+  !*** ./src/app/pages/about-hisense/values/values.component.ts ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "ValuesComponent": () => (/* binding */ ValuesComponent)
+/* harmony export */ });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ 3184);
+
+class ValuesComponent {
+    constructor() { }
+    ngOnInit() {
+    }
+}
+ValuesComponent.ɵfac = function ValuesComponent_Factory(t) { return new (t || ValuesComponent)(); };
+ValuesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: ValuesComponent, selectors: [["app-values"]], decls: 124, vars: 0, consts: [[1, "main-container"], [1, "about-overview", "about-values"], ["id", "overview-silder", "data-track", "90", 1, "trackin", 2, "transform", "translateY(90px)"], ["data-track", "90", 1, "text-box", "desktop-only", "trackin", 2, "transform", "translateY(90px)"], ["role", "img", "aria-label", "life simpler", 1, "text-box-with-image", 2, "background", "url(https://global.hisense.com/dam/jcr:17a23e89-5397-4dfa-8845-5d0fd5561e52/values.jpg) no-repeat", "background-position", "center", "background-size", "cover"], [1, "img-overlay"], ["data-track", "90", 1, "two-box-info", "absolute-c-c", "trackin", 2, "transform", "translateY(90px)"], [1, "hisenseBold", "text-center"], [1, "m-none"], ["data-track", "90", 1, "text-box", "mobile-only", "trackin", 2, "transform", "translateY(90px)"], ["role", "img", "aria-label", "life simpler", 1, "text-box-with-image", 2, "background", "url(https://global.hisense.com/dam/jcr:a82dcaa8-776d-4385-974f-a2ada72eb065/m_values.jpg) no-repeat", "background-position", "center", "background-size", "cover"], ["id", "mission-vision", 1, "text-center", "black"], [1, "hisenseBold"], [1, "hisenseLight"], ["id", "our-core-value"], [1, "hisenseBold", "black", "text-center"], [1, "container"], ["data-track", "90", 1, "text-box", "desktop-only", 2, "transform", "translateY(90px)"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:a48c9ea5-2d10-4d58-8409-574ef33dc06d/integrity.png) no-repeat", "background-position", "center", "background-size", "cover"], ["data-track", "90", 1, "two-box-info", "absolute-c-c", 2, "transform", "translateY(90px)"], [1, "slide-in"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:2cafc900-b043-4338-9c1d-2eda982df7e4/innovation.jpg) no-repeat", "background-position", "center", "background-size", "cover"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:3989417c-cc3e-43a5-9a4d-26762355daee/customer_focus.jpg) no-repeat", "background-position", "center", "background-size", "cover"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:e051c5b7-2d44-4354-aeff-c71a64482907/sustainability.jpg) no-repeat", "background-position", "center", "background-size", "cover"], [1, "our-core-value-desc", "black", "hisenseLight", "text-center"], ["data-track", "90", 1, "text-box", 2, "transform", "translateY(90px)"], [1, "overview-container"], [1, "bg-overflow-h", "desktop-only"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:0c8e8d75-bdd0-4844-9635-0ef1cbb05ab4/corporate.png) no-repeat", "background-position", "center top", "background-size", "cover"], ["href", "https://global.hisense.com/about-hisense/csr", 1, "hisenseMedium", "nostyle", "btn_more"], [1, "bg-overflow-h", "mobile-only"], ["role", "img", "aria-label", "", 1, "text-box-with-image", "bg-holder", "zoom", 2, "background", "url(https://global.hisense.com/dam/jcr:fc196622-7162-49f6-8256-7522fa800637/corporate.png) no-repeat", "background-position", "center top", "background-size", "cover"]], template: function ValuesComponent_Template(rf, ctx) { if (rf & 1) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "section", 2)(3, "div", 3)(4, "div", 4);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](5, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](6, "div", 6)(7, "h1", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](8, "Everything we do should ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](9, "br", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](10, "make your ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](11, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](12, "life simpler");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](13, "div", 9)(14, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](15, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](16, "div", 6)(17, "h1", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](18, "Everything we do should ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](19, "br", 8);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](20, "make your ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](21, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](22, "life simpler");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](23, "section", 11)(24, "h3", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](25, "Mission & Vision");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](26, "h4", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](27, "Vision");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](28, "p", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](29, "To be a century-old company, and to become the most reliable brand in the world.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](30, "h4", 12);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](31, "Mission");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](32, "p", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](33, "To pursue scientific and technological innovation, take the lead in the advanced manufacturing with intelligence as the core, and bring happiness to millions of families with high-quality products and services.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](34, "section", 14)(35, "h3", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](36, "Our Core Value");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](37, "div", 16)(38, "div", 17)(39, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](40, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](41, "div", 19)(42, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](43, "Integrity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](44, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](45, "div", 9)(46, "div", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](47, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](48, "div", 6)(49, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](50, "Integrity");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](51, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](52, "div", 17)(53, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](54, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](55, "div", 19)(56, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](57, "Innovation");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](58, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](59, "div", 9)(60, "div", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](61, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](62, "div", 6)(63, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](64, "Innovation");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](65, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](66, "div", 17)(67, "div", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](68, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](69, "div", 19)(70, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, "Customer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](72, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](73, "Focus");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](74, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "div", 9)(76, "div", 22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](77, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "div", 6)(79, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](80, "Customer");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](81, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, "Focus");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](83, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "div", 17)(85, "div", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](86, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "div", 19)(88, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](89, "Sustainability");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](90, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](91, "div", 9)(92, "div", 23);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](93, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "div", 6)(95, "h2", 7);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](96, "Sustainability");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](97, "span", 20);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "p", 24);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, "We\u2019ve always adhered to the core values of Integrity, Innovation, Customer Focus and Sustainability: Attributing our sustainable and healthy development to upright cadres and good corporate culture, attaching importance to R&D investment, prioritizing customer-centricity, and most importantly promoting precise urban governance and contributing to sustainable city development. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "section", 25)(101, "div", 26)(102, "div", 27)(103, "div", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](104, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](105, "div", 19)(106, "h3", 7)(107, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](108, "Corporate Social ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](109, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](110, "Responsibility");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "a", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](112, "See More");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "div", 30)(114, "div", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](115, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "div", 6)(117, "h3", 7)(118, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "Corporate Social ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](120, "span");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](121, "Responsibility");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "a", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, "See More");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]()()()()()()();
+    } }, styles: ["\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJ2YWx1ZXMuY29tcG9uZW50LnNjc3MifQ== */"] });
 
 
 /***/ })

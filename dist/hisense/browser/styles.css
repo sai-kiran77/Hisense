@@ -3551,14 +3551,6 @@ button.swiper-pagination-bullet {
 .mySwiperHome .swiper-button-next:hover::before {
   opacity: 1;
 }
-@media screen and (max-width: 767px) {
-  .mySwiper .swiper-button-next,
-.mySwiper .swiper-button-prev,
-.mySwiperHome .swiper-button-next,
-.mySwiperHome .swiper-button-prev {
-    display: none;
-  }
-}
 .mySwiper .swiper-pagination-bullet,
 .mySwiperHome .swiper-pagination-bullet {
   position: relative;
@@ -3886,22 +3878,22 @@ footer dd a {
   white-space: nowrap;
   text-align: center;
   font-weight: 400;
-  padding: 8px;
-  border-radius: 0 !important;
-  color: #00AAA6 !important;
-  background: #fff;
+  padding: 10px 24px !important;
+  font-size: 14px !important;
+  border-radius: 32px !important;
   background-size: 200%;
   display: block;
   width: auto !important;
   display: inline-block !important;
-  transition: background 200ms ease-in-out;
-}
-.btn-hisense-v2 * {
-  color: #00AAA6 !important;
+  transition: all 300ms ease-in-out;
+  background: white !important;
+  border: 1px solid black !important;
+  color: black !important;
 }
 .btn-hisense-v2:hover {
-  background: #00AAA6;
+  background: #00AAA6 !important;
   color: #fff !important;
+  border-color: white !important;
 }
 a.active {
   color: white !important;
@@ -3998,6 +3990,9 @@ option {
 }
 .flex-row {
   flex-direction: row !important;
+}
+.swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: -50px !important;
 }
 /*!****************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[5].rules[0].oneOf[0].use[2]!./node_modules/ngx-toastr/toastr.css ***!
