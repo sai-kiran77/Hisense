@@ -28,6 +28,10 @@ export class HomeComponent implements OnInit {
       name: 'keywords',
       content: "Hisense, Global, Your trusted partner, electronics, TV, Laser TV, Smartphone"
     })
+    this.meta.updateTag({
+      name: 'facebook-domain-verification',
+      content: "8rbkrcnetai57wl2anjpwbz5s71w0k"
+    })
    }
 
    slides: any = [];
