@@ -37,23 +37,23 @@ export class HeaderComponent implements OnInit {
         // },
     ]
 
-    // aboutUsSubLinks = [
-    //     {
-    //         image: 'assets/images/tv.png',
-    //         text: 'Overview',
-    //         url: '/about-hisense/overview'
-    //     },
-    //     {
-    //         image: 'assets/images/tv.png',
-    //         text: 'Values',
-    //         url: '/about-hisense/values'
-    //     },
-    //     // {
-    //     //     image: 'assets/images/tv.png',
-    //     //     text: 'Technology',
-    //     //     url: '/about-hisense'
-    //     // }
-    // ]
+    aboutUsSubLinks = [
+        {
+            image: 'assets/images/tv.png',
+            text: 'Overview',
+            url: '/about-hisense/overview'
+        },
+        {
+            image: 'assets/images/tv.png',
+            text: 'Values',
+            url: '/about-hisense/values'
+        },
+        {
+            image: 'assets/images/tv.png',
+            text: 'Technology',
+            url: '/about-hisense/technology'
+        }
+    ]
 
     aboutSubLinks = [
         {

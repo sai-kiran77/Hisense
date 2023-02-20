@@ -119,19 +119,20 @@ p {
 .tabs{
     display: flex;
     justify-content: center;
-    margin: 3rem;
+    // margin: 3rem;
 }
 
 .press__tabs__container{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-content: center;
     padding: 16px 0;
     .tabs{
         // background: #eae9e9;
         border-radius: 50px;
         padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        // box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
     .list-group {
         display: flex;
