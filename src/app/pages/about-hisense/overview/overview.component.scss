@@ -1,0 +1,323 @@
+#green-text-box {
+    background: #00AAA5;
+
+    .container {
+        width: 100%;
+        padding-right: 48px;
+        padding-left: 48px;
+        margin-right: auto;
+        margin-left: auto;
+
+        .green-text-box-info {
+            margin-top: 50px;
+            padding-left: 17.3%;
+            padding-top: 70px;
+            padding-bottom: 100px;
+
+            .hisenseBold {
+                font-weight: 700;
+                color: white;
+            }
+
+            div {
+                font-size: 42px;
+                margin-bottom: 30px;
+                line-height: 1.3;
+            }
+        }
+    }
+}
+
+.overlay-gray {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF !important;
+    padding: 18px 32px;
+    border-radius: 30px;
+    border: 2.5px solid white;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+        background-color: #fff;
+        color: #00AAA5 !important;
+    }
+}
+
+.img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.05);
+    z-index: 99 !important;
+}
+
+
+.hisenseBold {
+    font-weight: 700;
+}
+
+.about-overview p {
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.about-overview h1,
+.about-overview h1 p {
+    font-size: 64px;
+    line-height: 1.3;
+}
+
+.about-overview h1 p>span,
+.about-overview h2 p>span {
+    color: #0CE2DC;
+}
+
+.col-white {
+    color: white;
+}
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.text-box-info h2 {
+    margin-bottom: 5px;
+}
+
+.about-overview h2 {
+    font-size: 52px;
+    line-height: 1.3;
+}
+
+.hisenseLight {
+    font-weight: 300;
+}
+
+.text-box-info {
+    max-width: 797px;
+    margin: 0 auto;
+    margin-top: 81px;
+    margin-bottom: 60px;
+    color: #000000;
+}
+
+.container {
+    width: 100%;
+    padding-right: 48px;
+    padding-left: 48px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.overview-container {
+    display: flex;
+    // height: 700px;
+}
+
+.left-container {
+    flex: 0 1 50%;
+    min-height: 100%;
+    // max-width: 50%;
+    background: #00AAA5;
+    overflow: hidden;
+}
+
+.right-container {
+    flex: 0 1 50%;
+    min-height: 100%;
+    // max-width: 50%;
+    overflow: hidden;
+}
+
+.left-bottom {
+    top: 90% !important;
+    left: 10% !important;
+    position: absolute;
+    color: white;
+}
+
+.two-box-info-silders {
+    padding: 48px;
+    color: white;
+    width: 75%;
+    margin: auto;
+}
+
+.hisenseMedium {
+    font-weight: 500;
+}
+
+.two-box-info-silders div {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.two-box-info-silders h3,
+.text-box .overview-container h2,
+.text-box .overview-container h1 {
+    margin-bottom: 35px;
+}
+
+.about-overview h3 p {
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+.text-box-with-image {
+    height: 600px;
+    position: relative;
+}
+
+.text-box{
+    .bg-holder{
+        .csr{
+            background-image: url(../../../../assets/about-hisense/overview/csr.jpg);
+        }
+        .m_csr{
+            background-image: url(../../../../assets/about-hisense/overview/m_csr.jpg);
+        }
+        .industrial{
+            background-image: url(../../../../assets/about-hisense/overview/industrial.jpg);
+        }
+        .industrial-group{
+            background-image: url(../../../../assets/about-hisense/overview/industrial-group.png);
+        }
+        .values{
+            background-image: url(../../../../assets/about-hisense/overview/values.jpg);
+        }
+        .m_values{
+            background-image: url(../../../../assets/about-hisense/overview/m_values.jpg);
+        }
+        .technology{
+            background-image: url(../../../../assets/about-hisense/overview/technology.jpg);
+        }
+        .m_technology{
+            background-image: url(../../../../assets/about-hisense/overview/m_technology.jpg);
+        }
+        .hisense-partnership-kv{
+            background-image: url(../../../../assets/about-hisense/overview/hisense-partnership-kv.jpg);
+            background-position: center !important;
+        }
+        .hisense-partnership-kv-mobile{
+            background-image: url(../../../../assets/about-hisense/overview/hisense-partnership-kv-mobile.jpg);
+            background-position: center !important;
+        }
+    }
+}
+
+.zoom {
+    transition: all .6s ease-out;
+}
+
+.text-box {
+    margin-top: 10px;
+}
+
+.nostyle {
+    visibility: hidden;
+}
+
+.about-overview .absolute-c-c {
+    opacity: 1;
+    transform: translate(-50%, -50%) !important;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+
+.two-box-info div {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.overflow-h {
+    overflow: hidden;
+}
+
+.text-box {
+    .overview-container {
+        position: relative;
+
+        .bg-holder:hover {
+
+            .zoom {
+                transform: scale(1.1);
+            }
+
+            .nostyle {
+                visibility: visible;
+            }
+
+        }
+
+        .bg-holder {
+            width: 100%;
+            .img {
+                width: 100%;
+                height: 100%;
+                background-repeat: no-repeat;
+                // background-position: center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+.about-overview h2 p {
+    font-size: 52px;
+    line-height: 1.3;
+}
+
+@media screen and (max-width: 768px) {
+    .overview-container {
+        flex-direction: column;
+        height: auto;
+    }
+}
+
+.btn_more {
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF !important;
+    padding: 18px 32px;
+    border-radius: 30px;
+    border: 2.5px solid white;
+    transition: all 600ms ease-in-out;
+
+    &:hover {
+        background-color: #00AAA5 !important;
+        border: none !important;
+    }
+}
+
+.overview-silder{
+    img{
+        height: 100% !important;
+        width: 100% !important;
+    }
+}
+
+.two-box-info {
+    // max-width: 400px;
+    // text-align: center;
+    padding: 0 8%;
+}
+
+.about-overview h3 {
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+.about-values #our-core-value .our-core-value-desc {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 90px;
+}

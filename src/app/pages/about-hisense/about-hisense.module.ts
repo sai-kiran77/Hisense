@@ -4,6 +4,7 @@ import { AboutHisenseComponent } from './about-hisense.component';
 import { RouterModule, Routes } from '@angular/router';
 import { OverviewComponent } from './overview/overview.component';
 import { ValuesComponent } from './values/values.component';
+import { TechnologyComponent } from './technology/technology.component';
 
 const routes: Routes = [
   {
@@ -13,7 +14,10 @@ const routes: Routes = [
     path: 'overview', component: OverviewComponent
   },
   {
-    path: '', component: AboutHisenseComponent
+    path: 'technology', component: TechnologyComponent
+  },
+  {
+    path: '', component: AboutHisenseComponent, redirectTo: 'overview'
   }
 ]
 
@@ -21,7 +25,8 @@ const routes: Routes = [
   declarations: [
     AboutHisenseComponent,
     OverviewComponent,
-    ValuesComponent
+    ValuesComponent,
+    TechnologyComponent
   ],
   imports: [
     CommonModule,
