@@ -5,10 +5,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { OverviewComponent } from './overview/overview.component';
 import { ValuesComponent } from './values/values.component';
 import { TechnologyComponent } from './technology/technology.component';
+import { CsrComponent } from './csr/csr.component';
 
 const routes: Routes = [
   {
     path: 'values', component: ValuesComponent
+  },
+  {
+    path: 'csr', component: CsrComponent
   },
   {
     path: 'overview', component: OverviewComponent
@@ -26,7 +30,8 @@ const routes: Routes = [
     AboutHisenseComponent,
     OverviewComponent,
     ValuesComponent,
-    TechnologyComponent
+    TechnologyComponent,
+    CsrComponent
   ],
   imports: [
     CommonModule,

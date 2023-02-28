@@ -50,6 +50,11 @@ export class HeaderComponent implements OnInit {
         },
         {
             image: 'assets/images/tv.png',
+            text: 'CSR',
+            url: '/about-hisense/csr'
+        },
+        {
+            image: 'assets/images/tv.png',
             text: 'Technology',
             url: '/about-hisense/technology'
         }
