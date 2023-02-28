@@ -46,13 +46,7 @@ export class HomeComponent implements OnInit {
     this.api.getPageSlides({ pageUrl: '/' }).subscribe({
       next: (res: any) => {
         // console.log(res);
-        this.slides = res.data.home_page_slides.map((obj: any)=> {
-          if(obj.click_link.includes(environment.baseUrl)){
-            obj.click_link = obj.click_link.replace(environment.baseUrl, '');
-          }
-          return obj;
-        });
-        console.log(this.slides);
+        this.slides = res.data.home_page_slides;
         this.customerTestimonials = res.data.customer_testimonials;
 
         setTimeout(()=>{
