@@ -28,7 +28,7 @@
             <div class="swiper mySwiperHome" style="overflow: visible !important;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
-                        <a style="width: 100%;" class="slide__link" [routerLink]="slide.click_link">
+                        <a style="width: 100%;" class="slide__link" [href]="slide.click_link">
                             <picture>
                                 <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
                                 <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
