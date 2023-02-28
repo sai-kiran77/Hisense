@@ -2,6 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Title, Meta } from '@angular/platform-browser';
 import { ApiService } from 'src/app/services/api.service';
 import { GlobalStateService } from 'src/app/services/global-state.service';
+import { environment } from 'src/environments/environment';
 
 declare var Swiper: any;
 @Component({
@@ -41,7 +42,13 @@ export class HomeComponent implements OnInit {
     this.api.getPageSlides({ pageUrl: '/' }).subscribe({
       next: (res: any) => {
         // console.log(res);
-        this.slides = res.data.home_page_slides;
+        this.slides = res.data.home_page_slides.map((obj: any)=> {
+          if(obj.click_link.includes(environment.baseUrl)){
+            obj.click_link = obj.click_link.replace(environment.baseUrl, '');
+          }
+          return obj;
+        });
+        console.log(this.slides);
         this.customerTestimonials = res.data.customer_testimonials;
 
         setTimeout(()=>{
