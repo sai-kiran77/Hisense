@@ -83,7 +83,7 @@
                             <div class="section-title">In The News</div>
                             <div class="sub-menu ">
                                 <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
-                                    style="justify-content: center;">
+                                    style="justify-content: center;font-size: 12px;">
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
@@ -95,7 +95,7 @@
                             </a>
                         </div>
                     </li>
-                    <li class="dropdown in-the-news">
+                    <li class="dropdown about-us">
                         <a class="dropbtn" routerLink="/about-hisense" target="_self">About Hisense</a>
                         <a (click)="aboutUsSubDropdownToggle = true" class="toggle-dropdown"
                             id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"

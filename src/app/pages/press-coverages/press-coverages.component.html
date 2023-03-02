@@ -19,17 +19,17 @@
                 [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
         </div>
     </div>
-    <div class="col1 tabs">
+    <!-- <div class="col1 tabs">
         <div class="list-group" id="themeslist">
             <a class="list-group-item list-group-item-action" *ngFor="let tab of yearRecordsTabs"
                 [ngClass]="{'active': tab  == currentSelectedYearTab}" (click)="changeYearTab(tab)">{{tab }}</a>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <div class="container" #container>
-    <ng-container *ngIf="metaData?.data?.length">
-        <div class="row" style="display: flex;" *ngFor="let data of yearRecordsMap[currentSelectedYearTab];let i = index">
+    <ng-container *ngIf="metaData?.length">
+        <div class="row" style="display: flex;" *ngFor="let data of metaData;let i = index">
             <div style="flex: 0 0 75%;">
                 <!-- <h3 class="title italics">{{data.title}}</h3> -->
                 <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
@@ -41,7 +41,7 @@
                 <img [src]="data?.image_full_url" [alt]="'press coverage ' + (i + 1)">
             </div>
         </div>
-        <div *ngIf="yearRecordsMap[currentSelectedYearTab]?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
+        <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
     </ng-container>
     <!-- <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>

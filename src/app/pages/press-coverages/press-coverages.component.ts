@@ -83,7 +83,11 @@ export class PressCoveragesComponent implements OnInit {
         if(this.yearRecordsTabs.length){
           this.currentSelectedYearTab = this.yearRecordsTabs[0];
         }
-        this.metaData = res.data;
+        this.metaData = res.data.data.sort((a: any, b: any) => {
+          const dateA: any = new Date(a.published_at);
+          const dateB: any = new Date(b.published_at);
+          return dateB - dateA;
+        });;
       console.log(this.metaData);
       console.log(this.yearRecordsMap, this.yearRecordsTabs )
     }, (err) => {

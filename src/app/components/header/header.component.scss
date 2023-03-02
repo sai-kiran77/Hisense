@@ -38,8 +38,8 @@
 
 header {
   width: 100%;
-  // position: fixed;
-  top: 0;
+  position: fixed;
+  top: 0 !important;
   left: 0;
   z-index: 100;
   color: #1d1d1f;
@@ -116,7 +116,7 @@ header {
             font-size: 16px;
             color: #1d1d1f;
             position: relative;
-            font-weight: 500 !important;
+            font-weight: 400 !important;
             -webkit-transition: color 0.3s ease-out;
             -moz-transition: color 0.3s ease-out;
             -o-transition: color 0.3s ease-out;
@@ -143,6 +143,14 @@ header {
 
             &.toggle-dropdown {
               display: none;
+            }
+          }
+
+          &.dropdown {
+            .dropdown-content {
+              a {
+                font-size: 13px !important;
+              }
             }
           }
 
@@ -338,11 +346,11 @@ header {
   // }
 }
 
-@media (max-width: 1200px) {
-  header nav.main-nav ul li a {
-    font-size: 14px;
-  }
-}
+// @media (max-width: 1200px) {
+//   header nav.main-nav ul li a {
+//     font-size: 14px;
+//   }
+// }
 
 @media screen and (min-width: 1023px) {
   header {
@@ -857,14 +865,14 @@ li {
   .dropdown-content a:hover {
     background-color: #ddd;
   }
-  
+
   .dropdown:hover .dropdown-content {
     display: block;
   }
 
-  .dropdown:hover{
-    .dropbtn{
-      &::after{
+  .dropdown:hover {
+    .dropbtn {
+      &::after {
         transform: rotate(-180deg);
       }
     }

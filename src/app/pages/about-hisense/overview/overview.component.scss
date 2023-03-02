@@ -49,7 +49,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0, 0, 0, 0.05);
     z-index: 99 !important;
 }
 
@@ -170,39 +170,119 @@
     position: relative;
 }
 
-.text-box{
-    .bg-holder{
-        .csr{
+.text-box {
+    .bg-holder {
+        .csr {
             background-image: url(../../../../assets/about-hisense/overview/csr.jpg);
         }
-        .m_csr{
+
+        .m_csr {
             background-image: url(../../../../assets/about-hisense/overview/m_csr.jpg);
         }
-        .industrial{
+
+        .industrial {
             background-image: url(../../../../assets/about-hisense/overview/industrial.jpg);
         }
-        .industrial-group{
+
+        .industrial-group {
             background-image: url(../../../../assets/about-hisense/overview/industrial-group.png);
         }
-        .values{
+
+        .values {
             background-image: url(../../../../assets/about-hisense/overview/values.jpg);
         }
-        .m_values{
+
+        .m_values {
             background-image: url(../../../../assets/about-hisense/overview/m_values.jpg);
         }
-        .technology{
+
+        .technology {
             background-image: url(../../../../assets/about-hisense/overview/technology.jpg);
         }
-        .m_technology{
+
+        .m_technology {
             background-image: url(../../../../assets/about-hisense/overview/m_technology.jpg);
         }
-        .hisense-partnership-kv{
+
+        .hisense-partnership-kv {
             background-image: url(../../../../assets/about-hisense/overview/hisense-partnership-kv.jpg);
             background-position: center !important;
         }
-        .hisense-partnership-kv-mobile{
+
+        .hisense-partnership-kv-mobile {
             background-image: url(../../../../assets/about-hisense/overview/hisense-partnership-kv-mobile.jpg);
             background-position: center !important;
+        }
+    }
+}
+
+#overview-silder {
+    .in-love-with-tech {
+        .desktop-only {
+            background-image: url("../../../../assets/about-hisense/overview/slider1.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+
+        .mobile-only {
+            background-image: url("../../../../assets/about-hisense/overview/m_slider.png");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+    }
+    .values {
+        .desktop-only {
+            background-image: url("../../../../assets/about-hisense/overview/values.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+
+        .mobile-only {
+            background-image: url("../../../../assets/about-hisense/overview/m_values.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+    }
+    .technology {
+        .desktop-only {
+            background-image: url("../../../../assets/about-hisense/overview/technology.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+
+        .mobile-only {
+            background-image: url("../../../../assets/about-hisense/overview/m_technology.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+    }
+    .csr {
+        .desktop-only {
+            background-image: url("../../../../assets/about-hisense/overview/csr.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
+        }
+
+        .mobile-only {
+            background-image: url("../../../../assets/about-hisense/overview/m_csr.jpg");
+            background-position: center;
+            height: 100%;
+            width: 100%;
+            background-size: cover;
         }
     }
 }
@@ -259,6 +339,7 @@
 
         .bg-holder {
             width: 100%;
+
             .img {
                 width: 100%;
                 height: 100%;
@@ -297,8 +378,8 @@
     }
 }
 
-.overview-silder{
-    img{
+.overview-silder {
+    img {
         height: 100% !important;
         width: 100% !important;
     }
