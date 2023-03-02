@@ -615,7 +615,7 @@ header {
                 position: absolute;
                 width: 30px;
                 height: 30px;
-                top: 16px;
+                top: -5px;
                 left: 25px;
                 padding: 0;
                 outline: 0;
@@ -675,14 +675,21 @@ header {
 
 
   header.menu-in {
+    .overlay{
+      position: absolute;
+      width: 100vw;
+      height: 100vh;
+      z-index: 99;
+      background-color: rgba(0, 0, 0, 0.25);
+    }
     &:after {
       content: "";
       position: fixed;
-      width: 100%;
+      // width: 100%;
       height: 100%;
       background-color: #000;
       top: 0;
-      left: 0;
+      // left: 0;
       z-index: 100;
     }
 
@@ -814,15 +821,15 @@ li {
   word-break: break-word;
 }
 
-@media screen and (max-width: 768px) {
-  nav {
-    &.main-nav {
-      .mobile-nav-toggle.active.home-page {
-        top: -15px !important;
-      }
-    }
-  }
-}
+// @media screen and (max-width: 768px) {
+//   nav {
+//     &.main-nav {
+//       .mobile-nav-toggle.active.home-page {
+//         top: -15px !important;
+//       }
+//     }
+//   }
+// }
 
 .dropbtn {
   display: flex;

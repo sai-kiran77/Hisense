@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
+import { GlobalStateService } from 'src/app/services/global-state.service';
 
 @Component({
   selector: 'app-technology',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TechnologyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private state: GlobalStateService,
+  private title: Title) { }
 
   ngOnInit(): void {
+    this.state.mobileNavToggle.next(false);
+    this.title.setTitle('Hisense India | Technology');
   }
 
 }

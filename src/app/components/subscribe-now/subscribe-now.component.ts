@@ -12,4 +12,10 @@ export class SubscribeNowComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  email = '';
+
+  subscribeNow(){
+
+  }
+
 }

@@ -7,8 +7,8 @@
             <img class="logo lazy" src="https://global.hisense.com/dam/jcr:ea5650d6-6e08-465c-b904-5c20c22792d5/hisense-logo-white.svg"
                 alt="Hisense">
             <div class="input-container">
-                <input placeholder="Your email address" type="email" value="" name="EMAIL" required="">
-                <input class="btn-subscribe" type="submit" value="Subscribe Now">
+                <input placeholder="Your email address" type="email" value="" name="EMAIL" required="" [(ngModel)]="email">
+                <input class="btn-subscribe" (click)="subscribeNow()" value="Subscribe Now">
             </div>
             <p class="form-message success hidden">Thank you for subscribing!</p>
             <p class="form-message error hidden">There was an error..</p>
