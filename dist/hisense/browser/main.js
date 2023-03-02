@@ -1625,7 +1625,7 @@ HeaderComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_3__
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵloadQuery"]()) && (ctx.header = _t.first);
-    } }, inputs: { top: "top" }, decls: 44, vars: 19, consts: [[3, "ngClass"], ["header", ""], [1, "main-nav"], ["routerLink", "/", 1, "logo"], ["id", "navbar", 1, "navbar"], [1, "navigations"], [1, "left"], [4, "ngFor", "ngForOf"], ["routerLink", "/new-launches"], [1, "right"], [1, "in-the-news", "dropdown"], [1, "dropbtn"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 3, "click"], ["aria-labelledby", "toggle-dropdown-tv-and-audio", 1, "dropdown-menu", 3, "ngClass"], ["type", "button", "aria-label", "Toggle sub navigation", 1, "mobile-back", 3, "click"], [1, "navbar-back-icon"], [1, "section-title"], [1, "sub-menu"], ["style", "justify-content: center;font-size: 12px;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown-content"], ["style", "justify-content: center;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown", "about-us"], ["routerLink", "/about-hisense", "target", "_self", 1, "dropbtn"], [1, ""], ["routerLink", "/support"], ["type", "button", "aria-controls", "navbar", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "mobile-nav-toggle", 3, "ngClass", "click"], [1, "navbar-toggler-icon"], [3, "routerLink"], [2, "width", "25%", 3, "click"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 2, "margin-left", "auto !important"], [1, "sub-menu", 2, "background-color", "white"], ["style", "width: 230px !important;", 3, "routerLink", 4, "ngFor", "ngForOf"], [2, "width", "230px !important", 3, "routerLink"], [1, "thumbnail", 2, "overflow", "hidden"], [1, "img"], [2, "object-fit", "contain", "max-height", "180px", "min-width", "170px", 3, "src", "alt"], [1, "title"], [2, "justify-content", "center", "font-size", "12px", 3, "routerLink"], [2, "justify-content", "center", 3, "routerLink"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, inputs: { top: "top" }, decls: 44, vars: 19, consts: [[3, "ngClass"], ["header", ""], [1, "main-nav"], ["routerLink", "/", 1, "logo"], ["id", "navbar", 1, "navbar"], [1, "navigations"], [1, "left"], [4, "ngFor", "ngForOf"], ["routerLink", "/new-launches"], [1, "right"], [1, "in-the-news", "dropdown"], [1, "dropbtn"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 3, "click"], ["aria-labelledby", "toggle-dropdown-tv-and-audio", 1, "dropdown-menu", 3, "ngClass"], ["type", "button", "aria-label", "Toggle sub navigation", 1, "mobile-back", 3, "click"], [1, "navbar-back-icon"], [1, "section-title"], [1, "sub-menu"], ["style", "justify-content: center;font-size: 12px;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown-content"], ["style", "justify-content: center;", 3, "routerLink", 4, "ngFor", "ngForOf"], [1, "dropdown", "in-the-news"], ["routerLink", "/about-hisense", "target", "_self", 1, "dropbtn"], [1, ""], ["routerLink", "/support"], ["type", "button", "aria-controls", "navbar", "aria-expanded", "false", "aria-label", "Toggle navigation", 1, "mobile-nav-toggle", 3, "ngClass", "click"], [1, "navbar-toggler-icon"], [3, "routerLink"], [2, "width", "25%", 3, "click"], ["id", "toggle-dropdown-tv-and-audio", "aria-haspopup", "true", "aria-expanded", "false", "aria-label", "Toggle dropdown", 1, "toggle-dropdown", 2, "margin-left", "auto !important"], [1, "sub-menu", 2, "background-color", "white"], ["style", "width: 230px !important;", 3, "routerLink", 4, "ngFor", "ngForOf"], [2, "width", "230px !important", 3, "routerLink"], [1, "thumbnail", 2, "overflow", "hidden"], [1, "img"], [2, "object-fit", "contain", "max-height", "180px", "min-width", "170px", 3, "src", "alt"], [1, "title"], [2, "justify-content", "center", "font-size", "12px", 3, "routerLink"], [2, "justify-content", "center", 3, "routerLink"]], template: function HeaderComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementStart"](0, "header", 0, 1)(2, "nav", 2)(3, "a", 3);
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵtext"](4, "Hisense International");
         _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵelementEnd"]();
@@ -1932,7 +1932,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ 3587);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ 2816);
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common */ 6362);
 // import Swiper core and required modules
+
 
 
 
@@ -1944,7 +1946,7 @@ class SeriesComponent {
     }
 }
 SeriesComponent.ɵfac = function SeriesComponent_Factory(t) { return new (t || SeriesComponent)(); };
-SeriesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: SeriesComponent, selectors: [["app-series"]], decls: 42, vars: 0, consts: [[1, "series-container"], [1, "col-full"], [1, "top"], [1, "content"], [1, "item"], [1, "new"], [1, "btn-container"], ["routerLink", "/c/laser-tv", "rel", "", 1, "btn-more"], ["routerLink", "/c/tv", "rel", ""], [1, "banner"], [1, "img", 2, "left", "0%"], ["data-src", "https://global.hisense.com/dam/jcr:41dd000c-288a-4cb6-a1d8-1b27f75a8d4b/hisense-uled-8k-tv-u80g.jpg", "alt", "ULED 8K TV U80G", "data-ll-status", "loaded", "src", "https://global.hisense.com/dam/jcr:41dd000c-288a-4cb6-a1d8-1b27f75a8d4b/hisense-uled-8k-tv-u80g.jpg", 1, "lazy", "desktop-only", "entered", "loaded"], ["data-src", "https://global.hisense.com/dam/jcr:716847b7-d3f0-411b-909f-8d13db3e4231/hisense-uled-8k-tv-u80g-m.jpg", "alt", "ULED 8K TV U80G", "src", "https://global.hisense.com/dam/jcr:716847b7-d3f0-411b-909f-8d13db3e4231/hisense-uled-8k-tv-u80g-m.jpg", 1, "lazy", "mobile-only"], ["routerLink", "/c/air-conditioner", "target", "_self", "rel", "", 1, "btn-more"], ["routerLink", "/v/AT-CW355HJP", "target", "_self", "rel", ""], ["data-src", "https://global.hisense.com/dam/jcr:7a7f2b64-4816-438d-bd77-08a35a6f19e4/hisense-silentium-pro-split-air-conditioner.jpg", "alt", "Hisense Silentium Pro Air Conditioner", "src", "https://global.hisense.com/dam/jcr:7a7f2b64-4816-438d-bd77-08a35a6f19e4/hisense-silentium-pro-split-air-conditioner.jpg", 1, "lazy", "desktop-only"], ["data-src", "https://global.hisense.com/dam/jcr:a9964243-776b-46d6-b3f5-5fbf0166d775/hisense-silentium-pro-split-air-conditioner-m.jpg", "alt", "Hisense Silentium Pro Air Conditioner", "src", "https://global.hisense.com/dam/jcr:a9964243-776b-46d6-b3f5-5fbf0166d775/hisense-silentium-pro-split-air-conditioner-m.jpg", 1, "lazy", "mobile-only"]], template: function SeriesComponent_Template(rf, ctx) { if (rf & 1) {
+SeriesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵdefineComponent"]({ type: SeriesComponent, selectors: [["app-series"]], decls: 65, vars: 6, consts: [[1, "series-container"], [1, "col-full"], [1, "top"], [1, "content"], [1, "item"], [1, "new"], [1, "btn-container"], ["routerLink", "/v/120L9G", "rel", "", 1, "btn-more"], ["routerLink", "/c/tv", "rel", ""], [1, "banner"], [1, "img", 2, "left", "0%"], ["data-src", "https://global.hisense.com/dam/jcr:41dd000c-288a-4cb6-a1d8-1b27f75a8d4b/hisense-uled-8k-tv-u80g.jpg", "alt", "ULED 8K TV U80G", "data-ll-status", "loaded", "src", "https://global.hisense.com/dam/jcr:41dd000c-288a-4cb6-a1d8-1b27f75a8d4b/hisense-uled-8k-tv-u80g.jpg", 1, "lazy", "desktop-only", "entered", "loaded"], ["data-src", "https://global.hisense.com/dam/jcr:716847b7-d3f0-411b-909f-8d13db3e4231/hisense-uled-8k-tv-u80g-m.jpg", "alt", "ULED 8K TV U80G", "src", "https://global.hisense.com/dam/jcr:716847b7-d3f0-411b-909f-8d13db3e4231/hisense-uled-8k-tv-u80g-m.jpg", 1, "lazy", "mobile-only"], ["routerLink", "/v/RQ670N4SBU", "rel", "", 1, "btn-more"], ["routerLink", "/c/refrigerator", "rel", ""], [1, "img"], ["data-src", "https://global.hisense.com/dam/jcr:e34ea6d7-b4a6-4c16-97a5-127972fa3ad3/hisense-585l-cross-door-refrigerator-rc-68wc.jpg", "alt", "RC-68WC Ice & Water Dispenser 583L Refrigerator", "src", "https://global.hisense.com/dam/jcr:e34ea6d7-b4a6-4c16-97a5-127972fa3ad3/hisense-585l-cross-door-refrigerator-rc-68wc.jpg", 1, "lazy", "desktop-only"], ["data-src", "https://global.hisense.com/dam/jcr:f387e455-f1b8-4fd2-8469-74d7f81c32d5/hisense-585l-cross-door-refrigerator-rc-68wc-m.jpg", "alt", "RC-68WC Ice & Water Dispenser 583L Refrigerator", "src", "https://global.hisense.com/dam/jcr:f387e455-f1b8-4fd2-8469-74d7f81c32d5/hisense-585l-cross-door-refrigerator-rc-68wc-m.jpg", 1, "lazy", "mobile-only"], ["routerLink", "/v/AT-CW355HJP", "target", "_self", "rel", "", 1, "btn-more"], ["routerLink", "/c/air-conditioner", "target", "_self", "rel", ""], ["data-src", "https://global.hisense.com/dam/jcr:7a7f2b64-4816-438d-bd77-08a35a6f19e4/hisense-silentium-pro-split-air-conditioner.jpg", "alt", "Hisense Silentium Pro Air Conditioner", "src", "https://global.hisense.com/dam/jcr:7a7f2b64-4816-438d-bd77-08a35a6f19e4/hisense-silentium-pro-split-air-conditioner.jpg", 1, "lazy", "desktop-only"], ["data-src", "https://global.hisense.com/dam/jcr:a9964243-776b-46d6-b3f5-5fbf0166d775/hisense-silentium-pro-split-air-conditioner-m.jpg", "alt", "Hisense Silentium Pro Air Conditioner", "src", "https://global.hisense.com/dam/jcr:a9964243-776b-46d6-b3f5-5fbf0166d775/hisense-silentium-pro-split-air-conditioner-m.jpg", 1, "lazy", "mobile-only"]], template: function SeriesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](0, "ul", 0)(1, "li", 1)(2, "div", 2)(3, "h3");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](4, "TV");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -1954,19 +1956,19 @@ SeriesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](9, "New");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](10, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "ULED 8K TV U80G");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](11, "LASER TV 120L9G");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](12, "div", 6)(13, "a", 7);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](14, "More");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](15, "a", 8);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "View all TV");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](16, "View all");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](17, "div", 9)(18, "div", 10);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](19, "img", 11)(20, "img", 12);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](21, "ul", 0)(22, "li", 1)(23, "div", 2)(24, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](25, "Air Conditioner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](25, "Refrigerator");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](26, "nav");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
@@ -1974,18 +1976,45 @@ SeriesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_1__
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](30, "New");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](31, "p");
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](32, "Silentium Pro Split Air Conditioner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](33, "uppercase");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](33, "div", 6)(34, "a", 13);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](35, "More");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](34, "div", 6)(35, "a", 13);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](36, "More");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](36, "a", 14);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](37, "View all Air Conditioner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](37, "a", 14);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](38, "View all");
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](38, "div", 9)(39, "div", 10);
-        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](40, "img", 15)(41, "img", 16);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](39, "div", 9)(40, "div", 15);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](41, "img", 16)(42, "img", 17);
         _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
-    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterLinkWithHref], styles: ["a.btn-more {\n  color: white !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcmllcy5jb21wb25lbnQuc2NzcyIsIi4uXFwuLlxcLi5cXC4uXFwuLlxcLi5cXC4uXFxTYWklMjBLaXJhblxcRG9jdW1lbnRzXFxoaXNlbnNlXFxzcmNcXGFwcFxcY29tcG9uZW50c1xcc2VyaWVzXFxzZXJpZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBQTtBQ0NKIiwiZmlsZSI6InNlcmllcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImEuYnRuLW1vcmV7XHJcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcclxufSIsImEuYnRuLW1vcmUge1xuICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn0iXX0= */"], encapsulation: 2 });
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](43, "ul", 0)(44, "li", 1)(45, "div", 2)(46, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](47, "Air Conditioner");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](48, "nav");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](49, "div", 3)(50, "div", 4)(51, "div", 5);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](52, "New");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](53, "p");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](54);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipe"](55, "uppercase");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](56, "div", 6)(57, "a", 18);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](58, "More");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](59, "a", 19);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtext"](60, "View all");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementStart"](61, "div", 9)(62, "div", 10);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelement"](63, "img", 20)(64, "img", 21);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵelementEnd"]()()()();
+    } if (rf & 2) {
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](32);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](33, 2, "Multi Door Refrigerator"), " RQ670N4SBU");
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵadvance"](22);
+        _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵtextInterpolate1"]("", _angular_core__WEBPACK_IMPORTED_MODULE_1__["ɵɵpipeBind1"](55, 4, "IntelliPRO"), " AT-CW355HJP");
+    } }, directives: [_angular_router__WEBPACK_IMPORTED_MODULE_2__.RouterLinkWithHref], pipes: [_angular_common__WEBPACK_IMPORTED_MODULE_3__.UpperCasePipe], styles: ["a.btn-more {\n  color: white !important;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNlcmllcy5jb21wb25lbnQuc2NzcyIsIi4uXFwuLlxcLi5cXC4uXFwuLlxcLi5cXC4uXFxTYWklMjBLaXJhblxcRG9jdW1lbnRzXFxoaXNlbnNlXFxzcmNcXGFwcFxcY29tcG9uZW50c1xcc2VyaWVzXFxzZXJpZXMuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDSSx1QkFBQTtBQ0NKIiwiZmlsZSI6InNlcmllcy5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbImEuYnRuLW1vcmV7XHJcbiAgICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcclxufSIsImEuYnRuLW1vcmUge1xuICBjb2xvcjogd2hpdGUgIWltcG9ydGFudDtcbn0iXX0= */"], encapsulation: 2 });
 
 
 /***/ }),
