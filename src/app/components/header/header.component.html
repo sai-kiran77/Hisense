@@ -1,6 +1,6 @@
 <header #header [ngClass]="{'menu-in': mobileNavToggle,'top-45': top}">
+    <div class="overlay" (click)="mobileNavToggle = false"></div>
     <nav class="main-nav">
-        <!-- href="https://global.hisense.com/" -->
         <a class="logo" routerLink="/">Hisense International</a>
         <div class="navbar" id="navbar">
             <div class="navigations">
@@ -33,9 +33,9 @@
                             </div>
                         </div>
                     </li>
-                    <!-- <li>
+                    <li>
                         <a routerLink="/new-launches">New Launches</a>
-                    </li> -->
+                    </li>
                     <!-- <li>
                         <a [routerLink]="'/new-launches'">New Launches</a>
                         <div style="width: 25%;" (click)="newLaunchesDropDownToggle = true">
@@ -83,7 +83,7 @@
                             <div class="section-title">In The News</div>
                             <div class="sub-menu ">
                                 <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
-                                    style="justify-content: center;">
+                                    style="justify-content: center;font-size: 12px;">
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
@@ -95,28 +95,31 @@
                             </a>
                         </div>
                     </li>
-                    <li class="dropdown">
-                        <a class="" routerLink="/about-hisense">About Hisense</a>
-                        <!-- <div [ngClass]="{'menu-in': aboutSubDropDownToggle}" class="dropdown-menu"
+                    <li class="dropdown in-the-news">
+                        <a class="dropbtn" routerLink="/about-hisense" target="_self">About Hisense</a>
+                        <a (click)="aboutUsSubDropdownToggle = true" class="toggle-dropdown"
+                            id="toggle-dropdown-tv-and-audio" aria-haspopup="true" aria-expanded="false"
+                            aria-label="Toggle dropdown"></a>
+                        <div [ngClass]="{'menu-in': aboutUsSubDropdownToggle}" class="dropdown-menu"
                             aria-labelledby="toggle-dropdown-tv-and-audio">
-                            <button (click)="aboutSubDropDownToggle = false" class="mobile-back" type="button"
+                            <button (click)="aboutUsSubDropdownToggle = false" class="mobile-back" type="button"
                                 aria-label="Toggle sub navigation">
                                 <span class="navbar-back-icon"></span>
                             </button>
                             <div class="section-title">About Hisense</div>
                             <div class="sub-menu ">
-                                <a [routerLink]="subLink?.url" *ngFor="let subLink of aboutSubLinks"
-                                    style="justify-content: center;" [fragment]="subLink?.fragment">
+                                <a [routerLink]="subLink?.url" *ngFor="let subLink of aboutUsSubLinks"
+                                    style="justify-content: center;">
                                     <span class="title">{{subLink.text}}</span>
                                 </a>
                             </div>
-                        </div> -->
-                        <!-- <div class="dropdown-content">
-                            <a [routerLink]="subLink?.url" *ngFor="let subLink of newsSubLinks"
+                        </div>
+                        <div class="dropdown-content">
+                            <a [routerLink]="subLink?.url" *ngFor="let subLink of aboutUsSubLinks"
                                 style="justify-content: center;">
                                 <span class="title">{{subLink.text}}</span>
                             </a>
-                        </div> -->
+                        </div>
                     </li>
                     <li class="">
                         <a routerLink="/support">Support</a>

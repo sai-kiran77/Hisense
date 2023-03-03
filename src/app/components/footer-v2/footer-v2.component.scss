@@ -299,12 +299,17 @@
     background-color: #06bfff;
   }
   
-  // a.social-btn.ig {
-  //   background-image: url("../../../assets/icon-ig.svg");
-  // }
+  a.social-btn.ig {
+    background-image: url("../../../assets/icon-ig.svg");
+    background-color: #e809a8;
+  }
   a.social-btn.youtube {
     background-image: url("../../../assets/icon-youtube.svg");
     background-color: #eb212e;
+  }
+  a.social-btn.linkedin {
+    background-image: url("../../../assets/icon-linkedin.svg");
+    background-color: #0073b1;
   }
   
   

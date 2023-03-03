@@ -15,6 +15,7 @@ export class HeaderComponent implements OnInit {
 
     @Input() top = false;
     newsSubDropdownToggle = false;
+    aboutUsSubDropdownToggle = false;
     aboutSubDropDownToggle = false;
     newLaunchesDropDownToggle = false;
 
@@ -34,6 +35,29 @@ export class HeaderComponent implements OnInit {
         //     text: 'Offers/Promotions',
         //     url: '/offers-promotions/'
         // },
+    ]
+
+    aboutUsSubLinks = [
+        {
+            image: 'assets/images/tv.png',
+            text: 'Overview',
+            url: '/about-hisense/overview'
+        },
+        {
+            image: 'assets/images/tv.png',
+            text: 'Values',
+            url: '/about-hisense/values'
+        },
+        {
+            image: 'assets/images/tv.png',
+            text: 'CSR',
+            url: '/about-hisense/csr'
+        },
+        {
+            image: 'assets/images/tv.png',
+            text: 'Technology',
+            url: '/about-hisense/technology'
+        }
     ]
 
     aboutSubLinks = [
@@ -119,6 +143,7 @@ export class HeaderComponent implements OnInit {
                 obj.subDropdownToggle = false;
             }
             this.newsSubDropdownToggle = false;
+            this.aboutUsSubDropdownToggle = false;
         });
     }
 

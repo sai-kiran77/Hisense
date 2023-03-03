@@ -34,6 +34,9 @@ export class CategoryComponent implements OnInit, OnDestroy {
 
   isSmartTvPage = false;
 
+  isRefrigiratorPage = false;
+  isACPage = false;
+
   ngOnInit(): void {
     // does not render when there is a update in params
     // const category = this.route.snapshot.paramMap.get('category');
@@ -44,6 +47,22 @@ export class CategoryComponent implements OnInit, OnDestroy {
       this.isSmartTvPage = routeParams.category == 'smart-tv-platform';
       this.state.mobileNavToggle.next(false);
       this.show404 = false;
+      if(
+        routeParams.category == 'multi-door-refrigerators' ||
+        routeParams.category == 'side-by-side-refrigerators' ||
+        routeParams.category == 'single-door-refrigerator' ||
+        routeParams.category == 'mini-refrigerators'
+      ){
+        this.isRefrigiratorPage = true;
+      }
+
+      if(
+        routeParams.category == 'IntelliPRO-Series' ||
+        routeParams.category == 'Cooling-Expert-Series' ||
+        routeParams.category == 'convertible-health-series'
+      ){
+        this.isACPage = true;
+      }
       this.loadMetaData(routeParams['category']);
     });
 

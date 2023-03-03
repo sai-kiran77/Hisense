@@ -37,7 +37,7 @@ export class ContestTermsAndConditionsComponent implements OnInit {
   getSlides() {
     this.api.getPageSlides({ pageUrl: '/terms-and-conditions' }).subscribe({
       next: (res: any) => {
-        // console.log(res);
+        // console.log(res)
         this.metaData = res.data.terms_and_conditions;
         this.currentTab = this.metaData[0].tab_name;
       },

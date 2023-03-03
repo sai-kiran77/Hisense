@@ -1,0 +1,75 @@
+.color-black{
+    *{
+        color: black;
+    }
+}
+
+.bg-holder{
+    margin-bottom: 32px
+}
+
+.about-csr h4 {
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.about-csr #two-box h4 {
+    font-weight: 700;
+}
+
+#two-box .two-box-info h4 {
+    margin-bottom: 10px;
+}
+
+.about-csr p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.btn_more.hisenseMedium{
+    color: black !important;
+    border-color: black !important;
+}
+
+.about-csr h5 {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.two-box-info h3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.about-csr h3>span {
+    color: #0CE2DC;
+}
+
+.text-video-box .text-box-with-image+.two-box-info {
+    max-width: 50%;
+    padding: 0 15px;
+}
+
+.about-csr h5 {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.about-csr h3 {
+    font-size: 40px;
+    line-height: 1.3;
+}
+
+.two-box-info h3 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.text-video-box{
+    .two-box-info.absolute-c-c.trackin{
+        transform: translate(-50%,-100%) !important;
+    }
+}

@@ -1,0 +1,44 @@
+.about-technology h3 span {
+    color: #0CE2DC;
+    background: #35c3dd;
+    background: linear-gradient(90deg, #35c3dd 0%, #766acb 40%, #d128e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-technology .innovation-group {
+    background: #000000;
+    padding: 50px 0;
+    color: white;
+}
+
+.about-technology .text-box:nth-child(2n) h3 span {
+    color: #3FE0BF;
+    background: #3fe0bf;
+    background: linear-gradient(90deg, #3fe0bf 0%, #93cc6b 40%, #e4bb34 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-technology .overlay-top-banner-bottom {
+    position: absolute;
+    bottom: -1px;
+    width: 100%;
+    height: 125px;
+    z-index: 99 !important;
+    background: #000;
+    background: linear-gradient(0deg, #000 0%, rgba(0,0,0,0) 100%);
+}
+
+.about-technology .innovation-group .overlay-top-banner-bottom {
+    height: 100%;
+}
+
+.about-technology .innovation-group .innovation-text-box {
+    padding-bottom: 120px;
+    position: relative;
+    z-index: 99;
+    max-width: 905px;
+    margin: 0 auto;
+    margin-top: -125px;
+}

@@ -6,16 +6,10 @@
 //     align-items: center;
 // }
 
-footer ::ng-deep a.icon-region,
-.sitemap-container a.icon-region {
-    display: inline-block;
-    font-size: 15px;
-    color: #1d1d1f;
-    background: url(https://global.hisense.com/.resources/webresources/images/common/icon-worldwide-green.svg) no-repeat 0 5px;
-    background-size: 20px auto;
-    padding: 3px 0 0 30px;
-    font-weight: 500;
+.header-margin{
+    margin-top: 80px;
 }
+
 
 footer ::ng-deep a.icon-region:hover,
 .sitemap-container a.icon-region:hover {

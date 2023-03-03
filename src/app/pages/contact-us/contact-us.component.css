@@ -4185,6 +4185,7 @@ th {
 @media screen and (max-width:1024px) {
     .flex-wrapper .top__container{
         grid-template-columns: 1fr;
+        overflow-x: auto;
     }
 
     .d-sm-none {
@@ -4382,6 +4383,9 @@ h3 {
     .product__input__container .form__group {
         width: 80%;
     }
+    .contact__us__container{
+        width: 95%;
+    }
 }
 
 .two-col-md{
@@ -4389,15 +4393,19 @@ h3 {
     grid-template-columns: 1fr 1fr;
 }
 
-@media screen and (max-width: 768px) {
-    .two-col-md{
-        grid-template-columns: 1fr;
-    }
-}
-
 .align-start{
     width: 50% !important;
     margin: 0 !important;
     justify-self: flex-start;
     align-self: flex-start;
+}
+
+@media screen and (max-width: 768px) {
+    .two-col-md{
+        grid-template-columns: 1fr;
+    }
+
+    .align-start{
+        width: 100% !important;
+    }
 }

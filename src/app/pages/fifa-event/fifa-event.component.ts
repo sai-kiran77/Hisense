@@ -27,7 +27,6 @@ export class FifaEventComponent implements OnInit {
   tabs = ['Spot Hisense', "Spin the wheel"];
   currentTab = "Spot Hisense";
 
-
   slides = [
     {
       mobile_image_full_url: `${environment.baseApiUrl}/media/pages/campaigns/perfect-match-2022/slides/slide-1-mobile.webp`,

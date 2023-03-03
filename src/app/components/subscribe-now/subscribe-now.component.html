@@ -4,14 +4,24 @@
         method="post" id="mc-embedded-homepage-subscribe-form" name="mc-embedded-homepage-subscribe-form" -->
         <form>
             <h3>Stay up to date with</h3>
-            <img class="logo lazy" src="https://global.hisense.com/dam/jcr:ea5650d6-6e08-465c-b904-5c20c22792d5/hisense-logo-white.svg"
+            <img class="logo lazy" src="assets/hisense-white.png"
                 alt="Hisense">
             <div class="input-container">
-                <input placeholder="Your email address" type="email" value="" name="EMAIL" required="">
-                <input class="btn-subscribe" type="submit" value="Subscribe Now">
+                <input placeholder="Your email address" type="email" value="" name="EMAIL" required="" [(ngModel)]="email">
+                <button class="btn-subscribe cursor-pointer" (click)="subscribeNow()">Subscribe Now</button>
             </div>
             <p class="form-message success hidden">Thank you for subscribing!</p>
             <p class="form-message error hidden">There was an error..</p>
         </form>
+    </div>
+</div>
+
+<div class="modal" (click)="subscribedSuccessModal = false" [ngClass]="{'show-modal': subscribedSuccessModal}">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-container">
+            <img src="assets/images/success.png" alt="" width="100" height="100">
+            <div>Subscription Succesful!</div>
+        </div>
+        <button (click)="subscribedSuccessModal = false" class="js-close">Dismiss</button>
     </div>
 </div>

@@ -1,0 +1,21 @@
+a.btn-more{
+    color: white !important;
+}
+
+h2.sub-title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #1D1D1F;
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+}
+
+@media screen and (min-width: 1023px){
+    h2.sub-title {
+        font-size: calc(32px + 20 * ((100vw - 1023px) / 417));
+    }
+}
+
+h2.sub-title strong {
+    color: #00B3AC;
+}

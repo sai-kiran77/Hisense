@@ -47,7 +47,7 @@
         <li class="row" [ngClass]="{'show':row3}" style="max-height: 58px;">
           <a class="accordion-toggle" (click)="row3 = !row3"></a>
           <dl>
-            <dt><a target="">STAY CONNECTED WITH Hisense</a></dt>
+            <dt><a target="">{{'STAY CONNECTED WITH Hisense' | titlecase}}</a></dt>
             <div style="display: flex;gap: 12px;padding: 0 15px 10px;">
               <dt><a style="min-height: auto;" class="social-btn fb" href="https://www.facebook.com/HisenseIndiaOfficial/" target="_blank"
                   rel="noopener">Facebook</a></dt>
@@ -55,6 +55,10 @@
                   rel="noopener">Twitter</a></dt>
               <dt><a style="min-height: auto;" class="social-btn youtube" href="https://www.youtube.com/channel/UCuq2S-nKt0dL84SjoT-35YA"
                   target="_blank" rel="noopener">Youtube</a></dt>
+              <dt><a style="min-height: auto;" class="social-btn ig"
+                  target="_blank" rel="noopener">Instagram</a></dt>
+              <dt><a style="min-height: auto;" class="social-btn linkedin"
+                  target="_blank" rel="noopener">Linkedin</a></dt>
             </div>
           </dl>
         </li>

@@ -76,6 +76,10 @@ export class ApiService {
     return this.http.post(this.baseURL + endpoint, body);
   }
 
+  subscribeUs(body: any, endpoint: string = '/subscribe') {
+    return this.http.post(this.baseURL + endpoint, body);
+  }
+
   // ?username=email1_4788
   getHints(params: any, endpoint: string = '/delightful-india/hints') {
     return this.http.get(this.baseURL + endpoint, {

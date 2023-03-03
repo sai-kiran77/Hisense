@@ -19,26 +19,34 @@
                 [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
         </div>
     </div>
+    <!-- <div class="col1 tabs">
+        <div class="list-group" id="themeslist">
+            <a class="list-group-item list-group-item-action" *ngFor="let tab of yearRecordsTabs"
+                [ngClass]="{'active': tab  == currentSelectedYearTab}" (click)="changeYearTab(tab)">{{tab }}</a>
+        </div>
+    </div> -->
 </div>
 
 <div class="container" #container>
-    <div class="row" style="display: flex;" *ngFor="let data of metaData?.data;let i = index">
-        <div style="flex: 0 0 75%;">
-            <!-- <h3 class="title italics">{{data.title}}</h3> -->
-            <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
-            <p *ngIf="data?.vendor">({{data?.vendor}})</p>
-            <p>{{data?.description}}</p>
-            <a [href]="data?.external_url" class=" btn btn-default read-more-btn" target="_blank">Read More</a>
+    <ng-container *ngIf="metaData?.length">
+        <div class="row" style="display: flex;" *ngFor="let data of metaData;let i = index">
+            <div style="flex: 0 0 75%;">
+                <!-- <h3 class="title italics">{{data.title}}</h3> -->
+                <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
+                <p *ngIf="data?.vendor">({{data?.vendor}})</p>
+                <p>{{data?.description}}</p>
+                <a [href]="data?.external_url" class="btn-hisense-v2" target="_blank">Read More</a>
+            </div>
+            <div style="flex: 0 0 25%;">
+                <img [src]="data?.image_full_url" [alt]="'press coverage ' + (i + 1)">
+            </div>
         </div>
-        <div style="flex: 0 0 25%;">
-            <img [src]="data?.image_full_url" [alt]="'press coverage ' + (i + 1)">
-        </div>
-    </div>
-    <div *ngIf="metaData?.data.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
-    <div class="pagination">
+        <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
+    </ng-container>
+    <!-- <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
         <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
             (click)="getMetaData(i+1)">{{i+1}}</a>
         <a (click)="getMetaData(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
-    </div>
+    </div> -->
 </div>
