@@ -88,14 +88,6 @@
 .slick-loading .slick-list {
     background: #fff url(/.resources/webresources/.resources/webresources/images/ajax-loader.gif) center center no-repeat;
 }
-@font-face {
-    font-family: "slick";
-    src: url(/.resources/webresources/.resources/webresources/fonts/slick.eot);
-    src: url(/.resources/webresources/.resources/webresources/fonts/slick.eot?#iefix) format("embedded-opentype"), url(/.resources/webresources/.resources/webresources/fonts/slick.woff) format("woff"),
-        url(/.resources/webresources/.resources/webresources/fonts/slick.ttf) format("truetype"), url(/.resources/webresources/.resources/webresources/images/slick.svg#slick) format("svg");
-    font-weight: normal;
-    font-style: normal;
-}
 .slick-prev,
 .slick-next {
     position: absolute;

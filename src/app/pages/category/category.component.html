@@ -77,12 +77,12 @@
         <div class="product-listing" *ngIf="!metaData?.parent_category_id">
             <div class="product-listing-inner" style="width: 96% !important;margin: auto !important;"
                 [ngClass]="{'product-listing-grid-layout':metaData?.subcategories.length > 1}">
-                <div class="product-listing-tab" style="width: auto !important;padding: 10px 8px !important;"
+                <div class="product-listing-tab" style="padding: 10px 8px !important;"
                     [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories"
                     [ngClass]="{'single__cat':metaData?.subcategories.length == 1}">
                     <a class="product-listing-img" style="display: flex;justify-content: center;
                     align-items: center; overflow: visible;"
-                    [ngStyle]="{'min-height': isACPage ? '100px' : isRefrigiratorPage ? '200px' : 'auto' }">
+                    [ngStyle]="{'min-height': isACPage ? '100px' : 'auto', 'height': isRefrigiratorPage ? '200px' : 'auto' }">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
                             style="max-height: 300px; max-width: 85% !important" [ngStyle]="{'max-width': isACPage ? '100%' : 'auto' }" [alt]="prod.name">
                         <img *ngIf="!prod?.thumb_image?.full_url" src="assets/images/prod__placeholder.png"
@@ -105,11 +105,11 @@
                 <ng-container *ngFor="let product of metaData?.category_products">
                     <ng-container *ngIf="product.product?.product_variants.length">
                         <div #currentindex data-index="0" class="product-listing-tab"
-                            style="width: auto !important;flex: 1;cursor: default;padding: 16px 8px !important;">
+                            style="cursor: default;padding: 16px 8px !important;">
                             <!-- <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span> -->
                             <a class="product-listing-img" style="display: flex;justify-content: center;
-                            align-items: flex-start; overflow: visible;cursor: default;"
-                            [ngStyle]="{'min-height': isACPage ? '100px' : isRefrigiratorPage ? '200px' : 'auto' }">
+                            align-items: center; overflow: visible;cursor: default;"
+                            [ngStyle]="{'min-height': isACPage ? '100px' : 'auto', 'height': isRefrigiratorPage ? '200px' : 'auto' }">
                                 <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     style="max-width: 85% !important"
