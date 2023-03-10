@@ -107,7 +107,7 @@ function OffersPromotionsComponent_div_9_ng_container_5_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](16, "1-year comprehensive warranty and 10-year compressor warranty is on below models for Residential use");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](17, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](18, "1-year comprehensive warranty on functional parts, Gas Charging & labour (for Repairs or replacements except plastic parts like grill, louvers. Etc, of the air conditioner for a period of 60 months from the date of purchase)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](18, "1-year comprehensive warranty on functional parts, Gas Charging & labour (for Repairs or replacements except plastic parts like grill, louvers. Etc, of the air conditioner)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "li");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](20, "This warranty is for Domestic customers only and not applicable for commercial use.");
@@ -157,7 +157,7 @@ function OffersPromotionsComponent_div_9_ng_container_6_Template(rf, ctx) { if (
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](18, "5-year comprehensive warranty and 10-year compressor warranty is on below models for Residential use");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](19, "li");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](20, "5-year comprehensive warranty on functional parts, Gas Charging & labour (for Repairs or replacements except plastic parts like grill, louvers. Etc, of the air conditioner)");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](20, "5-year comprehensive warranty on functional parts, Gas Charging & labour (for Repairs or replacements except plastic parts like grill, louvers. Etc, of the air conditioner for a period of 60 months from the date of purchase)");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](21, "li");
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](22, "This warranty is for Domestic customers only and not applicable for commercial use.");
