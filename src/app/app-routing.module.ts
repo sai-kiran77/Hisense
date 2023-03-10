@@ -37,10 +37,10 @@ const routes: Routes = [
         path: 'FIFA-2022/participate/:uuid',
         loadChildren: () => import('./pages/participate-fifa-2022/participate-fifa-2022.module').then(m => m.ParticipateFifa2022Module)
       },
-      {
-        path: 'new-launches',
-        loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
-      },
+      // {
+      //   path: 'new-launches',
+      //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
+      // },
       {
         path: 'FIFA-2022',
         loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
