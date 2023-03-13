@@ -22,13 +22,35 @@
             </div>
         </div>
 
-        <div class="banner">
+        <!-- <div class="banner">
             <div class="img" style="left: 0%;">
                 <img class="lazy desktop-only entered loaded" alt="ULED 8K TV U80G" data-ll-status="loaded"
                     src="assets/about-hisense/overview/hisense-uled-8k-tv-u80g.jpg">
 
                 <img class="lazy mobile-only" alt="ULED 8K TV U80G"
                     src="assets/about-hisense/overview/hisense-uled-8k-tv-u80g-m.jpg">
+            </div>
+        </div> -->
+
+        <div class="main-visual slider slick-initialized slick-slider slick-dotted">
+            <div class="slick-list draggable" style="overflow: visible !important;">
+                <div class="slick-track">
+                    <div class="swiper laserTvSwiper" style="overflow: visible !important;">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
+                                <a style="width: 100%;" class="slide__link" [href]="slide.click_link">
+                                    <picture>
+                                        <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
+                                        <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
+                                            class="ls-bg" [alt]="'Series slide ' + (i + 1)">
+                                    </picture>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -67,6 +89,7 @@
 
     </li>
 </ul>
+
 <!-- <ul class="series-container">
     <li class="col-full"
         style="touch-action: pan-y; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);">

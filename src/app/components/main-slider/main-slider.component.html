@@ -1,30 +1,6 @@
 <div class="main-visual slider slick-initialized slick-slider slick-dotted" style="margin-bottom: 100px; overflow: visible !important;">
     <div class="slick-list draggable" style="overflow: visible !important;">
         <div class="slick-track">
-            <!-- <swiper [slidesPerView]="1" [spaceBetween]="30" [loop]="true" [pagination]="{ clickable: true}"
-                [navigation]="true" [speed]="1000" class="mySwiper"
-                [autoplay]="{ delay: 6000, disableOnInteraction: false }">
-                <ng-container *ngFor="let slide of slides;let i = index">
-                    <ng-template swiperSlide>
-                        <div style="background-color: rgb(229, 226, 226);" class="slick-slide slick-current"
-                            data-slick-index="i" aria-hidden="false" role="tabpanel"
-                            aria-describedby="slick-slide-control00" style="width: 100%;">
-                            <div>
-                                <div class="slide-item" style="width: 100%; display: inline-block;">
-                                    <a [routerLink]="slide.click_link">
-                                        <picture>
-                                            <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url">
-                                            <img [src]="slide.mobile_image_full_url" style="width: 100%;" class="banner"
-                                                class="ls-bg">
-                                        </picture>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </ng-template>
-                </ng-container>
-            </swiper> -->
-            <!-- Swiper -->
             <div class="swiper mySwiperHome" style="overflow: visible !important;">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
