@@ -3500,17 +3500,19 @@ button.swiper-pagination-bullet {
   margin-right: auto;
 }
 .mySwiper .swiper-button-prev,
-.mySwiperHome .swiper-button-prev {
+.mySwiperHome .swiper-button-prev, .laserTvSwiper .swiper-button-prev {
   left: 20px;
 }
 .mySwiper .swiper-button-next,
-.mySwiperHome .swiper-button-next {
+.mySwiperHome .swiper-button-next, .laserTvSwiper .swiper-button-next {
   right: 20px;
 }
 .mySwiper .swiper-button-prev,
 .mySwiperHome .swiper-button-prev,
+.laserTvSwiper .swiper-button-prev,
 .mySwiper .swiper-button-next,
-.mySwiperHome .swiper-button-next {
+.mySwiperHome .swiper-button-next,
+.laserTvSwiper .swiper-button-next {
   position: absolute;
   width: 50px !important;
   height: 50px !important;
@@ -3526,10 +3528,14 @@ button.swiper-pagination-bullet {
 .mySwiper .swiper-button-prev::after, .mySwiper .swiper-button-prev::before,
 .mySwiperHome .swiper-button-prev::after,
 .mySwiperHome .swiper-button-prev::before,
+.laserTvSwiper .swiper-button-prev::after,
+.laserTvSwiper .swiper-button-prev::before,
 .mySwiper .swiper-button-next::after,
 .mySwiper .swiper-button-next::before,
 .mySwiperHome .swiper-button-next::after,
-.mySwiperHome .swiper-button-next::before {
+.mySwiperHome .swiper-button-next::before,
+.laserTvSwiper .swiper-button-next::after,
+.laserTvSwiper .swiper-button-next::before {
   font-size: 20px;
   color: #fff;
   display: flex;
@@ -3541,17 +3547,23 @@ button.swiper-pagination-bullet {
 }
 .mySwiper .swiper-button-prev:hover,
 .mySwiperHome .swiper-button-prev:hover,
+.laserTvSwiper .swiper-button-prev:hover,
 .mySwiper .swiper-button-next:hover,
-.mySwiperHome .swiper-button-next:hover {
+.mySwiperHome .swiper-button-next:hover,
+.laserTvSwiper .swiper-button-next:hover {
   transform: translateY(-50%) scale(1.1);
 }
 .mySwiper .swiper-button-prev:hover::after, .mySwiper .swiper-button-prev:hover::before,
 .mySwiperHome .swiper-button-prev:hover::after,
 .mySwiperHome .swiper-button-prev:hover::before,
+.laserTvSwiper .swiper-button-prev:hover::after,
+.laserTvSwiper .swiper-button-prev:hover::before,
 .mySwiper .swiper-button-next:hover::after,
 .mySwiper .swiper-button-next:hover::before,
 .mySwiperHome .swiper-button-next:hover::after,
-.mySwiperHome .swiper-button-next:hover::before {
+.mySwiperHome .swiper-button-next:hover::before,
+.laserTvSwiper .swiper-button-next:hover::after,
+.laserTvSwiper .swiper-button-next:hover::before {
   opacity: 1;
 }
 .mySwiper .swiper-pagination-bullet,
@@ -3955,7 +3967,6 @@ option {
 .tabs__container .tabs {
   border-radius: 50px;
   padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .tabs__container .list-group {
   display: flex;
