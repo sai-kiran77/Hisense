@@ -38,7 +38,7 @@
 
 header {
   width: 100%;
-  position: fixed;
+  position: sticky;
   top: 0 !important;
   left: 0;
   z-index: 100;
@@ -62,7 +62,7 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
+      // position: fixed;
 
       a {
         &.logo {
