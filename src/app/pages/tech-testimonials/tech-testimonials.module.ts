@@ -11,7 +11,7 @@ const routes: Routes = [
 
 @NgModule({
   declarations: [
-    TechTestimonialsComponent
+    // TechTestimonialsComponent
   ],
   imports: [
     CommonModule,
