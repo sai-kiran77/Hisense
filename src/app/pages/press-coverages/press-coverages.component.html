@@ -8,30 +8,106 @@
     </div>
 </div> -->
 
-<div class="breadcrumb__yellow__banner">
-    <h1>Press Coverages</h1>
-</div>
-
-<div class="press__tabs__container">
-    <div class="col1 tabs">
-        <div class="list-group" id="themeslist">
-            <a class="list-group-item list-group-item-action" *ngFor="let tab of metaDataTabs"
-                [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
+<div class="press_coverages__container">
+    <div class="breadcrumb__yellow__banner">
+        <h1>Press Coverages</h1>
+    </div>
+    
+    <div class="press__tabs__container">
+        <div class="col1 tabs">
+            <div class="list-group" id="themeslist">
+                <a class="list-group-item list-group-item-action" *ngFor="let tab of metaDataTabs"
+                    [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
+            </div>
+        </div>
+        <!-- <div class="col1 tabs">
+            <div class="list-group" id="themeslist">
+                <a class="list-group-item list-group-item-action" *ngFor="let tab of yearRecordsTabs"
+                    [ngClass]="{'active': tab  == currentSelectedYearTab}" (click)="changeYearTab(tab)">{{tab }}</a>
+            </div>
+        </div> -->
+    </div>
+    
+    <div class="container">
+        <div class="mySwiperPress" style="overflow: visible !important;">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let slide of slides;let i = index">
+                    <a style="width: 100%;position: relative;" class="slide__link">
+                        <!-- <picture> -->
+                            <!-- <source media="(min-width:768px)" [srcset]="slide.desktop_image_full_url"> -->
+                            <!-- <img [src]="slide.image_full_url" style="width: 100%;" class="banner" class="ls-bg"
+                                [alt]="'press coverage slide ' + (i + 1)">
+                            <div></div> -->
+                            <div class="ls-bg" style="background-position: center;background-size: cover;background-size: cover;width: 100%;"
+                                [style.background]="'url(' + slide.image_full_url + ') no-repeat'">
+    
+                            </div>
+                        <!-- </picture> -->
+                    </a>
+                    <div class="two-box-info-silders trackin">
+                        <div class="hisenseMedium">Featured </div>
+                        <h4 class="hisenseBold ellipse">{{slide?.title || slide?.vendor}}</h4>
+                        <div class="hisenseMedium date">{{slide.published_at | date:'mediumDate'}}</div>
+                        <a class="hisenseMedium overlay-gray" [href]="slide?.external_url" target="_blank" tabindex="0">See
+                            More</a>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="swiper-button-next"></div> -->
+            <!-- <div class="swiper-button-prev"></div> -->
+            <div class="swiper-pagination"></div>
         </div>
     </div>
-    <!-- <div class="col1 tabs">
-        <div class="list-group" id="themeslist">
-            <a class="list-group-item list-group-item-action" *ngFor="let tab of yearRecordsTabs"
-                [ngClass]="{'active': tab  == currentSelectedYearTab}" (click)="changeYearTab(tab)">{{tab }}</a>
+    
+    <div>
+        <div class="container contaciner-v2" #container>
+            <ng-container *ngIf="metaData?.length && paginationPageCountinFive">
+                <div class="row" style="display: flex;" *ngFor="let data of metaData;let i = index">
+                    <div class="slide-item">
+                        <div class="content">
+                            <div class="bg-overflow-h">
+                                <div class="text-box-with-image bg-holder"
+                                    style="background-position: center;background-size: cover;background-size: cover;"
+                                    [style.background]="'url(' + data.image_full_url + ') no-repeat'">
+                                    <div class="img-overlay"></div>
+                                </div>
+                                <!-- <div class="text-box-with-image bg-holder mobile-only" style="background:url(/dam/jcr:6f639058-4c1f-4782-a86f-9068959a8ec0/20230228-image.jpg) no-repeat;background-position: center;background-size: cover;">
+                                    <div class="img-overlay"></div>
+                                </div> -->
+    
+                            </div>
+                            <div class="text-box trackin">
+                                <div class="news-topics">Press Release</div>
+                                <h4 class="ellipse ellipse-4">{{data?.title || data?.vendor}}</h4>
+                                <div class="news-date">{{data.published_at | date:'mediumDate'}}</div>
+                            </div>
+                            <a class="hisenseMedium nostyle"
+                                href="/about-hisense/newsroom/hisense-s-smart-refrigerators-and-washing-machines-receive-etsi-en-303-645-certification-by-tuv-rheinland"></a>
+                        </div>
+                    </div>
+    
+                </div>
+                <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
+            </ng-container>
         </div>
-    </div> -->
+        <ul class="pagination-sm pagination-v2" id="pagination">
+            <li class="page-item prev disabled" *ngIf="1 != currentPage"><a class="page-link"
+                    (click)="prevPage()">Previous</a></li>
+            <li class="page-item" *ngFor="let index of [].constructor(paginationPageCountinFive); let i = index"
+                [ngClass]="{'d-none': i+1 >= currentPage + 5 || i+1 < currentPage, 'active': currentPage == i + 1}"
+                (click)="jumpToPage(i + 1)">
+                <a class="page-link">{{i + 1}}</a>
+            </li>
+            <li class="page-item next"><a class="page-link" *ngIf="paginationPageCountinFive != currentPage"
+                    (click)="nextPage()">Next</a></li>
+        </ul>
+    </div>
 </div>
 
-<div class="container" #container>
-    <ng-container *ngIf="metaData?.length">
+<!-- <div class="container" #container> -->
+<!-- <ng-container *ngIf="metaData?.length">
         <div class="row" style="display: flex;" *ngFor="let data of metaData;let i = index">
             <div style="flex: 0 0 75%;">
-                <!-- <h3 class="title italics">{{data.title}}</h3> -->
                 <p class="f-24" style="word-break: break-all;"> {{data.title}} </p>
                 <p *ngIf="data?.vendor">({{data?.vendor}})</p>
                 <p>{{data?.description}}</p>
@@ -42,11 +118,11 @@
             </div>
         </div>
         <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
-    </ng-container>
-    <!-- <div class="pagination">
+    </ng-container> -->
+<!-- <div class="pagination">
         <a (click)="getMetaData(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
         <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
             (click)="getMetaData(i+1)">{{i+1}}</a>
         <a (click)="getMetaData(params.page + 1)" *ngIf="params.page < totalPagesinTen.length">&raquo;</a>
     </div> -->
-</div>
+<!-- </div> -->
