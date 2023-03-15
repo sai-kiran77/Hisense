@@ -6,6 +6,8 @@ import { OverviewComponent } from './overview/overview.component';
 import { ValuesComponent } from './values/values.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { CsrComponent } from './csr/csr.component';
+import { PressCoveragesComponent } from '../press-coverages/press-coverages.component';
+import { TechTestimonialsComponent } from '../tech-testimonials/tech-testimonials.component';
 
 const routes: Routes = [
   {
@@ -21,6 +23,12 @@ const routes: Routes = [
     path: 'technology', component: TechnologyComponent
   },
   {
+    path: 'tech-testimonials', component: TechTestimonialsComponent
+  },
+  {
+    path: 'newsroom', component: PressCoveragesComponent
+  },
+  {
     path: '', component: AboutHisenseComponent, redirectTo: 'overview'
   }
 ]
@@ -31,7 +39,9 @@ const routes: Routes = [
     OverviewComponent,
     ValuesComponent,
     TechnologyComponent,
-    CsrComponent
+    CsrComponent,
+    PressCoveragesComponent,
+    TechTestimonialsComponent
   ],
   imports: [
     CommonModule,
