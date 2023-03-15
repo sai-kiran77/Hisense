@@ -38,14 +38,14 @@
                             <!-- <img [src]="slide.image_full_url" style="width: 100%;" class="banner" class="ls-bg"
                                 [alt]="'press coverage slide ' + (i + 1)">
                             <div></div> -->
-                            <div class="ls-bg" style="background-position: center;background-size: cover;background-size: cover;width: 100%;"
+                            <div class="ls-bg"
                                 [style.background]="'url(' + slide.image_full_url + ') no-repeat'">
     
                             </div>
                         <!-- </picture> -->
                     </a>
                     <div class="two-box-info-silders trackin">
-                        <div class="hisenseMedium">Featured </div>
+                        <!-- <div class="hisenseMedium">Featured </div> -->
                         <h4 class="hisenseBold ellipse">{{slide?.title || slide?.vendor}}</h4>
                         <div class="hisenseMedium date">{{slide.published_at | date:'mediumDate'}}</div>
                         <a class="hisenseMedium overlay-gray" [href]="slide?.external_url" target="_blank" tabindex="0">See
@@ -62,12 +62,11 @@
     <div>
         <div class="container contaciner-v2" #container>
             <ng-container *ngIf="metaData?.length && paginationPageCountinFive">
-                <div class="row" style="display: flex;" *ngFor="let data of metaData;let i = index">
+                <a class="row" style="display: flex;" *ngFor="let data of metaData;let i = index" [href]="data?.external_url" target="_blank">
                     <div class="slide-item">
                         <div class="content">
                             <div class="bg-overflow-h">
                                 <div class="text-box-with-image bg-holder"
-                                    style="background-position: center;background-size: cover;background-size: cover;"
                                     [style.background]="'url(' + data.image_full_url + ') no-repeat'">
                                     <div class="img-overlay"></div>
                                 </div>
@@ -77,16 +76,14 @@
     
                             </div>
                             <div class="text-box trackin">
-                                <div class="news-topics">Press Release</div>
+                                <!-- <div class="news-topics">Press Release</div> -->
                                 <h4 class="ellipse ellipse-4">{{data?.title || data?.vendor}}</h4>
                                 <div class="news-date">{{data.published_at | date:'mediumDate'}}</div>
                             </div>
-                            <a class="hisenseMedium nostyle"
-                                href="/about-hisense/newsroom/hisense-s-smart-refrigerators-and-washing-machines-receive-etsi-en-303-645-certification-by-tuv-rheinland"></a>
                         </div>
                     </div>
     
-                </div>
+                </a>
                 <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
             </ng-container>
         </div>
