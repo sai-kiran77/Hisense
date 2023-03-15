@@ -3599,6 +3599,39 @@ button.swiper-pagination-bullet {
 .mySwiperHome .swiper-pagination-bullet:hover::before {
   transform: translate(-50%, -50%) scale(1.25);
 }
+.mySwiper .swiper-pagination-bullet,
+.mySwiperPress .swiper-pagination-bullet {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background: transparent;
+  padding: 5px;
+  border-radius: 50%;
+  border: none;
+  opacity: 1;
+}
+.mySwiper .swiper-pagination-bullet.swiper-pagination-bullet-active,
+.mySwiperPress .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border: solid 3px #E6E6E6;
+}
+.mySwiper .swiper-pagination-bullet::before,
+.mySwiperPress .swiper-pagination-bullet::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  transition: all 0.3s ease-out;
+}
+.mySwiper .swiper-pagination-bullet:hover::before,
+.mySwiperPress .swiper-pagination-bullet:hover::before {
+  transform: translate(-50%, -50%) scale(1.25);
+}
 .main-visual {
   width: 100%;
   overflow: hidden;
