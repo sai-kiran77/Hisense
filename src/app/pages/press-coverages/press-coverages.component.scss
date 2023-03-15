@@ -49,7 +49,7 @@
     flex-direction: column;
     gap: 5rem;
     margin-top: 1.5rem;
-    padding-top: 100px;
+    // padding-top: 100px;
     padding-bottom: 80px;
     overflow: hidden;
 }
@@ -66,6 +66,7 @@
 .row {
     display: flex;
     gap: 2.5rem;
+    cursor: pointer;
 }
 
 .f-24 {
@@ -250,10 +251,28 @@ p {
 
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 36px !important;
+        bottom: 100px !important;
         left: 53%;
         width: 36%;
     }
+}
+
+.slide__link {
+    height: 540px !important;
+    max-height: 540px !important;
+
+    .ls-bg {
+        height: 100%;
+        width: 100%;
+        background-position: center top !important;
+        background-size: cover !important;
+        width: 100% !important;
+    }
+}
+
+ul#pagination li {
+    display: inline-block;
+    margin: 0 37px;
 }
 
 @media screen and (max-width: 768px) {
@@ -265,7 +284,12 @@ p {
         }
     }
 
-    .swiper-slide{
+    .slide__link {
+        height: 320px !important;
+        max-height: 320px !important;
+    }
+
+    .swiper-slide {
         display: flex !important;
         flex-direction: column !important;
         // position: static !important;
@@ -274,14 +298,30 @@ p {
     .two-box-info-silders {
         width: 100% !important;
         position: static !important;
-        height: 480px !important;
-        .overlay-gray{
-            margin-bottom: 50px !important;
-            padding: 12px 24px !important;
+        height: 340px !important;
+        padding-top: 36px !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+
+        div{
+            font-size: 14px !important;
+        }
+
+        .hisenseMedium.date{
+            margin-top: 24px;
+        }
+
+        .hisenseBold{
+            font-size: 18px !important;
+        }
+
+        .overlay-gray {
+            margin-bottom: 60px !important;
+            padding: 8px 16px !important;
         }
     }
 
-    .mySwiperPress{
+    .mySwiperPress {
         position: relative;
     }
 
@@ -295,11 +335,15 @@ p {
         }
     }
 
+    ul#pagination li {
+        margin: 0 15px;
+    }
+
 }
 
 ul#pagination {
     text-align: center;
-    padding-bottom: 10px;
+    padding-bottom: 80px;
 }
 
 ul#pagination li.prev,
@@ -336,17 +380,12 @@ ul#pagination li.next:hover {
     transform: translateX(10px);
 }
 
-ul#pagination li {
-    display: inline-block;
-    margin: 0 37px;
-}
-
 ul#pagination li.active {
     border: 1.5px solid black !important;
-    border-radius: 50%;
+    border-radius: 100%;
     background: transparent !important;
-    width: 32px !important;
-    height: 24px !important;
+    width: 25px !important;
+    height: 25px !important;
 }
 
 .d-none {
@@ -409,14 +448,9 @@ ul#pagination li.active {
     }
 }
 
-.slide__link {
-    height: 500px !important;
-    max-height: 500px !important;
-
-    .ls-bg {
-        height: 100%;
-        width: 100%;
-    }
+.bg-holder {
+    background-position: center top !important;
+    background-size: cover !important;
 }
 
 .ellipse {
