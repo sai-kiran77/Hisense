@@ -252,8 +252,9 @@ p {
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
         bottom: 100px !important;
-        left: 53%;
-        width: 36%;
+        left: 68%;
+        width: 100%;
+        display: flex;
     }
 }
 
@@ -321,16 +322,12 @@ ul#pagination li {
         }
     }
 
-    .mySwiperPress {
-        position: relative;
-    }
-
     .press_coverages__container {
 
         .swiper-horizontal>.swiper-pagination-bullets,
         .swiper-pagination-bullets.swiper-pagination-horizontal {
             bottom: 12px !important;
-            left: -18% !important;
+            left: 10px !important;
             width: 100% !important;
         }
     }
@@ -471,4 +468,8 @@ ul#pagination li.active {
 .ellipse-4 {
     -webkit-line-clamp: 4;
     -moz-box-lines: 4;
+}
+
+.mySwiperPress {
+    position: relative !important;
 }
