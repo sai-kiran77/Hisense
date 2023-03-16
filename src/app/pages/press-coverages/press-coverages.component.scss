@@ -205,7 +205,8 @@ p {
         }
 
         .text-box-with-image {
-            height: 298px;
+            height: 250px;
+            background-position: center
         }
 
         .text-box {
@@ -446,7 +447,7 @@ ul#pagination li.active {
 }
 
 .bg-holder {
-    background-position: center top !important;
+    background-position: center !important;
     background-size: cover !important;
 }
 
