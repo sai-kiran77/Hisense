@@ -262,6 +262,8 @@ p {
 .slide__link {
     height: 540px !important;
     max-height: 540px !important;
+    margin-right: auto;
+    width: 64%;
 
     .ls-bg {
         height: 100%;
@@ -289,6 +291,7 @@ ul#pagination li {
     .slide__link {
         height: 320px !important;
         max-height: 320px !important;
+        width: 100%;
     }
 
     .swiper-slide {
