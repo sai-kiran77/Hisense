@@ -2018,12 +2018,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "ShellComponent": () => (/* binding */ ShellComponent)
 /* harmony export */ });
+/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 6362);
 /* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/router */ 2816);
 /* harmony import */ var src_environments_environment__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! src/environments/environment */ 2340);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/core */ 3184);
 /* harmony import */ var _header_header_component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../header/header.component */ 3646);
-/* harmony import */ var _angular_common__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/common */ 6362);
 /* harmony import */ var _footer_v2_footer_v2_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../footer-v2/footer-v2.component */ 5285);
+
 
 
 
@@ -2033,8 +2034,9 @@ __webpack_require__.r(__webpack_exports__);
 
 const _c0 = function (a0) { return { "m-top-45": a0 }; };
 class ShellComponent {
-    constructor(router) {
+    constructor(router, document) {
         this.router = router;
+        this.document = document;
         this.environment = src_environments_environment__WEBPACK_IMPORTED_MODULE_0__.environment;
     }
     ngOnInit() {
@@ -2044,8 +2046,10 @@ class ShellComponent {
             // if (event instanceof NavigationStart) {
             //     // Show loading indicator
             // }
+            var _a, _b;
             if (event instanceof _angular_router__WEBPACK_IMPORTED_MODULE_3__.NavigationEnd) {
                 this.currentRoute = event.url;
+                (_b = (_a = this.document) === null || _a === void 0 ? void 0 : _a.querySelector('body')) === null || _b === void 0 ? void 0 : _b.scrollTo(0, 0);
                 // console.log(this.currentRoute)
             }
             // if (event instanceof NavigationError) {
@@ -2065,7 +2069,7 @@ class ShellComponent {
         console.log(this.currentRoute);
     }
 }
-ShellComponent.ɵfac = function ShellComponent_Factory(t) { return new (t || ShellComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router)); };
+ShellComponent.ɵfac = function ShellComponent_Factory(t) { return new (t || ShellComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_router__WEBPACK_IMPORTED_MODULE_3__.Router), _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdirectiveInject"](_angular_common__WEBPACK_IMPORTED_MODULE_5__.DOCUMENT)); };
 ShellComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵdefineComponent"]({ type: ShellComponent, selectors: [["app-shell"]], decls: 4, vars: 4, consts: [[3, "ngClass", "top"]], template: function ShellComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelement"](0, "app-header", 0)(1, "router-outlet");
         _angular_core__WEBPACK_IMPORTED_MODULE_4__["ɵɵelementStart"](2, "footer");
