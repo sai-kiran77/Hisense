@@ -12,22 +12,21 @@
       </ul>
   
       <ul class="col">
-        <li class="row">
+        <!-- <li class="row">
           <dl>
             <dt><a routerLink="/FIFA-2022" target="">FIFA 2022</a></dt>
           </dl>
-        </li>
+        </li> -->
         <li class="row" [ngClass]="{'show':row1}" style="max-height: 58px;">
           <a class="accordion-toggle" (click)="row1 = !row1"></a>
           <dl>
-            <dt><a target="">In The News</a></dt>
-            <dd><a routerLink="/press-coverages" target="">Press Coverages</a></dd>
-            <dd><a routerLink="/tech-testimonials" target="">Tech Testimonials</a></dd>
-          </dl>
-        </li>
-        <li class="row">
-          <dl>
             <dt><a routerLink="/about-hisense" target="">About Hisense</a></dt>
+            <dd><a routerLink="/about-hisense/overview" target="">Overview</a></dd>
+            <dd><a routerLink="/about-hisense/values" target="">Values</a></dd>
+            <dd><a routerLink="/about-hisense/csr" target="">CSR</a></dd>
+            <dd><a routerLink="/about-hisense/technology" target="">Technology</a></dd>
+            <dd><a routerLink="/about-hisense/newsroom" target="">Newsroom</a></dd>
+            <dd><a routerLink="/about-hisense/tech-testimonials" target="">Tech Testimonials</a></dd>
           </dl>
         </li>
         <li class="row" [ngClass]="{'show':row2}" style="max-height: 58px;">
