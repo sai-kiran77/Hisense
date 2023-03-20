@@ -60,32 +60,37 @@
     </div>
     
     <div>
-        <div class="container contaciner-v2" #container>
-            <ng-container *ngIf="metaData?.length && paginationPageCountinFive">
-                <a class="row" style="display: flex;" *ngFor="let data of metaData;let i = index" [href]="data?.external_url" target="_blank">
-                    <div class="slide-item">
-                        <div class="content">
-                            <div class="bg-overflow-h">
-                                <div class="text-box-with-image bg-holder"
-                                    [style.background]="'url(' + data.image_full_url + ') no-repeat'">
-                                    <div class="img-overlay"></div>
+        <div class="container" #container style="gap: 0;">
+            <div class="news-info">
+                <h4>Latest News</h4>
+            </div>
+            <div class="contaciner-v2">
+                <ng-container *ngIf="metaData?.length && paginationPageCountinFive">
+                    <a class="row" style="display: flex;" *ngFor="let data of metaData;let i = index" [href]="data?.external_url" target="_blank">
+                        <div class="slide-item">
+                            <div class="content">
+                                <div class="bg-overflow-h">
+                                    <div class="text-box-with-image bg-holder"
+                                        [style.background]="'url(' + data.image_full_url + ') no-repeat'">
+                                        <div class="img-overlay"></div>
+                                    </div>
+                                    <!-- <div class="text-box-with-image bg-holder mobile-only" style="background:url(/dam/jcr:6f639058-4c1f-4782-a86f-9068959a8ec0/20230228-image.jpg) no-repeat;background-position: center;background-size: cover;">
+                                        <div class="img-overlay"></div>
+                                    </div> -->
+        
                                 </div>
-                                <!-- <div class="text-box-with-image bg-holder mobile-only" style="background:url(/dam/jcr:6f639058-4c1f-4782-a86f-9068959a8ec0/20230228-image.jpg) no-repeat;background-position: center;background-size: cover;">
-                                    <div class="img-overlay"></div>
-                                </div> -->
-    
-                            </div>
-                            <div class="text-box trackin">
-                                <!-- <div class="news-topics">Press Release</div> -->
-                                <h4 class="ellipse ellipse-4">{{data?.title || data?.vendor}}</h4>
-                                <div class="news-date">{{data.published_at | date:'mediumDate'}}</div>
+                                <div class="text-box trackin">
+                                    <!-- <div class="news-topics">Press Release</div> -->
+                                    <h4 class="ellipse ellipse-4">{{data?.title || data?.vendor}}</h4>
+                                    <div class="news-date">{{data.published_at | date:'mediumDate'}}</div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-    
-                </a>
-                <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
-            </ng-container>
+        
+                    </a>
+                    <div *ngIf="metaData?.length == 0" class="text-center" style="text-align: center;">No Records Found!</div>
+                </ng-container>
+            </div>
         </div>
         <ul class="pagination-sm pagination-v2" id="pagination">
             <li class="page-item prev disabled" *ngIf="1 != currentPage"><a class="page-link"

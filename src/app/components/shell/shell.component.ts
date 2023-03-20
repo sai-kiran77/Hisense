@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
@@ -12,7 +13,8 @@ export class ShellComponent implements OnInit {
   currentRoute: any;
   environment = environment;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    @Inject(DOCUMENT) private document: Document) { }
 
   ngOnInit(): void {
     this.currentRoute = this.router.url.split('?')[0];
@@ -22,9 +24,10 @@ export class ShellComponent implements OnInit {
       // if (event instanceof NavigationStart) {
       //     // Show loading indicator
       // }
-
+      
       if (event instanceof NavigationEnd) {
         this.currentRoute = event.url;
+        this.document?.querySelector('body')?.scrollTo(0,0)
         // console.log(this.currentRoute)
       }
 

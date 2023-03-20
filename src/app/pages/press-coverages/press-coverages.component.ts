@@ -16,8 +16,8 @@ export class PressCoveragesComponent implements OnInit {
 
   totalPagesinTen: any = [];
 
-  yearRecordsMap: any = {};
-  yearRecordsTabs: any = [];
+  // yearRecordsMap: any = {};
+  // yearRecordsTabs: any = [];
 
   params = {
     per_page: 100000,
@@ -27,7 +27,7 @@ export class PressCoveragesComponent implements OnInit {
   metaData: any;
   metaDataTabs = ['National', 'Global'];
   currentTab = 'National';
-  currentSelectedYearTab = 0;
+  // currentSelectedYearTab = 0;
 
   changeTab(tab: any) {
     this.currentTab = tab;
@@ -45,10 +45,9 @@ export class PressCoveragesComponent implements OnInit {
     }
   }
 
-  changeYearTab(tab: any) {
-    this.currentSelectedYearTab = tab;
-
-  }
+  // changeYearTab(tab: any) {
+  //   this.currentSelectedYearTab = tab;
+  // }
 
   constructor(private api: ApiService,
     private state: GlobalStateService,
@@ -95,33 +94,34 @@ export class PressCoveragesComponent implements OnInit {
       this.params.page = page;
     }
 
-    this.yearRecordsMap = {};
-    this.yearRecordsTabs = [];
-    this.currentSelectedYearTab = 0;
+    // this.yearRecordsMap = {};
+    // this.yearRecordsTabs = [];
+    // this.currentSelectedYearTab = 0;
     this.api.getPressCoverages(this.params).subscribe((res: any) => {
-      res?.data?.data.forEach((obj: any) => {
-        if (this.yearRecordsMap[obj.published_year]) {
-          this.yearRecordsMap[obj.published_year].push(obj);
-        } else {
-          this.yearRecordsTabs.push(obj.published_year);
-          this.yearRecordsMap[obj.published_year] = [obj];
-        }
-      })
+      // res?.data?.data.forEach((obj: any) => {
+      //   if (this.yearRecordsMap[obj.published_year]) {
+      //     this.yearRecordsMap[obj.published_year].push(obj);
+      //   } else {
+      //     this.yearRecordsTabs.push(obj.published_year);
+      //     this.yearRecordsMap[obj.published_year] = [obj];
+      //   }
+      // })
       // this.totalPagesinTen = new Array(res.data.last_page);
       // if (this.container) {
       //   this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
       // } 
-      if (this.yearRecordsTabs.length) {
-        this.currentSelectedYearTab = this.yearRecordsTabs[0];
-      }
-      this.metaData = res.data.data.sort((a: any, b: any) => {
-        const dateA: any = new Date(a.published_at);
-        const dateB: any = new Date(b.published_at);
-        return dateB - dateA;
-      });
+      // if (this.yearRecordsTabs.length) {
+      //   this.currentSelectedYearTab = this.yearRecordsTabs[0];
+      // }
+      this.metaData = res.data.data
+      // .sort((a: any, b: any) => {
+      //   const dateA: any = new Date(a.published_at);
+      //   const dateB: any = new Date(b.published_at);
+      //   return dateB - dateA;
+      // });
       this.slides = this.metaData.slice(0, 4);
       this.swiperr.slideTo(0);
-      this.metaDataCopyv = this.metaData.slice(4);
+      this.metaDataCopyv = this.metaData;
       const decimal = this.metaDataCopyv.length / 6;
       this.paginationPageCountinFive = Math.ceil(decimal);
       this.lastPage = this.paginationPageCountinFive;

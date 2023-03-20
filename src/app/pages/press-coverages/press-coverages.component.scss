@@ -50,7 +50,7 @@
     gap: 5rem;
     margin-top: 1.5rem;
     // padding-top: 100px;
-    padding-bottom: 80px;
+    // padding-bottom: 80px;
     overflow: hidden;
 }
 
@@ -167,6 +167,16 @@ p {
     }
 }
 
+.news-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+    h4{
+        font-size: 32px;
+    }
+}
+
 
 @media screen and (max-width: 768px) {
     .press__tabs__container {
@@ -184,6 +194,12 @@ p {
             }
         }
     }
+    .news-info {
+        margin: 25px 0;
+        h4{
+            font-size: 24px;
+        }
+    }   
 }
 
 .contaciner-v2 {
@@ -308,15 +324,15 @@ ul#pagination li {
         padding-left: 20px !important;
         padding-right: 20px !important;
 
-        div{
+        div {
             font-size: 14px !important;
         }
 
-        .hisenseMedium.date{
+        .hisenseMedium.date {
             margin-top: 24px;
         }
 
-        .hisenseBold{
+        .hisenseBold {
             font-size: 18px !important;
         }
 
