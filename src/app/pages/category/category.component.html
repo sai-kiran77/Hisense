@@ -109,7 +109,7 @@
                             <!-- <span style="font-size: 30px;font-weight: bold;">{{product?.product?.name}}</span> -->
                             <a class="product-listing-img" style="display: flex;justify-content: center;
                             align-items: center; overflow: visible;cursor: default;"
-                            [ngStyle]="{'min-height': isACPage ? '100px' : 'auto', 'height': isRefrigiratorPage ? '200px' : 'auto' }">
+                            [ngStyle]="{'min-height': isACPage ? '100px' : '180px', 'height': isRefrigiratorPage ? '200px' : '180px' }">
                                 <img *ngIf="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     [src]="product?.product?.product_variants[product.currentIndex]?.thumb_image_medium?.full_url"
                                     style="max-width: 85% !important"

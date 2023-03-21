@@ -73,3 +73,16 @@
         transform: translate(-50%,-100%) !important;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .text-video-box .text-box-with-image+.two-box-info {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .about-overview{
+        h3{
+            font-size: 24px !important;
+        }
+    }
+}

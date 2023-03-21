@@ -49,6 +49,21 @@
     }
 }
 
+@media (max-width: 768px){
+    .about-values{
+        #our-core-value{
+            .card__container{
+                flex-direction: column !important;
+                flex-wrap: nowrap;
+                .text-box {
+                    flex: 100%;
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+}
+
 .about-values #our-core-value .text-box-with-image {
     height: 350px;
 }
