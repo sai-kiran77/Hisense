@@ -42,10 +42,18 @@
         font-size: 62px;
     }
 }
+
+.hisense__intro__video{
+    height: 700px;
+}
+
 @media (max-width: 767px) {
     .video-container .content h3 {
         font-size: 32px;
         margin-bottom: 50px;
+    }
+    .hisense__intro__video{
+        height: 250px;
     }
 }
 .video-container .content h3 strong {
