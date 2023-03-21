@@ -332,7 +332,7 @@ function CategoryComponent_ng_container_0_ng_container_5_div_2_ng_container_2_ng
     const product_r31 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"]().$implicit;
     const ctx_r32 = _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵnextContext"](4);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](3);
-    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](8, _c5, ctx_r32.isACPage ? "100px" : "auto", ctx_r32.isRefrigiratorPage ? "200px" : "auto"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngStyle", _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵpureFunction2"](8, _c5, ctx_r32.isACPage ? "100px" : "180px", ctx_r32.isRefrigiratorPage ? "200px" : "180px"));
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵproperty"]("ngIf", product_r31 == null ? null : product_r31.product == null ? null : product_r31.product.product_variants[product_r31.currentIndex] == null ? null : product_r31.product.product_variants[product_r31.currentIndex].thumb_image_medium == null ? null : product_r31.product.product_variants[product_r31.currentIndex].thumb_image_medium.full_url);
     _angular_core__WEBPACK_IMPORTED_MODULE_3__["ɵɵadvance"](1);
@@ -462,7 +462,7 @@ class CategoryComponent {
                 redirectLink: '/c/google-tv'
             },
             {
-                heading: "Vidaa",
+                heading: "VidAA",
                 image: "assets/smart-tv/vidaa-tv.webp",
                 desc: "The TV that's great for entertainment.",
                 link: "fire",
