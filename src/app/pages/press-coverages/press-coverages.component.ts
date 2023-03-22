@@ -61,26 +61,6 @@ export class PressCoveragesComponent implements OnInit {
 
   ngOnInit(): void {
     this.getMetaData();
-    setTimeout(() => {
-      this.swiperr = new Swiper(".mySwiperPress", {
-        slidesPerView: 1,
-        // loop: true,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        // autoplay: {
-        //   delay: 6000,
-        // },
-        initialSlide: 0,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-      });
-      // this.swiperr.loopDestroy();
-      // this.swiperr.loopCreate();
-    })
   }
 
   paginationPageCountinFive = 0;
@@ -93,34 +73,30 @@ export class PressCoveragesComponent implements OnInit {
     if (page) {
       this.params.page = page;
     }
-
-    // this.yearRecordsMap = {};
-    // this.yearRecordsTabs = [];
-    // this.currentSelectedYearTab = 0;
     this.api.getPressCoverages(this.params).subscribe((res: any) => {
-      // res?.data?.data.forEach((obj: any) => {
-      //   if (this.yearRecordsMap[obj.published_year]) {
-      //     this.yearRecordsMap[obj.published_year].push(obj);
-      //   } else {
-      //     this.yearRecordsTabs.push(obj.published_year);
-      //     this.yearRecordsMap[obj.published_year] = [obj];
-      //   }
-      // })
-      // this.totalPagesinTen = new Array(res.data.last_page);
-      // if (this.container) {
-      //   this.container.nativeElement.scrollIntoView({ behavior: "smooth" });
-      // } 
-      // if (this.yearRecordsTabs.length) {
-      //   this.currentSelectedYearTab = this.yearRecordsTabs[0];
-      // }
       this.metaData = res.data.data
-      // .sort((a: any, b: any) => {
-      //   const dateA: any = new Date(a.published_at);
-      //   const dateB: any = new Date(b.published_at);
-      //   return dateB - dateA;
-      // });
-      this.slides = this.metaData.filter((obj: any)=>obj.is_featured);
-      this.swiperr.slideTo(0);
+      this.slides = this.metaData.filter((obj: any) => obj.is_featured).sort((a: any, b: any) => {
+        return a.is_featured - b.is_featured;
+      });
+      setTimeout(() => {
+        this.swiperr = new Swiper(".mySwiperPress", {
+          slidesPerView: 1,
+          // loop: true,
+          pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+          },
+          // autoplay: {
+          //   delay: 6000,
+          // },
+          initialSlide: 0,
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+        });
+        this.swiperr.slideTo(0);
+      })
       this.metaDataCopyv = this.metaData;
       const decimal = this.metaDataCopyv.length / 6;
       this.paginationPageCountinFive = Math.ceil(decimal);
