@@ -137,7 +137,7 @@
                                     </div>
                                 </div>
 
-                                <div class="top__specifications">
+                                <div class="top__specifications" [ngStyle]="{'min-height': isACPage ? '155px' : 'auto', 'height': isACPage ? 'auto' : '155px' }">
                                     <ng-container
                                         *ngIf="product?.product?.product_variants[product.currentIndex]?.top_specifications">
                                         <div style="font-size: 12px;color: gray;font-weight: bold;text-align: center;">

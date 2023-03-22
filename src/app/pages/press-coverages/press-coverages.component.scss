@@ -209,15 +209,17 @@ p {
     // flex-direction: row !important;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
 
     .row {
         // flex: 1 0 300px;
-        min-width: 33%;
+        // min-width: 33%;
         margin: 10px;
-        max-width: max-content;
+        width: 100%;
+        // max-width: max-content;
 
         .slide-item {
-            max-width: 100%;
+            width: 100%;
         }
 
         .text-box-with-image {

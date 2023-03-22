@@ -119,7 +119,7 @@ export class PressCoveragesComponent implements OnInit {
       //   const dateB: any = new Date(b.published_at);
       //   return dateB - dateA;
       // });
-      this.slides = this.metaData.slice(0, 4);
+      this.slides = this.metaData.filter((obj: any)=>obj.is_featured);
       this.swiperr.slideTo(0);
       this.metaDataCopyv = this.metaData;
       const decimal = this.metaDataCopyv.length / 6;
