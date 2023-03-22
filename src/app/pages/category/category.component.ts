@@ -89,7 +89,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
       redirectLink: '/c/google-tv'
     },
     {
-      heading: "VidAA",
+      heading: "VIDAA",
       image: "assets/smart-tv/vidaa-tv.webp",
       desc: "The TV that's great for entertainment.",
       link: "fire",
