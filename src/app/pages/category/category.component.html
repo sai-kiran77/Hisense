@@ -80,7 +80,7 @@
                 <div class="product-listing-tab" style="padding: 10px 8px !important;"
                     [routerLink]="prod.relative_url" *ngFor="let prod of metaData?.subcategories"
                     [ngClass]="{'single__cat':metaData?.subcategories.length == 1}">
-                    <a class="product-listing-img" style="display: flex;justify-content: center;
+                    <a class="product-listing-img category-product-listing-img" style="display: flex;justify-content: center;
                     align-items: center; overflow: visible;"
                     [ngStyle]="{'min-height': isACPage ? '100px' : 'auto', 'height': isRefrigiratorPage ? '200px' : 'auto' }">
                         <img *ngIf="prod?.thumb_image?.full_url" [src]="prod.thumb_image?.full_url"
