@@ -508,6 +508,7 @@ class CategoryComponent {
                 this.isRefrigiratorPage = true;
             }
             if (routeParams.category == 'IntelliPRO-Series' ||
+                routeParams.category == 'Intelli-PRO' ||
                 routeParams.category == 'Cooling-Expert-Series' ||
                 routeParams.category == 'convertible-health-series') {
                 this.isACPage = true;
