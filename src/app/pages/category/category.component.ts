@@ -47,6 +47,8 @@ export class CategoryComponent implements OnInit, OnDestroy {
       this.isSmartTvPage = routeParams.category == 'smart-tv-platform';
       this.state.mobileNavToggle.next(false);
       this.show404 = false;
+      this.isACPage = false;
+      this.isRefrigiratorPage = false;
       console.log(routeParams.category);
       if(
         routeParams.category == 'multi-door-refrigerators' ||
