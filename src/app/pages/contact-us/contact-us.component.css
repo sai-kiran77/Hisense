@@ -4409,23 +4409,26 @@ h3 {
         width: 100% !important;
     }
 
-    h4{
+    /* h4{
         font-size: 16px !important;
-    }
+    } */
 
     th, p{
         font-size: 12px;
     }
+    /* p{
+        font-size: 12px;
+    } */
     td{
         font-size: 11px;
     }
 
-    .label-class{
+    /* .label-class{
         font-size: 12px;
     }
     .value{
         font-size: 10px;
-    }
+    } */
 
     .row{
         display: flex;
