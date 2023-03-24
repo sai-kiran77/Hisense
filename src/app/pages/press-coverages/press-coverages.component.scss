@@ -43,7 +43,7 @@
 
 
 .container {
-    width: 90%;
+    width: 95%;
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -270,18 +270,18 @@ p {
 
     .swiper-horizontal>.swiper-pagination-bullets,
     .swiper-pagination-bullets.swiper-pagination-horizontal {
-        bottom: 100px !important;
-        left: 68%;
+        bottom: 50px !important;
+        left: 73%;
         width: 100%;
         display: flex;
     }
 }
 
 .slide__link {
-    height: 540px !important;
-    max-height: 540px !important;
+    height: 480px !important;
+    max-height: 480px !important;
     margin-right: auto;
-    width: 64%;
+    width: 70%;
 
     .ls-bg {
         height: 100%;
@@ -412,11 +412,11 @@ ul#pagination li.active {
 }
 
 .two-box-info-silders {
-    width: 36%;
+    width: 30%;
     background-color: #00aaa5;
-    padding-top: 65px;
-    padding-left: 36px;
-    padding-right: 36px;
+    padding-top: 35px;
+    padding-left: 18px;
+    padding-right: 18px;
     color: #fff;
     position: absolute;
     top: 0;
@@ -425,7 +425,7 @@ ul#pagination li.active {
     text-align: left;
 
     div {
-        font-size: 18px;
+        font-size: 16px;
     }
 
     .hisenseMedium {
@@ -446,10 +446,10 @@ ul#pagination li.active {
     .overlay-gray {
         margin: 0;
         display: inline-block;
-        font-size: 16px;
+        font-size: 14px;
         color: #FFF !important;
         position: relative;
-        padding: 18px 32px;
+        padding: 12px 32px;
         -webkit-border-radius: 30px;
         -moz-border-radius: 30px;
         -ms-border-radius: 30px;
