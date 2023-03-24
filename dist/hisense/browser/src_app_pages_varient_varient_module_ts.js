@@ -229,20 +229,6 @@ class VarientComponent {
                 this.seoTags(res.data.seo_info);
                 this.spec = this.metaData['all_specifications'];
                 console.log(this.metaData['all_specifications']);
-                // if(res.data.code == '75A6H' || res.data.code == '120L9G' || res.data.code == '65U6G' || 
-                // res.data.code == 'RQ670N4SBU' || res.data.code == 'RR94D4SSN' || res.data.code == 'AS-18TC5RAM0' 
-                // || res.data.code == 'AS-18TC4RAM1' || res.data.code == 'WFVB6010MS' || res.data.code == 'H15DSS' || 
-                // res.data.code == 'AS-22TC3RAM0' ||
-                // res.data.code == '75A6H' ||
-                // res.data.code == '55A6H' ||
-                // res.data.code == '50A6H' ||
-                // res.data.code == '43A6H' ||
-                // res.data.code == '65U6G' ||
-                // res.data.code == 'AS-12TC4RAM0' ||
-                // res.data.code == 'AS-12TC5RAM0' ||
-                // res.data.code == '55U6G' || res.data.code == 'WFVB7012MS' ){
-                //   this.showFlag = true;
-                // }
                 setTimeout(() => {
                     // let swiper = new Swiper(".mySwiper", {
                     //   slidesPerView: 1,
@@ -313,10 +299,10 @@ class VarientComponent {
             }
         });
     }
-    updateCarousel(index) {
-        this.position = `translateX(${index * -100}%)`;
-        this.currentIndex = index;
-    }
+    // updateCarousel(index: number) {
+    //   this.position = `translateX(${index * -100}%)`
+    //   this.currentIndex = index;
+    // }
     getVendorImage(vendor) {
         switch (vendor) {
             case "amazon":
