@@ -99,7 +99,8 @@ export class HeaderComponent implements OnInit {
                     "sub-menu": obj['sub-menu'].map((obj1: any) => {
                         return {
                             ...obj1,
-                            "image": obj1.thumb_image_small
+                            "image": obj1.thumb_image_small,
+                            isRefgrigrator: obj.text == 'Refrigerator'
                         }
                     })
                 }
