@@ -63,6 +63,7 @@ export class CategoryComponent implements OnInit, OnDestroy {
         routeParams.category == 'IntelliPRO-Series' ||
         routeParams.category == 'Intelli-PRO' ||
         routeParams.category == 'Cooling-Expert-Series' ||
+        routeParams.category == 'Cooling-Xpert' ||
         routeParams.category == 'convertible-health-series'
       ){
         this.isACPage = true;
