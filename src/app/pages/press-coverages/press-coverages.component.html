@@ -38,9 +38,11 @@
                             <!-- <img [src]="slide.image_full_url" style="width: 100%;" class="banner" class="ls-bg"
                                 [alt]="'press coverage slide ' + (i + 1)">
                             <div></div> -->
-                            <div class="ls-bg"
-                                [style.background]="'url(' + slide.image_full_url + ') no-repeat'">
-    
+                            <div class="ls-bg desktop-only"
+                                [style.background]="'url(' + slide.desktop_image_full_url + ') no-repeat'">
+                            </div>
+                            <div class="ls-bg mobile-only"
+                                [style.background]="'url(' + slide.mobile_image_full_url + ') no-repeat'">
                             </div>
                         <!-- </picture> -->
                     </a>
