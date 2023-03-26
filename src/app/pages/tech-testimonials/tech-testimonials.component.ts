@@ -52,7 +52,7 @@ export class TechTestimonialsComponent implements OnInit {
     public sanitizer: DomSanitizer,
     private api: ApiService,
     private title: Title) {
-    this.title.setTitle('Hisense India | TECH TESTIMONIALS');
+    this.title.setTitle('Hisense India | Tech Testimonials');
     this.state.mobileNavToggle.next(false);
   }
 

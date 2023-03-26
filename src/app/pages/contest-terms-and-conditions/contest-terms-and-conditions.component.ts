@@ -43,7 +43,7 @@ export class ContestTermsAndConditionsComponent implements OnInit {
   constructor(private state: GlobalStateService,
     private api: ApiService,
     private title: Title) {
-    this.title.setTitle('Hisense India | TERMS AND CONDITIONS');
+    this.title.setTitle('Hisense India | Terms And Conditions');
     this.state.mobileNavToggle.next(false);
   }
 
