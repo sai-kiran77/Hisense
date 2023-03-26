@@ -35,7 +35,7 @@ export class OffersPromotionsComponent implements OnInit {
     private api: ApiService,
     private title: Title) {
     this.state.mobileNavToggle.next(false);
-    this.title.setTitle('Hisense India | WARRANTY INFORMATION');
+    this.title.setTitle('Hisense India | Warranty Information');
   }
 
   currentImg: any;
