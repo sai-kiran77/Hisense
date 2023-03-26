@@ -286,7 +286,7 @@ class OffersPromotionsComponent {
         this.ACSectionLeftTabs = ['Inverter expert', 'Intelligent inverter', 'Intellipro and cooling xpert'];
         this.currentAcSectionTab = 'Inverter expert';
         this.state.mobileNavToggle.next(false);
-        this.title.setTitle('Hisense India | WARRANTY INFORMATION');
+        this.title.setTitle('Hisense India | Warranty Information');
     }
     changeMainTab(tab) {
         this.currentMainTab = tab;

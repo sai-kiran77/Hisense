@@ -1500,7 +1500,7 @@ class TechTestimonialsComponent {
         // metaDataTabs = ['National', 'Global'];
         this.metaDataTabs = ['National'];
         this.currentTab = 'National';
-        this.title.setTitle('Hisense India | TECH TESTIMONIALS');
+        this.title.setTitle('Hisense India | Tech Testimonials');
         this.state.mobileNavToggle.next(false);
     }
     changeTab(tab) {
