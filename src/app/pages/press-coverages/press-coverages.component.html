@@ -72,9 +72,15 @@
                         <div class="slide-item">
                             <div class="content">
                                 <div class="bg-overflow-h">
-                                    <div class="text-box-with-image bg-holder"
+                                    <!-- <div class="text-box-with-image bg-holder"
                                         [style.background]="'url(' + data.image_full_url + ') no-repeat'">
                                         <div class="img-overlay"></div>
+                                    </div> -->
+                                    <div class="text-box-with-image bg-holder desktop-only"
+                                        [style.background]="'url(' + data.desktop_image_full_url + ') no-repeat'">
+                                    </div>
+                                    <div class="text-box-with-image bg-holder mobile-only"
+                                        [style.background]="'url(' + data.mobile_image_full_url + ') no-repeat'">
                                     </div>
                                     <!-- <div class="text-box-with-image bg-holder mobile-only" style="background:url(/dam/jcr:6f639058-4c1f-4782-a86f-9068959a8ec0/20230228-image.jpg) no-repeat;background-position: center;background-size: cover;">
                                         <div class="img-overlay"></div>
