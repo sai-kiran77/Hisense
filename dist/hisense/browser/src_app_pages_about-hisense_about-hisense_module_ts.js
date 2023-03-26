@@ -1143,9 +1143,9 @@ function PressCoveragesComponent_div_11_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("href", slide_r10 == null ? null : slide_r10.external_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
 } }
 function PressCoveragesComponent_ng_container_20_a_1_Template(rf, ctx) { if (rf & 1) {
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "a", 32)(1, "div", 33)(2, "div", 34)(3, "div", 35)(4, "div", 36);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](5, "div", 37);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "a", 32)(1, "div", 33)(2, "div", 34)(3, "div", 35);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelement"](4, "div", 36)(5, "div", 37);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](6, "div", 38)(7, "h4", 39);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](8);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]();
@@ -1157,11 +1157,13 @@ function PressCoveragesComponent_ng_container_20_a_1_Template(rf, ctx) { if (rf 
     const data_r14 = ctx.$implicit;
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵproperty"]("href", data_r14 == null ? null : data_r14.external_url, _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵsanitizeUrl"]);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵstyleProp"]("background", "url(" + data_r14.image_full_url + ") no-repeat");
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](4);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵstyleProp"]("background", "url(" + data_r14.desktop_image_full_url + ") no-repeat");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](1);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵstyleProp"]("background", "url(" + data_r14.mobile_image_full_url + ") no-repeat");
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](3);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"]((data_r14 == null ? null : data_r14.title) || (data_r14 == null ? null : data_r14.vendor));
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵadvance"](2);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](11, 5, data_r14.published_at, "mediumDate"));
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtextInterpolate"](_angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵpipeBind2"](11, 7, data_r14.published_at, "mediumDate"));
 } }
 function PressCoveragesComponent_ng_container_20_div_2_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 41);
@@ -1170,7 +1172,7 @@ function PressCoveragesComponent_ng_container_20_div_2_Template(rf, ctx) { if (r
 } }
 function PressCoveragesComponent_ng_container_20_Template(rf, ctx) { if (rf & 1) {
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerStart"](0);
-    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, PressCoveragesComponent_ng_container_20_a_1_Template, 12, 8, "a", 30);
+    _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](1, PressCoveragesComponent_ng_container_20_a_1_Template, 12, 10, "a", 30);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtemplate"](2, PressCoveragesComponent_ng_container_20_div_2_Template, 2, 0, "div", 31);
     _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementContainerEnd"]();
 } if (rf & 2) {
@@ -1326,7 +1328,7 @@ PressCoveragesComponent.ɵcmp = /*@__PURE__*/ _angular_core__WEBPACK_IMPORTED_MO
     } if (rf & 2) {
         let _t;
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵqueryRefresh"](_t = _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵloadQuery"]()) && (ctx.container = _t.first);
-    } }, decls: 26, vars: 7, consts: [[1, "press_coverages__container"], [1, "breadcrumb__yellow__banner"], [1, "press__tabs__container"], [1, "col1", "tabs"], ["id", "themeslist", 1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "container"], [1, "mySwiperPress", 2, "overflow", "visible !important"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-pagination"], [1, "container", 2, "gap", "0"], ["container", ""], [1, "news-info"], [1, "contaciner-v2"], [4, "ngIf"], ["id", "pagination", 1, "pagination-sm", "pagination-v2"], ["class", "page-item prev disabled", 4, "ngIf"], ["class", "page-item", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "page-item", "next"], ["class", "page-link", 3, "click", 4, "ngIf"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "swiper-slide"], [1, "slide__link", 2, "position", "relative"], [1, "ls-bg", "desktop-only"], [1, "ls-bg", "mobile-only"], [1, "two-box-info-silders", "trackin"], [1, "hisenseBold", "ellipse"], [1, "hisenseMedium", "date"], ["target", "_blank", "tabindex", "0", 1, "hisenseMedium", "overlay-gray", 3, "href"], ["class", "row", "style", "display: flex;", "target", "_blank", 3, "href", 4, "ngFor", "ngForOf"], ["class", "text-center", "style", "text-align: center;", 4, "ngIf"], ["target", "_blank", 1, "row", 2, "display", "flex", 3, "href"], [1, "slide-item"], [1, "content"], [1, "bg-overflow-h"], [1, "text-box-with-image", "bg-holder"], [1, "img-overlay"], [1, "text-box", "trackin"], [1, "ellipse", "ellipse-4"], [1, "news-date"], [1, "text-center", 2, "text-align", "center"], [1, "page-item", "prev", "disabled"], [1, "page-link", 3, "click"], [1, "page-item", 3, "ngClass", "click"], [1, "page-link"]], template: function PressCoveragesComponent_Template(rf, ctx) { if (rf & 1) {
+    } }, decls: 26, vars: 7, consts: [[1, "press_coverages__container"], [1, "breadcrumb__yellow__banner"], [1, "press__tabs__container"], [1, "col1", "tabs"], ["id", "themeslist", 1, "list-group"], ["class", "list-group-item list-group-item-action", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "container"], [1, "mySwiperPress", 2, "overflow", "visible !important"], [1, "swiper-wrapper"], ["class", "swiper-slide", 4, "ngFor", "ngForOf"], [1, "swiper-pagination"], [1, "container", 2, "gap", "0"], ["container", ""], [1, "news-info"], [1, "contaciner-v2"], [4, "ngIf"], ["id", "pagination", 1, "pagination-sm", "pagination-v2"], ["class", "page-item prev disabled", 4, "ngIf"], ["class", "page-item", 3, "ngClass", "click", 4, "ngFor", "ngForOf"], [1, "page-item", "next"], ["class", "page-link", 3, "click", 4, "ngIf"], [1, "list-group-item", "list-group-item-action", 3, "ngClass", "click"], [1, "swiper-slide"], [1, "slide__link", 2, "position", "relative"], [1, "ls-bg", "desktop-only"], [1, "ls-bg", "mobile-only"], [1, "two-box-info-silders", "trackin"], [1, "hisenseBold", "ellipse"], [1, "hisenseMedium", "date"], ["target", "_blank", "tabindex", "0", 1, "hisenseMedium", "overlay-gray", 3, "href"], ["class", "row", "style", "display: flex;", "target", "_blank", 3, "href", 4, "ngFor", "ngForOf"], ["class", "text-center", "style", "text-align: center;", 4, "ngIf"], ["target", "_blank", 1, "row", 2, "display", "flex", 3, "href"], [1, "slide-item"], [1, "content"], [1, "bg-overflow-h"], [1, "text-box-with-image", "bg-holder", "desktop-only"], [1, "text-box-with-image", "bg-holder", "mobile-only"], [1, "text-box", "trackin"], [1, "ellipse", "ellipse-4"], [1, "news-date"], [1, "text-center", 2, "text-align", "center"], [1, "page-item", "prev", "disabled"], [1, "page-link", 3, "click"], [1, "page-item", 3, "ngClass", "click"], [1, "page-link"]], template: function PressCoveragesComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementStart"](0, "div", 0)(1, "div", 1)(2, "h1");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵtext"](3, "Newsroom");
         _angular_core__WEBPACK_IMPORTED_MODULE_2__["ɵɵelementEnd"]()();
