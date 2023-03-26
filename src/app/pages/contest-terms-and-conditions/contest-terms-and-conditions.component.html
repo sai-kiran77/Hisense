@@ -2,27 +2,42 @@
         <h1>TERMS AND CONDITIONS</h1>
 </div>
 
-<div class="container">
-        <div class="col1">
-                <div class="list-group" id="themeslist">
-                        <a class="list-group-item list-group-item-action" *ngFor="let obj of metaData;let i = index"
-                                [ngClass]="{'active': obj.tab_name  == currentTab}"
-                                (click)="changeTab(obj,i)">{{obj.tab_name }}</a>
+<div class="container" *ngIf="metaData">
+
+        <div class="flex tabs__container">
+                <div class="tabs">
+                        <div class="list-group flex-row">
+                                <a class="list-group-item list-group-item-action" *ngFor="let tab of metaData; let i = index"
+                                        [ngClass]="{'active': tab?.group?.name  == currentMainTab}" (click)="changeMainTab(tab?.group?.name, i)">{{tab?.group?.name}}</a>
+                        </div>
                 </div>
         </div>
-        <div class="col2">
-                <ng-container>
-                        <h1 *ngIf="metaData[currentIndex]?.heading">{{metaData[currentIndex].heading}}</h1>
-                        <h2 *ngIf="metaData[currentIndex]?.sub_heading">{{metaData[currentIndex]?.sub_heading}}</h2>
-                        <h3 *ngIf="metaData[currentIndex]?.date_range">({{metaData[currentIndex]?.date_range}})</h3>
 
-                        <img *ngIf="metaData[currentIndex]?.content_image_full_url"
-                                [src]="metaData[currentIndex]?.content_image_full_url" alt="content image"/>
-
-                        <div class="terms__and__conditions__context__text">
-                                <div style="word-break:break-all;" *ngIf="metaData[currentIndex]?.content_text"
-                                        [innerHTML]="metaData[currentIndex]?.content_text"></div>
+        <div class="content__container">
+                <div class="col1">
+                        <div class="list-group" id="themeslist">
+                                <ng-container *ngFor="let object of metaData;let i = index">
+                                        <a class="list-group-item list-group-item-action" *ngFor="let obj of object.terms_and_conditions;let j = index" 
+                                                [ngClass]="{'active': obj.tab_name  == currentTab, 'd-none': i !== currentIndex}"
+                                                (click)="changeTab(obj, i, j)">{{obj.tab_name }}</a>
+                                </ng-container>
                         </div>
-                </ng-container>
+                </div>
+                <div class="col2">
+                        <ng-container>
+                                <h1 *ngIf="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.heading">{{metaData[currentIndex].heading}}</h1>
+                                <h2 *ngIf="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.sub_heading">{{metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.sub_heading}}</h2>
+                                <h3 *ngIf="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.date_range">({{metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.date_range}})</h3>
+        
+                                <img *ngIf="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.content_image_full_url"
+                                        [src]="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.content_image_full_url" alt="content image"/>
+        
+                                <div class="terms__and__conditions__context__text">
+                                        <div style="word-break:break-all;" *ngIf="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.content_text"
+                                                [innerHTML]="metaData[currentIndex]?.terms_and_conditions[currentTermsIndex]?.content_text"></div>
+                                </div>
+                        </ng-container>
+                </div>
         </div>
+
 </div>
