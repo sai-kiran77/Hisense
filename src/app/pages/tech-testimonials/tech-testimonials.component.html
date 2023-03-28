@@ -18,6 +18,16 @@
                 [ngClass]="{'active': tab  == currentTab}" (click)="changeTab(tab)">{{tab }}</a>
         </div>
     </div>
+    <div class="form__group">
+        <!-- <label>Select type </label> -->
+        <div class="form__control">
+            <select class="w-100" (change)="updateProductFilter($event)" [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="productFilter">
+                <option value="null" disabled>Select Product</option>
+                <option *ngFor="let testimonial of testimonials" [value]="testimonial.id">{{testimonial.name}} {{testimonial.variant_size}}</option>
+            </select>
+        </div>
+    </div>
 </div>
 
 <div class="container">
@@ -39,8 +49,8 @@
                     <div class="wpb_wrapper">
                         <div class="text-center-img">
                             <div *ngIf="!obj.playVideo" class="youtube__fake__img__wrapper" (click)="playVideo(obj)">
-                                <img
-                                    [src]="obj.youtube_thumb_image" style="width: 90%;height: 300px;" [alt]="'youtube thumbnail ' + (i + 1)">
+                                <img [src]="obj.youtube_thumb_image" style="width: 90%;height: 300px;"
+                                    [alt]="'youtube thumbnail ' + (i + 1)">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="1.43em" height="1em"
                                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 180">
                                     <path fill="red"
@@ -60,8 +70,9 @@
     </div>
 </div>
 <div class="" style="width:80%;margin: 20px auto;">
-    <div *ngIf="totalPagesinTen?.length == 0" class="text-center" style="text-align: center;margin: 16px 0;">No Records Found!</div>
-    <div class="pagination">
+    <div *ngIf="totalPagesinTen?.length == 0" class="text-center" style="text-align: center;margin: 16px 0;">No Records
+        Found!</div>
+    <div class="pagination" *ngIf="totalTestimonialsCount > 10">
         <a (click)="getPaginatedTestimonials(params.page - 1)" *ngIf="params.page > 1">&laquo;</a>
         <a [ngClass]="{'active': params.page == i + 1}" *ngFor="let e of totalPagesinTen;let i = index"
             (click)="getPaginatedTestimonials(i+1)">{{i+1}}</a>

@@ -10,6 +10,8 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 })
 export class TechTestimonialsComponent implements OnInit {
 
+  // productFilter = null;
+
   testimonials: any = [];
 
   paginatedTestimonials: any = [];
@@ -37,15 +39,14 @@ export class TechTestimonialsComponent implements OnInit {
     this.paginatedTestimonials = [];
     let currentTestimonials = [];
     if (this.currentTab == 'Global') {
-      currentTestimonials = this.testimonials.filter((obj: any) => obj.country == 'global');
+      currentTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == 'global');
       this.paginatedTestimonials = currentTestimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
     } else {
-      currentTestimonials = this.testimonials.filter((obj: any) => obj.country == 'national');
+      currentTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == 'national');
       this.paginatedTestimonials = currentTestimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
       // this.getTechTestimonials(1);
     }
     this.totalPagesinTen = new Array(Math.ceil(currentTestimonials.length / this.params.per_page));
-    console.log(this.paginatedTestimonials);
   }
 
   constructor(private state: GlobalStateService,
@@ -67,8 +68,9 @@ export class TechTestimonialsComponent implements OnInit {
     this.api.getTechTestimonials(this.params).subscribe({
       next: (res: any) => {
         this.testimonials = res.data;
+        this.updateProductFilter({target: {value: this.testimonials[0].id}});
+        res.data = this.currentTestimonials;
         this.paginatedTestimonials = res.data.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
-        console.log(res.data);
         this.totalPagesinTen = new Array(Math.ceil(res.data.length / this.params.per_page));
       },
       error: (err) => {
@@ -81,9 +83,7 @@ export class TechTestimonialsComponent implements OnInit {
     if (page) {
       this.params.page = page;
     }
-    console.log(((this.params.page - 1) * 10), (((this.params.page) * 10)))
-    this.paginatedTestimonials = this.testimonials.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
-    console.log(this.paginatedTestimonials);
+    this.paginatedTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
   }
 
   playVideo(obj: any) {
@@ -96,5 +96,21 @@ export class TechTestimonialsComponent implements OnInit {
   getVideoLink(url: string) {
     url = url + '?autoplay=1&mute=0&showinfo=1&controls=1;';
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
+
+  currentTestimonials: any = null;
+  productFilter: any = null;
+
+  totalTestimonialsCount = 0;
+  updateProductFilter(event: any){
+    const testimonials = this.testimonials.filter((testimonial: any)=>{
+      return testimonial.id == event.target.value;
+    });
+    this.productFilter = event.target.value;
+    this.currentTestimonials = testimonials[0].tech_testimonials;
+    this.getPaginatedTestimonials(1);
+    this.totalTestimonialsCount = this.currentTestimonials.length;
+    this.paginatedTestimonials = this.currentTestimonials.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
+    this.totalPagesinTen = new Array(Math.ceil(this.currentTestimonials.length / this.params.per_page));
   }
 }
