@@ -8,6 +8,7 @@ import { TechnologyComponent } from './technology/technology.component';
 import { CsrComponent } from './csr/csr.component';
 import { PressCoveragesComponent } from '../press-coverages/press-coverages.component';
 import { TechTestimonialsComponent } from '../tech-testimonials/tech-testimonials.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -45,7 +46,8 @@ const routes: Routes = [
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormsModule
   ]
 })
 export class AboutHisenseModule { }

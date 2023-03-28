@@ -136,8 +136,11 @@ p {
 
 .tech__tabs__container{
     display: flex;
-    justify-content: center;
-    align-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
     padding: 16px 0;
     .tabs{
         // background: #eae9e9;
@@ -183,4 +186,8 @@ p {
             }
         }
     }
+}
+
+select {
+    padding: 4px 8px;
 }
