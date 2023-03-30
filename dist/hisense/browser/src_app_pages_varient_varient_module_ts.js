@@ -247,15 +247,15 @@ class VarientComponent {
                     //   },
                     // });
                     let galleryThumbs = new Swiper(".thumbsSlider", {
-                        centeredSlides: true,
-                        centeredSlidesBounds: true,
+                        // centeredSlides: true,
+                        // centeredSlidesBounds: true,
                         direction: "horizontal",
                         spaceBetween: 10,
                         slidesPerView: 5,
-                        freeMode: false,
+                        // freeMode: false,
                         // loop: true,
-                        watchSlidesVisibility: true,
-                        watchSlidesProgress: true,
+                        // watchSlidesVisibility: true,
+                        // watchSlidesProgress: true,
                         // watchOverflow: true,
                         breakpoints: {
                             992: {
