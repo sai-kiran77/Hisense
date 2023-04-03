@@ -24,7 +24,7 @@
             <select class="w-100" (change)="updateProductFilter($event)" [ngModelOptions]="{standalone: true}"
                 [(ngModel)]="productFilter">
                 <option value="null" disabled>Select Product</option>
-                <option *ngFor="let testimonial of testimonials" [value]="testimonial.id">{{testimonial.name}} {{testimonial.variant_size}}</option>
+                <option *ngFor="let testimonial of testimonials" [value]="testimonial.id">{{testimonial.display_value}}</option>
             </select>
         </div>
     </div>
@@ -34,8 +34,8 @@
     <div class="wpb_column vc_column_container vc_col-sm-6" *ngFor="let obj of paginatedTestimonials;let i = index">
         <div class="vc_column-inner">
             <div class="wpb_wrapper">
-                <div class="wpb_text_column wpb_content_element  vc_custom_1643340962550">
-                    <div class="wpb_wrapper">
+                <div class="wpb_text_column wpb_content_element  vc_custom_1643340962550" style="margin-bottom: 8px;">
+                    <div class="wpb_wrapper tes__description">
                         <p>{{obj.description}}</p>
 
                     </div>
