@@ -13,6 +13,7 @@ export class TechTestimonialsComponent implements OnInit {
   // productFilter = null;
 
   testimonials: any = [];
+  loading = true;
 
   paginatedTestimonials: any = [];
   GlobalpaginatedTestimonials: any = [];
@@ -68,7 +69,7 @@ export class TechTestimonialsComponent implements OnInit {
     this.api.getTechTestimonials(this.params).subscribe({
       next: (res: any) => {
         this.testimonials = res.data;
-        this.updateProductFilter({target: {value: this.testimonials[0].id}});
+        this.updateProductFilter({ target: { value: this.testimonials[0].id } });
         res.data = this.currentTestimonials;
         this.paginatedTestimonials = res.data.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
         this.totalPagesinTen = new Array(Math.ceil(res.data.length / this.params.per_page));
@@ -84,6 +85,7 @@ export class TechTestimonialsComponent implements OnInit {
       this.params.page = page;
     }
     this.paginatedTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+    this.loading = false;
   }
 
   playVideo(obj: any) {
@@ -102,8 +104,8 @@ export class TechTestimonialsComponent implements OnInit {
   productFilter: any = null;
 
   totalTestimonialsCount = 0;
-  updateProductFilter(event: any){
-    const testimonials = this.testimonials.filter((testimonial: any)=>{
+  updateProductFilter(event: any) {
+    const testimonials = this.testimonials.filter((testimonial: any) => {
       return testimonial.id == event.target.value;
     });
     this.productFilter = event.target.value;
