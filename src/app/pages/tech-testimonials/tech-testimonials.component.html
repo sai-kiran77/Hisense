@@ -21,7 +21,7 @@
                     <div class="form__control">
                         <select class="w-100" (change)="updateProductFilter($event)"
                             [ngModelOptions]="{standalone: true}" [(ngModel)]="productFilter">
-                            <option value="null" disabled>Select Product</option>
+                            <option value="null" disabled>Select category</option>
                             <option *ngFor="let testimonial of testimonials" [value]="testimonial.id">
                                 {{testimonial.display_value}}</option>
                         </select>
@@ -30,7 +30,7 @@
                 <div class="form__group">
                     <div class="form__control">
                         <select class="w-100" (change)="updateProductVarient($event)">
-                            <option value="null" disabled>Select Varient</option>
+                            <option value="null" disabled>Select product</option>
                             <option *ngFor="let product of currentTestimonial.products" [value]="product.id">
                                 {{product.display_value}}</option>
                         </select>
