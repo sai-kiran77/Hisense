@@ -71,8 +71,9 @@ export class TechTestimonialsComponent implements OnInit {
         this.testimonials = res.data;
         this.updateProductFilter({ target: { value: this.testimonials[0].id } });
         res.data = this.currentTestimonials;
-        this.paginatedTestimonials = res.data.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
-        this.totalPagesinTen = new Array(Math.ceil(res.data.length / this.params.per_page));
+        this.loading = false;
+        // this.paginatedTestimonials = res.data.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
+        // this.totalPagesinTen = new Array(Math.ceil(res.data.length / this.params.per_page));
       },
       error: (err) => {
         console.log(err);
@@ -84,8 +85,9 @@ export class TechTestimonialsComponent implements OnInit {
     if (page) {
       this.params.page = page;
     }
-    this.paginatedTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
-    this.loading = false;
+    // this.paginatedTestimonials = this.currentTestimonials?.filter((obj: any) => obj.country == this.currentTab.toLowerCase()).slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+    this.paginatedTestimonials = this.currentTestimonials.slice(((this.params.page - 1) * 10), (((this.params.page) * 10)));
+    // this.loading = false;
   }
 
   playVideo(obj: any) {
@@ -101,6 +103,7 @@ export class TechTestimonialsComponent implements OnInit {
   }
 
   currentTestimonials: any = null;
+  currentTestimonial: any = null;
   productFilter: any = null;
 
   totalTestimonialsCount = 0;
@@ -109,10 +112,21 @@ export class TechTestimonialsComponent implements OnInit {
       return testimonial.id == event.target.value;
     });
     this.productFilter = event.target.value;
-    this.currentTestimonials = testimonials[0].tech_testimonials;
+    this.currentTestimonial = testimonials[0];
+    this.updateProductVarient({ target: { value: this.currentTestimonial.products[0].id } })
+  }
+
+  selectedProductVarient: any = null;
+
+  updateProductVarient(event: any) {
+    const testimonials = this.currentTestimonial.products.filter((testimonial: any) => {
+      return testimonial.id == event.target.value;
+    });
+    this.selectedProductVarient = testimonials[0];
+    this.currentTestimonials = this.selectedProductVarient.tech_testimonials
     this.getPaginatedTestimonials(1);
     this.totalTestimonialsCount = this.currentTestimonials.length;
-    this.paginatedTestimonials = this.currentTestimonials.filter((obj: any) => obj.country == 'national').slice(((this.params.page - 1) * 10), this.params.per_page);
+    this.paginatedTestimonials = this.currentTestimonials.slice(((this.params.page - 1) * 10), this.params.per_page);
     this.totalPagesinTen = new Array(Math.ceil(this.currentTestimonials.length / this.params.per_page));
   }
 }
