@@ -11,6 +11,183 @@ import { environment } from 'src/environments/environment';
 })
 export class OffersPromotionsComponent implements OnInit {
 
+  sampleResponse = {
+    "status": "ok",
+    "message": "Warranty information list loaded",
+    "data": [
+      {
+        "id": 8,
+        "code": "uhd-tv",
+        "name": "UHD TV",
+        "display_value": "UHD TV",
+        "products": [
+          {
+            "id": 8,
+            "code": "32E4G",
+            "name": "Hisense Android Smart TV",
+            "display_value": "Hisense Android Smart TV",
+            "product_variants": [
+              {
+                "id": 88,
+                "code": "32E4G64",
+                "name": "Product variant name",
+                "display_value": "Product variant display name",
+                "years_of_purchase": [
+                  {
+                    "year": 2020,
+                    "display_value": "2020",
+                    "months_of_purchase": [
+                      {
+                        "month": "January",
+                        "display_value": "January",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years  of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      },
+                      {
+                        "month": "April",
+                        "display_value": "April",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years  of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      },
+                      {
+                        "month": "July",
+                        "display_value": "July",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years  of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "year": 2018,
+                    "display_value": "2018",
+                    "months_of_purchase": [
+                      {
+                        "month": "February",
+                        "display_value": "February",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      },
+                      {
+                        "month": "May",
+                        "display_value": "May",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "id": 44,
+                "code": "32E4G44",
+                "name": "Product variant name 2",
+                "display_value": "Product variant display name 2",
+                "years_of_purchase": [
+                  {
+                    "year": 2019,
+                    "display_value": "2019",
+                    "months_of_purchase": [
+                      {
+                        "month": "February",
+                        "display_value": "February",
+                        "warranty_information": {
+                          "id": 88,
+                          "warranty_description_array": [],
+                          "warranty_description_text": "1.5 years  of warranty",
+                          "warranty_duration_years": "1",
+                          "warranty_duration_months": "6",
+                          "warranty_duration_years_string": "1 year 6 months",
+                          "warranty_duration_start_date": "01-01-2020",
+                          "warranty_duration_end_date": "31-12-2021",
+                          "warranty_duration_date_string": "Jan'20 till Dec'21",
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+
+  selectedCat: any = null;
+  productVarients: any = [];
+  selectedProd: any = null;
+  updateCategory(event: any) {
+    this.productVarients = [];
+    this.sampleResponse.data.find((obj)=>obj.id == event.target.value)?.products.forEach((object)=>{
+      object.product_variants.forEach((o)=>{
+        this.productVarients.push(o);
+      })
+    });
+  }
+
+  updateProduct(event: any) {
+    // this.selectedProd = this.selectedCat?.products?.find((obj: any)=>obj.id == event.target.value).;
+    this.selectedProd = this.productVarients.find((obj: any)=>obj.id == event.target.value);
+  }
+
+  selectedYear: any;
+  updateYear(event: any) {
+    this.selectedYear = this.selectedProd.years_of_purchase.find((obj: any)=>obj.year == event.target.value);
+  }
+  warranty: any;
+  updateMonth(event: any) {
+    this.warranty = this.selectedYear.months_of_purchase.find((obj: any)=>obj.month == event.target.value);
+    console.log(this.warranty);
+  }
+
+
+  readMore = false;
+
   metaData: any = [];
   isImageLoading = true;
   tabs = ["Air Conditioner", 'Television'];
@@ -20,7 +197,7 @@ export class OffersPromotionsComponent implements OnInit {
     this.currentMainTab = tab;
   }
 
-  ACSectionLeftTabs = ['Inverter expert', 'Intelligent inverter','Intellipro and cooling xpert'];
+  ACSectionLeftTabs = ['Inverter expert', 'Intelligent inverter', 'Intellipro and cooling xpert'];
   currentAcSectionTab = 'Inverter expert';
 
   changeTab(obj: any) {
