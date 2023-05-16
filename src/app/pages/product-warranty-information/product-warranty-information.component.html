@@ -1,0 +1,77 @@
+<div class="breadcrumb__yellow__banner">
+    <h1>Product Warranty Information</h1>
+</div>
+<div style="max-width: 850px; margin: auto;" class="page_container">
+    <div class="my-5 select-container" style="justify-content: center;background-color: #f8f8f8;
+    padding: 24px;align-items: center;">
+        <div class="form__group">
+            <label>Category</label>
+            <div class="form__control">
+                <select (change)="updateCategory($event)">
+                    <option value="" disabled selected>Select Category</option>
+                    <option *ngFor="let cat of metaData" [value]="cat.id">{{cat.display_value}}
+                    </option>
+                </select>
+                <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
+                        Required!</span></div> -->
+            </div>
+        </div>
+        <div class="form__group">
+            <label>Product</label>
+            <div class="form__control">
+                <select (change)="updateProduct($event)">
+                    <option value="0" disabled selected>Select Product</option>
+                    <option *ngFor="let cat of productVarients" [value]="cat.id">{{cat.display_value}}
+                    </option>
+                </select>
+                <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
+                        Required!</span></div> -->
+            </div>
+        </div>
+        <div class="form__group">
+            <label>Year of Purchase</label>
+            <div class="form__control">
+                <select (change)="updateYear($event)">
+                    <option value="0" disabled selected>Select Year</option>
+                    <option *ngFor="let cat of selectedProd?.years_of_purchase" [value]="cat.year">{{cat.display_value}}
+                    </option>
+                </select>
+                <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
+                        Required!</span></div> -->
+            </div>
+        </div>
+        <div class="form__group">
+            <label>Month of Purchase</label>
+            <div class="form__control">
+                <select (change)="updateMonth($event)">
+                    <option value="0" disabled selected>Select Month</option>
+                    <option *ngFor="let cat of selectedYear?.months_of_purchase" [value]="cat.month">{{cat.display_value}}
+                    </option>
+                </select>
+                <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
+                        Required!</span></div> -->
+            </div>
+        </div>
+    </div>
+    
+    <div *ngIf="warranty">
+        <label class="text-center" style="display: block;">Warranty Information</label>
+        <div class="col2 text-center" style="max-width: 800px;margin: 16px auto;">
+            <ng-container>
+                <div class="mb-3" *ngIf="warranty?.warranty_information?.warranty_description_text">
+                    <p [innerHtml]="warranty?.warranty_information?.warranty_description_text"></p>
+                </div>
+                <div class="text-center">
+                    <p *ngIf="warranty?.warranty_information?.warranty_duration_years_string">
+                        {{warranty?.warranty_information?.warranty_duration_years_string}}
+                        <span *ngIf="warranty?.warranty_information?.warranty_duration_date_string">({{warranty?.warranty_information?.warranty_duration_date_string}})</span>
+                    </p>
+                </div>
+            </ng-container>
+        </div>
+        <div style="text-align: center;" class="my-5">
+            <a class="btn-hisense" style="color: white !important; height: auto;padding: 22px;white-space: nowrap;" routerLink="/warranty-information">Read More About Warranty Information</a>
+        </div>
+    </div>
+    
+</div>

@@ -94,6 +94,10 @@ const routes: Routes = [
         path: 'warranty-information',
         loadChildren: () => import('./pages/offers-promotions/offers-promotions.module').then(m => m.OffersPromotionsModule)
       },
+      {
+        path: 'product-warranty-information',
+        loadChildren: () => import('./pages/product-warranty-information/product-warranty-information.module').then(m => m.ProductWarrantyInformationModule)
+      },
       // {
       //   path: 'treasure-hunt',
       //   loadChildren: () => import('./pages/treasure-hunt/treasure-hunt.module').then(m => m.TreasureHuntModule)

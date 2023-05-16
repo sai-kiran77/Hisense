@@ -1,0 +1,56 @@
+.col2 {
+    // padding: 1.25rem;
+    background-color: #fff;
+    // border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+}
+
+input,
+textarea,
+select {
+    padding: 4px 8px;
+}
+
+.form__group{
+    flex: 1 0 25%;
+}
+
+select{
+    width: 100%;
+}
+
+label {
+    font-size: 14px;
+}
+
+label,
+h3 {
+    white-space: nowrap;
+}
+
+.select-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+}
+
+.page_container{
+    width: 80%;
+}
+
+@media screen and (max-width:768px) {
+    .page_container{
+        width: 90%;
+    }
+    .select-container{
+        grid-template-columns: 1fr;
+        flex-direction: column !important;
+    }
+    .form__group{
+        width: 100%;
+        margin: auto;
+        select{
+            width: 100%;
+        }
+    }
+}

@@ -3,7 +3,7 @@
 </div>
 
 <div class="page__container">
-    <ng-container *ngIf="readMore; else elseBlock">
+    <ng-container>
         <div class="flex tabs__container">
             <div class="tabs">
                 <div class="list-group flex-row">
@@ -195,77 +195,4 @@
             </div>
         </div>
     </ng-container>
-
-    <ng-template #elseBlock>
-        <div style="display: flex;justify-content: center;gap: 32px;flex-wrap: wrap;">
-            <div class="form__group">
-                <label>Select Category</label>
-                <div class="form__control">
-                    <select (change)="updateCategory($event)">
-                        <option value="0">Select Category</option>
-                        <option *ngFor="let cat of sampleResponse.data" [value]="cat.id">{{cat.display_value}}
-                        </option>
-                    </select>
-                    <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                            Required!</span></div> -->
-                </div>
-            </div>
-            <div class="form__group">
-                <label>Select Product</label>
-                <div class="form__control">
-                    <select (change)="updateProduct($event)">
-                        <option value="0">Select Product</option>
-                        <option *ngFor="let cat of productVarients" [value]="cat.id">{{cat.display_value}}
-                        </option>
-                    </select>
-                    <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                            Required!</span></div> -->
-                </div>
-            </div>
-            <div class="form__group">
-                <label>Select Year of Purchase</label>
-                <div class="form__control">
-                    <select (change)="updateYear($event)">
-                        <option value="0">Select Year</option>
-                        <option *ngFor="let cat of selectedProd?.years_of_purchase" [value]="cat.year">{{cat.display_value}}
-                        </option>
-                    </select>
-                    <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                            Required!</span></div> -->
-                </div>
-            </div>
-            <div class="form__group">
-                <label>Select Month of Purchase</label>
-                <div class="form__control">
-                    <select (change)="updateMonth($event)">
-                        <option value="0">Select Month</option>
-                        <option *ngFor="let cat of selectedYear?.months_of_purchase" [value]="cat.month">{{cat.display_value}}
-                        </option>
-                    </select>
-                    <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                            Required!</span></div> -->
-                </div>
-            </div>
-        </div>
-
-        <div *ngIf="warranty">
-            <div class="col2 text-center" style="max-width: 800px;margin: 100px auto;">
-                <ng-container *ngIf="currentAcSectionTab == 'Inverter expert'">
-                    <div class="my-5" *ngIf="warranty?.warranty_information?.warranty_description_text">
-                        <p [innerHtml]="warranty?.warranty_information?.warranty_description_text"></p>
-                    </div>
-                    <div class="my-5 text-center">
-                        <p *ngIf="warranty?.warranty_information?.warranty_duration_years_string">
-                            {{warranty?.warranty_information?.warranty_duration_years_string}}
-                            <span *ngIf="warranty?.warranty_information?.warranty_duration_date_string">({{warranty?.warranty_information?.warranty_duration_date_string}})</span>
-                        </p>
-                    </div>
-                </ng-container>
-            </div>
-        </div>
-
-        <div style="margin-top: 100px;text-align: right;">
-            <a (click)="readMore = true">Read More About Warranty Information...</a>
-        </div>
-    </ng-template>
 </div>
