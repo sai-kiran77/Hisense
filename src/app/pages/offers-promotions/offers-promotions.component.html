@@ -249,7 +249,7 @@
         </div>
 
         <div *ngIf="warranty">
-            <div class="col2 text-center" style="max-width: 800px;margin: 100px;">
+            <div class="col2 text-center" style="max-width: 800px;margin: 100px auto;">
                 <ng-container *ngIf="currentAcSectionTab == 'Inverter expert'">
                     <div class="my-5" *ngIf="warranty?.warranty_information?.warranty_description_text">
                         <p [innerHtml]="warranty?.warranty_information?.warranty_description_text"></p>
