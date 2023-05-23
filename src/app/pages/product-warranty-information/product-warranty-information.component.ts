@@ -9,6 +9,12 @@ import { GlobalStateService } from 'src/app/services/global-state.service';
 })
 export class ProductWarrantyInformationComponent implements OnInit {
 
+  product_purchase_date = '';
+
+  setRegistrationDate(e: any){
+
+  }
+
   metaData: any = [];
 
   selectedCat: any = null;
@@ -40,9 +46,12 @@ export class ProductWarrantyInformationComponent implements OnInit {
 
 
   readMore = false;
-
+  today;
   constructor(private state: GlobalStateService,
-    private api: ApiService,) { }
+    private api: ApiService,) { 
+      const date = new Date();
+    this.today = `${date.getFullYear()}-${(String(date.getMonth() + 1)).padStart(2, '0')}-${(String(date.getDate())).padStart(2, '0')}`;
+    }
 
   ngOnInit(): void {
     this.getproductWarrantyInformation();

@@ -21,6 +21,7 @@ select{
 
 label {
     font-size: 14px;
+    color: rgb(107, 107, 107) !important;
 }
 
 label,
@@ -38,6 +39,14 @@ h3 {
     width: 80%;
 }
 
+.three-col{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mt-100{
+    margin-top: 100px;
+}
+
 @media screen and (max-width:768px) {
     .page_container{
         width: 90%;
@@ -53,4 +62,22 @@ h3 {
             width: 100%;
         }
     }
+
+    .mt-100{
+        margin-top: 50px;
+    }
+
+    .three-col{
+        grid-template-columns: 1fr;
+    }
+}
+
+h3{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #000;
 }
