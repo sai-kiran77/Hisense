@@ -1,98 +1,106 @@
 <div class="breadcrumb__yellow__banner">
     <h1>Product Warranty Information</h1>
 </div>
-<div style="max-width: 850px; margin: auto;" class="page_container">
-    <div class="my-5" style="justify-content: center;background-color: #f8f8f8;
-    padding: 24px;align-items: center;">
-        <div>
-            <h3>Select your product</h3>
-            <div class="select-container">
-                <div class="form__group">
-                    <label>Category</label>
-                    <div class="form__control">
-                        <select (change)="updateCategory($event)">
-                            <option value="" disabled selected>Select Category</option>
-                            <option *ngFor="let cat of metaData" [value]="cat.id">{{cat.display_value}}
-                            </option>
-                        </select>
-                        <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                        Required!</span></div> -->
+<div style="margin-bottom: 200px; margin-top: 20px;">
+    <div style="max-width: 850px; margin: auto;" class="page_container">
+        <div class="my-5" style="justify-content: center;background-color: #f8f8f8;
+        padding: 24px;align-items: center;">
+            <div>
+                <h3>Select your product</h3>
+                <div class="select-container">
+                    <div class="form__group">
+                        <label>Category</label>
+                        <div class="form__control">
+                            <select (change)="updateCategory($event)">
+                                <option value="" disabled selected>Select Category</option>
+                                <option *ngFor="let cat of metaData" [value]="cat.id">{{cat.display_value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form__group">
+                        <label>Product</label>
+                        <div class="form__control">
+                            <select (change)="updateProduct($event)" [(ngModel)]="selectedProdId">
+                                <option value="null" disabled selected>Select Product</option>
+                                <option *ngFor="let cat of productVarients" [value]="cat.id">{{cat.display_value}}
+                                </option>
+                            </select>
+                        </div>
                     </div>
                 </div>
-                <div class="form__group">
-                    <label>Product</label>
-                    <div class="form__control">
-                        <select (change)="updateProduct($event)">
-                            <option value="0" disabled selected>Select Product</option>
-                            <option *ngFor="let cat of productVarients" [value]="cat.id">{{cat.display_value}}
-                            </option>
-                        </select>
-                        <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                        Required!</span></div> -->
+            </div>
+            <div class="mt-100">
+                <h3>Select date of purchase</h3>
+                <!-- three-col -->
+                <div class="select-container">
+                    <!-- <div class="form__group">
+                        <label>Year of Purchase</label>
+                        <div class="form__control">
+                            <select (change)="updateYear($event)">
+                                <option value="0" disabled selected>Select Year</option>
+                                <option *ngFor="let cat of selectedProd?.years_of_purchase" [value]="cat.year">
+                                    {{cat.display_value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <!-- <div class="form__group">
+                        <label>Month of Purchase</label>
+                        <div class="form__control">
+                            <select (change)="updateMonth($event)">
+                                <option value="0" disabled selected>Select Month</option>
+                                <option *ngFor="let cat of selectedYear?.months_of_purchase" [value]="cat.month">
+                                    {{cat.display_value}}
+                                </option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="form__group">
+                        <label>Date of Purchase</label>
+                        <div class="form__control">
+                            <input [(ngModel)]="dateSelected" type="date" name="date" id="date"
+                                [max]="maxYear + '-' + maxYearMaxMonth + '-' + daysInMonthMap[maxYearMaxMonth]" [min]="minYear + '-' + minYearMinMonth + '-01'" (change)="changeDate($event)" class="w-100">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="mt-100">
-            <h3>Select date of purchase</h3>
-            <div class="select-container three-col">
-                <div class="form__group">
-                    <label>Year of Purchase</label>
-                    <div class="form__control">
-                        <select (change)="updateYear($event)">
-                            <option value="0" disabled selected>Select Year</option>
-                            <option *ngFor="let cat of selectedProd?.years_of_purchase" [value]="cat.year">
-                                {{cat.display_value}}
-                            </option>
-                        </select>
-                        <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                        Required!</span></div> -->
+    
+        <div *ngIf="warranty" class="my-5">
+            <label class="text-center" style="display: block;">Warranty Information</label>
+            <div class="col2 text-center" style="max-width: 800px;margin: 16px auto;">
+                <ng-container>
+                    <div class="mb-3" *ngIf="warranty?.warranty_information?.warranty_description_text">
+                        <p [innerHtml]="warranty?.warranty_information?.warranty_description_text"></p>
                     </div>
-                </div>
-                <div class="form__group">
-                    <label>Month of Purchase</label>
-                    <div class="form__control">
-                        <select (change)="updateMonth($event)">
-                            <option value="0" disabled selected>Select Month</option>
-                            <option *ngFor="let cat of selectedYear?.months_of_purchase" [value]="cat.month">
-                                {{cat.display_value}}
-                            </option>
-                        </select>
-                        <!-- <div *ngIf="isFormSubmitted && !issueType" #ErrorMessage class="error__message"><span>Issue type is
-                        Required!</span></div> -->
+                    <div class="text-center">
+                        <p *ngIf="warranty?.warranty_information?.warranty_duration_years_string">
+                            {{warranty?.warranty_information?.warranty_duration_years_string}}
+                            <span
+                                *ngIf="warranty?.warranty_information?.warranty_duration_date_string">({{warranty?.warranty_information?.warranty_duration_date_string}})</span>
+                        </p>
                     </div>
-                </div>
-                <div class="form__group">
-                    <label>Date of Purchase</label>
-                    <div class="form__control">
-                        <input [(ngModel)]="product_purchase_date" type="date" name="date" id="date"
-                            [max]="today" (change)="setRegistrationDate($event)" class="w-100">
-                    </div>
-                </div>
+                </ng-container>
+            </div>
+            <div style="text-align: center;" class="my-5">
+                <a class="btn-hisense" style="color: white !important; height: auto;padding: 22px;white-space: nowrap;"
+                    routerLink="/warranty-information">Read More About Warranty Information</a>
             </div>
         </div>
-    </div>
-
-    <div *ngIf="warranty">
-        <label class="text-center" style="display: block;">Warranty Information</label>
-        <div class="col2 text-center" style="max-width: 800px;margin: 16px auto;">
-            <ng-container>
-                <div class="mb-3" *ngIf="warranty?.warranty_information?.warranty_description_text">
-                    <p [innerHtml]="warranty?.warranty_information?.warranty_description_text"></p>
-                </div>
-                <div class="text-center">
-                    <p *ngIf="warranty?.warranty_information?.warranty_duration_years_string">
-                        {{warranty?.warranty_information?.warranty_duration_years_string}}
-                        <span
-                            *ngIf="warranty?.warranty_information?.warranty_duration_date_string">({{warranty?.warranty_information?.warranty_duration_date_string}})</span>
-                    </p>
-                </div>
-            </ng-container>
+    
+        <div *ngIf="!warranty && dateSelected" class="my-5">
+            <div class="col2 text-center" style="max-width: 800px;margin: 32px auto;">
+                <ng-container>
+                    <div class="text-center">
+                        <p>
+                            <!-- Warranty Information not found for selected date <b>{{dateSelected}}</b> -->
+                            No warranty information found
+                        </p>
+                    </div>
+                </ng-container>
+            </div>
         </div>
-        <div style="text-align: center;" class="my-5">
-            <a class="btn-hisense" style="color: white !important; height: auto;padding: 22px;white-space: nowrap;"
-                routerLink="/warranty-information">Read More About Warranty Information</a>
-        </div>
+    
     </div>
-
 </div>
