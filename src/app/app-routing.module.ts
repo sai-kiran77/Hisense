@@ -41,9 +41,13 @@ const routes: Routes = [
       //   path: 'new-launches',
       //   loadChildren: () => import('./pages/new-launches/new-launches.module').then(m => m.NewLaunchesModule)
       // },
+      // {
+      //   path: 'FIFA-2022',
+      //   loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
+      // },
       {
-        path: 'FIFA-2022',
-        loadChildren: () => import('./pages/fifa-event/fifa-event.module').then(m => m.FifaEventModule)
+        path: 'super-brand-days',
+        loadChildren: () => import('./pages/super-brand-days/super-brand-days.module').then(m => m.SuperBrandDaysModule)
       },
       {
         path: 'wheel-of-fortune',
